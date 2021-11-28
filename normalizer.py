@@ -1,12 +1,10 @@
 import json
-from typing import List
-from spacy.lang.en import English
-
-import spacy
-
-import string
 import logging
 import re
+import string
+from typing import List
+
+from spacy.lang.en import English
 
 
 class Normalizer:
@@ -49,10 +47,10 @@ class Normalizer:
             text2_counter = token_index + len(token)
         return tokens
 
-    def __mapping_char_en(self, char, digit_keys, puncs_keys):
-        if char in digit_keys:
+    def __mapping_char_en(self, char):
+        if char in self.__digits.keys():
             return self.__digits[char]['en']
-        elif char in puncs_keys:
+        elif char in self.__puncs.keys():
             return self.__puncs[char]['en']
         return char
 
@@ -62,9 +60,7 @@ class Normalizer:
                 :param text: input text
                 :return: mapped text
         """
-        digit_keys = self.__digits.keys()
-        puncs_keys = self.__puncs.keys()
-        return ''.join(map(self.__mapping_char_en, text, digit_keys, puncs_keys))
+        return ''.join(map(self.__mapping_char_en, text))
 
     def __mapping_char(self, char):
         if char in self.__acceptable_chars:
