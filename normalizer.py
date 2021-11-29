@@ -102,7 +102,7 @@ class Normalizer:
         :return: result
         """
 
-        res = ''.join([" " if char in self.__diacritics.keys() else char for char in text])
+        res = ''.join(["" if char in self.__diacritics.keys() else char for char in text])
         text = res
         text = text.replace("ِ", "")
         return text
