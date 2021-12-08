@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 import re
 import string
 from typing import List
@@ -21,6 +22,39 @@ class Normalizer:
         self.__remove_diacritics = remove_diacritics
         self._init_data()
 
+    def __mapping_chars(self, tokens, text):
+        result = ""
+        tokens_counter = 0
+        char_in_token_counter = 0
+        if len(text) > 0:
+            for char in text:
+                token = tokens[tokens_counter]
+                change_char = False
+                if char in self.__acceptable_chars:
+                    result += char
+                    change_char = True
+                elif char == token and token in self.__puncs.keys():
+                    result += self.__puncs[token][self.__langs[0]]
+                    change_char = True
+                elif char in self.__digits.keys():
+                    result += self.__digits[char][self.__langs[0]]
+                    change_char = True
+                elif char:
+                    for lang in self.__langs[::-1]:
+                        if char in self.__letters[lang].keys():
+                            result += self.__letters[lang][char]
+                            change_char = True
+                if not change_char:
+                    result += char
+                if char == token[char_in_token_counter]:
+                    char_in_token_counter += 1
+                if char_in_token_counter >= len(token):
+                    if tokens_counter < len(tokens) - 1:
+                        tokens_counter += 1
+                    char_in_token_counter = 0
+
+        return result
+
     def normalize(self, text: str) -> str:
         """
             return a incredible text
@@ -28,7 +62,8 @@ class Normalizer:
             :return: normalized text
         """
         tokens = self.__tokenize(text)
-        result = ' '.join(map(self.__mapping_token, tokens))
+        # result = ' '.join(map(self.__mapping_token, tokens))
+        result = self.__mapping_chars(tokens, text)
         if self.__remove_extra_spaces:
             result = self.__do_remove_extra_spaces(result)
         if self.__remove_diacritics:
@@ -62,20 +97,20 @@ class Normalizer:
         """
         return ''.join(map(self.__mapping_char_en, text))
 
-    def __mapping_char(self, char):
-        if char in self.__acceptable_chars:
-            return char
-        if char in self.__digits.keys():
-            return self.__digits[char][self.__langs[0]]
-        for lang in self.__langs[::-1]:
-            if char in self.__letters[lang].keys():
-                return self.__letters[lang][char]
-        return char
-
-    def __mapping_token(self, token):
-        if token in self.__puncs.keys():
-            return self.__puncs[token][self.__langs[0]]
-        return ''.join(map(self.__mapping_char, token))
+    # def __mapping_char(self, char):
+    #     if char in self.__acceptable_chars:
+    #         return char
+    #     if char in self.__digits.keys():
+    #         return self.__digits[char][self.__langs[0]]
+    #     for lang in self.__langs[::-1]:
+    #         if char in self.__letters[lang].keys():
+    #             return self.__letters[lang][char]
+    #     return char
+    #
+    # def __mapping_token(self, token):
+    #     if token in self.__puncs.keys():
+    #         return self.__puncs[token][self.__langs[0]]
+    #     return ''.join(map(self.__mapping_char, token))
 
     def __do_remove_extra_spaces(self, text: string) -> string:
         """
@@ -108,25 +143,25 @@ class Normalizer:
         return text
 
     def _init_data(self):
+        current_directory = os.path.dirname(os.path.abspath(__file__))
         self.__letters = {'fa': [], 'ar': [], 'en': []}
         self.__puncs, self.__all_puncs = Normalizer.others_dic(
-            Normalizer.read_json('./data/Punctuations/punctuations_edited.json'))
+            Normalizer.read_json(current_directory + '/data/Punctuations/punctuations_edited.json'))
         self.__digits, self.__all_digits = Normalizer.others_dic(
-            Normalizer.read_json('./data/Digits/digits.json'))
+            Normalizer.read_json(current_directory + '/data/Digits/digits.json'))
         self.__letters['fa'], self.__all_letters_fa = Normalizer.read_dics(
-            Normalizer.read_json('./data/Characters/Persian/fa_alphabet.json'))
+            Normalizer.read_json(current_directory + '/data/Characters/Persian/fa_alphabet.json'))
         self.__letters['en'], self.__all_letters_en = Normalizer.read_dics(
-            Normalizer.read_json('./data/Characters/English/en_alphabet.json'))
+            Normalizer.read_json(current_directory + '/data/Characters/English/en_alphabet.json'))
         self.__letters['ar'], self.__all_letters_ar = Normalizer.read_dics(
-            Normalizer.read_json('./data/Characters/Arabic/ar_alphabet.json'))
+            Normalizer.read_json(current_directory + '/data/Characters/Arabic/ar_alphabet.json'))
         self.__acceptable_chars = self.__create_acceptable_chars()
         self.__spaces, self.__all_spaces = Normalizer.read_dics(
-            Normalizer.read_json('./data/Spaces/spaces.json'))
+            Normalizer.read_json(current_directory + '/data/Spaces/spaces.json'))
         self.__diacritics, self.__all_diacritics = Normalizer.read_dics(
-            Normalizer.read_json('./data/Diacritic/diacritics.json'))
+            Normalizer.read_json(current_directory + '/data/Diacritic/diacritics.json'))
 
     def __create_acceptable_chars(self) -> list:
-
         result = []
         self.__all_chars = self.__all_puncs
         self.__all_chars = Normalizer.append_dics(
