@@ -41,7 +41,7 @@ class Normalizer:
                     change_char = True
                 elif char:
                     for lang in self.__langs[::-1]:
-                        if char in self.__letters[lang].keys():
+                        if char in self.__letters[lang].keys() and not change_char:
                             result += self.__letters[lang][char]
                             change_char = True
                 if not change_char:
