@@ -62,7 +62,6 @@ class Normalizer:
             :return: normalized text
         """
         tokens = self.__tokenize(text)
-        # result = ' '.join(map(self.__mapping_token, tokens))
         result = self.__mapping_chars(tokens, text)
         if self.__remove_extra_spaces:
             result = self.__do_remove_extra_spaces(result)
@@ -96,21 +95,6 @@ class Normalizer:
                 :return: mapped text
         """
         return ''.join(map(self.__mapping_char_en, text))
-
-    # def __mapping_char(self, char):
-    #     if char in self.__acceptable_chars:
-    #         return char
-    #     if char in self.__digits.keys():
-    #         return self.__digits[char][self.__langs[0]]
-    #     for lang in self.__langs[::-1]:
-    #         if char in self.__letters[lang].keys():
-    #             return self.__letters[lang][char]
-    #     return char
-    #
-    # def __mapping_token(self, token):
-    #     if token in self.__puncs.keys():
-    #         return self.__puncs[token][self.__langs[0]]
-    #     return ''.join(map(self.__mapping_char, token))
 
     def __do_remove_extra_spaces(self, text: string) -> string:
         """
