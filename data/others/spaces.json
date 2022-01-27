@@ -1,0 +1,158 @@
+[
+  {
+    "name": "SPACE",
+    "map": {
+      "none": {
+        "char": "",
+        "name": "EMPTY CHARACTER"
+      },
+      "normal": {
+        "char": " ",
+        "name": "SPACE"
+      }
+    },
+    "others": [
+      {
+        "char": " ",
+        "name": "SPACE"
+      },
+      {
+        "char": " ",
+        "name": "NO-BREAK SPACE"
+      },
+      {
+        "char": " ",
+        "name": "OGHAM SPACE MARK"
+      },
+      {
+        "char": " ",
+        "name": "EN SPACE"
+      },
+      {
+        "char": " ",
+        "name": "EM SPACE"
+      },
+      {
+        "char": " ",
+        "name": "THREE-PER-EM SPACE"
+      },
+      {
+        "char": " ",
+        "name": "FOUR-PER-EM SPACE"
+      },
+      {
+        "char": " ",
+        "name": "SIX-PER-EM SPACE"
+      },
+      {
+        "char": " ",
+        "name": "FIGURE SPACE"
+      },
+      {
+        "char": " ",
+        "name": "PUNCTUATION SPACE"
+      },
+      {
+        "char": " ",
+        "name": "THIN SPACE"
+      },
+      {
+        "char": " ",
+        "name": "HAIR SPACE"
+      },
+      {
+        "char": "​",
+        "name": "ZERO WIDTH SPACE"
+      },
+      {
+        "char": " ",
+        "name": "NARROW NO-BREAK SPACE"
+      },
+      {
+        "char": " ",
+        "name": "MEDIUM MATHEMATICAL SPACE"
+      },
+      {
+        "char": "␠",
+        "name": "SYMBOL FOR SPACE"
+      },
+      {
+        "char": "　",
+        "name": "IDEOGRAPHIC SPACE"
+      },
+      {
+        "char": "〿",
+        "name": "IDEOGRAPHIC HALF FILL SPACE"
+      }
+    ]
+  },
+  {
+    "name": "TAB",
+    "map": {
+      "none": {
+        "char": "",
+        "name": "EMPTY CHARACTER"
+      },
+      "normal": {
+        "char": "\t",
+        "name": "TAB"
+      },
+      "space": {
+        "char": " ",
+        "name": "SPACE"
+      }
+    },
+    "others": [
+      {
+        "char": "\t",
+        "name": "TAB"
+      }
+    ]
+  },
+  {
+    "name": "NEW LINE",
+    "map": {
+      "none": {
+        "char": "",
+        "name": "EMPTY CHARACTER"
+      },
+      "normal": {
+        "char": "\n",
+        "name": "NEW LINE"
+      },
+      "space": {
+        "char": " ",
+        "name": "SPACE"
+      }
+    },
+    "others": [
+      {
+        "char": "\n",
+        "name": "NEW LINE"
+      }
+    ]
+  },
+  {
+    "name": "CARRIAGE RETURN",
+    "map": {
+      "none": {
+        "char": "",
+        "name": "EMPTY CHARACTER"
+      },
+      "normal": {
+        "char": "\r",
+        "name": "CARRIAGE RETURN"
+      },
+      "space": {
+        "char": " ",
+        "name": "SPACE"
+      }
+    },
+    "others": [
+      {
+        "char": "\r",
+        "name": "CARRIAGE RETURN"
+      }
+    ]
+  }
+]

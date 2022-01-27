@@ -1,16 +1,19 @@
-{
-    "COMMA": {
-        "fa": {
-            "char": "،",
-            "name": "ARABIC COMMA"
-        },
-        "ar": {
-            "char": "،",
-            "name": "ARABIC COMMA"
-        },
-        "en": {
-            "char": ",",
-            "name": "COMMA"
+[
+    {
+        "name": "COMMA",
+        "map": {
+            "punc_fa": {
+                "char": "،",
+                "name": "ARABIC COMMA"
+            },
+            "punc_ar": {
+                "char": "،",
+                "name": "ARABIC COMMA"
+            },
+            "punc_en": {
+                "char": ",",
+                "name": "COMMA"
+            }
         },
         "others": [
             {
@@ -79,18 +82,21 @@
             }
         ]
     },
-    "FULL STOP": {
-        "fa": {
-            "char": ".",
-            "name": "FULL STOP"
-        },
-        "ar": {
-            "char": "۔",
-            "name": "ARABIC FULL STOP"
-        },
-        "en": {
-            "char": ".",
-            "name": "FULL STOP"
+    {
+        "name": "FULL STOP",
+        "map": {
+            "punc_fa": {
+                "char": ".",
+                "name": "FULL STOP"
+            },
+            "punc_ar": {
+                "char": "۔",
+                "name": "ARABIC FULL STOP"
+            },
+            "punc_en": {
+                "char": ".",
+                "name": "FULL STOP"
+            }
         },
         "others": [
             {
@@ -151,18 +157,21 @@
             }
         ]
     },
-    "APOSTROPHE": {
-        "fa": {
-            "char": "'",
-            "name": "APOSTROPHE"
-        },
-        "ar": {
-            "char": "'",
-            "name": "APOSTROPHE"
-        },
-        "en": {
-            "char": "'",
-            "name": "APOSTROPHE"
+    {
+        "name": "APOSTROPHE",
+        "map": {
+            "punc_fa": {
+                "char": "'",
+                "name": "APOSTROPHE"
+            },
+            "punc_ar": {
+                "char": "'",
+                "name": "APOSTROPHE"
+            },
+            "punc_en": {
+                "char": "'",
+                "name": "APOSTROPHE"
+            }
         },
         "others": [
             {
@@ -191,18 +200,21 @@
             }
         ]
     },
-    "RIGHT PARENTHESIS": {
-        "fa": {
-            "char": ")",
-            "name": "RIGHT PARENTHESIS"
-        },
-        "ar": {
-            "char": ")",
-            "name": "RIGHT PARENTHESIS"
-        },
-        "en": {
-            "char": ")",
-            "name": "RIGHT PARENTHESIS"
+    {
+        "name": "RIGHT PARENTHESIS",
+        "map": {
+            "punc_fa": {
+                "char": ")",
+                "name": "RIGHT PARENTHESIS"
+            },
+            "punc_ar": {
+                "char": ")",
+                "name": "RIGHT PARENTHESIS"
+            },
+            "punc_en": {
+                "char": ")",
+                "name": "RIGHT PARENTHESIS"
+            }
         },
         "others": [
             {
@@ -227,18 +239,21 @@
             }
         ]
     },
-    "LEFT PARENTHESIS": {
-        "fa": {
-            "char": "(",
-            "name": "LEFT PARENTHESIS"
-        },
-        "ar": {
-            "char": "(",
-            "name": "LEFT PARENTHESIS"
-        },
-        "en": {
-            "char": "(",
-            "name": "LEFT PARENTHESIS"
+    {
+        "name": "LEFT PARENTHESIS",
+        "map": {
+            "punc_fa": {
+                "char": "(",
+                "name": "LEFT PARENTHESIS"
+            },
+            "punc_ar": {
+                "char": "(",
+                "name": "LEFT PARENTHESIS"
+            },
+            "punc_en": {
+                "char": "(",
+                "name": "LEFT PARENTHESIS"
+            }
         },
         "others": [
             {
@@ -263,18 +278,21 @@
             }
         ]
     },
-    "COLON": {
-        "fa": {
-            "char": ":",
-            "name": "COLON"
-        },
-        "ar": {
-            "char": ":",
-            "name": "COLON"
-        },
-        "en": {
-            "char": ":",
-            "name": "COLON"
+    {
+        "name": "COLON",
+        "map": {
+            "punc_fa": {
+                "char": ":",
+                "name": "COLON"
+            },
+            "punc_ar": {
+                "char": ":",
+                "name": "COLON"
+            },
+            "punc_en": {
+                "char": ":",
+                "name": "COLON"
+            }
         },
         "others": [
             {
@@ -351,18 +369,21 @@
             }
         ]
     },
-    "HYPHEN-MINUS": {
-        "fa": {
-            "char": "-",
-            "name": "HYPHEN-MINUS"
-        },
-        "ar": {
-            "char": "-",
-            "name": "HYPHEN-MINUS"
-        },
-        "en": {
-            "char": "-",
-            "name": "HYPHEN-MINUS"
+    {
+        "name": "HYPHEN-MINUS",
+        "map": {
+            "punc_fa": {
+                "char": "-",
+                "name": "HYPHEN-MINUS"
+            },
+            "punc_ar": {
+                "char": "-",
+                "name": "HYPHEN-MINUS"
+            },
+            "punc_en": {
+                "char": "-",
+                "name": "HYPHEN-MINUS"
+            }
         },
         "others": [
             {
@@ -383,18 +404,21 @@
             }
         ]
     },
-    "SEMICOLON": {
-        "fa": {
-            "char": "؛",
-            "name": "ARABIC SEMICOLON"
-        },
-        "ar": {
-            "char": "؛",
-            "name": "ARABIC SEMICOLON"
-        },
-        "en": {
-            "char": ";",
-            "name": "SEMICOLON"
+    {
+        "name": "SEMICOLON",
+        "map": {
+            "punc_fa": {
+                "char": "؛",
+                "name": "ARABIC SEMICOLON"
+            },
+            "punc_ar": {
+                "char": "؛",
+                "name": "ARABIC SEMICOLON"
+            },
+            "punc_en": {
+                "char": ";",
+                "name": "SEMICOLON"
+            }
         },
         "others": [
             {
@@ -427,18 +451,21 @@
             }
         ]
     },
-    "SOLIDUS": {
-        "fa": {
-            "char": "/",
-            "name": "SOLIDUS"
-        },
-        "ar": {
-            "char": "/",
-            "name": "SOLIDUS"
-        },
-        "en": {
-            "char": "/",
-            "name": "SOLIDUS"
+    {
+        "name": "SOLIDUS",
+        "map": {
+            "punc_fa": {
+                "char": "/",
+                "name": "SOLIDUS"
+            },
+            "punc_ar": {
+                "char": "/",
+                "name": "SOLIDUS"
+            },
+            "punc_en": {
+                "char": "/",
+                "name": "SOLIDUS"
+            }
         },
         "others": [
             {
@@ -495,18 +522,21 @@
             }
         ]
     },
-    "RIGHT SQUARE BRACKET": {
-        "fa": {
-            "char": "]",
-            "name": "RIGHT SQUARE BRACKET"
-        },
-        "ar": {
-            "char": "]",
-            "name": "RIGHT SQUARE BRACKET"
-        },
-        "en": {
-            "char": "]",
-            "name": "RIGHT SQUARE BRACKET"
+    {
+        "name": "RIGHT SQUARE BRACKET",
+        "map": {
+            "punc_fa": {
+                "char": "]",
+                "name": "RIGHT SQUARE BRACKET"
+            },
+            "punc_ar": {
+                "char": "]",
+                "name": "RIGHT SQUARE BRACKET"
+            },
+            "punc_en": {
+                "char": "]",
+                "name": "RIGHT SQUARE BRACKET"
+            }
         },
         "others": [
             {
@@ -531,18 +561,21 @@
             }
         ]
     },
-    "LEFT SQUARE BRACKET": {
-        "fa": {
-            "char": "[",
-            "name": "LEFT SQUARE BRACKET"
-        },
-        "ar": {
-            "char": "[",
-            "name": "LEFT SQUARE BRACKET"
-        },
-        "en": {
-            "char": "[",
-            "name": "LEFT SQUARE BRACKET"
+    {
+        "name": "LEFT SQUARE BRACKET",
+        "map": {
+            "punc_fa": {
+                "char": "[",
+                "name": "LEFT SQUARE BRACKET"
+            },
+            "punc_ar": {
+                "char": "[",
+                "name": "LEFT SQUARE BRACKET"
+            },
+            "punc_en": {
+                "char": "[",
+                "name": "LEFT SQUARE BRACKET"
+            }
         },
         "others": [
             {
@@ -567,18 +600,21 @@
             }
         ]
     },
-    "THOUSANDS SEPARATOR": {
-        "fa": {
-            "char": "٬",
-            "name": "ARABIC THOUSANDS SEPARATOR"
-        },
-        "ar": {
-            "char": "٬",
-            "name": "ARABIC THOUSANDS SEPARATOR"
-        },
-        "en": {
-            "char": ",",
-            "name": "COMMA"
+    {
+        "name": "THOUSANDS SEPARATOR",
+        "map": {
+            "punc_fa": {
+                "char": "٬",
+                "name": "ARABIC THOUSANDS SEPARATOR"
+            },
+            "punc_ar": {
+                "char": "٬",
+                "name": "ARABIC THOUSANDS SEPARATOR"
+            },
+            "punc_en": {
+                "char": ",",
+                "name": "COMMA"
+            }
         },
         "others": [
             {
@@ -587,18 +623,21 @@
             }
         ]
     },
-    "QUOTATION MARK": {
-        "fa": {
-            "char": "\"",
-            "name": "QUOTATION MARK"
-        },
-        "ar": {
-            "char": "\"",
-            "name": "QUOTATION MARK"
-        },
-        "en": {
-            "char": "\"",
-            "name": "QUOTATION MARK"
+    {
+        "name": "QUOTATION MARK",
+        "map": {
+            "punc_fa": {
+                "char": "\"",
+                "name": "QUOTATION MARK"
+            },
+            "punc_ar": {
+                "char": "\"",
+                "name": "QUOTATION MARK"
+            },
+            "punc_en": {
+                "char": "\"",
+                "name": "QUOTATION MARK"
+            }
         },
         "others": [
             {
@@ -695,18 +734,21 @@
             }
         ]
     },
-    "NUMBER SIGN": {
-        "fa": {
-            "char": "#",
-            "name": "NUMBER SIGN"
-        },
-        "ar": {
-            "char": "؀",
-            "name": "ARABIC NUMBER SIGN"
-        },
-        "en": {
-            "char": "#",
-            "name": "NUMBER SIGN"
+    {
+        "name": "NUMBER SIGN",
+        "map": {
+            "punc_fa": {
+                "char": "#",
+                "name": "NUMBER SIGN"
+            },
+            "punc_ar": {
+                "char": "؀",
+                "name": "ARABIC NUMBER SIGN"
+            },
+            "punc_en": {
+                "char": "#",
+                "name": "NUMBER SIGN"
+            }
         },
         "others": [
             {
@@ -723,18 +765,21 @@
             }
         ]
     },
-    "PERCENT SIGN": {
-        "fa": {
-            "char": "٪",
-            "name": "ARABIC PERCENT SIGN"
-        },
-        "ar": {
-            "char": "٪",
-            "name": "ARABIC PERCENT SIGN"
-        },
-        "en": {
-            "char": "%",
-            "name": "PERCENT SIGN"
+    {
+        "name": "PERCENT SIGN",
+        "map": {
+            "punc_fa": {
+                "char": "٪",
+                "name": "ARABIC PERCENT SIGN"
+            },
+            "punc_ar": {
+                "char": "٪",
+                "name": "ARABIC PERCENT SIGN"
+            },
+            "punc_en": {
+                "char": "%",
+                "name": "PERCENT SIGN"
+            }
         },
         "others": [
             {
@@ -747,18 +792,21 @@
             }
         ]
     },
-    "PLUS SIGN": {
-        "fa": {
-            "char": "+",
-            "name": "PLUS SIGN"
-        },
-        "ar": {
-            "char": "+",
-            "name": "PLUS SIGN"
-        },
-        "en": {
-            "char": "+",
-            "name": "PLUS SIGN"
+    {
+        "name": "PLUS SIGN",
+        "map": {
+            "punc_fa": {
+                "char": "+",
+                "name": "PLUS SIGN"
+            },
+            "punc_ar": {
+                "char": "+",
+                "name": "PLUS SIGN"
+            },
+            "punc_en": {
+                "char": "+",
+                "name": "PLUS SIGN"
+            }
         },
         "others": [
             {
@@ -767,18 +815,21 @@
             }
         ]
     },
-    "EQUALS SIGN": {
-        "fa": {
-            "char": "=",
-            "name": "EQUALS SIGN"
-        },
-        "ar": {
-            "char": "=",
-            "name": "EQUALS SIGN"
-        },
-        "en": {
-            "char": "=",
-            "name": "EQUALS SIGN"
+    {
+        "name": "EQUALS SIGN",
+        "map": {
+            "punc_fa": {
+                "char": "=",
+                "name": "EQUALS SIGN"
+            },
+            "punc_ar": {
+                "char": "=",
+                "name": "EQUALS SIGN"
+            },
+            "punc_en": {
+                "char": "=",
+                "name": "EQUALS SIGN"
+            }
         },
         "others": [
             {
@@ -787,18 +838,21 @@
             }
         ]
     },
-    "HORIZONTAL ELLIPSIS": {
-        "fa": {
-            "char": "…",
-            "name": "HORIZONTAL ELLIPSIS"
-        },
-        "ar": {
-            "char": "…",
-            "name": "HORIZONTAL ELLIPSIS"
-        },
-        "en": {
-            "char": "…",
-            "name": "HORIZONTAL ELLIPSIS"
+    {
+        "name": "HORIZONTAL ELLIPSIS",
+        "map": {
+            "punc_fa": {
+                "char": "…",
+                "name": "HORIZONTAL ELLIPSIS"
+            },
+            "punc_ar": {
+                "char": "…",
+                "name": "HORIZONTAL ELLIPSIS"
+            },
+            "punc_en": {
+                "char": "…",
+                "name": "HORIZONTAL ELLIPSIS"
+            }
         },
         "others": [
             {
@@ -811,18 +865,21 @@
             }
         ]
     },
-    "DEGREE SIGN": {
-        "fa": {
-            "char": "°",
-            "name": "DEGREE SIGN"
-        },
-        "ar": {
-            "char": "°",
-            "name": "DEGREE SIGN"
-        },
-        "en": {
-            "char": "°",
-            "name": "DEGREE SIGN"
+    {
+        "name": "DEGREE SIGN",
+        "map": {
+            "punc_fa": {
+                "char": "°",
+                "name": "DEGREE SIGN"
+            },
+            "punc_ar": {
+                "char": "°",
+                "name": "DEGREE SIGN"
+            },
+            "punc_en": {
+                "char": "°",
+                "name": "DEGREE SIGN"
+            }
         },
         "others": [
             {
@@ -831,18 +888,21 @@
             }
         ]
     },
-    "RIGHT CURLY BRACKET": {
-        "fa": {
-            "char": "}",
-            "name": "RIGHT CURLY BRACKET"
-        },
-        "ar": {
-            "char": "}",
-            "name": "RIGHT CURLY BRACKET"
-        },
-        "en": {
-            "char": "}",
-            "name": "RIGHT CURLY BRACKET"
+    {
+        "name": "RIGHT CURLY BRACKET",
+        "map": {
+            "punc_fa": {
+                "char": "}",
+                "name": "RIGHT CURLY BRACKET"
+            },
+            "punc_ar": {
+                "char": "}",
+                "name": "RIGHT CURLY BRACKET"
+            },
+            "punc_en": {
+                "char": "}",
+                "name": "RIGHT CURLY BRACKET"
+            }
         },
         "others": [
             {
@@ -855,18 +915,21 @@
             }
         ]
     },
-    "LEFT CURLY BRACKET": {
-        "fa": {
-            "char": "{",
-            "name": "LEFT CURLY BRACKET"
-        },
-        "ar": {
-            "char": "{",
-            "name": "LEFT CURLY BRACKET"
-        },
-        "en": {
-            "char": "{",
-            "name": "LEFT CURLY BRACKET"
+    {
+        "name": "LEFT CURLY BRACKET",
+        "map": {
+            "punc_fa": {
+                "char": "{",
+                "name": "LEFT CURLY BRACKET"
+            },
+            "punc_ar": {
+                "char": "{",
+                "name": "LEFT CURLY BRACKET"
+            },
+            "punc_en": {
+                "char": "{",
+                "name": "LEFT CURLY BRACKET"
+            }
         },
         "others": [
             {
@@ -879,18 +942,21 @@
             }
         ]
     },
-    "AMPERSAND": {
-        "fa": {
-            "char": "و",
-            "name": "ARABIC LETTER WAW"
-        },
-        "ar": {
-            "char": "۽",
-            "name": "ARABIC SIGN SINDHI AMPERSAND"
-        },
-        "en": {
-            "char": "&",
-            "name": "AMPERSAND"
+    {
+        "name": "AMPERSAND",
+        "map": {
+            "punc_fa": {
+                "char": "و",
+                "name": "ARABIC LETTER WAW"
+            },
+            "punc_ar": {
+                "char": "۽",
+                "name": "ARABIC SIGN SINDHI AMPERSAND"
+            },
+            "punc_en": {
+                "char": "&",
+                "name": "AMPERSAND"
+            }
         },
         "others": [
             {
@@ -907,18 +973,21 @@
             }
         ]
     },
-    "REVERSE SOLIDUS": {
-        "fa": {
-            "char": "\\",
-            "name": "REVERSE SOLIDUS"
-        },
-        "ar": {
-            "char": "\\",
-            "name": "REVERSE SOLIDUS"
-        },
-        "en": {
-            "char": "\\",
-            "name": "REVERSE SOLIDUS"
+    {
+        "name": "REVERSE SOLIDUS",
+        "map": {
+            "punc_fa": {
+                "char": "\\",
+                "name": "REVERSE SOLIDUS"
+            },
+            "punc_ar": {
+                "char": "\\",
+                "name": "REVERSE SOLIDUS"
+            },
+            "punc_en": {
+                "char": "\\",
+                "name": "REVERSE SOLIDUS"
+            }
         },
         "others": [
             {
@@ -935,18 +1004,21 @@
             }
         ]
     },
-    "LESS-THAN SIGN": {
-        "fa": {
-            "char": "<",
-            "name": "LESS-THAN SIGN"
-        },
-        "ar": {
-            "char": "<",
-            "name": "LESS-THAN SIGN"
-        },
-        "en": {
-            "char": "<",
-            "name": "LESS-THAN SIGN"
+    {
+        "name": "LESS-THAN SIGN",
+        "map": {
+            "punc_fa": {
+                "char": "<",
+                "name": "LESS-THAN SIGN"
+            },
+            "punc_ar": {
+                "char": "<",
+                "name": "LESS-THAN SIGN"
+            },
+            "punc_en": {
+                "char": "<",
+                "name": "LESS-THAN SIGN"
+            }
         },
         "others": [
             {
@@ -955,18 +1027,21 @@
             }
         ]
     },
-    "GREATER-THAN SIGN": {
-        "fa": {
-            "char": ">",
-            "name": "GREATER-THAN SIGN"
-        },
-        "ar": {
-            "char": ">",
-            "name": "GREATER-THAN SIGN"
-        },
-        "en": {
-            "char": ">",
-            "name": "GREATER-THAN SIGN"
+    {
+        "name": "GREATER-THAN SIGN",
+        "map": {
+            "punc_fa": {
+                "char": ">",
+                "name": "GREATER-THAN SIGN"
+            },
+            "punc_ar": {
+                "char": ">",
+                "name": "GREATER-THAN SIGN"
+            },
+            "punc_en": {
+                "char": ">",
+                "name": "GREATER-THAN SIGN"
+            }
         },
         "others": [
             {
@@ -975,18 +1050,21 @@
             }
         ]
     },
-    "COMMERCIAL AT": {
-        "fa": {
-            "char": "@",
-            "name": "COMMERCIAL AT"
-        },
-        "ar": {
-            "char": "@",
-            "name": "COMMERCIAL AT"
-        },
-        "en": {
-            "char": "@",
-            "name": "COMMERCIAL AT"
+    {
+        "name": "COMMERCIAL AT",
+        "map": {
+            "punc_fa": {
+                "char": "@",
+                "name": "COMMERCIAL AT"
+            },
+            "punc_ar": {
+                "char": "@",
+                "name": "COMMERCIAL AT"
+            },
+            "punc_en": {
+                "char": "@",
+                "name": "COMMERCIAL AT"
+            }
         },
         "others": [
             {
@@ -995,18 +1073,21 @@
             }
         ]
     },
-    "TILDE": {
-        "fa": {
-            "char": "~",
-            "name": "TILDE"
-        },
-        "ar": {
-            "char": "~",
-            "name": "TILDE"
-        },
-        "en": {
-            "char": "~",
-            "name": "TILDE"
+    {
+        "name": "TILDE",
+        "map": {
+            "punc_fa": {
+                "char": "~",
+                "name": "TILDE"
+            },
+            "punc_ar": {
+                "char": "~",
+                "name": "TILDE"
+            },
+            "punc_en": {
+                "char": "~",
+                "name": "TILDE"
+            }
         },
         "others": [
             {
@@ -1043,18 +1124,21 @@
             }
         ]
     },
-    "CIRCUMFLEX ACCENT": {
-        "fa": {
-            "char": "^",
-            "name": "CIRCUMFLEX ACCENT"
-        },
-        "ar": {
-            "char": "^",
-            "name": "CIRCUMFLEX ACCENT"
-        },
-        "en": {
-            "char": "^",
-            "name": "CIRCUMFLEX ACCENT"
+    {
+        "name": "CIRCUMFLEX ACCENT",
+        "map": {
+            "punc_fa": {
+                "char": "^",
+                "name": "CIRCUMFLEX ACCENT"
+            },
+            "punc_ar": {
+                "char": "^",
+                "name": "CIRCUMFLEX ACCENT"
+            },
+            "punc_en": {
+                "char": "^",
+                "name": "CIRCUMFLEX ACCENT"
+            }
         },
         "others": [
             {
@@ -1063,18 +1147,21 @@
             }
         ]
     },
-    "LOW LINE": {
-        "fa": {
-            "char": "_",
-            "name": "LOW LINE"
-        },
-        "ar": {
-            "char": "_",
-            "name": "LOW LINE"
-        },
-        "en": {
-            "char": "_",
-            "name": "LOW LINE"
+    {
+        "name": "LOW LINE",
+        "map": {
+            "punc_fa": {
+                "char": "_",
+                "name": "LOW LINE"
+            },
+            "punc_ar": {
+                "char": "_",
+                "name": "LOW LINE"
+            },
+            "punc_en": {
+                "char": "_",
+                "name": "LOW LINE"
+            }
         },
         "others": [
             {
@@ -1095,4 +1182,4 @@
             }
         ]
     }
-}
+]
