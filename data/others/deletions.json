@@ -1,12 +1,12 @@
 [
   {
     "name": "DELETIONS",
-    "map": [
-      {
+    "map": {
+      "deletions_delete": {
         "name": "EMPTY CHARACTER",
         "delete": ""
       }
-    ],
+    },
     "others": [
       {
         "char": "ـ",

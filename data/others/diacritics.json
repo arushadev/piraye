@@ -2,7 +2,7 @@
   {
     "name": "DIACRITIC",
     "map": {
-      "delete": {
+      "diacritic_delete": {
         "char": "",
         "name": "EMPTY CHARACTER"
       }

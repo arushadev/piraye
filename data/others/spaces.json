@@ -2,11 +2,15 @@
   {
     "name": "SPACE",
     "map": {
-      "none": {
+      "space_delete": {
         "char": "",
         "name": "EMPTY CHARACTER"
       },
-      "normal": {
+      "space_normal": {
+        "char": " ",
+        "name": "SPACE"
+      },
+      "space_keep": {
         "char": " ",
         "name": "SPACE"
       }
@@ -89,15 +93,15 @@
   {
     "name": "TAB",
     "map": {
-      "none": {
+      "space_delete": {
         "char": "",
         "name": "EMPTY CHARACTER"
       },
-      "normal": {
+      "space_keep": {
         "char": "\t",
         "name": "TAB"
       },
-      "space": {
+      "space_normal": {
         "char": " ",
         "name": "SPACE"
       }
@@ -116,12 +120,12 @@
         "char": "",
         "name": "EMPTY CHARACTER"
       },
-      "normal": {
+      "space_normal": {
         "char": "\n",
         "name": "NEW LINE"
       },
-      "space": {
-        "char": " ",
+      "space_keep": {
+        "char": "\n",
         "name": "SPACE"
       }
     },
@@ -139,11 +143,11 @@
         "char": "",
         "name": "EMPTY CHARACTER"
       },
-      "normal": {
+      "space_keep": {
         "char": "\r",
         "name": "CARRIAGE RETURN"
       },
-      "space": {
+      "space_normal": {
         "char": " ",
         "name": "SPACE"
       }
