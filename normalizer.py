@@ -1,5 +1,4 @@
 import json
-import logging
 import os
 import re
 import string
@@ -10,100 +9,104 @@ from spacy.lang.en import English
 
 class Normalizer:
 
-    def __init__(self, langs: List[str], remove_extra_spaces=True, remove_diacritics=True):
+    def __init__(self, configs: List[str], remove_extra_spaces=True):
         """
             constructor
-            :param langs: a list of [fa,ar,en]
+            :param configs
         """
+        langs: List[str]
         # Create a blank Tokenizer with just the English vocab
         self.__tokenizer = English().tokenizer
-        self.__langs = langs
+        self.__configs = configs
         self.__remove_extra_spaces = remove_extra_spaces
-        self.__remove_diacritics = remove_diacritics
-        self._init_data()
+        self.__mapping, self.__mapping_punc, self.__en_mapping = self.__load_jsons()
+        self.__tokens = []
 
-    def __mapping_chars(self, tokens, text):
-        result = ""
-        tokens_counter = 0
-        char_in_token_counter = 0
-        if len(text) > 0:
-            for char in text:
-                token = tokens[tokens_counter]
-                change_char = False
-                if char in self.__acceptable_chars:
-                    result += char
-                    change_char = True
-                elif char == token and token in self.__puncs.keys():
-                    result += self.__puncs[token][self.__langs[0]]
-                    change_char = True
-                elif char in self.__digits.keys():
-                    result += self.__digits[char][self.__langs[0]]
-                    change_char = True
-                elif char:
-                    for lang in self.__langs[::-1]:
-                        if char in self.__letters[lang].keys() and not change_char:
-                            result += self.__letters[lang][char]
-                            change_char = True
-                if not change_char:
-                    result += char
-                if char == token[char_in_token_counter]:
-                    char_in_token_counter += 1
-                if char_in_token_counter >= len(token):
-                    if tokens_counter < len(tokens) - 1:
-                        tokens_counter += 1
-                    char_in_token_counter = 0
-
-        return result
+    def __mapping_char(self, char):
+        if char in self.__mapping.keys():
+            return self.__mapping[char]
+        return char
 
     def normalize(self, text: str) -> str:
         """
-            return a incredible text
+            return an incredible text
             :param text: the input text
             :return: normalized text
         """
-        tokens = self.__tokenize(text)
-        result = self.__mapping_chars(tokens, text)
+        text = self.__change_puncs(text)
+        result = ''.join(map(self.__mapping_char, text))
         if self.__remove_extra_spaces:
-            result = self.__do_remove_extra_spaces(result)
-        if self.__remove_diacritics:
-            result = self.__do_remove_diacritics(result)
+            result = Normalizer.do_remove_extra_spaces(result)
         return result
 
-    def __tokenize(self, text: str) -> List[str]:
-        text2 = self.__en_mapping_pd(text)
+    def __change_puncs(self, text: str) -> str:
+        text2 = ''.join([self.__en_mapping[char] if char in self.__en_mapping.keys() else char for char in text])
         doc = self.__tokenizer(text2)
-        tokens = []
         text2_counter = 0
+        final_text = ""
+        last_token_index = 0
+        prev_token = ""
         for i in range(len(doc)):
             token = doc[i].text
             token_index = text2.index(token, text2_counter)
-            tokens.append(text[token_index:token_index + len(token)])
+            if last_token_index + len(prev_token) <= token_index:
+                final_text += text[last_token_index + len(prev_token):token_index]
+            curr_text = text[token_index:token_index + len(token)]
+            if len(token) == 1 and self.__mapping_punc.get(curr_text):
+                final_text += self.__mapping_punc[curr_text]
+            else:
+                final_text += curr_text
             text2_counter = token_index + len(token)
-        return tokens
+            last_token_index = token_index
+            prev_token = token
+        return final_text
 
-    def __mapping_char_en(self, char):
-        if char in self.__digits.keys():
-            return self.__digits[char]['en']
-        elif char in self.__puncs.keys():
-            return self.__puncs[char]['en']
-        return char
+    def __load_jsons(self) -> (dict[str, str], dict[str, str], dict[str, str]):
+        all_configs = []
+        current_directory = os.path.dirname(os.path.abspath(__file__))
+        for dir_path, _, filenames in os.walk(current_directory + "/data/"):
+            for f in filenames:
+                all_configs.extend(Normalizer.read_json(os.path.abspath(os.path.join(dir_path, f))))
+        configs_punc = []
+        configs_not_punc = []
+        for config in self.__configs:
+            if config.startswith("punc"):
+                configs_punc.append(config)
+            else:
+                configs_not_punc.append(config)
+        return Normalizer.__get_mapping(all_configs, configs_not_punc), \
+               Normalizer.__get_mapping(all_configs, configs_punc), \
+               Normalizer.__get_mapping(all_configs, ["digit_en", "punc_en"])
 
-    def __en_mapping_pd(self, text: string) -> string:
-        """
-                mapping punctuations and digits to english
-                :param text: input text
-                :return: mapped text
-        """
-        return ''.join(map(self.__mapping_char_en, text))
+    @staticmethod
+    def __get_mapping(all_configs: List[dict[str,]], configs: List[str]) -> dict[str, str]:
+        mapping = {}
+        for data in all_configs:
+            for key in data["map"].keys():
+                if key in configs:
+                    mapping[data["map"][key]["char"]] = data["map"][key]["char"]
+                    for char_dic in data["others"]:
+                        char = char_dic["char"]
+                        if not mapping.get(char):
+                            mapping[char] = data["map"][key]["char"]
 
-    def __do_remove_extra_spaces(self, text: string) -> string:
+        return mapping
+
+    @staticmethod
+    # read json file based on address
+    def read_json(address: string):
+        f = open(address, )
+        data = json.load(f)
+        f.close()
+        return data
+
+    @staticmethod
+    def do_remove_extra_spaces(text: string) -> string:
         """
         replace extra spaces with one space ( also for half space )
         :param text: a string
         :return: a string without extra spaces
         """
-        res = ''.join([" " if char in self.__spaces.keys() else char for char in text])
-        text = res
         # remove extra spaces
         text = re.sub(r' {2,}', ' ', text)
         # remove extra newlines
@@ -113,96 +116,3 @@ class Normalizer:
         # remove keshide, carriage returns
         text = re.sub(r'[ـ\r]', '', text)
         return text
-
-    def __do_remove_diacritics(self, text: string) -> string:
-        """
-        remove all diacritics like ِ ُ َ
-        :param text : a string
-        :return: result
-        """
-
-        res = ''.join(["" if char in self.__diacritics.keys() else char for char in text])
-        text = res
-        text = text.replace("ِ", "")
-        return text
-
-    def _init_data(self):
-        current_directory = os.path.dirname(os.path.abspath(__file__))
-        self.__letters = {'fa': [], 'ar': [], 'en': []}
-        self.__puncs, self.__all_puncs = Normalizer.others_dic(
-            Normalizer.read_json(current_directory + '/data/Punctuations/punctuations_edited.json'))
-        self.__digits, self.__all_digits = Normalizer.others_dic(
-            Normalizer.read_json(current_directory + '/data/Digits/digits.json'))
-        self.__letters['fa'], self.__all_letters_fa = Normalizer.read_dics(
-            Normalizer.read_json(current_directory + '/data/Characters/Persian/fa_alphabet.json'))
-        self.__letters['en'], self.__all_letters_en = Normalizer.read_dics(
-            Normalizer.read_json(current_directory + '/data/Characters/English/en_alphabet.json'))
-        self.__letters['ar'], self.__all_letters_ar = Normalizer.read_dics(
-            Normalizer.read_json(current_directory + '/data/Characters/Arabic/ar_alphabet.json'))
-        self.__acceptable_chars = self.__create_acceptable_chars()
-        self.__spaces, self.__all_spaces = Normalizer.read_dics(
-            Normalizer.read_json(current_directory + '/data/Spaces/spaces.json'))
-        self.__diacritics, self.__all_diacritics = Normalizer.read_dics(
-            Normalizer.read_json(current_directory + '/data/Diacritic/diacritics.json'))
-
-    def __create_acceptable_chars(self) -> list:
-        result = []
-        self.__all_chars = self.__all_puncs
-        self.__all_chars = Normalizer.append_dics(
-            dic1=self.__all_chars, dic2=self.__all_digits)
-        self.__all_chars['fa'].extend(self.__all_letters_fa)
-        self.__all_chars['en'].extend(self.__all_letters_en)
-        self.__all_chars['ar'].extend(self.__all_letters_ar)
-        for lang in self.__langs:
-            result.extend(self.__all_chars[lang])
-        return result
-
-    @staticmethod
-    def append_dics(dic1: dict, dic2: dict) -> dict:
-        for key in dic1:
-            dic1[key].extend(dic2[key])
-        return dic1
-
-    @staticmethod
-    # read json file based on address
-    def read_json(address: string):
-        f = open(address, )
-        data = json.load(f)
-        return data
-
-    @staticmethod
-    def others_dic(data: dict):
-        result = {}
-        acceptable_chars = {'fa': [], 'en': [], 'ar': []}
-        for _, value in data.items():
-            for key in acceptable_chars:
-                acceptable_chars[key].append(value[key]['char'])
-            for ch in value['others']:
-                try:
-                    result[ch['char']] = {
-                        'fa': value['fa']['char'],
-                        'ar': value['ar']['char'],
-                        'en': value['en']['char'],
-                    }
-                except Exception as e:
-                    logging.exception(e)
-                    print(ch['char'])
-                    result[ch['char']] = {
-                        'fa': value['fa'],
-                        'ar': value['ar'],
-                        'en': value['en'],
-                    }
-
-        return result, acceptable_chars
-
-    @staticmethod
-    def read_dics(data: dict):
-        result = {}
-        for key, value in data.items():
-            for ch in value:
-                try:
-                    result[ch] = key
-                except Exception as e:
-                    logging.exception(e)
-                    print('error : ', ch['char'])
-        return result, data.keys()

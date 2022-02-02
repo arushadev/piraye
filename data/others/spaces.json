@@ -116,7 +116,7 @@
   {
     "name": "NEW LINE",
     "map": {
-      "none": {
+      "space_delete": {
         "char": "",
         "name": "EMPTY CHARACTER"
       },
@@ -139,7 +139,7 @@
   {
     "name": "CARRIAGE RETURN",
     "map": {
-      "none": {
+      "space_delete": {
         "char": "",
         "name": "EMPTY CHARACTER"
       },
