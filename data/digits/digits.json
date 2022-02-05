@@ -1,0 +1,1944 @@
+[
+    {
+        "name": "ONE",
+        "map": {
+            "digit_fa": {
+                "char": "۱",
+                "name": "EXTENDED ARABIC-INDIC DIGIT ONE"
+            },
+            "digit_ar": {
+                "char": "١",
+                "name": "ARABIC-INDIC DIGIT ONE"
+            },
+            "digit_en": {
+                "char": "1",
+                "name": "DIGIT ONE"
+            }
+        },
+        "others": [
+            {
+                "char": "1",
+                "name": "DIGIT ONE"
+            },
+            {
+                "char": "١",
+                "name": "ARABIC-INDIC DIGIT ONE"
+            },
+            {
+                "char": "۱",
+                "name": "EXTENDED ARABIC-INDIC DIGIT ONE"
+            },
+            {
+                "char": "߁",
+                "name": "NKO DIGIT ONE"
+            },
+            {
+                "char": "१",
+                "name": "DEVANAGARI DIGIT ONE"
+            },
+            {
+                "char": "১",
+                "name": "BENGALI DIGIT ONE"
+            },
+            {
+                "char": "੧",
+                "name": "GURMUKHI DIGIT ONE"
+            },
+            {
+                "char": "૧",
+                "name": "GUJARATI DIGIT ONE"
+            },
+            {
+                "char": "୧",
+                "name": "ORIYA DIGIT ONE"
+            },
+            {
+                "char": "௧",
+                "name": "TAMIL DIGIT ONE"
+            },
+            {
+                "char": "౧",
+                "name": "TELUGU DIGIT ONE"
+            },
+            {
+                "char": "೧",
+                "name": "KANNADA DIGIT ONE"
+            },
+            {
+                "char": "൧",
+                "name": "MALAYALAM DIGIT ONE"
+            },
+            {
+                "char": "෧",
+                "name": "SINHALA LITH DIGIT ONE"
+            },
+            {
+                "char": "๑",
+                "name": "THAI DIGIT ONE"
+            },
+            {
+                "char": "໑",
+                "name": "LAO DIGIT ONE"
+            },
+            {
+                "char": "༡",
+                "name": "TIBETAN DIGIT ONE"
+            },
+            {
+                "char": "၁",
+                "name": "MYANMAR DIGIT ONE"
+            },
+            {
+                "char": "႑",
+                "name": "MYANMAR SHAN DIGIT ONE"
+            },
+            {
+                "char": "፩",
+                "name": "ETHIOPIC DIGIT ONE"
+            },
+            {
+                "char": "១",
+                "name": "KHMER DIGIT ONE"
+            },
+            {
+                "char": "᠑",
+                "name": "MONGOLIAN DIGIT ONE"
+            },
+            {
+                "char": "᥇",
+                "name": "LIMBU DIGIT ONE"
+            },
+            {
+                "char": "᧑",
+                "name": "NEW TAI LUE DIGIT ONE"
+            },
+            {
+                "char": "᧚",
+                "name": "NEW TAI LUE THAM DIGIT ONE"
+            },
+            {
+                "char": "᪁",
+                "name": "TAI THAM HORA DIGIT ONE"
+            },
+            {
+                "char": "᪑",
+                "name": "TAI THAM THAM DIGIT ONE"
+            },
+            {
+                "char": "᭑",
+                "name": "BALINESE DIGIT ONE"
+            },
+            {
+                "char": "᮱",
+                "name": "SUNDANESE DIGIT ONE"
+            },
+            {
+                "char": "᱁",
+                "name": "LEPCHA DIGIT ONE"
+            },
+            {
+                "char": "᱑",
+                "name": "OL CHIKI DIGIT ONE"
+            },
+            {
+                "char": "①",
+                "name": "CIRCLED DIGIT ONE"
+            },
+            {
+                "char": "⑴",
+                "name": "PARENTHESIZED DIGIT ONE"
+            },
+            {
+                "char": "⓵",
+                "name": "DOUBLE CIRCLED DIGIT ONE"
+            },
+            {
+                "char": "❶",
+                "name": "DINGBAT NEGATIVE CIRCLED DIGIT ONE"
+            },
+            {
+                "char": "➀",
+                "name": "DINGBAT CIRCLED SANS-SERIF DIGIT ONE"
+            },
+            {
+                "char": "➊",
+                "name": "DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT ONE"
+            },
+            {
+                "char": "꘡",
+                "name": "VAI DIGIT ONE"
+            },
+            {
+                "char": "꣑",
+                "name": "SAURASHTRA DIGIT ONE"
+            },
+            {
+                "char": "꣡",
+                "name": "COMBINING DEVANAGARI DIGIT ONE"
+            },
+            {
+                "char": "꤁",
+                "name": "KAYAH LI DIGIT ONE"
+            },
+            {
+                "char": "꧑",
+                "name": "JAVANESE DIGIT ONE"
+            },
+            {
+                "char": "꧱",
+                "name": "MYANMAR TAI LAING DIGIT ONE"
+            },
+            {
+                "char": "꩑",
+                "name": "CHAM DIGIT ONE"
+            },
+            {
+                "char": "꯱",
+                "name": "MEETEI MAYEK DIGIT ONE"
+            }
+        ]
+    },
+    {
+        "name": "TWO",
+        "map": {
+            "digit_fa": {
+                "char": "۲",
+                "name": "EXTENDED ARABIC-INDIC DIGIT TWO"
+            },
+            "digit_ar": {
+                "char": "٢",
+                "name": "ARABIC-INDIC DIGIT TWO"
+            },
+            "digit_en": {
+                "char": "2",
+                "name": "DIGIT TWO"
+            }
+        },
+        "others": [
+            {
+                "char": "2",
+                "name": "DIGIT TWO"
+            },
+            {
+                "char": "٢",
+                "name": "ARABIC-INDIC DIGIT TWO"
+            },
+            {
+                "char": "۲",
+                "name": "EXTENDED ARABIC-INDIC DIGIT TWO"
+            },
+            {
+                "char": "߂",
+                "name": "NKO DIGIT TWO"
+            },
+            {
+                "char": "२",
+                "name": "DEVANAGARI DIGIT TWO"
+            },
+            {
+                "char": "২",
+                "name": "BENGALI DIGIT TWO"
+            },
+            {
+                "char": "੨",
+                "name": "GURMUKHI DIGIT TWO"
+            },
+            {
+                "char": "૨",
+                "name": "GUJARATI DIGIT TWO"
+            },
+            {
+                "char": "୨",
+                "name": "ORIYA DIGIT TWO"
+            },
+            {
+                "char": "௨",
+                "name": "TAMIL DIGIT TWO"
+            },
+            {
+                "char": "౨",
+                "name": "TELUGU DIGIT TWO"
+            },
+            {
+                "char": "೨",
+                "name": "KANNADA DIGIT TWO"
+            },
+            {
+                "char": "൨",
+                "name": "MALAYALAM DIGIT TWO"
+            },
+            {
+                "char": "෨",
+                "name": "SINHALA LITH DIGIT TWO"
+            },
+            {
+                "char": "๒",
+                "name": "THAI DIGIT TWO"
+            },
+            {
+                "char": "໒",
+                "name": "LAO DIGIT TWO"
+            },
+            {
+                "char": "༢",
+                "name": "TIBETAN DIGIT TWO"
+            },
+            {
+                "char": "၂",
+                "name": "MYANMAR DIGIT TWO"
+            },
+            {
+                "char": "႒",
+                "name": "MYANMAR SHAN DIGIT TWO"
+            },
+            {
+                "char": "፪",
+                "name": "ETHIOPIC DIGIT TWO"
+            },
+            {
+                "char": "២",
+                "name": "KHMER DIGIT TWO"
+            },
+            {
+                "char": "᠒",
+                "name": "MONGOLIAN DIGIT TWO"
+            },
+            {
+                "char": "᥈",
+                "name": "LIMBU DIGIT TWO"
+            },
+            {
+                "char": "᧒",
+                "name": "NEW TAI LUE DIGIT TWO"
+            },
+            {
+                "char": "᪂",
+                "name": "TAI THAM HORA DIGIT TWO"
+            },
+            {
+                "char": "᪒",
+                "name": "TAI THAM THAM DIGIT TWO"
+            },
+            {
+                "char": "᭒",
+                "name": "BALINESE DIGIT TWO"
+            },
+            {
+                "char": "᮲",
+                "name": "SUNDANESE DIGIT TWO"
+            },
+            {
+                "char": "᱂",
+                "name": "LEPCHA DIGIT TWO"
+            },
+            {
+                "char": "᱒",
+                "name": "OL CHIKI DIGIT TWO"
+            },
+            {
+                "char": "↊",
+                "name": "TURNED DIGIT TWO"
+            },
+            {
+                "char": "②",
+                "name": "CIRCLED DIGIT TWO"
+            },
+            {
+                "char": "⑵",
+                "name": "PARENTHESIZED DIGIT TWO"
+            },
+            {
+                "char": "⓶",
+                "name": "DOUBLE CIRCLED DIGIT TWO"
+            },
+            {
+                "char": "❷",
+                "name": "DINGBAT NEGATIVE CIRCLED DIGIT TWO"
+            },
+            {
+                "char": "➁",
+                "name": "DINGBAT CIRCLED SANS-SERIF DIGIT TWO"
+            },
+            {
+                "char": "➋",
+                "name": "DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT TWO"
+            },
+            {
+                "char": "꘢",
+                "name": "VAI DIGIT TWO"
+            },
+            {
+                "char": "꣒",
+                "name": "SAURASHTRA DIGIT TWO"
+            },
+            {
+                "char": "꣢",
+                "name": "COMBINING DEVANAGARI DIGIT TWO"
+            },
+            {
+                "char": "꤂",
+                "name": "KAYAH LI DIGIT TWO"
+            },
+            {
+                "char": "꧒",
+                "name": "JAVANESE DIGIT TWO"
+            },
+            {
+                "char": "꧲",
+                "name": "MYANMAR TAI LAING DIGIT TWO"
+            },
+            {
+                "char": "꩒",
+                "name": "CHAM DIGIT TWO"
+            },
+            {
+                "char": "꯲",
+                "name": "MEETEI MAYEK DIGIT TWO"
+            }
+        ]
+    },
+    {
+        "name": "THREE",
+        "map": {
+            "digit_fa": {
+                "char": "۳",
+                "name": "EXTENDED ARABIC-INDIC DIGIT THREE"
+            },
+            "digit_ar": {
+                "char": "٣",
+                "name": "ARABIC-INDIC DIGIT THREE"
+            },
+            "digit_en": {
+                "char": "3",
+                "name": "DIGIT THREE"
+            }
+        },
+        "others": [
+            {
+                "char": "3",
+                "name": "DIGIT THREE"
+            },
+            {
+                "char": "٣",
+                "name": "ARABIC-INDIC DIGIT THREE"
+            },
+            {
+                "char": "۳",
+                "name": "EXTENDED ARABIC-INDIC DIGIT THREE"
+            },
+            {
+                "char": "߃",
+                "name": "NKO DIGIT THREE"
+            },
+            {
+                "char": "३",
+                "name": "DEVANAGARI DIGIT THREE"
+            },
+            {
+                "char": "৩",
+                "name": "BENGALI DIGIT THREE"
+            },
+            {
+                "char": "੩",
+                "name": "GURMUKHI DIGIT THREE"
+            },
+            {
+                "char": "૩",
+                "name": "GUJARATI DIGIT THREE"
+            },
+            {
+                "char": "୩",
+                "name": "ORIYA DIGIT THREE"
+            },
+            {
+                "char": "௩",
+                "name": "TAMIL DIGIT THREE"
+            },
+            {
+                "char": "౩",
+                "name": "TELUGU DIGIT THREE"
+            },
+            {
+                "char": "೩",
+                "name": "KANNADA DIGIT THREE"
+            },
+            {
+                "char": "൩",
+                "name": "MALAYALAM DIGIT THREE"
+            },
+            {
+                "char": "෩",
+                "name": "SINHALA LITH DIGIT THREE"
+            },
+            {
+                "char": "๓",
+                "name": "THAI DIGIT THREE"
+            },
+            {
+                "char": "໓",
+                "name": "LAO DIGIT THREE"
+            },
+            {
+                "char": "༣",
+                "name": "TIBETAN DIGIT THREE"
+            },
+            {
+                "char": "၃",
+                "name": "MYANMAR DIGIT THREE"
+            },
+            {
+                "char": "႓",
+                "name": "MYANMAR SHAN DIGIT THREE"
+            },
+            {
+                "char": "፫",
+                "name": "ETHIOPIC DIGIT THREE"
+            },
+            {
+                "char": "៣",
+                "name": "KHMER DIGIT THREE"
+            },
+            {
+                "char": "᠓",
+                "name": "MONGOLIAN DIGIT THREE"
+            },
+            {
+                "char": "᥉",
+                "name": "LIMBU DIGIT THREE"
+            },
+            {
+                "char": "᧓",
+                "name": "NEW TAI LUE DIGIT THREE"
+            },
+            {
+                "char": "᪃",
+                "name": "TAI THAM HORA DIGIT THREE"
+            },
+            {
+                "char": "᪓",
+                "name": "TAI THAM THAM DIGIT THREE"
+            },
+            {
+                "char": "᭓",
+                "name": "BALINESE DIGIT THREE"
+            },
+            {
+                "char": "᮳",
+                "name": "SUNDANESE DIGIT THREE"
+            },
+            {
+                "char": "᱃",
+                "name": "LEPCHA DIGIT THREE"
+            },
+            {
+                "char": "᱓",
+                "name": "OL CHIKI DIGIT THREE"
+            },
+            {
+                "char": "↋",
+                "name": "TURNED DIGIT THREE"
+            },
+            {
+                "char": "③",
+                "name": "CIRCLED DIGIT THREE"
+            },
+            {
+                "char": "⑶",
+                "name": "PARENTHESIZED DIGIT THREE"
+            },
+            {
+                "char": "⓷",
+                "name": "DOUBLE CIRCLED DIGIT THREE"
+            },
+            {
+                "char": "❸",
+                "name": "DINGBAT NEGATIVE CIRCLED DIGIT THREE"
+            },
+            {
+                "char": "➂",
+                "name": "DINGBAT CIRCLED SANS-SERIF DIGIT THREE"
+            },
+            {
+                "char": "➌",
+                "name": "DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT THREE"
+            },
+            {
+                "char": "꘣",
+                "name": "VAI DIGIT THREE"
+            },
+            {
+                "char": "꣓",
+                "name": "SAURASHTRA DIGIT THREE"
+            },
+            {
+                "char": "꣣",
+                "name": "COMBINING DEVANAGARI DIGIT THREE"
+            },
+            {
+                "char": "꤃",
+                "name": "KAYAH LI DIGIT THREE"
+            },
+            {
+                "char": "꧓",
+                "name": "JAVANESE DIGIT THREE"
+            },
+            {
+                "char": "꧳",
+                "name": "MYANMAR TAI LAING DIGIT THREE"
+            },
+            {
+                "char": "꩓",
+                "name": "CHAM DIGIT THREE"
+            },
+            {
+                "char": "꯳",
+                "name": "MEETEI MAYEK DIGIT THREE"
+            }
+        ]
+    },
+    {
+        "name": "FOUR",
+        "map": {
+            "digit_fa": {
+                "char": "۴",
+                "name": "EXTENDED ARABIC-INDIC DIGIT FOUR"
+            },
+            "digit_ar": {
+                "char": "٤",
+                "name": "ARABIC-INDIC DIGIT FOUR"
+            },
+            "digit_en": {
+                "char": "4",
+                "name": "DIGIT FOUR"
+            }
+        },
+        "others": [
+            {
+                "char": "4",
+                "name": "DIGIT FOUR"
+            },
+            {
+                "char": "٤",
+                "name": "ARABIC-INDIC DIGIT FOUR"
+            },
+            {
+                "char": "۴",
+                "name": "EXTENDED ARABIC-INDIC DIGIT FOUR"
+            },
+            {
+                "char": "߄",
+                "name": "NKO DIGIT FOUR"
+            },
+            {
+                "char": "४",
+                "name": "DEVANAGARI DIGIT FOUR"
+            },
+            {
+                "char": "৪",
+                "name": "BENGALI DIGIT FOUR"
+            },
+            {
+                "char": "੪",
+                "name": "GURMUKHI DIGIT FOUR"
+            },
+            {
+                "char": "૪",
+                "name": "GUJARATI DIGIT FOUR"
+            },
+            {
+                "char": "୪",
+                "name": "ORIYA DIGIT FOUR"
+            },
+            {
+                "char": "௪",
+                "name": "TAMIL DIGIT FOUR"
+            },
+            {
+                "char": "౪",
+                "name": "TELUGU DIGIT FOUR"
+            },
+            {
+                "char": "೪",
+                "name": "KANNADA DIGIT FOUR"
+            },
+            {
+                "char": "൪",
+                "name": "MALAYALAM DIGIT FOUR"
+            },
+            {
+                "char": "෪",
+                "name": "SINHALA LITH DIGIT FOUR"
+            },
+            {
+                "char": "๔",
+                "name": "THAI DIGIT FOUR"
+            },
+            {
+                "char": "໔",
+                "name": "LAO DIGIT FOUR"
+            },
+            {
+                "char": "༤",
+                "name": "TIBETAN DIGIT FOUR"
+            },
+            {
+                "char": "၄",
+                "name": "MYANMAR DIGIT FOUR"
+            },
+            {
+                "char": "႔",
+                "name": "MYANMAR SHAN DIGIT FOUR"
+            },
+            {
+                "char": "፬",
+                "name": "ETHIOPIC DIGIT FOUR"
+            },
+            {
+                "char": "៤",
+                "name": "KHMER DIGIT FOUR"
+            },
+            {
+                "char": "᠔",
+                "name": "MONGOLIAN DIGIT FOUR"
+            },
+            {
+                "char": "᥊",
+                "name": "LIMBU DIGIT FOUR"
+            },
+            {
+                "char": "᧔",
+                "name": "NEW TAI LUE DIGIT FOUR"
+            },
+            {
+                "char": "᪄",
+                "name": "TAI THAM HORA DIGIT FOUR"
+            },
+            {
+                "char": "᪔",
+                "name": "TAI THAM THAM DIGIT FOUR"
+            },
+            {
+                "char": "᭔",
+                "name": "BALINESE DIGIT FOUR"
+            },
+            {
+                "char": "᮴",
+                "name": "SUNDANESE DIGIT FOUR"
+            },
+            {
+                "char": "᱄",
+                "name": "LEPCHA DIGIT FOUR"
+            },
+            {
+                "char": "᱔",
+                "name": "OL CHIKI DIGIT FOUR"
+            },
+            {
+                "char": "④",
+                "name": "CIRCLED DIGIT FOUR"
+            },
+            {
+                "char": "⑷",
+                "name": "PARENTHESIZED DIGIT FOUR"
+            },
+            {
+                "char": "⓸",
+                "name": "DOUBLE CIRCLED DIGIT FOUR"
+            },
+            {
+                "char": "❹",
+                "name": "DINGBAT NEGATIVE CIRCLED DIGIT FOUR"
+            },
+            {
+                "char": "➃",
+                "name": "DINGBAT CIRCLED SANS-SERIF DIGIT FOUR"
+            },
+            {
+                "char": "➍",
+                "name": "DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FOUR"
+            },
+            {
+                "char": "꘤",
+                "name": "VAI DIGIT FOUR"
+            },
+            {
+                "char": "꣔",
+                "name": "SAURASHTRA DIGIT FOUR"
+            },
+            {
+                "char": "꣤",
+                "name": "COMBINING DEVANAGARI DIGIT FOUR"
+            },
+            {
+                "char": "꤄",
+                "name": "KAYAH LI DIGIT FOUR"
+            },
+            {
+                "char": "꧔",
+                "name": "JAVANESE DIGIT FOUR"
+            },
+            {
+                "char": "꧴",
+                "name": "MYANMAR TAI LAING DIGIT FOUR"
+            },
+            {
+                "char": "꩔",
+                "name": "CHAM DIGIT FOUR"
+            },
+            {
+                "char": "꯴",
+                "name": "MEETEI MAYEK DIGIT FOUR"
+            }
+        ]
+    },
+    {
+        "name": "FIVE",
+        "map": {
+            "digit_fa": {
+                "char": "۵",
+                "name": "EXTENDED ARABIC-INDIC DIGIT FIVE"
+            },
+            "digit_ar": {
+                "char": "٥",
+                "name": "ARABIC-INDIC DIGIT FIVE"
+            },
+            "digit_en": {
+                "char": "5",
+                "name": "DIGIT FIVE"
+            }
+        },
+        "others": [
+            {
+                "char": "5",
+                "name": "DIGIT FIVE"
+            },
+            {
+                "char": "٥",
+                "name": "ARABIC-INDIC DIGIT FIVE"
+            },
+            {
+                "char": "۵",
+                "name": "EXTENDED ARABIC-INDIC DIGIT FIVE"
+            },
+            {
+                "char": "߅",
+                "name": "NKO DIGIT FIVE"
+            },
+            {
+                "char": "५",
+                "name": "DEVANAGARI DIGIT FIVE"
+            },
+            {
+                "char": "৫",
+                "name": "BENGALI DIGIT FIVE"
+            },
+            {
+                "char": "੫",
+                "name": "GURMUKHI DIGIT FIVE"
+            },
+            {
+                "char": "૫",
+                "name": "GUJARATI DIGIT FIVE"
+            },
+            {
+                "char": "୫",
+                "name": "ORIYA DIGIT FIVE"
+            },
+            {
+                "char": "௫",
+                "name": "TAMIL DIGIT FIVE"
+            },
+            {
+                "char": "౫",
+                "name": "TELUGU DIGIT FIVE"
+            },
+            {
+                "char": "೫",
+                "name": "KANNADA DIGIT FIVE"
+            },
+            {
+                "char": "൫",
+                "name": "MALAYALAM DIGIT FIVE"
+            },
+            {
+                "char": "෫",
+                "name": "SINHALA LITH DIGIT FIVE"
+            },
+            {
+                "char": "๕",
+                "name": "THAI DIGIT FIVE"
+            },
+            {
+                "char": "໕",
+                "name": "LAO DIGIT FIVE"
+            },
+            {
+                "char": "༥",
+                "name": "TIBETAN DIGIT FIVE"
+            },
+            {
+                "char": "၅",
+                "name": "MYANMAR DIGIT FIVE"
+            },
+            {
+                "char": "႕",
+                "name": "MYANMAR SHAN DIGIT FIVE"
+            },
+            {
+                "char": "፭",
+                "name": "ETHIOPIC DIGIT FIVE"
+            },
+            {
+                "char": "៥",
+                "name": "KHMER DIGIT FIVE"
+            },
+            {
+                "char": "᠕",
+                "name": "MONGOLIAN DIGIT FIVE"
+            },
+            {
+                "char": "᥋",
+                "name": "LIMBU DIGIT FIVE"
+            },
+            {
+                "char": "᧕",
+                "name": "NEW TAI LUE DIGIT FIVE"
+            },
+            {
+                "char": "᪅",
+                "name": "TAI THAM HORA DIGIT FIVE"
+            },
+            {
+                "char": "᪕",
+                "name": "TAI THAM THAM DIGIT FIVE"
+            },
+            {
+                "char": "᭕",
+                "name": "BALINESE DIGIT FIVE"
+            },
+            {
+                "char": "᮵",
+                "name": "SUNDANESE DIGIT FIVE"
+            },
+            {
+                "char": "᱅",
+                "name": "LEPCHA DIGIT FIVE"
+            },
+            {
+                "char": "᱕",
+                "name": "OL CHIKI DIGIT FIVE"
+            },
+            {
+                "char": "⑤",
+                "name": "CIRCLED DIGIT FIVE"
+            },
+            {
+                "char": "⑸",
+                "name": "PARENTHESIZED DIGIT FIVE"
+            },
+            {
+                "char": "⓹",
+                "name": "DOUBLE CIRCLED DIGIT FIVE"
+            },
+            {
+                "char": "❺",
+                "name": "DINGBAT NEGATIVE CIRCLED DIGIT FIVE"
+            },
+            {
+                "char": "➄",
+                "name": "DINGBAT CIRCLED SANS-SERIF DIGIT FIVE"
+            },
+            {
+                "char": "➎",
+                "name": "DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT FIVE"
+            },
+            {
+                "char": "꘥",
+                "name": "VAI DIGIT FIVE"
+            },
+            {
+                "char": "꣕",
+                "name": "SAURASHTRA DIGIT FIVE"
+            },
+            {
+                "char": "꣥",
+                "name": "COMBINING DEVANAGARI DIGIT FIVE"
+            },
+            {
+                "char": "꤅",
+                "name": "KAYAH LI DIGIT FIVE"
+            },
+            {
+                "char": "꧕",
+                "name": "JAVANESE DIGIT FIVE"
+            },
+            {
+                "char": "꧵",
+                "name": "MYANMAR TAI LAING DIGIT FIVE"
+            },
+            {
+                "char": "꩕",
+                "name": "CHAM DIGIT FIVE"
+            },
+            {
+                "char": "꯵",
+                "name": "MEETEI MAYEK DIGIT FIVE"
+            }
+        ]
+    },
+    {
+        "name": "SIX",
+        "map": {
+            "digit_fa": {
+                "char": "۶",
+                "name": "EXTENDED ARABIC-INDIC DIGIT SIX"
+            },
+            "digit_ar": {
+                "char": "٦",
+                "name": "ARABIC-INDIC DIGIT SIX"
+            },
+            "digit_en": {
+                "char": "6",
+                "name": "DIGIT SIX"
+            }
+        },
+        "others": [
+            {
+                "char": "6",
+                "name": "DIGIT SIX"
+            },
+            {
+                "char": "٦",
+                "name": "ARABIC-INDIC DIGIT SIX"
+            },
+            {
+                "char": "۶",
+                "name": "EXTENDED ARABIC-INDIC DIGIT SIX"
+            },
+            {
+                "char": "߆",
+                "name": "NKO DIGIT SIX"
+            },
+            {
+                "char": "६",
+                "name": "DEVANAGARI DIGIT SIX"
+            },
+            {
+                "char": "৬",
+                "name": "BENGALI DIGIT SIX"
+            },
+            {
+                "char": "੬",
+                "name": "GURMUKHI DIGIT SIX"
+            },
+            {
+                "char": "૬",
+                "name": "GUJARATI DIGIT SIX"
+            },
+            {
+                "char": "୬",
+                "name": "ORIYA DIGIT SIX"
+            },
+            {
+                "char": "௬",
+                "name": "TAMIL DIGIT SIX"
+            },
+            {
+                "char": "౬",
+                "name": "TELUGU DIGIT SIX"
+            },
+            {
+                "char": "೬",
+                "name": "KANNADA DIGIT SIX"
+            },
+            {
+                "char": "൬",
+                "name": "MALAYALAM DIGIT SIX"
+            },
+            {
+                "char": "෬",
+                "name": "SINHALA LITH DIGIT SIX"
+            },
+            {
+                "char": "๖",
+                "name": "THAI DIGIT SIX"
+            },
+            {
+                "char": "໖",
+                "name": "LAO DIGIT SIX"
+            },
+            {
+                "char": "༦",
+                "name": "TIBETAN DIGIT SIX"
+            },
+            {
+                "char": "၆",
+                "name": "MYANMAR DIGIT SIX"
+            },
+            {
+                "char": "႖",
+                "name": "MYANMAR SHAN DIGIT SIX"
+            },
+            {
+                "char": "፮",
+                "name": "ETHIOPIC DIGIT SIX"
+            },
+            {
+                "char": "៦",
+                "name": "KHMER DIGIT SIX"
+            },
+            {
+                "char": "᠖",
+                "name": "MONGOLIAN DIGIT SIX"
+            },
+            {
+                "char": "᥌",
+                "name": "LIMBU DIGIT SIX"
+            },
+            {
+                "char": "᧖",
+                "name": "NEW TAI LUE DIGIT SIX"
+            },
+            {
+                "char": "᪆",
+                "name": "TAI THAM HORA DIGIT SIX"
+            },
+            {
+                "char": "᪖",
+                "name": "TAI THAM THAM DIGIT SIX"
+            },
+            {
+                "char": "᭖",
+                "name": "BALINESE DIGIT SIX"
+            },
+            {
+                "char": "᮶",
+                "name": "SUNDANESE DIGIT SIX"
+            },
+            {
+                "char": "᱆",
+                "name": "LEPCHA DIGIT SIX"
+            },
+            {
+                "char": "᱖",
+                "name": "OL CHIKI DIGIT SIX"
+            },
+            {
+                "char": "⑥",
+                "name": "CIRCLED DIGIT SIX"
+            },
+            {
+                "char": "⑹",
+                "name": "PARENTHESIZED DIGIT SIX"
+            },
+            {
+                "char": "⓺",
+                "name": "DOUBLE CIRCLED DIGIT SIX"
+            },
+            {
+                "char": "❻",
+                "name": "DINGBAT NEGATIVE CIRCLED DIGIT SIX"
+            },
+            {
+                "char": "➅",
+                "name": "DINGBAT CIRCLED SANS-SERIF DIGIT SIX"
+            },
+            {
+                "char": "➏",
+                "name": "DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SIX"
+            },
+            {
+                "char": "꘦",
+                "name": "VAI DIGIT SIX"
+            },
+            {
+                "char": "꣖",
+                "name": "SAURASHTRA DIGIT SIX"
+            },
+            {
+                "char": "꣦",
+                "name": "COMBINING DEVANAGARI DIGIT SIX"
+            },
+            {
+                "char": "꤆",
+                "name": "KAYAH LI DIGIT SIX"
+            },
+            {
+                "char": "꧖",
+                "name": "JAVANESE DIGIT SIX"
+            },
+            {
+                "char": "꧶",
+                "name": "MYANMAR TAI LAING DIGIT SIX"
+            },
+            {
+                "char": "꩖",
+                "name": "CHAM DIGIT SIX"
+            },
+            {
+                "char": "꯶",
+                "name": "MEETEI MAYEK DIGIT SIX"
+            }
+        ]
+    },
+    {
+        "name": "SEVEN",
+        "map": {
+            "digit_fa": {
+                "char": "۷",
+                "name": "EXTENDED ARABIC-INDIC DIGIT SEVEN"
+            },
+            "digit_ar": {
+                "char": "٧",
+                "name": "ARABIC-INDIC DIGIT SEVEN"
+            },
+            "digit_en": {
+                "char": "7",
+                "name": "DIGIT SEVEN"
+            }
+        },
+        "others": [
+            {
+                "char": "7",
+                "name": "DIGIT SEVEN"
+            },
+            {
+                "char": "٧",
+                "name": "ARABIC-INDIC DIGIT SEVEN"
+            },
+            {
+                "char": "۷",
+                "name": "EXTENDED ARABIC-INDIC DIGIT SEVEN"
+            },
+            {
+                "char": "߇",
+                "name": "NKO DIGIT SEVEN"
+            },
+            {
+                "char": "७",
+                "name": "DEVANAGARI DIGIT SEVEN"
+            },
+            {
+                "char": "৭",
+                "name": "BENGALI DIGIT SEVEN"
+            },
+            {
+                "char": "੭",
+                "name": "GURMUKHI DIGIT SEVEN"
+            },
+            {
+                "char": "૭",
+                "name": "GUJARATI DIGIT SEVEN"
+            },
+            {
+                "char": "୭",
+                "name": "ORIYA DIGIT SEVEN"
+            },
+            {
+                "char": "௭",
+                "name": "TAMIL DIGIT SEVEN"
+            },
+            {
+                "char": "౭",
+                "name": "TELUGU DIGIT SEVEN"
+            },
+            {
+                "char": "೭",
+                "name": "KANNADA DIGIT SEVEN"
+            },
+            {
+                "char": "൭",
+                "name": "MALAYALAM DIGIT SEVEN"
+            },
+            {
+                "char": "෭",
+                "name": "SINHALA LITH DIGIT SEVEN"
+            },
+            {
+                "char": "๗",
+                "name": "THAI DIGIT SEVEN"
+            },
+            {
+                "char": "໗",
+                "name": "LAO DIGIT SEVEN"
+            },
+            {
+                "char": "༧",
+                "name": "TIBETAN DIGIT SEVEN"
+            },
+            {
+                "char": "၇",
+                "name": "MYANMAR DIGIT SEVEN"
+            },
+            {
+                "char": "႗",
+                "name": "MYANMAR SHAN DIGIT SEVEN"
+            },
+            {
+                "char": "፯",
+                "name": "ETHIOPIC DIGIT SEVEN"
+            },
+            {
+                "char": "៧",
+                "name": "KHMER DIGIT SEVEN"
+            },
+            {
+                "char": "᠗",
+                "name": "MONGOLIAN DIGIT SEVEN"
+            },
+            {
+                "char": "᥍",
+                "name": "LIMBU DIGIT SEVEN"
+            },
+            {
+                "char": "᧗",
+                "name": "NEW TAI LUE DIGIT SEVEN"
+            },
+            {
+                "char": "᪇",
+                "name": "TAI THAM HORA DIGIT SEVEN"
+            },
+            {
+                "char": "᪗",
+                "name": "TAI THAM THAM DIGIT SEVEN"
+            },
+            {
+                "char": "᭗",
+                "name": "BALINESE DIGIT SEVEN"
+            },
+            {
+                "char": "᮷",
+                "name": "SUNDANESE DIGIT SEVEN"
+            },
+            {
+                "char": "᱇",
+                "name": "LEPCHA DIGIT SEVEN"
+            },
+            {
+                "char": "᱗",
+                "name": "OL CHIKI DIGIT SEVEN"
+            },
+            {
+                "char": "⑦",
+                "name": "CIRCLED DIGIT SEVEN"
+            },
+            {
+                "char": "⑺",
+                "name": "PARENTHESIZED DIGIT SEVEN"
+            },
+            {
+                "char": "⓻",
+                "name": "DOUBLE CIRCLED DIGIT SEVEN"
+            },
+            {
+                "char": "❼",
+                "name": "DINGBAT NEGATIVE CIRCLED DIGIT SEVEN"
+            },
+            {
+                "char": "➆",
+                "name": "DINGBAT CIRCLED SANS-SERIF DIGIT SEVEN"
+            },
+            {
+                "char": "➐",
+                "name": "DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT SEVEN"
+            },
+            {
+                "char": "꘧",
+                "name": "VAI DIGIT SEVEN"
+            },
+            {
+                "char": "꣗",
+                "name": "SAURASHTRA DIGIT SEVEN"
+            },
+            {
+                "char": "꣧",
+                "name": "COMBINING DEVANAGARI DIGIT SEVEN"
+            },
+            {
+                "char": "꤇",
+                "name": "KAYAH LI DIGIT SEVEN"
+            },
+            {
+                "char": "꧗",
+                "name": "JAVANESE DIGIT SEVEN"
+            },
+            {
+                "char": "꧷",
+                "name": "MYANMAR TAI LAING DIGIT SEVEN"
+            },
+            {
+                "char": "꩗",
+                "name": "CHAM DIGIT SEVEN"
+            },
+            {
+                "char": "꯷",
+                "name": "MEETEI MAYEK DIGIT SEVEN"
+            }
+        ]
+    },
+    {
+        "name": "EIGHT",
+        "map": {
+            "digit_fa": {
+                "char": "۸",
+                "name": "EXTENDED ARABIC-INDIC DIGIT EIGHT"
+            },
+            "digit_ar": {
+                "char": "٨",
+                "name": "ARABIC-INDIC DIGIT EIGHT"
+            },
+            "digit_en": {
+                "char": "8",
+                "name": "DIGIT EIGHT"
+            }
+        },
+        "others": [
+            {
+                "char": "8",
+                "name": "DIGIT EIGHT"
+            },
+            {
+                "char": "٨",
+                "name": "ARABIC-INDIC DIGIT EIGHT"
+            },
+            {
+                "char": "۸",
+                "name": "EXTENDED ARABIC-INDIC DIGIT EIGHT"
+            },
+            {
+                "char": "߈",
+                "name": "NKO DIGIT EIGHT"
+            },
+            {
+                "char": "८",
+                "name": "DEVANAGARI DIGIT EIGHT"
+            },
+            {
+                "char": "৮",
+                "name": "BENGALI DIGIT EIGHT"
+            },
+            {
+                "char": "੮",
+                "name": "GURMUKHI DIGIT EIGHT"
+            },
+            {
+                "char": "૮",
+                "name": "GUJARATI DIGIT EIGHT"
+            },
+            {
+                "char": "୮",
+                "name": "ORIYA DIGIT EIGHT"
+            },
+            {
+                "char": "௮",
+                "name": "TAMIL DIGIT EIGHT"
+            },
+            {
+                "char": "౮",
+                "name": "TELUGU DIGIT EIGHT"
+            },
+            {
+                "char": "೮",
+                "name": "KANNADA DIGIT EIGHT"
+            },
+            {
+                "char": "൮",
+                "name": "MALAYALAM DIGIT EIGHT"
+            },
+            {
+                "char": "෮",
+                "name": "SINHALA LITH DIGIT EIGHT"
+            },
+            {
+                "char": "๘",
+                "name": "THAI DIGIT EIGHT"
+            },
+            {
+                "char": "໘",
+                "name": "LAO DIGIT EIGHT"
+            },
+            {
+                "char": "༨",
+                "name": "TIBETAN DIGIT EIGHT"
+            },
+            {
+                "char": "၈",
+                "name": "MYANMAR DIGIT EIGHT"
+            },
+            {
+                "char": "႘",
+                "name": "MYANMAR SHAN DIGIT EIGHT"
+            },
+            {
+                "char": "፰",
+                "name": "ETHIOPIC DIGIT EIGHT"
+            },
+            {
+                "char": "៨",
+                "name": "KHMER DIGIT EIGHT"
+            },
+            {
+                "char": "᠘",
+                "name": "MONGOLIAN DIGIT EIGHT"
+            },
+            {
+                "char": "᥎",
+                "name": "LIMBU DIGIT EIGHT"
+            },
+            {
+                "char": "᧘",
+                "name": "NEW TAI LUE DIGIT EIGHT"
+            },
+            {
+                "char": "᪈",
+                "name": "TAI THAM HORA DIGIT EIGHT"
+            },
+            {
+                "char": "᪘",
+                "name": "TAI THAM THAM DIGIT EIGHT"
+            },
+            {
+                "char": "᭘",
+                "name": "BALINESE DIGIT EIGHT"
+            },
+            {
+                "char": "᮸",
+                "name": "SUNDANESE DIGIT EIGHT"
+            },
+            {
+                "char": "᱈",
+                "name": "LEPCHA DIGIT EIGHT"
+            },
+            {
+                "char": "᱘",
+                "name": "OL CHIKI DIGIT EIGHT"
+            },
+            {
+                "char": "⑧",
+                "name": "CIRCLED DIGIT EIGHT"
+            },
+            {
+                "char": "⑻",
+                "name": "PARENTHESIZED DIGIT EIGHT"
+            },
+            {
+                "char": "⓼",
+                "name": "DOUBLE CIRCLED DIGIT EIGHT"
+            },
+            {
+                "char": "❽",
+                "name": "DINGBAT NEGATIVE CIRCLED DIGIT EIGHT"
+            },
+            {
+                "char": "➇",
+                "name": "DINGBAT CIRCLED SANS-SERIF DIGIT EIGHT"
+            },
+            {
+                "char": "➑",
+                "name": "DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT EIGHT"
+            },
+            {
+                "char": "꘨",
+                "name": "VAI DIGIT EIGHT"
+            },
+            {
+                "char": "꣘",
+                "name": "SAURASHTRA DIGIT EIGHT"
+            },
+            {
+                "char": "꣨",
+                "name": "COMBINING DEVANAGARI DIGIT EIGHT"
+            },
+            {
+                "char": "꤈",
+                "name": "KAYAH LI DIGIT EIGHT"
+            },
+            {
+                "char": "꧘",
+                "name": "JAVANESE DIGIT EIGHT"
+            },
+            {
+                "char": "꧸",
+                "name": "MYANMAR TAI LAING DIGIT EIGHT"
+            },
+            {
+                "char": "꩘",
+                "name": "CHAM DIGIT EIGHT"
+            },
+            {
+                "char": "꯸",
+                "name": "MEETEI MAYEK DIGIT EIGHT"
+            }
+        ]
+    },
+    {
+        "name": "NINE",
+        "map": {
+            "digit_fa": {
+                "char": "۹",
+                "name": "EXTENDED ARABIC-INDIC DIGIT NINE"
+            },
+            "digit_ar": {
+                "char": "٩",
+                "name": "ARABIC-INDIC DIGIT NINE"
+            },
+            "digit_en": {
+                "char": "9",
+                "name": "DIGIT NINE"
+            }
+        },
+        "others": [
+            {
+                "char": "9",
+                "name": "DIGIT NINE"
+            },
+            {
+                "char": "٩",
+                "name": "ARABIC-INDIC DIGIT NINE"
+            },
+            {
+                "char": "۹",
+                "name": "EXTENDED ARABIC-INDIC DIGIT NINE"
+            },
+            {
+                "char": "߉",
+                "name": "NKO DIGIT NINE"
+            },
+            {
+                "char": "९",
+                "name": "DEVANAGARI DIGIT NINE"
+            },
+            {
+                "char": "৯",
+                "name": "BENGALI DIGIT NINE"
+            },
+            {
+                "char": "੯",
+                "name": "GURMUKHI DIGIT NINE"
+            },
+            {
+                "char": "૯",
+                "name": "GUJARATI DIGIT NINE"
+            },
+            {
+                "char": "୯",
+                "name": "ORIYA DIGIT NINE"
+            },
+            {
+                "char": "௯",
+                "name": "TAMIL DIGIT NINE"
+            },
+            {
+                "char": "౯",
+                "name": "TELUGU DIGIT NINE"
+            },
+            {
+                "char": "೯",
+                "name": "KANNADA DIGIT NINE"
+            },
+            {
+                "char": "൯",
+                "name": "MALAYALAM DIGIT NINE"
+            },
+            {
+                "char": "෯",
+                "name": "SINHALA LITH DIGIT NINE"
+            },
+            {
+                "char": "๙",
+                "name": "THAI DIGIT NINE"
+            },
+            {
+                "char": "໙",
+                "name": "LAO DIGIT NINE"
+            },
+            {
+                "char": "༩",
+                "name": "TIBETAN DIGIT NINE"
+            },
+            {
+                "char": "၉",
+                "name": "MYANMAR DIGIT NINE"
+            },
+            {
+                "char": "႙",
+                "name": "MYANMAR SHAN DIGIT NINE"
+            },
+            {
+                "char": "፱",
+                "name": "ETHIOPIC DIGIT NINE"
+            },
+            {
+                "char": "៩",
+                "name": "KHMER DIGIT NINE"
+            },
+            {
+                "char": "᠙",
+                "name": "MONGOLIAN DIGIT NINE"
+            },
+            {
+                "char": "᥏",
+                "name": "LIMBU DIGIT NINE"
+            },
+            {
+                "char": "᧙",
+                "name": "NEW TAI LUE DIGIT NINE"
+            },
+            {
+                "char": "᪉",
+                "name": "TAI THAM HORA DIGIT NINE"
+            },
+            {
+                "char": "᪙",
+                "name": "TAI THAM THAM DIGIT NINE"
+            },
+            {
+                "char": "᭙",
+                "name": "BALINESE DIGIT NINE"
+            },
+            {
+                "char": "᮹",
+                "name": "SUNDANESE DIGIT NINE"
+            },
+            {
+                "char": "᱉",
+                "name": "LEPCHA DIGIT NINE"
+            },
+            {
+                "char": "᱙",
+                "name": "OL CHIKI DIGIT NINE"
+            },
+            {
+                "char": "⑨",
+                "name": "CIRCLED DIGIT NINE"
+            },
+            {
+                "char": "⑼",
+                "name": "PARENTHESIZED DIGIT NINE"
+            },
+            {
+                "char": "⓽",
+                "name": "DOUBLE CIRCLED DIGIT NINE"
+            },
+            {
+                "char": "❾",
+                "name": "DINGBAT NEGATIVE CIRCLED DIGIT NINE"
+            },
+            {
+                "char": "➈",
+                "name": "DINGBAT CIRCLED SANS-SERIF DIGIT NINE"
+            },
+            {
+                "char": "➒",
+                "name": "DINGBAT NEGATIVE CIRCLED SANS-SERIF DIGIT NINE"
+            },
+            {
+                "char": "꘩",
+                "name": "VAI DIGIT NINE"
+            },
+            {
+                "char": "꣙",
+                "name": "SAURASHTRA DIGIT NINE"
+            },
+            {
+                "char": "꣩",
+                "name": "COMBINING DEVANAGARI DIGIT NINE"
+            },
+            {
+                "char": "꤉",
+                "name": "KAYAH LI DIGIT NINE"
+            },
+            {
+                "char": "꧙",
+                "name": "JAVANESE DIGIT NINE"
+            },
+            {
+                "char": "꧹",
+                "name": "MYANMAR TAI LAING DIGIT NINE"
+            },
+            {
+                "char": "꩙",
+                "name": "CHAM DIGIT NINE"
+            },
+            {
+                "char": "꯹",
+                "name": "MEETEI MAYEK DIGIT NINE"
+            }
+        ]
+    },
+    {
+        "name": "ZERO",
+        "map": {
+            "digit_fa": {
+                "char": "۰",
+                "name": "EXTENDED ARABIC-INDIC DIGIT ZERO"
+            },
+            "digit_ar": {
+                "char": "٠",
+                "name": "ARABIC-INDIC DIGIT ZERO"
+            },
+            "digit_en": {
+                "char": "0",
+                "name": "DIGIT ZERO"
+            }
+        },
+        "others": [
+            {
+                "char": "0",
+                "name": "DIGIT ZERO"
+            },
+            {
+                "char": "٠",
+                "name": "ARABIC-INDIC DIGIT ZERO"
+            },
+            {
+                "char": "۰",
+                "name": "EXTENDED ARABIC-INDIC DIGIT ZERO"
+            },
+            {
+                "char": "߀",
+                "name": "NKO DIGIT ZERO"
+            },
+            {
+                "char": "०",
+                "name": "DEVANAGARI DIGIT ZERO"
+            },
+            {
+                "char": "০",
+                "name": "BENGALI DIGIT ZERO"
+            },
+            {
+                "char": "੦",
+                "name": "GURMUKHI DIGIT ZERO"
+            },
+            {
+                "char": "૦",
+                "name": "GUJARATI DIGIT ZERO"
+            },
+            {
+                "char": "୦",
+                "name": "ORIYA DIGIT ZERO"
+            },
+            {
+                "char": "௦",
+                "name": "TAMIL DIGIT ZERO"
+            },
+            {
+                "char": "౦",
+                "name": "TELUGU DIGIT ZERO"
+            },
+            {
+                "char": "೦",
+                "name": "KANNADA DIGIT ZERO"
+            },
+            {
+                "char": "൦",
+                "name": "MALAYALAM DIGIT ZERO"
+            },
+            {
+                "char": "෦",
+                "name": "SINHALA LITH DIGIT ZERO"
+            },
+            {
+                "char": "๐",
+                "name": "THAI DIGIT ZERO"
+            },
+            {
+                "char": "໐",
+                "name": "LAO DIGIT ZERO"
+            },
+            {
+                "char": "༠",
+                "name": "TIBETAN DIGIT ZERO"
+            },
+            {
+                "char": "၀",
+                "name": "MYANMAR DIGIT ZERO"
+            },
+            {
+                "char": "႐",
+                "name": "MYANMAR SHAN DIGIT ZERO"
+            },
+            {
+                "char": "០",
+                "name": "KHMER DIGIT ZERO"
+            },
+            {
+                "char": "᠐",
+                "name": "MONGOLIAN DIGIT ZERO"
+            },
+            {
+                "char": "᥆",
+                "name": "LIMBU DIGIT ZERO"
+            },
+            {
+                "char": "᧐",
+                "name": "NEW TAI LUE DIGIT ZERO"
+            },
+            {
+                "char": "᪀",
+                "name": "TAI THAM HORA DIGIT ZERO"
+            },
+            {
+                "char": "᪐",
+                "name": "TAI THAM THAM DIGIT ZERO"
+            },
+            {
+                "char": "᭐",
+                "name": "BALINESE DIGIT ZERO"
+            },
+            {
+                "char": "᮰",
+                "name": "SUNDANESE DIGIT ZERO"
+            },
+            {
+                "char": "᱀",
+                "name": "LEPCHA DIGIT ZERO"
+            },
+            {
+                "char": "᱐",
+                "name": "OL CHIKI DIGIT ZERO"
+            },
+            {
+                "char": "⓪",
+                "name": "CIRCLED DIGIT ZERO"
+            },
+            {
+                "char": "⓿",
+                "name": "NEGATIVE CIRCLED DIGIT ZERO"
+            },
+            {
+                "char": "꘠",
+                "name": "VAI DIGIT ZERO"
+            },
+            {
+                "char": "꣐",
+                "name": "SAURASHTRA DIGIT ZERO"
+            },
+            {
+                "char": "꣠",
+                "name": "COMBINING DEVANAGARI DIGIT ZERO"
+            },
+            {
+                "char": "꤀",
+                "name": "KAYAH LI DIGIT ZERO"
+            },
+            {
+                "char": "꧐",
+                "name": "JAVANESE DIGIT ZERO"
+            },
+            {
+                "char": "꧰",
+                "name": "MYANMAR TAI LAING DIGIT ZERO"
+            },
+            {
+                "char": "꩐",
+                "name": "CHAM DIGIT ZERO"
+            },
+            {
+                "char": "꯰",
+                "name": "MEETEI MAYEK DIGIT ZERO"
+            }
+        ]
+    }
+]

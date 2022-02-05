@@ -1,0 +1,61 @@
+[
+  {
+    "name": "DIACRITIC",
+    "map": {
+      "diacritic_delete": {
+        "char": "",
+        "name": "EMPTY CHARACTER"
+      }
+    },
+    "others": [
+      {
+        "char": "ً",
+        "name": "ARABIC FATHATAN"
+      },
+      {
+        "char": "ٌ",
+        "name": "ARABIC DAMMATAN"
+      },
+      {
+        "char": "ٍ",
+        "name": "ARABIC KASRATAN"
+      },
+      {
+        "char": "َ",
+        "name": "ARABIC FATHA"
+      },
+      {
+        "char": "ُ",
+        "name": "ARABIC DAMMA"
+      },
+      {
+        "char": "ِ",
+        "name": "ARABIC KASRA"
+      },
+      {
+        "char": "ّ",
+        "name": "ARABIC SHADDA"
+      },
+      {
+        "char": "ْ",
+        "name": "ARABIC SUKUN"
+      },
+      {
+        "char": "ٓ",
+        "name": "ARABIC MADDAH ABOVE"
+      },
+      {
+        "char": "ٔ",
+        "name": "ARABIC HAMZA ABOVE"
+      },
+      {
+        "char": "ٕ",
+        "name": "ARABIC HAMZA BELOW"
+      },
+      {
+        "char": "ٖ",
+        "name": "ARABIC SUBSCRIPT ALEF"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1429 @@
+[
+    {
+        "name": "ARABIC LETTER HAMZA",
+        "map": {
+            "alphabet_ar": {
+                "char": "ء",
+                "name": "ARABIC LETTER HAMZA"
+            }
+        },
+        "others": [
+            {
+                "char": "ء",
+                "name": "ARABIC LETTER HAMZA"
+            },
+            {
+                "char": "ٴ",
+                "name": "ARABIC LETTER HIGH HAMZA"
+            },
+            {
+                "char": "ﺀ",
+                "name": "ARABIC LETTER HAMZA ISOLATED FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER YEH WITH HAMZA ABOVE",
+        "map": {
+            "alphabet_ar": {
+                "char": "ئ",
+                "name": "ARABIC LETTER YEH WITH HAMZA ABOVE"
+            }
+        },
+        "others": [
+            {
+                "char": "ئ",
+                "name": "ARABIC LETTER YEH WITH HAMZA ABOVE"
+            },
+            {
+                "char": "ﺋ",
+                "name": "ARABIC LETTER YEH WITH HAMZA ABOVE INITIAL FORM"
+            },
+            {
+                "char": "ﺌ",
+                "name": "ARABIC LETTER YEH WITH HAMZA ABOVE MEDIAL FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER WAW WITH HAMZA ABOVE",
+        "map": {
+            "alphabet_ar": {
+                "char": "ؤ",
+                "name": "ARABIC LETTER WAW WITH HAMZA ABOVE"
+            }
+        },
+        "others": [
+            {
+                "char": "ؤ",
+                "name": "ARABIC LETTER WAW WITH HAMZA ABOVE"
+            },
+            {
+                "char": "ﺅ",
+                "name": "ARABIC LETTER WAW WITH HAMZA ABOVE ISOLATED FORM"
+            },
+            {
+                "char": "ﺆ",
+                "name": "ARABIC LETTER WAW WITH HAMZA ABOVE FINAL FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER ALEF WITH MADDA ABOVE",
+        "map": {
+            "alphabet_ar": {
+                "char": "آ",
+                "name": "ARABIC LETTER ALEF WITH MADDA ABOVE"
+            }
+        },
+        "others": [
+            {
+                "char": "آ",
+                "name": "ARABIC LETTER ALEF WITH MADDA ABOVE"
+            },
+            {
+                "char": "ﺁ",
+                "name": "ARABIC LETTER ALEF WITH MADDA ABOVE ISOLATED FORM"
+            },
+            {
+                "char": "ﺂ",
+                "name": "ARABIC LETTER ALEF WITH MADDA ABOVE FINAL FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER ALEF",
+        "map": {
+            "alphabet_ar": {
+                "char": "ا",
+                "name": "ARABIC LETTER ALEF"
+            }
+        },
+        "others": [
+            {
+                "char": "ا",
+                "name": "ARABIC LETTER ALEF"
+            },
+            {
+                "char": "ﺍ",
+                "name": "ARABIC LETTER ALEF ISOLATED FORM"
+            },
+            {
+                "char": "ﺎ",
+                "name": "ARABIC LETTER ALEF FINAL FORM"
+            },
+            {
+                "char": "ٱ",
+                "name": "ARABIC LETTER ALEF WASLA"
+            },
+            {
+                "char": "ݴ",
+                "name": "ARABIC LETTER ALEF WITH EXTENDED ARABIC-INDIC DIGIT THREE ABOVE"
+            },
+            {
+                "char": "ݳ",
+                "name": "ARABIC LETTER ALEF WITH EXTENDED ARABIC-INDIC DIGIT TWO ABOVE"
+            },
+            {
+                "char": "أ",
+                "name": "ARABIC LETTER ALEF WITH HAMZA ABOVE"
+            },
+            {
+                "char": "إ",
+                "name": "ARABIC LETTER ALEF WITH HAMZA BELOW"
+            },
+            {
+                "char": "ٲ",
+                "name": "ARABIC LETTER ALEF WITH WAVY HAMZA ABOVE"
+            },
+            {
+                "char": "ﺄ",
+                "name": "ARABIC LETTER ALEF WITH HAMZA ABOVE FINAL FORM"
+            },
+            {
+                "char": "ٵ",
+                "name": "ARABIC LETTER HIGH HAMZA ALEF"
+            },
+            {
+                "char": "ﺃ",
+                "name": "ARABIC LETTER ALEF WITH HAMZA ABOVE ISOLATED FORM"
+            },
+            {
+                "char": "ٳ",
+                "name": "ARABIC LETTER ALEF WITH WAVY HAMZA BELOW"
+            },
+            {
+                "char": "ﭐ",
+                "name": "ARABIC LETTER ALEF WASLA ISOLATED FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER BEH",
+        "map": {
+            "alphabet_ar": {
+                "char": "ب",
+                "name": "ARABIC LETTER BEH"
+            }
+        },
+        "others": [
+            {
+                "char": "ب",
+                "name": "ARABIC LETTER BEH"
+            },
+            {
+                "char": "ﺑ",
+                "name": "ARABIC LETTER BEH INITIAL FORM"
+            },
+            {
+                "char": "ﺒ",
+                "name": "ARABIC LETTER BEH MEDIAL FORM"
+            },
+            {
+                "char": "ﺐ",
+                "name": "ARABIC LETTER BEH FINAL FORM"
+            },
+            {
+                "char": "ﺏ",
+                "name": "ARABIC LETTER BEH ISOLATED FORM"
+            },
+            {
+                "char": "ٮ",
+                "name": "ARABIC LETTER DOTLESS BEH"
+            },
+            {
+                "char": "ݔ",
+                "name": "ARABIC LETTER BEH WITH TWO DOTS BELOW AND DOT ABOVE"
+            },
+            {
+                "char": "ﭔ",
+                "name": "ARABIC LETTER BEEH INITIAL FORM"
+            },
+            {
+                "char": "ﭕ",
+                "name": "ARABIC LETTER BEEH MEDIAL FORM"
+            },
+            {
+                "char": "ﭜ",
+                "name": "ARABIC LETTER BEHEH INITIAL FORM"
+            },
+            {
+                "char": "ﭝ",
+                "name": "ARABIC LETTER BEHEH MEDIAL FORM"
+            },
+            {
+                "char": "ڀ",
+                "name": "ARABIC LETTER BEHEH"
+            },
+            {
+                "char": "ݐ",
+                "name": "ARABIC LETTER BEH WITH THREE DOTS HORIZONTALLY BELOW"
+            },
+            {
+                "char": "ٻ",
+                "name": "ARABIC LETTER BEEH"
+            },
+            {
+                "char": "ݖ",
+                "name": "ARABIC LETTER BEH WITH SMALL V"
+            },
+            {
+                "char": "ݕ",
+                "name": "ARABIC LETTER BEH WITH INVERTED SMALL V BELOW"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER TEH",
+        "map": {
+            "alphabet_ar": {
+                "char": "ت",
+                "name": "ARABIC LETTER TEH"
+            }
+        },
+        "others": [
+            {
+                "char": "ت",
+                "name": "ARABIC LETTER TEH"
+            },
+            {
+                "char": "ﺘ",
+                "name": "ARABIC LETTER TEH MEDIAL FORM"
+            },
+            {
+                "char": "ﺖ",
+                "name": "ARABIC LETTER TEH FINAL FORM"
+            },
+            {
+                "char": "ﺗ",
+                "name": "ARABIC LETTER TEH INITIAL FORM"
+            },
+            {
+                "char": "ٹ",
+                "name": "ARABIC LETTER TTEH"
+            },
+            {
+                "char": "ﺕ",
+                "name": "ARABIC LETTER TEH ISOLATED FORM"
+            },
+            {
+                "char": "ټ",
+                "name": "ARABIC LETTER TEH WITH RING"
+            },
+            {
+                "char": "ٽ",
+                "name": "ARABIC LETTER TEH WITH THREE DOTS ABOVE DOWNWARDS"
+            },
+            {
+                "char": "ٺ",
+                "name": "ARABIC LETTER TTEHEH"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER TEH MARBUTA",
+        "map": {
+            "alphabet_ar": {
+                "char": "ة",
+                "name": "ARABIC LETTER TEH MARBUTA"
+            }
+        },
+        "others": [
+            {
+                "char": "ﺓ",
+                "name": "ARABIC LETTER TEH MARBUTA ISOLATED FORM"
+            },
+            {
+                "char": "ة",
+                "name": "ARABIC LETTER TEH MARBUTA"
+            },
+            {
+                "char": "ۃ",
+                "name": "ARABIC LETTER TEH MARBUTA GOAL"
+            },
+            {
+                "char": "ﺔ",
+                "name": "ARABIC LETTER TEH MARBUTA FINAL FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER THEH",
+        "map": {
+            "alphabet_ar": {
+                "char": "ث",
+                "name": "ARABIC LETTER THEH"
+            }
+        },
+        "others": [
+            {
+                "char": "ث",
+                "name": "ARABIC LETTER THEH"
+            },
+            {
+                "char": "ﺛ",
+                "name": "ARABIC LETTER THEH INITIAL FORM"
+            },
+            {
+                "char": "ٿ",
+                "name": "ARABIC LETTER TEHEH"
+            },
+            {
+                "char": "ﺜ",
+                "name": "ARABIC LETTER THEH MEDIAL FORM"
+            },
+            {
+                "char": "ﺚ",
+                "name": "ARABIC LETTER THEH FINAL FORM"
+            },
+            {
+                "char": "ﺙ",
+                "name": "ARABIC LETTER THEH ISOLATED FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER JEEM",
+        "map": {
+            "alphabet_ar": {
+                "char": "ج",
+                "name": "ARABIC LETTER JEEM"
+            }
+        },
+        "others": [
+            {
+                "char": "ج",
+                "name": "ARABIC LETTER JEEM"
+            },
+            {
+                "char": "ﺟ",
+                "name": "ARABIC LETTER JEEM INITIAL FORM"
+            },
+            {
+                "char": "ﺠ",
+                "name": "ARABIC LETTER JEEM MEDIAL FORM"
+            },
+            {
+                "char": "ﺝ",
+                "name": "ARABIC LETTER JEEM ISOLATED FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER HAH",
+        "map": {
+            "alphabet_ar": {
+                "char": "ح",
+                "name": "ARABIC LETTER HAH"
+            }
+        },
+        "others": [
+            {
+                "char": "ح",
+                "name": "ARABIC LETTER HAH"
+            },
+            {
+                "char": "ﺣ",
+                "name": "ARABIC LETTER HAH INITIAL FORM"
+            },
+            {
+                "char": "ﺤ",
+                "name": "ARABIC LETTER HAH MEDIAL FORM"
+            },
+            {
+                "char": "ځ",
+                "name": "ARABIC LETTER HAH WITH HAMZA ABOVE"
+            },
+            {
+                "char": "ﺢ",
+                "name": "ARABIC LETTER HAH FINAL FORM"
+            },
+            {
+                "char": "څ",
+                "name": "ARABIC LETTER HAH WITH THREE DOTS ABOVE"
+            },
+            {
+                "char": "ﺡ",
+                "name": "ARABIC LETTER HAH ISOLATED FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER KHAH",
+        "map": {
+            "alphabet_ar": {
+                "char": "خ",
+                "name": "ARABIC LETTER KHAH"
+            }
+        },
+        "others": [
+            {
+                "char": "خ",
+                "name": "ARABIC LETTER KHAH"
+            },
+            {
+                "char": "ﺧ",
+                "name": "ARABIC LETTER KHAH INITIAL FORM"
+            },
+            {
+                "char": "ﺨ",
+                "name": "ARABIC LETTER KHAH MEDIAL FORM"
+            },
+            {
+                "char": "ﺦ",
+                "name": "ARABIC LETTER KHAH FINAL FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER DAL",
+        "map": {
+            "alphabet_ar": {
+                "char": "د",
+                "name": "ARABIC LETTER DAL"
+            }
+        },
+        "others": [
+            {
+                "char": "د",
+                "name": "ARABIC LETTER DAL"
+            },
+            {
+                "char": "ﺪ",
+                "name": "ARABIC LETTER DAL FINAL FORM"
+            },
+            {
+                "char": "ﺩ",
+                "name": "ARABIC LETTER DAL ISOLATED FORM"
+            },
+            {
+                "char": "ڈ",
+                "name": "ARABIC LETTER DDAL"
+            },
+            {
+                "char": "ډ",
+                "name": "ARABIC LETTER DAL WITH RING"
+            },
+            {
+                "char": "ۮ",
+                "name": "ARABIC LETTER DAL WITH INVERTED V"
+            },
+            {
+                "char": "ݚ",
+                "name": "ARABIC LETTER DAL WITH INVERTED SMALL V BELOW"
+            },
+            {
+                "char": "ڏ",
+                "name": "ARABIC LETTER DAL WITH THREE DOTS ABOVE DOWNWARDS"
+            },
+            {
+                "char": "ڍ",
+                "name": "ARABIC LETTER DDAHAL"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER THAL",
+        "map": {
+            "alphabet_ar": {
+                "char": "ذ",
+                "name": "ARABIC LETTER THAL"
+            }
+        },
+        "others": [
+            {
+                "char": "ذ",
+                "name": "ARABIC LETTER THAL"
+            },
+            {
+                "char": "ﺬ",
+                "name": "ARABIC LETTER THAL FINAL FORM"
+            },
+            {
+                "char": "ﺫ",
+                "name": "ARABIC LETTER THAL ISOLATED FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER REH",
+        "map": {
+            "alphabet_ar": {
+                "char": "ر",
+                "name": "ARABIC LETTER REH"
+            }
+        },
+        "others": [
+            {
+                "char": "ر",
+                "name": "ARABIC LETTER REH"
+            },
+            {
+                "char": "ﺮ",
+                "name": "ARABIC LETTER REH FINAL FORM"
+            },
+            {
+                "char": "ﺭ",
+                "name": "ARABIC LETTER REH ISOLATED FORM"
+            },
+            {
+                "char": "ڕ",
+                "name": "ARABIC LETTER REH WITH SMALL V BELOW"
+            },
+            {
+                "char": "ڑ",
+                "name": "ARABIC LETTER RREH"
+            },
+            {
+                "char": "ړ",
+                "name": "ARABIC LETTER REH WITH RING"
+            },
+            {
+                "char": "ږ",
+                "name": "ARABIC LETTER REH WITH DOT BELOW AND DOT ABOVE"
+            },
+            {
+                "char": "ڒ",
+                "name": "ARABIC LETTER REH WITH SMALL V"
+            },
+            {
+                "char": "ڙ",
+                "name": "ARABIC LETTER REH WITH FOUR DOTS ABOVE"
+            },
+            {
+                "char": "ڗ",
+                "name": "ARABIC LETTER REH WITH TWO DOTS ABOVE"
+            },
+            {
+                "char": "ۯ",
+                "name": "ARABIC LETTER REH WITH INVERTED V"
+            },
+            {
+                "char": "ڔ",
+                "name": "ARABIC LETTER REH WITH DOT BELOW"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER ZAIN",
+        "map": {
+            "alphabet_ar": {
+                "char": "ز",
+                "name": "ARABIC LETTER ZAIN"
+            }
+        },
+        "others": [
+            {
+                "char": "ز",
+                "name": "ARABIC LETTER ZAIN"
+            },
+            {
+                "char": "ﺯ",
+                "name": "ARABIC LETTER ZAIN ISOLATED FORM"
+            },
+            {
+                "char": "ﺰ",
+                "name": "ARABIC LETTER ZAIN FINAL FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER SEEN",
+        "map": {
+            "alphabet_ar": {
+                "char": "س",
+                "name": "ARABIC LETTER SEEN"
+            }
+        },
+        "others": [
+            {
+                "char": "س",
+                "name": "ARABIC LETTER SEEN"
+            },
+            {
+                "char": "ﺳ",
+                "name": "ARABIC LETTER SEEN INITIAL FORM"
+            },
+            {
+                "char": "ﺴ",
+                "name": "ARABIC LETTER SEEN MEDIAL FORM"
+            },
+            {
+                "char": "ښ",
+                "name": "ARABIC LETTER SEEN WITH DOT BELOW AND DOT ABOVE"
+            },
+            {
+                "char": "ﺲ",
+                "name": "ARABIC LETTER SEEN FINAL FORM"
+            },
+            {
+                "char": "ﺱ",
+                "name": "ARABIC LETTER SEEN ISOLATED FORM"
+            },
+            {
+                "char": "ݜ",
+                "name": "ARABIC LETTER SEEN WITH FOUR DOTS ABOVE"
+            },
+            {
+                "char": "ݭ",
+                "name": "ARABIC LETTER SEEN WITH TWO DOTS VERTICALLY ABOVE"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER SHEEN",
+        "map": {
+            "alphabet_ar": {
+                "char": "ش",
+                "name": "ARABIC LETTER SHEEN"
+            }
+        },
+        "others": [
+            {
+                "char": "ش",
+                "name": "ARABIC LETTER SHEEN"
+            },
+            {
+                "char": "ﺷ",
+                "name": "ARABIC LETTER SHEEN INITIAL FORM"
+            },
+            {
+                "char": "ﺸ",
+                "name": "ARABIC LETTER SHEEN MEDIAL FORM"
+            },
+            {
+                "char": "ﺶ",
+                "name": "ARABIC LETTER SHEEN FINAL FORM"
+            },
+            {
+                "char": "ﺵ",
+                "name": "ARABIC LETTER SHEEN ISOLATED FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER SAD",
+        "map": {
+            "alphabet_ar": {
+                "char": "ص",
+                "name": "ARABIC LETTER SAD"
+            }
+        },
+        "others": [
+            {
+                "char": "ص",
+                "name": "ARABIC LETTER SAD"
+            },
+            {
+                "char": "ﺼ",
+                "name": "ARABIC LETTER SAD MEDIAL FORM"
+            },
+            {
+                "char": "ﺻ",
+                "name": "ARABIC LETTER SAD INITIAL FORM"
+            },
+            {
+                "char": "ﺹ",
+                "name": "ARABIC LETTER SAD ISOLATED FORM"
+            },
+            {
+                "char": "ﺺ",
+                "name": "ARABIC LETTER SAD FINAL FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER DAD",
+        "map": {
+            "alphabet_ar": {
+                "char": "ض",
+                "name": "ARABIC LETTER DAD"
+            }
+        },
+        "others": [
+            {
+                "char": "ض",
+                "name": "ARABIC LETTER DAD"
+            },
+            {
+                "char": "ﺿ",
+                "name": "ARABIC LETTER DAD INITIAL FORM"
+            },
+            {
+                "char": "ﻀ",
+                "name": "ARABIC LETTER DAD MEDIAL FORM"
+            },
+            {
+                "char": "ﺾ",
+                "name": "ARABIC LETTER DAD FINAL FORM"
+            },
+            {
+                "char": "ﺽ",
+                "name": "ARABIC LETTER DAD ISOLATED FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER TAH",
+        "map": {
+            "alphabet_ar": {
+                "char": "ط",
+                "name": "ARABIC LETTER TAH"
+            }
+        },
+        "others": [
+            {
+                "char": "ط",
+                "name": "ARABIC LETTER TAH"
+            },
+            {
+                "char": "ﻄ",
+                "name": "ARABIC LETTER TAH MEDIAL FORM"
+            },
+            {
+                "char": "ﻃ",
+                "name": "ARABIC LETTER TAH INITIAL FORM"
+            },
+            {
+                "char": "ﻂ",
+                "name": "ARABIC LETTER TAH FINAL FORM"
+            },
+            {
+                "char": "ﻁ",
+                "name": "ARABIC LETTER TAH ISOLATED FORM"
+            },
+            {
+                "char": "ࢣ",
+                "name": "ARABIC LETTER TAH WITH TWO DOTS ABOVE"
+            },
+            {
+                "char": "ڟ",
+                "name": "ARABIC LETTER TAH WITH THREE DOTS ABOVE"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER ZAH",
+        "map": {
+            "alphabet_ar": {
+                "char": "ظ",
+                "name": "ARABIC LETTER ZAH"
+            }
+        },
+        "others": [
+            {
+                "char": "ظ",
+                "name": "ARABIC LETTER ZAH"
+            },
+            {
+                "char": "ﻈ",
+                "name": "ARABIC LETTER ZAH MEDIAL FORM"
+            },
+            {
+                "char": "ﻇ",
+                "name": "ARABIC LETTER ZAH INITIAL FORM"
+            },
+            {
+                "char": "ﻆ",
+                "name": "ARABIC LETTER ZAH FINAL FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER AIN",
+        "map": {
+            "alphabet_ar": {
+                "char": "ع",
+                "name": "ARABIC LETTER AIN"
+            }
+        },
+        "others": [
+            {
+                "char": "ع",
+                "name": "ARABIC LETTER AIN"
+            },
+            {
+                "char": "ﻋ",
+                "name": "ARABIC LETTER AIN INITIAL FORM"
+            },
+            {
+                "char": "ﻌ",
+                "name": "ARABIC LETTER AIN MEDIAL FORM"
+            },
+            {
+                "char": "ﻊ",
+                "name": "ARABIC LETTER AIN FINAL FORM"
+            },
+            {
+                "char": "ﻉ",
+                "name": "ARABIC LETTER AIN ISOLATED FORM"
+            },
+            {
+                "char": "ڠ",
+                "name": "ARABIC LETTER AIN WITH THREE DOTS ABOVE"
+            },
+            {
+                "char": "ݝ",
+                "name": "ARABIC LETTER AIN WITH TWO DOTS ABOVE"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER GHAIN",
+        "map": {
+            "alphabet_ar": {
+                "char": "غ",
+                "name": "ARABIC LETTER GHAIN"
+            }
+        },
+        "others": [
+            {
+                "char": "غ",
+                "name": "ARABIC LETTER GHAIN"
+            },
+            {
+                "char": "ﻏ",
+                "name": "ARABIC LETTER GHAIN INITIAL FORM"
+            },
+            {
+                "char": "ﻐ",
+                "name": "ARABIC LETTER GHAIN MEDIAL FORM"
+            },
+            {
+                "char": "ﻎ",
+                "name": "ARABIC LETTER GHAIN FINAL FORM"
+            },
+            {
+                "char": "ﻍ",
+                "name": "ARABIC LETTER GHAIN ISOLATED FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER FEH",
+        "map": {
+            "alphabet_ar": {
+                "char": "ف",
+                "name": "ARABIC LETTER FEH"
+            }
+        },
+        "others": [
+            {
+                "char": "ف",
+                "name": "ARABIC LETTER FEH"
+            },
+            {
+                "char": "ﻓ",
+                "name": "ARABIC LETTER FEH INITIAL FORM"
+            },
+            {
+                "char": "ﻔ",
+                "name": "ARABIC LETTER FEH MEDIAL FORM"
+            },
+            {
+                "char": "ﻒ",
+                "name": "ARABIC LETTER FEH FINAL FORM"
+            },
+            {
+                "char": "ﻑ",
+                "name": "ARABIC LETTER FEH ISOLATED FORM"
+            },
+            {
+                "char": "ڡ",
+                "name": "ARABIC LETTER DOTLESS FEH"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER QAF",
+        "map": {
+            "alphabet_ar": {
+                "char": "ق",
+                "name": "ARABIC LETTER QAF"
+            }
+        },
+        "others": [
+            {
+                "char": "ق",
+                "name": "ARABIC LETTER QAF"
+            },
+            {
+                "char": "ﻗ",
+                "name": "ARABIC LETTER QAF INITIAL FORM"
+            },
+            {
+                "char": "ﻘ",
+                "name": "ARABIC LETTER QAF MEDIAL FORM"
+            },
+            {
+                "char": "ﻕ",
+                "name": "ARABIC LETTER QAF ISOLATED FORM"
+            },
+            {
+                "char": "ﻖ",
+                "name": "ARABIC LETTER QAF FINAL FORM"
+            },
+            {
+                "char": "ٯ",
+                "name": "ARABIC LETTER DOTLESS QAF"
+            },
+            {
+                "char": "ڨ",
+                "name": "ARABIC LETTER QAF WITH THREE DOTS ABOVE"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER KEHEH",
+        "map": {
+            "alphabet_ar": {
+                "char": "ک",
+                "name": "ARABIC LETTER KEHEH"
+            }
+        },
+        "others": [
+            {
+                "char": "ک",
+                "name": "ARABIC LETTER KEHEH"
+            },
+            {
+                "char": "ك",
+                "name": "ARABIC LETTER KAF"
+            },
+            {
+                "char": "ﻜ",
+                "name": "ARABIC LETTER KAF MEDIAL FORM"
+            },
+            {
+                "char": "ﮑ",
+                "name": "ARABIC LETTER KEHEH MEDIAL FORM"
+            },
+            {
+                "char": "ﻛ",
+                "name": "ARABIC LETTER KAF INITIAL FORM"
+            },
+            {
+                "char": "ګ",
+                "name": "ARABIC LETTER KAF WITH RING"
+            },
+            {
+                "char": "ﮐ",
+                "name": "ARABIC LETTER KEHEH INITIAL FORM"
+            },
+            {
+                "char": "ﮏ",
+                "name": "ARABIC LETTER KEHEH FINAL FORM"
+            },
+            {
+                "char": "ڪ",
+                "name": "ARABIC LETTER SWASH KAF"
+            },
+            {
+                "char": "ڬ",
+                "name": "ARABIC LETTER KAF WITH DOT ABOVE"
+            },
+            {
+                "char": "ﻚ",
+                "name": "ARABIC LETTER KAF FINAL FORM"
+            },
+            {
+                "char": "ﮎ",
+                "name": "ARABIC LETTER KEHEH ISOLATED FORM"
+            },
+            {
+                "char": "ﻙ",
+                "name": "ARABIC LETTER KAF ISOLATED FORM"
+            },
+            {
+                "char": "ݢ",
+                "name": "ARABIC LETTER KEHEH WITH DOT ABOVE"
+            },
+            {
+                "char": "ࢴ",
+                "name": "ARABIC LETTER KAF WITH DOT BELOW"
+            },
+            {
+                "char": "ݣ",
+                "name": "ARABIC LETTER KEHEH WITH THREE DOTS ABOVE"
+            },
+            {
+                "char": "ﯓ",
+                "name": "ARABIC LETTER NG ISOLATED FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER LAM",
+        "map": {
+            "alphabet_ar": {
+                "char": "ل",
+                "name": "ARABIC LETTER LAM"
+            }
+        },
+        "others": [
+            {
+                "char": "ل",
+                "name": "ARABIC LETTER LAM"
+            },
+            {
+                "char": "ڵ",
+                "name": "ARABIC LETTER LAM WITH SMALL V"
+            },
+            {
+                "char": "ﻟ",
+                "name": "ARABIC LETTER LAM INITIAL FORM"
+            },
+            {
+                "char": "ﻠ",
+                "name": "ARABIC LETTER LAM MEDIAL FORM"
+            },
+            {
+                "char": "ﻞ",
+                "name": "ARABIC LETTER LAM FINAL FORM"
+            },
+            {
+                "char": "ﻻ",
+                "name": "ARABIC LIGATURE LAM WITH ALEF ISOLATED FORM"
+            },
+            {
+                "char": "ﻼ",
+                "name": "ARABIC LIGATURE LAM WITH ALEF FINAL FORM"
+            },
+            {
+                "char": "ﻝ",
+                "name": "ARABIC LETTER LAM ISOLATED FORM"
+            },
+            {
+                "char": "ﻵ",
+                "name": "ARABIC LIGATURE LAM WITH ALEF WITH MADDA ABOVE ISOLATED FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER MEEM",
+        "map": {
+            "alphabet_ar": {
+                "char": "م",
+                "name": "ARABIC LETTER MEEM"
+            }
+        },
+        "others": [
+            {
+                "char": "م",
+                "name": "ARABIC LETTER MEEM"
+            },
+            {
+                "char": "ﻣ",
+                "name": "ARABIC LETTER MEEM INITIAL FORM"
+            },
+            {
+                "char": "ﻤ",
+                "name": "ARABIC LETTER MEEM MEDIAL FORM"
+            },
+            {
+                "char": "ﻢ",
+                "name": "ARABIC LETTER MEEM FINAL FORM"
+            },
+            {
+                "char": "ﻡ",
+                "name": "ARABIC LETTER MEEM ISOLATED FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER NOON",
+        "map": {
+            "alphabet_ar": {
+                "char": "ن",
+                "name": "ARABIC LETTER NOON"
+            }
+        },
+        "others": [
+            {
+                "char": "ن",
+                "name": "ARABIC LETTER NOON"
+            },
+            {
+                "char": "ﻧ",
+                "name": "ARABIC LETTER NOON INITIAL FORM"
+            },
+            {
+                "char": "ﻨ",
+                "name": "ARABIC LETTER NOON MEDIAL FORM"
+            },
+            {
+                "char": "ﻦ",
+                "name": "ARABIC LETTER NOON FINAL FORM"
+            },
+            {
+                "char": "ﻥ",
+                "name": "ARABIC LETTER NOON ISOLATED FORM"
+            },
+            {
+                "char": "ں",
+                "name": "ARABIC LETTER NOON GHUNNA"
+            },
+            {
+                "char": "ڼ",
+                "name": "ARABIC LETTER NOON WITH RING"
+            },
+            {
+                "char": "ﮟ",
+                "name": "ARABIC LETTER NOON GHUNNA FINAL FORM"
+            },
+            {
+                "char": "ڽ",
+                "name": "ARABIC LETTER NOON WITH THREE DOTS ABOVE"
+            },
+            {
+                "char": "ݨ",
+                "name": "ARABIC LETTER NOON WITH SMALL TAH"
+            },
+            {
+                "char": "ﮞ",
+                "name": "ARABIC LETTER NOON GHUNNA ISOLATED FORM"
+            },
+            {
+                "char": "ݩ",
+                "name": "ARABIC LETTER NOON WITH SMALL V"
+            },
+            {
+                "char": "ڻ",
+                "name": "ARABIC LETTER RNOON"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER WAW",
+        "map": {
+            "alphabet_ar": {
+                "char": "و",
+                "name": "ARABIC LETTER WAW"
+            }
+        },
+        "others": [
+            {
+                "char": "و",
+                "name": "ARABIC LETTER WAW"
+            },
+            {
+                "char": "ﻮ",
+                "name": "ARABIC LETTER WAW FINAL FORM"
+            },
+            {
+                "char": "ۆ",
+                "name": "ARABIC LETTER OE"
+            },
+            {
+                "char": "ﻭ",
+                "name": "ARABIC LETTER WAW ISOLATED FORM"
+            },
+            {
+                "char": "ۊ",
+                "name": "ARABIC LETTER WAW WITH TWO DOTS ABOVE"
+            },
+            {
+                "char": "ۇ",
+                "name": "ARABIC LETTER U"
+            },
+            {
+                "char": "ۉ",
+                "name": "ARABIC LETTER KIRGHIZ YU"
+            },
+            {
+                "char": "ۏ",
+                "name": "ARABIC LETTER WAW WITH DOT ABOVE"
+            },
+            {
+                "char": "ۋ",
+                "name": "ARABIC LETTER VE"
+            },
+            {
+                "char": "ﺆ",
+                "name": "ARABIC LETTER WAW WITH HAMZA ABOVE FINAL FORM"
+            },
+            {
+                "char": "ٶ",
+                "name": "ARABIC LETTER HIGH HAMZA WAW"
+            },
+            {
+                "char": "ۈ",
+                "name": "ARABIC LETTER YU"
+            },
+            {
+                "char": "ۅ",
+                "name": "ARABIC LETTER KIRGHIZ OE"
+            },
+            {
+                "char": "ﯙ",
+                "name": "ARABIC LETTER OE ISOLATED FORM"
+            },
+            {
+                "char": "ݸ",
+                "name": "ARABIC LETTER WAW WITH EXTENDED ARABIC-INDIC DIGIT TWO ABOVE"
+            },
+            {
+                "char": "ﯞ",
+                "name": "ARABIC LETTER VE ISOLATED FORM"
+            },
+            {
+                "char": "ﺅ",
+                "name": "ARABIC LETTER WAW WITH HAMZA ABOVE ISOLATED FORM"
+            },
+            {
+                "char": "ﯗ",
+                "name": "ARABIC LETTER U ISOLATED FORM"
+            },
+            {
+                "char": "ٷ",
+                "name": "ARABIC LETTER U WITH HAMZA ABOVE"
+            },
+            {
+                "char": "ۄ",
+                "name": "ARABIC LETTER WAW WITH RING"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER HEH",
+        "map": {
+            "alphabet_ar": {
+                "char": "ه",
+                "name": "ARABIC LETTER HEH"
+            }
+        },
+        "others": [
+            {
+                "char": "ه",
+                "name": "ARABIC LETTER HEH"
+            },
+            {
+                "char": "ۀ",
+                "name": "ARABIC LETTER HEH WITH YEH ABOVE"
+            },
+            {
+                "char": "ﻫ",
+                "name": "ARABIC LETTER HEH INITIAL FORM"
+            },
+            {
+                "char": "ﻪ",
+                "name": "ARABIC LETTER HEH FINAL FORM"
+            },
+            {
+                "char": "ە",
+                "name": "ARABIC LETTER AE"
+            },
+            {
+                "char": "ھ",
+                "name": "ARABIC LETTER HEH DOACHASHMEE"
+            },
+            {
+                "char": "ۂ",
+                "name": "ARABIC LETTER HEH GOAL WITH HAMZA ABOVE"
+            },
+            {
+                "char": "ہ",
+                "name": "ARABIC LETTER HEH GOAL"
+            },
+            {
+                "char": "ﻬ",
+                "name": "ARABIC LETTER HEH MEDIAL FORM"
+            },
+            {
+                "char": "ﻩ",
+                "name": "ARABIC LETTER HEH ISOLATED FORM"
+            },
+            {
+                "char": "ﮥ",
+                "name": "ARABIC LETTER HEH WITH YEH ABOVE FINAL FORM"
+            },
+            {
+                "char": "ﮬ",
+                "name": "ARABIC LETTER HEH DOACHASHMEE INITIAL FORM"
+            },
+            {
+                "char": "ﮫ",
+                "name": "ARABIC LETTER HEH DOACHASHMEE FINAL FORM"
+            },
+            {
+                "char": "ﮪ",
+                "name": "ARABIC LETTER HEH DOACHASHMEE ISOLATED FORM"
+            },
+            {
+                "char": "ﮭ",
+                "name": "ARABIC LETTER HEH DOACHASHMEE MEDIAL FORM"
+            },
+            {
+                "char": "ۿ",
+                "name": "ARABIC LETTER HEH WITH INVERTED V"
+            },
+            {
+                "char": "ﮤ",
+                "name": "ARABIC LETTER HEH WITH YEH ABOVE ISOLATED FORM"
+            }
+        ]
+    },
+    {
+        "name": "ARABIC LETTER FARSI YEH",
+        "map": {
+            "alphabet_ar": {
+                "char": "ی",
+                "name": "ARABIC LETTER FARSI YEH"
+            }
+        },
+        "others": [
+            {
+                "char": "ی",
+                "name": "ARABIC LETTER FARSI YEH"
+            },
+            {
+                "char": "ي",
+                "name": "ARABIC LETTER YEH"
+            },
+            {
+                "char": "ى",
+                "name": "ARABIC LETTER ALEF MAKSURA"
+            },
+            {
+                "char": "ێ",
+                "name": "ARABIC LETTER YEH WITH SMALL V"
+            },
+            {
+                "char": "ﻴ",
+                "name": "ARABIC LETTER YEH MEDIAL FORM"
+            },
+            {
+                "char": "ﻳ",
+                "name": "ARABIC LETTER YEH INITIAL FORM"
+            },
+            {
+                "char": "ﯾ",
+                "name": "ARABIC LETTER FARSI YEH INITIAL FORM"
+            },
+            {
+                "char": "ﯿ",
+                "name": "ARABIC LETTER FARSI YEH MEDIAL FORM"
+            },
+            {
+                "char": "ؽ",
+                "name": "ARABIC LETTER FARSI YEH WITH INVERTED V"
+            },
+            {
+                "char": "ﯽ",
+                "name": "ARABIC LETTER FARSI YEH FINAL FORM"
+            },
+            {
+                "char": "ﻲ",
+                "name": "ARABIC LETTER YEH FINAL FORM"
+            },
+            {
+                "char": "ﻰ",
+                "name": "ARABIC LETTER ALEF MAKSURA FINAL FORM"
+            },
+            {
+                "char": "ﯼ",
+                "name": "ARABIC LETTER FARSI YEH ISOLATED FORM"
+            },
+            {
+                "char": "ے",
+                "name": "ARABIC LETTER YEH BARREE"
+            },
+            {
+                "char": "ﻯ",
+                "name": "ARABIC LETTER ALEF MAKSURA ISOLATED FORM"
+            },
+            {
+                "char": "ٸ",
+                "name": "ARABIC LETTER HIGH HAMZA YEH"
+            },
+            {
+                "char": "ؿ",
+                "name": "ARABIC LETTER FARSI YEH WITH THREE DOTS ABOVE"
+            },
+            {
+                "char": "ې",
+                "name": "ARABIC LETTER E"
+            },
+            {
+                "char": "ﻱ",
+                "name": "ARABIC LETTER YEH ISOLATED FORM"
+            },
+            {
+                "char": "ۓ",
+                "name": "ARABIC LETTER YEH BARREE WITH HAMZA ABOVE"
+            },
+            {
+                "char": "ۍ",
+                "name": "ARABIC LETTER YEH WITH TAIL"
+            },
+            {
+                "char": "ݵ",
+                "name": "ARABIC LETTER FARSI YEH WITH EXTENDED ARABIC-INDIC DIGIT TWO ABOVE"
+            },
+            {
+                "char": "ݶ",
+                "name": "ARABIC LETTER FARSI YEH WITH EXTENDED ARABIC-INDIC DIGIT THREE ABOVE"
+            }
+        ]
+    }
+]

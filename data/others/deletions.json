@@ -1,0 +1,17 @@
+[
+  {
+    "name": "DELETIONS",
+    "map": {
+      "deletions_delete": {
+        "name": "EMPTY CHARACTER",
+        "char": ""
+      }
+    },
+    "others": [
+      {
+        "char": "ـ",
+        "name": "ARABIC TATWEEL"
+      }
+    ]
+  }
+]
