@@ -87,6 +87,18 @@
       {
         "char": "〿",
         "name": "IDEOGRAPHIC HALF FILL SPACE"
+      },
+      {
+        "char": "\u180E",
+        "name": "MONGOLIAN VOWEL SEPARATOR"
+      },
+      {
+        "char": "\u2000",
+        "name": "EN QUAD"
+      },
+      {
+        "char": "\u2001",
+        "name": "EM QUAD"
       }
     ]
   },
@@ -121,18 +133,38 @@
         "name": "EMPTY CHARACTER"
       },
       "space_normal": {
-        "char": "\n",
-        "name": "NEW LINE"
+        "char": " ",
+        "name": "SPACE"
       },
       "space_keep": {
         "char": "\n",
-        "name": "SPACE"
+        "name": "NEW LINE"
       }
     },
     "others": [
       {
         "char": "\n",
         "name": "NEW LINE"
+      },
+      {
+        "char": "\u000B",
+        "name": "VERTICAL TABULATION"
+      },
+      {
+        "char": "\u000C",
+        "name": "FORM FEED"
+      },
+      {
+        "char": "\u0085",
+        "name": "NEXT LINE"
+      },
+      {
+        "char": "\u2028",
+        "name": "LINE SEPARATOR"
+      },
+      {
+        "char": "\u2029",
+        "name": "PARAGRAPH SEPARATOR"
       }
     ]
   },
@@ -179,6 +211,29 @@
       {
         "char": "\u200C",
         "name": "ZERO WIDTH NON-JOINER"
+      }
+    ]
+  },
+  {
+    "name": "ZERO WIDTH JOINER",
+    "map": {
+      "space_delete": {
+        "char": "",
+        "name": "EMPTY CHARACTER"
+      },
+      "space_keep": {
+        "char": "\u200D",
+        "name": "ZERO WIDTH JOINER"
+      },
+      "space_normal": {
+        "char": " ",
+        "name": "SPACE"
+      }
+    },
+    "others": [
+      {
+        "char": "\u200D",
+        "name": "ZERO WIDTH JOINER"
       }
     ]
   }
