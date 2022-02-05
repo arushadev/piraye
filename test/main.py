@@ -4,5 +4,5 @@ text = '.محمد   & حمزﻫ در , تاریخ ۲۴/12 به ("دانشگاه�
 norm = Normalizer(['fa'], remove_extra_spaces=False)
 result = norm.normalize(text)
 print(result)
-with open("Output.txt", "w") as text_file:
+with open("output/Output.txt", "w") as text_file:
     text_file.write(result)
