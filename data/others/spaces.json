@@ -158,5 +158,28 @@
         "name": "CARRIAGE RETURN"
       }
     ]
+  },
+  {
+    "name": "ZERO WIDTH NON-JOINER",
+    "map": {
+      "space_delete": {
+        "char": "",
+        "name": "EMPTY CHARACTER"
+      },
+      "space_keep": {
+        "char": "\u200C",
+        "name": "ZERO WIDTH NON-JOINER"
+      },
+      "space_normal": {
+        "char": " ",
+        "name": "SPACE"
+      }
+    },
+    "others": [
+      {
+        "char": "\u200C",
+        "name": "ZERO WIDTH NON-JOINER"
+      }
+    ]
   }
 ]
