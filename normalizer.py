@@ -5,6 +5,7 @@ import re
 import string
 import typing
 from typing import List
+from typing import Dict
 
 from spacy.lang.en import English
 
@@ -74,7 +75,7 @@ class Normalizer:
             prev_token = token
         return final_text
 
-    def __load_jsons(self) -> (dict[str, str], dict[str, str], dict[str, str]):
+    def __load_jsons(self) -> (Dict[str, str], Dict[str, str], Dict[str, str]):
         all_configs = []
         current_directory = os.path.dirname(os.path.abspath(__file__))
         for dir_path, _, filenames in os.walk(current_directory + "/data/"):
@@ -93,8 +94,8 @@ class Normalizer:
                Normalizer.__get_mapping(all_configs, ["digit_en", "punc_en"])
 
     @staticmethod
-    def __get_mapping(all_configs: List[dict[str, typing.Any]],
-                      configs: List[str]) -> dict[str, str]:
+    def __get_mapping(all_configs: List[Dict[str, typing.Any]],
+                      configs: List[str]) -> Dict[str, str]:
         mapping = {}
         for data in all_configs:
             for key in data["map"].keys():
