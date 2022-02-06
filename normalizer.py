@@ -1,31 +1,44 @@
+"""This module includes Normalizer class for normalizing texts"""
 import json
 import os
 import re
 import string
+import typing
 from typing import List
 
 from spacy.lang.en import English
 
 
 class Normalizer:
+    """
+    A class for normalizer.
 
-    def __init__(self, configs: List[str], remove_extra_spaces=True):
+    ...
+
+    Attributes
+    ----------
+    configs : List[str]
+        list of desired configs
+    remove_extra_spaces : boo
+        that determines spaces stick together or not
+
+
+    Methods
+    -------
+    normalize(text: str):
+        get a text and normalize it and finally return it
+    """
+
+    def __init__(self, configs: List[str], remove_extra_spaces: bool = True):
         """
             constructor
             :param configs
         """
-        langs: List[str]
         # Create a blank Tokenizer with just the English vocab
         self.__tokenizer = English().tokenizer
         self.__configs = configs
         self.__remove_extra_spaces = remove_extra_spaces
         self.__mapping, self.__mapping_punc, self.__en_mapping = self.__load_jsons()
-        self.__tokens = []
-
-    def __mapping_char(self, char):
-        if char in self.__mapping.keys():
-            return self.__mapping[char]
-        return char
 
     def normalize(self, text: str) -> str:
         """
@@ -34,20 +47,20 @@ class Normalizer:
             :return: normalized text
         """
         text = self.__change_puncs(text)
-        result = ''.join(map(self.__mapping_char, text))
+        result = ''.join([self.__mapping.get(char, char) for char in text])
         if self.__remove_extra_spaces:
             result = Normalizer.do_remove_extra_spaces(result)
         return result
 
     def __change_puncs(self, text: str) -> str:
-        text2 = ''.join([self.__en_mapping[char] if char in self.__en_mapping.keys() else char for char in text])
+        text2 = ''.join([self.__en_mapping.get(char, char) for char in text])
         doc = self.__tokenizer(text2)
         text2_counter = 0
         final_text = ""
         last_token_index = 0
         prev_token = ""
-        for i in range(len(doc)):
-            token = doc[i].text
+        for doc_i in doc:
+            token = doc_i.text
             token_index = text2.index(token, text2_counter)
             if last_token_index + len(prev_token) <= token_index:
                 final_text += text[last_token_index + len(prev_token):token_index]
@@ -65,8 +78,9 @@ class Normalizer:
         all_configs = []
         current_directory = os.path.dirname(os.path.abspath(__file__))
         for dir_path, _, filenames in os.walk(current_directory + "/data/"):
-            for f in filenames:
-                all_configs.extend(Normalizer.read_json(os.path.abspath(os.path.join(dir_path, f))))
+            for filename in filenames:
+                all_configs.extend(Normalizer.read_json(os.path.abspath
+                                                        (os.path.join(dir_path, filename))))
         configs_punc = []
         configs_not_punc = []
         for config in self.__configs:
@@ -79,7 +93,8 @@ class Normalizer:
                Normalizer.__get_mapping(all_configs, ["digit_en", "punc_en"])
 
     @staticmethod
-    def __get_mapping(all_configs: List[dict[str,]], configs: List[str]) -> dict[str, str]:
+    def __get_mapping(all_configs: List[dict[str, typing.Any]],
+                      configs: List[str]) -> dict[str, str]:
         mapping = {}
         for data in all_configs:
             for key in data["map"].keys():
@@ -93,12 +108,15 @@ class Normalizer:
         return mapping
 
     @staticmethod
-    # read json file based on address
     def read_json(address: string):
-        f = open(address, )
-        data = json.load(f)
-        f.close()
-        return data
+        """
+            return loaded json from dist
+            :param address: the input address
+            :return: loaded json
+        """
+        with open(address, encoding="utf-8") as json_file:
+            data = json.load(json_file)
+            return data
 
     @staticmethod
     def do_remove_extra_spaces(text: string) -> string:
