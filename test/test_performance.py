@@ -14,3 +14,4 @@ if __name__ == '__main__':
     # for 10 time = 5s ( first normalizer)
     # for 10 time = 4.110s ( second normalizer)
     # for 10 time = 0.059s ( third normalizer)
+sdsd
