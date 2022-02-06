@@ -1,1185 +1,1311 @@
 [
-    {
-        "name": "COMMA",
-        "map": {
-            "punc_fa": {
-                "char": "،",
-                "name": "ARABIC COMMA"
-            },
-            "punc_ar": {
-                "char": "،",
-                "name": "ARABIC COMMA"
-            },
-            "punc_en": {
-                "char": ",",
-                "name": "COMMA"
-            }
-        },
-        "others": [
-            {
-                "char": "،",
-                "name": "ARABIC COMMA"
-            },
-            {
-                "char": ",",
-                "name": "COMMA"
-            },
-            {
-                "char": "՝",
-                "name": "ARMENIAN COMMA"
-            },
-            {
-                "char": "߸",
-                "name": "NKO COMMA"
-            },
-            {
-                "char": "፣",
-                "name": "ETHIOPIC COMMA"
-            },
-            {
-                "char": "᠂",
-                "name": "MONGOLIAN COMMA"
-            },
-            {
-                "char": "᠈",
-                "name": "MONGOLIAN MANCHU COMMA"
-            },
-            {
-                "char": "⸲",
-                "name": "TURNED COMMA"
-            },
-            {
-                "char": "⸴",
-                "name": "RAISED COMMA"
-            },
-            {
-                "char": "⹁",
-                "name": "REVERSED COMMA"
-            },
-            {
-                "char": "⹉",
-                "name": "DOUBLE STACKED COMMA"
-            },
-            {
-                "char": "⹌",
-                "name": "MEDIEVAL COMMA"
-            },
-            {
-                "char": "、",
-                "name": "IDEOGRAPHIC COMMA"
-            },
-            {
-                "char": "꓾",
-                "name": "LISU PUNCTUATION COMMA"
-            },
-            {
-                "char": "꘍",
-                "name": "VAI COMMA"
-            },
-            {
-                "char": "꛵",
-                "name": "BAMUM COMMA"
-            }
-        ]
+  {
+    "name": "COMMA",
+    "map": {
+      "punc_fa": {
+        "char": "،",
+        "name": "ARABIC COMMA"
+      },
+      "punc_ar": {
+        "char": "،",
+        "name": "ARABIC COMMA"
+      },
+      "punc_en": {
+        "char": ",",
+        "name": "COMMA"
+      }
     },
-    {
-        "name": "FULL STOP",
-        "map": {
-            "punc_fa": {
-                "char": ".",
-                "name": "FULL STOP"
-            },
-            "punc_ar": {
-                "char": "۔",
-                "name": "ARABIC FULL STOP"
-            },
-            "punc_en": {
-                "char": ".",
-                "name": "FULL STOP"
-            }
-        },
-        "others": [
-            {
-                "char": ".",
-                "name": "FULL STOP"
-            },
-            {
-                "char": "۔",
-                "name": "ARABIC FULL STOP"
-            },
-            {
-                "char": "։",
-                "name": "ARMENIAN FULL STOP"
-            },
-            {
-                "char": "܁",
-                "name": "SYRIAC SUPRALINEAR FULL STOP"
-            },
-            {
-                "char": "܂",
-                "name": "SYRIAC SUBLINEAR FULL STOP"
-            },
-            {
-                "char": "።",
-                "name": "ETHIOPIC FULL STOP"
-            },
-            {
-                "char": "᙮",
-                "name": "CANADIAN SYLLABICS FULL STOP"
-            },
-            {
-                "char": "᠃",
-                "name": "MONGOLIAN FULL STOP"
-            },
-            {
-                "char": "᠉",
-                "name": "MONGOLIAN MANCHU FULL STOP"
-            },
-            {
-                "char": "⸼",
-                "name": "STENOGRAPHIC FULL STOP"
-            },
-            {
-                "char": "。",
-                "name": "IDEOGRAPHIC FULL STOP"
-            },
-            {
-                "char": "꓿",
-                "name": "LISU PUNCTUATION FULL STOP"
-            },
-            {
-                "char": "꘎",
-                "name": "VAI FULL STOP"
-            },
-            {
-                "char": "꛳",
-                "name": "BAMUM FULL STOP"
-            }
-        ]
+    "others": [
+      {
+        "char": "،",
+        "name": "ARABIC COMMA"
+      },
+      {
+        "char": ",",
+        "name": "COMMA"
+      },
+      {
+        "char": "՝",
+        "name": "ARMENIAN COMMA"
+      },
+      {
+        "char": "߸",
+        "name": "NKO COMMA"
+      },
+      {
+        "char": "፣",
+        "name": "ETHIOPIC COMMA"
+      },
+      {
+        "char": "᠂",
+        "name": "MONGOLIAN COMMA"
+      },
+      {
+        "char": "᠈",
+        "name": "MONGOLIAN MANCHU COMMA"
+      },
+      {
+        "char": "⸲",
+        "name": "TURNED COMMA"
+      },
+      {
+        "char": "⸴",
+        "name": "RAISED COMMA"
+      },
+      {
+        "char": "⹁",
+        "name": "REVERSED COMMA"
+      },
+      {
+        "char": "⹉",
+        "name": "DOUBLE STACKED COMMA"
+      },
+      {
+        "char": "⹌",
+        "name": "MEDIEVAL COMMA"
+      },
+      {
+        "char": "、",
+        "name": "IDEOGRAPHIC COMMA"
+      },
+      {
+        "char": "꓾",
+        "name": "LISU PUNCTUATION COMMA"
+      },
+      {
+        "char": "꘍",
+        "name": "VAI COMMA"
+      },
+      {
+        "char": "꛵",
+        "name": "BAMUM COMMA"
+      }
+    ]
+  },
+  {
+    "name": "FULL STOP",
+    "map": {
+      "punc_fa": {
+        "char": ".",
+        "name": "FULL STOP"
+      },
+      "punc_ar": {
+        "char": "۔",
+        "name": "ARABIC FULL STOP"
+      },
+      "punc_en": {
+        "char": ".",
+        "name": "FULL STOP"
+      }
     },
-    {
-        "name": "APOSTROPHE",
-        "map": {
-            "punc_fa": {
-                "char": "'",
-                "name": "APOSTROPHE"
-            },
-            "punc_ar": {
-                "char": "'",
-                "name": "APOSTROPHE"
-            },
-            "punc_en": {
-                "char": "'",
-                "name": "APOSTROPHE"
-            }
-        },
-        "others": [
-            {
-                "char": "'",
-                "name": "APOSTROPHE"
-            },
-            {
-                "char": "ʼ",
-                "name": "MODIFIER LETTER APOSTROPHE"
-            },
-            {
-                "char": "ˮ",
-                "name": "MODIFIER LETTER DOUBLE APOSTROPHE"
-            },
-            {
-                "char": "՚",
-                "name": "ARMENIAN APOSTROPHE"
-            },
-            {
-                "char": "ߴ",
-                "name": "NKO HIGH TONE APOSTROPHE"
-            },
-            {
-                "char": "ߵ",
-                "name": "NKO LOW TONE APOSTROPHE"
-            }
-        ]
+    "others": [
+      {
+        "char": ".",
+        "name": "FULL STOP"
+      },
+      {
+        "char": "۔",
+        "name": "ARABIC FULL STOP"
+      },
+      {
+        "char": "։",
+        "name": "ARMENIAN FULL STOP"
+      },
+      {
+        "char": "܁",
+        "name": "SYRIAC SUPRALINEAR FULL STOP"
+      },
+      {
+        "char": "܂",
+        "name": "SYRIAC SUBLINEAR FULL STOP"
+      },
+      {
+        "char": "።",
+        "name": "ETHIOPIC FULL STOP"
+      },
+      {
+        "char": "᙮",
+        "name": "CANADIAN SYLLABICS FULL STOP"
+      },
+      {
+        "char": "᠃",
+        "name": "MONGOLIAN FULL STOP"
+      },
+      {
+        "char": "᠉",
+        "name": "MONGOLIAN MANCHU FULL STOP"
+      },
+      {
+        "char": "⸼",
+        "name": "STENOGRAPHIC FULL STOP"
+      },
+      {
+        "char": "。",
+        "name": "IDEOGRAPHIC FULL STOP"
+      },
+      {
+        "char": "꓿",
+        "name": "LISU PUNCTUATION FULL STOP"
+      },
+      {
+        "char": "꘎",
+        "name": "VAI FULL STOP"
+      },
+      {
+        "char": "꛳",
+        "name": "BAMUM FULL STOP"
+      }
+    ]
+  },
+  {
+    "name": "APOSTROPHE",
+    "map": {
+      "punc_fa": {
+        "char": "'",
+        "name": "APOSTROPHE"
+      },
+      "punc_ar": {
+        "char": "'",
+        "name": "APOSTROPHE"
+      },
+      "punc_en": {
+        "char": "'",
+        "name": "APOSTROPHE"
+      }
     },
-    {
-        "name": "RIGHT PARENTHESIS",
-        "map": {
-            "punc_fa": {
-                "char": ")",
-                "name": "RIGHT PARENTHESIS"
-            },
-            "punc_ar": {
-                "char": ")",
-                "name": "RIGHT PARENTHESIS"
-            },
-            "punc_en": {
-                "char": ")",
-                "name": "RIGHT PARENTHESIS"
-            }
-        },
-        "others": [
-            {
-                "char": ")",
-                "name": "RIGHT PARENTHESIS"
-            },
-            {
-                "char": "⁾",
-                "name": "SUPERSCRIPT RIGHT PARENTHESIS"
-            },
-            {
-                "char": "₎",
-                "name": "SUBSCRIPT RIGHT PARENTHESIS"
-            },
-            {
-                "char": "❩",
-                "name": "MEDIUM RIGHT PARENTHESIS ORNAMENT"
-            },
-            {
-                "char": "❫",
-                "name": "MEDIUM FLATTENED RIGHT PARENTHESIS ORNAMENT"
-            }
-        ]
+    "others": [
+      {
+        "char": "'",
+        "name": "APOSTROPHE"
+      },
+      {
+        "char": "ʼ",
+        "name": "MODIFIER LETTER APOSTROPHE"
+      },
+      {
+        "char": "ˮ",
+        "name": "MODIFIER LETTER DOUBLE APOSTROPHE"
+      },
+      {
+        "char": "՚",
+        "name": "ARMENIAN APOSTROPHE"
+      },
+      {
+        "char": "ߴ",
+        "name": "NKO HIGH TONE APOSTROPHE"
+      },
+      {
+        "char": "ߵ",
+        "name": "NKO LOW TONE APOSTROPHE"
+      }
+    ]
+  },
+  {
+    "name": "RIGHT PARENTHESIS",
+    "map": {
+      "punc_fa": {
+        "char": ")",
+        "name": "RIGHT PARENTHESIS"
+      },
+      "punc_ar": {
+        "char": ")",
+        "name": "RIGHT PARENTHESIS"
+      },
+      "punc_en": {
+        "char": ")",
+        "name": "RIGHT PARENTHESIS"
+      }
     },
-    {
-        "name": "LEFT PARENTHESIS",
-        "map": {
-            "punc_fa": {
-                "char": "(",
-                "name": "LEFT PARENTHESIS"
-            },
-            "punc_ar": {
-                "char": "(",
-                "name": "LEFT PARENTHESIS"
-            },
-            "punc_en": {
-                "char": "(",
-                "name": "LEFT PARENTHESIS"
-            }
-        },
-        "others": [
-            {
-                "char": "(",
-                "name": "LEFT PARENTHESIS"
-            },
-            {
-                "char": "⁽",
-                "name": "SUPERSCRIPT LEFT PARENTHESIS"
-            },
-            {
-                "char": "₍",
-                "name": "SUBSCRIPT LEFT PARENTHESIS"
-            },
-            {
-                "char": "❨",
-                "name": "MEDIUM LEFT PARENTHESIS ORNAMENT"
-            },
-            {
-                "char": "❪",
-                "name": "MEDIUM FLATTENED LEFT PARENTHESIS ORNAMENT"
-            }
-        ]
+    "others": [
+      {
+        "char": ")",
+        "name": "RIGHT PARENTHESIS"
+      },
+      {
+        "char": "⁾",
+        "name": "SUPERSCRIPT RIGHT PARENTHESIS"
+      },
+      {
+        "char": "₎",
+        "name": "SUBSCRIPT RIGHT PARENTHESIS"
+      },
+      {
+        "char": "❩",
+        "name": "MEDIUM RIGHT PARENTHESIS ORNAMENT"
+      },
+      {
+        "char": "❫",
+        "name": "MEDIUM FLATTENED RIGHT PARENTHESIS ORNAMENT"
+      }
+    ]
+  },
+  {
+    "name": "LEFT PARENTHESIS",
+    "map": {
+      "punc_fa": {
+        "char": "(",
+        "name": "LEFT PARENTHESIS"
+      },
+      "punc_ar": {
+        "char": "(",
+        "name": "LEFT PARENTHESIS"
+      },
+      "punc_en": {
+        "char": "(",
+        "name": "LEFT PARENTHESIS"
+      }
     },
-    {
-        "name": "COLON",
-        "map": {
-            "punc_fa": {
-                "char": ":",
-                "name": "COLON"
-            },
-            "punc_ar": {
-                "char": ":",
-                "name": "COLON"
-            },
-            "punc_en": {
-                "char": ":",
-                "name": "COLON"
-            }
-        },
-        "others": [
-            {
-                "char": ":",
-                "name": "COLON"
-            },
-            {
-                "char": "ː",
-                "name": "MODIFIER LETTER TRIANGULAR COLON"
-            },
-            {
-                "char": "˸",
-                "name": "MODIFIER LETTER RAISED COLON"
-            },
-            {
-                "char": "܃",
-                "name": "SYRIAC SUPRALINEAR COLON"
-            },
-            {
-                "char": "܄",
-                "name": "SYRIAC SUBLINEAR COLON"
-            },
-            {
-                "char": "܅",
-                "name": "SYRIAC HORIZONTAL COLON"
-            },
-            {
-                "char": "܆",
-                "name": "SYRIAC COLON SKEWED LEFT"
-            },
-            {
-                "char": "܇",
-                "name": "SYRIAC COLON SKEWED RIGHT"
-            },
-            {
-                "char": "܈",
-                "name": "SYRIAC SUPRALINEAR COLON SKEWED LEFT"
-            },
-            {
-                "char": "܉",
-                "name": "SYRIAC SUBLINEAR COLON SKEWED RIGHT"
-            },
-            {
-                "char": "፥",
-                "name": "ETHIOPIC COLON"
-            },
-            {
-                "char": "፦",
-                "name": "ETHIOPIC PREFACE COLON"
-            },
-            {
-                "char": "᠄",
-                "name": "MONGOLIAN COLON"
-            },
-            {
-                "char": "⁝",
-                "name": "TRICOLON"
-            },
-            {
-                "char": "⍠",
-                "name": "APL FUNCTIONAL SYMBOL QUAD COLON"
-            },
-            {
-                "char": "⫶",
-                "name": "TRIPLE COLON OPERATOR"
-            },
-            {
-                "char": "꛴",
-                "name": "BAMUM COLON"
-            },
-            {
-                "char": "꞉",
-                "name": "MODIFIER LETTER COLON"
-            }
-        ]
+    "others": [
+      {
+        "char": "(",
+        "name": "LEFT PARENTHESIS"
+      },
+      {
+        "char": "⁽",
+        "name": "SUPERSCRIPT LEFT PARENTHESIS"
+      },
+      {
+        "char": "₍",
+        "name": "SUBSCRIPT LEFT PARENTHESIS"
+      },
+      {
+        "char": "❨",
+        "name": "MEDIUM LEFT PARENTHESIS ORNAMENT"
+      },
+      {
+        "char": "❪",
+        "name": "MEDIUM FLATTENED LEFT PARENTHESIS ORNAMENT"
+      }
+    ]
+  },
+  {
+    "name": "COLON",
+    "map": {
+      "punc_fa": {
+        "char": ":",
+        "name": "COLON"
+      },
+      "punc_ar": {
+        "char": ":",
+        "name": "COLON"
+      },
+      "punc_en": {
+        "char": ":",
+        "name": "COLON"
+      }
     },
-    {
-        "name": "HYPHEN-MINUS",
-        "map": {
-            "punc_fa": {
-                "char": "-",
-                "name": "HYPHEN-MINUS"
-            },
-            "punc_ar": {
-                "char": "-",
-                "name": "HYPHEN-MINUS"
-            },
-            "punc_en": {
-                "char": "-",
-                "name": "HYPHEN-MINUS"
-            }
-        },
-        "others": [
-            {
-                "char": "-",
-                "name": "HYPHEN-MINUS"
-            },
-            {
-                "char": "–",
-                "name": "EN DASH"
-            },
-            {
-                "char": "—",
-                "name": "EM DASH"
-            },
-            {
-                "char": "−",
-                "name": "MINUS SIGN"
-            }
-        ]
+    "others": [
+      {
+        "char": ":",
+        "name": "COLON"
+      },
+      {
+        "char": "ː",
+        "name": "MODIFIER LETTER TRIANGULAR COLON"
+      },
+      {
+        "char": "˸",
+        "name": "MODIFIER LETTER RAISED COLON"
+      },
+      {
+        "char": "܃",
+        "name": "SYRIAC SUPRALINEAR COLON"
+      },
+      {
+        "char": "܄",
+        "name": "SYRIAC SUBLINEAR COLON"
+      },
+      {
+        "char": "܅",
+        "name": "SYRIAC HORIZONTAL COLON"
+      },
+      {
+        "char": "܆",
+        "name": "SYRIAC COLON SKEWED LEFT"
+      },
+      {
+        "char": "܇",
+        "name": "SYRIAC COLON SKEWED RIGHT"
+      },
+      {
+        "char": "܈",
+        "name": "SYRIAC SUPRALINEAR COLON SKEWED LEFT"
+      },
+      {
+        "char": "܉",
+        "name": "SYRIAC SUBLINEAR COLON SKEWED RIGHT"
+      },
+      {
+        "char": "፥",
+        "name": "ETHIOPIC COLON"
+      },
+      {
+        "char": "፦",
+        "name": "ETHIOPIC PREFACE COLON"
+      },
+      {
+        "char": "᠄",
+        "name": "MONGOLIAN COLON"
+      },
+      {
+        "char": "⁝",
+        "name": "TRICOLON"
+      },
+      {
+        "char": "⍠",
+        "name": "APL FUNCTIONAL SYMBOL QUAD COLON"
+      },
+      {
+        "char": "⫶",
+        "name": "TRIPLE COLON OPERATOR"
+      },
+      {
+        "char": "꛴",
+        "name": "BAMUM COLON"
+      },
+      {
+        "char": "꞉",
+        "name": "MODIFIER LETTER COLON"
+      }
+    ]
+  },
+  {
+    "name": "HYPHEN-MINUS",
+    "map": {
+      "punc_fa": {
+        "char": "-",
+        "name": "HYPHEN-MINUS"
+      },
+      "punc_ar": {
+        "char": "-",
+        "name": "HYPHEN-MINUS"
+      },
+      "punc_en": {
+        "char": "-",
+        "name": "HYPHEN-MINUS"
+      }
     },
-    {
-        "name": "SEMICOLON",
-        "map": {
-            "punc_fa": {
-                "char": "؛",
-                "name": "ARABIC SEMICOLON"
-            },
-            "punc_ar": {
-                "char": "؛",
-                "name": "ARABIC SEMICOLON"
-            },
-            "punc_en": {
-                "char": ";",
-                "name": "SEMICOLON"
-            }
-        },
-        "others": [
-            {
-                "char": "؛",
-                "name": "ARABIC SEMICOLON"
-            },
-            {
-                "char": ";",
-                "name": "SEMICOLON"
-            },
-            {
-                "char": "፤",
-                "name": "ETHIOPIC SEMICOLON"
-            },
-            {
-                "char": "⁏",
-                "name": "REVERSED SEMICOLON"
-            },
-            {
-                "char": "⍮",
-                "name": "APL FUNCTIONAL SYMBOL SEMICOLON UNDERBAR"
-            },
-            {
-                "char": "⸵",
-                "name": "TURNED SEMICOLON"
-            },
-            {
-                "char": "꛶",
-                "name": "BAMUM SEMICOLON"
-            }
-        ]
+    "others": [
+      {
+        "char": "-",
+        "name": "HYPHEN-MINUS"
+      },
+      {
+        "char": "–",
+        "name": "EN DASH"
+      },
+      {
+        "char": "—",
+        "name": "EM DASH"
+      },
+      {
+        "char": "−",
+        "name": "MINUS SIGN"
+      },
+      {
+        "char": "\u00AD",
+        "name": "SOFT HYPHEN"
+      }
+    ]
+  },
+  {
+    "name": "SEMICOLON",
+    "map": {
+      "punc_fa": {
+        "char": "؛",
+        "name": "ARABIC SEMICOLON"
+      },
+      "punc_ar": {
+        "char": "؛",
+        "name": "ARABIC SEMICOLON"
+      },
+      "punc_en": {
+        "char": ";",
+        "name": "SEMICOLON"
+      }
     },
-    {
-        "name": "SOLIDUS",
-        "map": {
-            "punc_fa": {
-                "char": "/",
-                "name": "SOLIDUS"
-            },
-            "punc_ar": {
-                "char": "/",
-                "name": "SOLIDUS"
-            },
-            "punc_en": {
-                "char": "/",
-                "name": "SOLIDUS"
-            }
-        },
-        "others": [
-            {
-                "char": "/",
-                "name": "SOLIDUS"
-            },
-            {
-                "char": "̷",
-                "name": "COMBINING SHORT SOLIDUS OVERLAY"
-            },
-            {
-                "char": "̸",
-                "name": "COMBINING LONG SOLIDUS OVERLAY"
-            },
-            {
-                "char": "⃥",
-                "name": "COMBINING REVERSE SOLIDUS OVERLAY"
-            },
-            {
-                "char": "⃫",
-                "name": "COMBINING LONG DOUBLE SOLIDUS OVERLAY"
-            },
-            {
-                "char": "⟉",
-                "name": "SUPERSET PRECEDING SOLIDUS"
-            },
-            {
-                "char": "⧶",
-                "name": "SOLIDUS WITH OVERBAR"
-            },
-            {
-                "char": "⧸",
-                "name": "BIG SOLIDUS"
-            },
-            {
-                "char": "⫻",
-                "name": "TRIPLE SOLIDUS BINARY RELATION"
-            },
-            {
-                "char": "⫽",
-                "name": "DOUBLE SOLIDUS OPERATOR"
-            },
-            {
-                "char": "⹊",
-                "name": "DOTTED SOLIDUS"
-            },
-            {
-                "char": "٫",
-                "name": "ARABIC DECIMAL SEPARATOR"
-            },
-            {
-                "char": "⎖",
-                "name": "DECIMAL SEPARATOR KEY SYMBOL"
-            }
-        ]
+    "others": [
+      {
+        "char": "؛",
+        "name": "ARABIC SEMICOLON"
+      },
+      {
+        "char": ";",
+        "name": "SEMICOLON"
+      },
+      {
+        "char": "፤",
+        "name": "ETHIOPIC SEMICOLON"
+      },
+      {
+        "char": "⁏",
+        "name": "REVERSED SEMICOLON"
+      },
+      {
+        "char": "⍮",
+        "name": "APL FUNCTIONAL SYMBOL SEMICOLON UNDERBAR"
+      },
+      {
+        "char": "⸵",
+        "name": "TURNED SEMICOLON"
+      },
+      {
+        "char": "꛶",
+        "name": "BAMUM SEMICOLON"
+      }
+    ]
+  },
+  {
+    "name": "SOLIDUS",
+    "map": {
+      "punc_fa": {
+        "char": "/",
+        "name": "SOLIDUS"
+      },
+      "punc_ar": {
+        "char": "/",
+        "name": "SOLIDUS"
+      },
+      "punc_en": {
+        "char": "/",
+        "name": "SOLIDUS"
+      }
     },
-    {
-        "name": "RIGHT SQUARE BRACKET",
-        "map": {
-            "punc_fa": {
-                "char": "]",
-                "name": "RIGHT SQUARE BRACKET"
-            },
-            "punc_ar": {
-                "char": "]",
-                "name": "RIGHT SQUARE BRACKET"
-            },
-            "punc_en": {
-                "char": "]",
-                "name": "RIGHT SQUARE BRACKET"
-            }
-        },
-        "others": [
-            {
-                "char": "]",
-                "name": "RIGHT SQUARE BRACKET"
-            },
-            {
-                "char": "⁆",
-                "name": "RIGHT SQUARE BRACKET WITH QUILL"
-            },
-            {
-                "char": "⦌",
-                "name": "RIGHT SQUARE BRACKET WITH UNDERBAR"
-            },
-            {
-                "char": "⦎",
-                "name": "RIGHT SQUARE BRACKET WITH TICK IN BOTTOM CORNER"
-            },
-            {
-                "char": "⦐",
-                "name": "RIGHT SQUARE BRACKET WITH TICK IN TOP CORNER"
-            }
-        ]
+    "others": [
+      {
+        "char": "/",
+        "name": "SOLIDUS"
+      },
+      {
+        "char": "̷",
+        "name": "COMBINING SHORT SOLIDUS OVERLAY"
+      },
+      {
+        "char": "̸",
+        "name": "COMBINING LONG SOLIDUS OVERLAY"
+      },
+      {
+        "char": "⃥",
+        "name": "COMBINING REVERSE SOLIDUS OVERLAY"
+      },
+      {
+        "char": "⃫",
+        "name": "COMBINING LONG DOUBLE SOLIDUS OVERLAY"
+      },
+      {
+        "char": "⟉",
+        "name": "SUPERSET PRECEDING SOLIDUS"
+      },
+      {
+        "char": "⧶",
+        "name": "SOLIDUS WITH OVERBAR"
+      },
+      {
+        "char": "⧸",
+        "name": "BIG SOLIDUS"
+      },
+      {
+        "char": "⫻",
+        "name": "TRIPLE SOLIDUS BINARY RELATION"
+      },
+      {
+        "char": "⫽",
+        "name": "DOUBLE SOLIDUS OPERATOR"
+      },
+      {
+        "char": "⹊",
+        "name": "DOTTED SOLIDUS"
+      },
+      {
+        "char": "٫",
+        "name": "ARABIC DECIMAL SEPARATOR"
+      },
+      {
+        "char": "⎖",
+        "name": "DECIMAL SEPARATOR KEY SYMBOL"
+      }
+    ]
+  },
+  {
+    "name": "RIGHT SQUARE BRACKET",
+    "map": {
+      "punc_fa": {
+        "char": "]",
+        "name": "RIGHT SQUARE BRACKET"
+      },
+      "punc_ar": {
+        "char": "]",
+        "name": "RIGHT SQUARE BRACKET"
+      },
+      "punc_en": {
+        "char": "]",
+        "name": "RIGHT SQUARE BRACKET"
+      }
     },
-    {
-        "name": "LEFT SQUARE BRACKET",
-        "map": {
-            "punc_fa": {
-                "char": "[",
-                "name": "LEFT SQUARE BRACKET"
-            },
-            "punc_ar": {
-                "char": "[",
-                "name": "LEFT SQUARE BRACKET"
-            },
-            "punc_en": {
-                "char": "[",
-                "name": "LEFT SQUARE BRACKET"
-            }
-        },
-        "others": [
-            {
-                "char": "[",
-                "name": "LEFT SQUARE BRACKET"
-            },
-            {
-                "char": "⁅",
-                "name": "LEFT SQUARE BRACKET WITH QUILL"
-            },
-            {
-                "char": "⦋",
-                "name": "LEFT SQUARE BRACKET WITH UNDERBAR"
-            },
-            {
-                "char": "⦍",
-                "name": "LEFT SQUARE BRACKET WITH TICK IN TOP CORNER"
-            },
-            {
-                "char": "⦏",
-                "name": "LEFT SQUARE BRACKET WITH TICK IN BOTTOM CORNER"
-            }
-        ]
+    "others": [
+      {
+        "char": "]",
+        "name": "RIGHT SQUARE BRACKET"
+      },
+      {
+        "char": "⁆",
+        "name": "RIGHT SQUARE BRACKET WITH QUILL"
+      },
+      {
+        "char": "⦌",
+        "name": "RIGHT SQUARE BRACKET WITH UNDERBAR"
+      },
+      {
+        "char": "⦎",
+        "name": "RIGHT SQUARE BRACKET WITH TICK IN BOTTOM CORNER"
+      },
+      {
+        "char": "⦐",
+        "name": "RIGHT SQUARE BRACKET WITH TICK IN TOP CORNER"
+      }
+    ]
+  },
+  {
+    "name": "LEFT SQUARE BRACKET",
+    "map": {
+      "punc_fa": {
+        "char": "[",
+        "name": "LEFT SQUARE BRACKET"
+      },
+      "punc_ar": {
+        "char": "[",
+        "name": "LEFT SQUARE BRACKET"
+      },
+      "punc_en": {
+        "char": "[",
+        "name": "LEFT SQUARE BRACKET"
+      }
     },
-    {
-        "name": "THOUSANDS SEPARATOR",
-        "map": {
-            "punc_fa": {
-                "char": "٬",
-                "name": "ARABIC THOUSANDS SEPARATOR"
-            },
-            "punc_ar": {
-                "char": "٬",
-                "name": "ARABIC THOUSANDS SEPARATOR"
-            },
-            "punc_en": {
-                "char": ",",
-                "name": "COMMA"
-            }
-        },
-        "others": [
-            {
-                "char": "٬",
-                "name": "ARABIC THOUSANDS SEPARATOR"
-            }
-        ]
+    "others": [
+      {
+        "char": "[",
+        "name": "LEFT SQUARE BRACKET"
+      },
+      {
+        "char": "⁅",
+        "name": "LEFT SQUARE BRACKET WITH QUILL"
+      },
+      {
+        "char": "⦋",
+        "name": "LEFT SQUARE BRACKET WITH UNDERBAR"
+      },
+      {
+        "char": "⦍",
+        "name": "LEFT SQUARE BRACKET WITH TICK IN TOP CORNER"
+      },
+      {
+        "char": "⦏",
+        "name": "LEFT SQUARE BRACKET WITH TICK IN BOTTOM CORNER"
+      }
+    ]
+  },
+  {
+    "name": "THOUSANDS SEPARATOR",
+    "map": {
+      "punc_fa": {
+        "char": "٬",
+        "name": "ARABIC THOUSANDS SEPARATOR"
+      },
+      "punc_ar": {
+        "char": "٬",
+        "name": "ARABIC THOUSANDS SEPARATOR"
+      },
+      "punc_en": {
+        "char": ",",
+        "name": "COMMA"
+      }
     },
-    {
-        "name": "QUOTATION MARK",
-        "map": {
-            "punc_fa": {
-                "char": "\"",
-                "name": "QUOTATION MARK"
-            },
-            "punc_ar": {
-                "char": "\"",
-                "name": "QUOTATION MARK"
-            },
-            "punc_en": {
-                "char": "\"",
-                "name": "QUOTATION MARK"
-            }
-        },
-        "others": [
-            {
-                "char": "\"",
-                "name": "QUOTATION MARK"
-            },
-            {
-                "char": "«",
-                "name": "LEFT-POINTING DOUBLE ANGLE QUOTATION MARK"
-            },
-            {
-                "char": "»",
-                "name": "RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK"
-            },
-            {
-                "char": "‚",
-                "name": "SINGLE LOW-9 QUOTATION MARK"
-            },
-            {
-                "char": "‛",
-                "name": "SINGLE HIGH-REVERSED-9 QUOTATION MARK"
-            },
-            {
-                "char": "“",
-                "name": "LEFT DOUBLE QUOTATION MARK"
-            },
-            {
-                "char": "”",
-                "name": "RIGHT DOUBLE QUOTATION MARK"
-            },
-            {
-                "char": "„",
-                "name": "DOUBLE LOW-9 QUOTATION MARK"
-            },
-            {
-                "char": "‟",
-                "name": "DOUBLE HIGH-REVERSED-9 QUOTATION MARK"
-            },
-            {
-                "char": "‹",
-                "name": "SINGLE LEFT-POINTING ANGLE QUOTATION MARK"
-            },
-            {
-                "char": "›",
-                "name": "SINGLE RIGHT-POINTING ANGLE QUOTATION MARK"
-            },
-            {
-                "char": "❛",
-                "name": "HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT"
-            },
-            {
-                "char": "❜",
-                "name": "HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT"
-            },
-            {
-                "char": "❝",
-                "name": "HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT"
-            },
-            {
-                "char": "❞",
-                "name": "HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT"
-            },
-            {
-                "char": "❟",
-                "name": "HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT"
-            },
-            {
-                "char": "❠",
-                "name": "HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT"
-            },
-            {
-                "char": "❮",
-                "name": "HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT"
-            },
-            {
-                "char": "❯",
-                "name": "HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT"
-            },
-            {
-                "char": "⹂",
-                "name": "DOUBLE LOW-REVERSED-9 QUOTATION MARK"
-            },
-            {
-                "char": "〝",
-                "name": "REVERSED DOUBLE PRIME QUOTATION MARK"
-            },
-            {
-                "char": "〞",
-                "name": "DOUBLE PRIME QUOTATION MARK"
-            },
-            {
-                "char": "〟",
-                "name": "LOW DOUBLE PRIME QUOTATION MARK"
-            }
-        ]
+    "others": [
+      {
+        "char": "٬",
+        "name": "ARABIC THOUSANDS SEPARATOR"
+      }
+    ]
+  },
+  {
+    "name": "QUOTATION MARK",
+    "map": {
+      "punc_fa": {
+        "char": "\"",
+        "name": "QUOTATION MARK"
+      },
+      "punc_ar": {
+        "char": "\"",
+        "name": "QUOTATION MARK"
+      },
+      "punc_en": {
+        "char": "\"",
+        "name": "QUOTATION MARK"
+      }
     },
-    {
-        "name": "NUMBER SIGN",
-        "map": {
-            "punc_fa": {
-                "char": "#",
-                "name": "NUMBER SIGN"
-            },
-            "punc_ar": {
-                "char": "؀",
-                "name": "ARABIC NUMBER SIGN"
-            },
-            "punc_en": {
-                "char": "#",
-                "name": "NUMBER SIGN"
-            }
-        },
-        "others": [
-            {
-                "char": "#",
-                "name": "NUMBER SIGN"
-            },
-            {
-                "char": "؀",
-                "name": "ARABIC NUMBER SIGN"
-            },
-            {
-                "char": "௺",
-                "name": "TAMIL NUMBER SIGN"
-            }
-        ]
+    "others": [
+      {
+        "char": "\"",
+        "name": "QUOTATION MARK"
+      },
+      {
+        "char": "«",
+        "name": "LEFT-POINTING DOUBLE ANGLE QUOTATION MARK"
+      },
+      {
+        "char": "»",
+        "name": "RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK"
+      },
+      {
+        "char": "‚",
+        "name": "SINGLE LOW-9 QUOTATION MARK"
+      },
+      {
+        "char": "‛",
+        "name": "SINGLE HIGH-REVERSED-9 QUOTATION MARK"
+      },
+      {
+        "char": "“",
+        "name": "LEFT DOUBLE QUOTATION MARK"
+      },
+      {
+        "char": "”",
+        "name": "RIGHT DOUBLE QUOTATION MARK"
+      },
+      {
+        "char": "„",
+        "name": "DOUBLE LOW-9 QUOTATION MARK"
+      },
+      {
+        "char": "‟",
+        "name": "DOUBLE HIGH-REVERSED-9 QUOTATION MARK"
+      },
+      {
+        "char": "‹",
+        "name": "SINGLE LEFT-POINTING ANGLE QUOTATION MARK"
+      },
+      {
+        "char": "›",
+        "name": "SINGLE RIGHT-POINTING ANGLE QUOTATION MARK"
+      },
+      {
+        "char": "❛",
+        "name": "HEAVY SINGLE TURNED COMMA QUOTATION MARK ORNAMENT"
+      },
+      {
+        "char": "❜",
+        "name": "HEAVY SINGLE COMMA QUOTATION MARK ORNAMENT"
+      },
+      {
+        "char": "❝",
+        "name": "HEAVY DOUBLE TURNED COMMA QUOTATION MARK ORNAMENT"
+      },
+      {
+        "char": "❞",
+        "name": "HEAVY DOUBLE COMMA QUOTATION MARK ORNAMENT"
+      },
+      {
+        "char": "❟",
+        "name": "HEAVY LOW SINGLE COMMA QUOTATION MARK ORNAMENT"
+      },
+      {
+        "char": "❠",
+        "name": "HEAVY LOW DOUBLE COMMA QUOTATION MARK ORNAMENT"
+      },
+      {
+        "char": "❮",
+        "name": "HEAVY LEFT-POINTING ANGLE QUOTATION MARK ORNAMENT"
+      },
+      {
+        "char": "❯",
+        "name": "HEAVY RIGHT-POINTING ANGLE QUOTATION MARK ORNAMENT"
+      },
+      {
+        "char": "⹂",
+        "name": "DOUBLE LOW-REVERSED-9 QUOTATION MARK"
+      },
+      {
+        "char": "〝",
+        "name": "REVERSED DOUBLE PRIME QUOTATION MARK"
+      },
+      {
+        "char": "〞",
+        "name": "DOUBLE PRIME QUOTATION MARK"
+      },
+      {
+        "char": "〟",
+        "name": "LOW DOUBLE PRIME QUOTATION MARK"
+      }
+    ]
+  },
+  {
+    "name": "NUMBER SIGN",
+    "map": {
+      "punc_fa": {
+        "char": "#",
+        "name": "NUMBER SIGN"
+      },
+      "punc_ar": {
+        "char": "؀",
+        "name": "ARABIC NUMBER SIGN"
+      },
+      "punc_en": {
+        "char": "#",
+        "name": "NUMBER SIGN"
+      }
     },
-    {
-        "name": "PERCENT SIGN",
-        "map": {
-            "punc_fa": {
-                "char": "٪",
-                "name": "ARABIC PERCENT SIGN"
-            },
-            "punc_ar": {
-                "char": "٪",
-                "name": "ARABIC PERCENT SIGN"
-            },
-            "punc_en": {
-                "char": "%",
-                "name": "PERCENT SIGN"
-            }
-        },
-        "others": [
-            {
-                "char": "٪",
-                "name": "ARABIC PERCENT SIGN"
-            },
-            {
-                "char": "%",
-                "name": "PERCENT SIGN"
-            }
-        ]
+    "others": [
+      {
+        "char": "#",
+        "name": "NUMBER SIGN"
+      },
+      {
+        "char": "؀",
+        "name": "ARABIC NUMBER SIGN"
+      },
+      {
+        "char": "௺",
+        "name": "TAMIL NUMBER SIGN"
+      }
+    ]
+  },
+  {
+    "name": "PERCENT SIGN",
+    "map": {
+      "punc_fa": {
+        "char": "٪",
+        "name": "ARABIC PERCENT SIGN"
+      },
+      "punc_ar": {
+        "char": "٪",
+        "name": "ARABIC PERCENT SIGN"
+      },
+      "punc_en": {
+        "char": "%",
+        "name": "PERCENT SIGN"
+      }
     },
-    {
-        "name": "PLUS SIGN",
-        "map": {
-            "punc_fa": {
-                "char": "+",
-                "name": "PLUS SIGN"
-            },
-            "punc_ar": {
-                "char": "+",
-                "name": "PLUS SIGN"
-            },
-            "punc_en": {
-                "char": "+",
-                "name": "PLUS SIGN"
-            }
-        },
-        "others": [
-            {
-                "char": "+",
-                "name": "PLUS SIGN"
-            }
-        ]
+    "others": [
+      {
+        "char": "٪",
+        "name": "ARABIC PERCENT SIGN"
+      },
+      {
+        "char": "%",
+        "name": "PERCENT SIGN"
+      }
+    ]
+  },
+  {
+    "name": "PLUS SIGN",
+    "map": {
+      "punc_fa": {
+        "char": "+",
+        "name": "PLUS SIGN"
+      },
+      "punc_ar": {
+        "char": "+",
+        "name": "PLUS SIGN"
+      },
+      "punc_en": {
+        "char": "+",
+        "name": "PLUS SIGN"
+      }
     },
-    {
-        "name": "EQUALS SIGN",
-        "map": {
-            "punc_fa": {
-                "char": "=",
-                "name": "EQUALS SIGN"
-            },
-            "punc_ar": {
-                "char": "=",
-                "name": "EQUALS SIGN"
-            },
-            "punc_en": {
-                "char": "=",
-                "name": "EQUALS SIGN"
-            }
-        },
-        "others": [
-            {
-                "char": "=",
-                "name": "EQUALS SIGN"
-            }
-        ]
+    "others": [
+      {
+        "char": "+",
+        "name": "PLUS SIGN"
+      }
+    ]
+  },
+  {
+    "name": "EQUALS SIGN",
+    "map": {
+      "punc_fa": {
+        "char": "=",
+        "name": "EQUALS SIGN"
+      },
+      "punc_ar": {
+        "char": "=",
+        "name": "EQUALS SIGN"
+      },
+      "punc_en": {
+        "char": "=",
+        "name": "EQUALS SIGN"
+      }
     },
-    {
-        "name": "HORIZONTAL ELLIPSIS",
-        "map": {
-            "punc_fa": {
-                "char": "…",
-                "name": "HORIZONTAL ELLIPSIS"
-            },
-            "punc_ar": {
-                "char": "…",
-                "name": "HORIZONTAL ELLIPSIS"
-            },
-            "punc_en": {
-                "char": "…",
-                "name": "HORIZONTAL ELLIPSIS"
-            }
-        },
-        "others": [
-            {
-                "char": "…",
-                "name": "HORIZONTAL ELLIPSIS"
-            },
-            {
-                "char": "⋯",
-                "name": "MIDLINE HORIZONTAL ELLIPSIS"
-            }
-        ]
+    "others": [
+      {
+        "char": "=",
+        "name": "EQUALS SIGN"
+      }
+    ]
+  },
+  {
+    "name": "HORIZONTAL ELLIPSIS",
+    "map": {
+      "punc_fa": {
+        "char": "…",
+        "name": "HORIZONTAL ELLIPSIS"
+      },
+      "punc_ar": {
+        "char": "…",
+        "name": "HORIZONTAL ELLIPSIS"
+      },
+      "punc_en": {
+        "char": "…",
+        "name": "HORIZONTAL ELLIPSIS"
+      }
     },
-    {
-        "name": "DEGREE SIGN",
-        "map": {
-            "punc_fa": {
-                "char": "°",
-                "name": "DEGREE SIGN"
-            },
-            "punc_ar": {
-                "char": "°",
-                "name": "DEGREE SIGN"
-            },
-            "punc_en": {
-                "char": "°",
-                "name": "DEGREE SIGN"
-            }
-        },
-        "others": [
-            {
-                "char": "°",
-                "name": "DEGREE SIGN"
-            }
-        ]
+    "others": [
+      {
+        "char": "…",
+        "name": "HORIZONTAL ELLIPSIS"
+      },
+      {
+        "char": "⋯",
+        "name": "MIDLINE HORIZONTAL ELLIPSIS"
+      }
+    ]
+  },
+  {
+    "name": "DEGREE SIGN",
+    "map": {
+      "punc_fa": {
+        "char": "°",
+        "name": "DEGREE SIGN"
+      },
+      "punc_ar": {
+        "char": "°",
+        "name": "DEGREE SIGN"
+      },
+      "punc_en": {
+        "char": "°",
+        "name": "DEGREE SIGN"
+      }
     },
-    {
-        "name": "RIGHT CURLY BRACKET",
-        "map": {
-            "punc_fa": {
-                "char": "}",
-                "name": "RIGHT CURLY BRACKET"
-            },
-            "punc_ar": {
-                "char": "}",
-                "name": "RIGHT CURLY BRACKET"
-            },
-            "punc_en": {
-                "char": "}",
-                "name": "RIGHT CURLY BRACKET"
-            }
-        },
-        "others": [
-            {
-                "char": "}",
-                "name": "RIGHT CURLY BRACKET"
-            },
-            {
-                "char": "❵",
-                "name": "MEDIUM RIGHT CURLY BRACKET ORNAMENT"
-            }
-        ]
+    "others": [
+      {
+        "char": "°",
+        "name": "DEGREE SIGN"
+      }
+    ]
+  },
+  {
+    "name": "RIGHT CURLY BRACKET",
+    "map": {
+      "punc_fa": {
+        "char": "}",
+        "name": "RIGHT CURLY BRACKET"
+      },
+      "punc_ar": {
+        "char": "}",
+        "name": "RIGHT CURLY BRACKET"
+      },
+      "punc_en": {
+        "char": "}",
+        "name": "RIGHT CURLY BRACKET"
+      }
     },
-    {
-        "name": "LEFT CURLY BRACKET",
-        "map": {
-            "punc_fa": {
-                "char": "{",
-                "name": "LEFT CURLY BRACKET"
-            },
-            "punc_ar": {
-                "char": "{",
-                "name": "LEFT CURLY BRACKET"
-            },
-            "punc_en": {
-                "char": "{",
-                "name": "LEFT CURLY BRACKET"
-            }
-        },
-        "others": [
-            {
-                "char": "{",
-                "name": "LEFT CURLY BRACKET"
-            },
-            {
-                "char": "❴",
-                "name": "MEDIUM LEFT CURLY BRACKET ORNAMENT"
-            }
-        ]
+    "others": [
+      {
+        "char": "}",
+        "name": "RIGHT CURLY BRACKET"
+      },
+      {
+        "char": "❵",
+        "name": "MEDIUM RIGHT CURLY BRACKET ORNAMENT"
+      }
+    ]
+  },
+  {
+    "name": "LEFT CURLY BRACKET",
+    "map": {
+      "punc_fa": {
+        "char": "{",
+        "name": "LEFT CURLY BRACKET"
+      },
+      "punc_ar": {
+        "char": "{",
+        "name": "LEFT CURLY BRACKET"
+      },
+      "punc_en": {
+        "char": "{",
+        "name": "LEFT CURLY BRACKET"
+      }
     },
-    {
-        "name": "AMPERSAND",
-        "map": {
-            "punc_fa": {
-                "char": "و",
-                "name": "ARABIC LETTER WAW"
-            },
-            "punc_ar": {
-                "char": "۽",
-                "name": "ARABIC SIGN SINDHI AMPERSAND"
-            },
-            "punc_en": {
-                "char": "&",
-                "name": "AMPERSAND"
-            }
-        },
-        "others": [
-            {
-                "char": "۽",
-                "name": "ARABIC SIGN SINDHI AMPERSAND"
-            },
-            {
-                "char": "&",
-                "name": "AMPERSAND"
-            },
-            {
-                "char": "⅋",
-                "name": "TURNED AMPERSAND"
-            }
-        ]
+    "others": [
+      {
+        "char": "{",
+        "name": "LEFT CURLY BRACKET"
+      },
+      {
+        "char": "❴",
+        "name": "MEDIUM LEFT CURLY BRACKET ORNAMENT"
+      }
+    ]
+  },
+  {
+    "name": "AMPERSAND",
+    "map": {
+      "punc_fa": {
+        "char": "و",
+        "name": "ARABIC LETTER WAW"
+      },
+      "punc_ar": {
+        "char": "۽",
+        "name": "ARABIC SIGN SINDHI AMPERSAND"
+      },
+      "punc_en": {
+        "char": "&",
+        "name": "AMPERSAND"
+      }
     },
-    {
-        "name": "REVERSE SOLIDUS",
-        "map": {
-            "punc_fa": {
-                "char": "\\",
-                "name": "REVERSE SOLIDUS"
-            },
-            "punc_ar": {
-                "char": "\\",
-                "name": "REVERSE SOLIDUS"
-            },
-            "punc_en": {
-                "char": "\\",
-                "name": "REVERSE SOLIDUS"
-            }
-        },
-        "others": [
-            {
-                "char": "\\",
-                "name": "REVERSE SOLIDUS"
-            },
-            {
-                "char": "⧵",
-                "name": "REVERSE SOLIDUS OPERATOR"
-            },
-            {
-                "char": "⧹",
-                "name": "BIG REVERSE SOLIDUS"
-            }
-        ]
+    "others": [
+      {
+        "char": "۽",
+        "name": "ARABIC SIGN SINDHI AMPERSAND"
+      },
+      {
+        "char": "&",
+        "name": "AMPERSAND"
+      },
+      {
+        "char": "⅋",
+        "name": "TURNED AMPERSAND"
+      }
+    ]
+  },
+  {
+    "name": "REVERSE SOLIDUS",
+    "map": {
+      "punc_fa": {
+        "char": "\\",
+        "name": "REVERSE SOLIDUS"
+      },
+      "punc_ar": {
+        "char": "\\",
+        "name": "REVERSE SOLIDUS"
+      },
+      "punc_en": {
+        "char": "\\",
+        "name": "REVERSE SOLIDUS"
+      }
     },
-    {
-        "name": "LESS-THAN SIGN",
-        "map": {
-            "punc_fa": {
-                "char": "<",
-                "name": "LESS-THAN SIGN"
-            },
-            "punc_ar": {
-                "char": "<",
-                "name": "LESS-THAN SIGN"
-            },
-            "punc_en": {
-                "char": "<",
-                "name": "LESS-THAN SIGN"
-            }
-        },
-        "others": [
-            {
-                "char": "<",
-                "name": "LESS-THAN SIGN"
-            }
-        ]
+    "others": [
+      {
+        "char": "\\",
+        "name": "REVERSE SOLIDUS"
+      },
+      {
+        "char": "⧵",
+        "name": "REVERSE SOLIDUS OPERATOR"
+      },
+      {
+        "char": "⧹",
+        "name": "BIG REVERSE SOLIDUS"
+      }
+    ]
+  },
+  {
+    "name": "LESS-THAN SIGN",
+    "map": {
+      "punc_fa": {
+        "char": "<",
+        "name": "LESS-THAN SIGN"
+      },
+      "punc_ar": {
+        "char": "<",
+        "name": "LESS-THAN SIGN"
+      },
+      "punc_en": {
+        "char": "<",
+        "name": "LESS-THAN SIGN"
+      }
     },
-    {
-        "name": "GREATER-THAN SIGN",
-        "map": {
-            "punc_fa": {
-                "char": ">",
-                "name": "GREATER-THAN SIGN"
-            },
-            "punc_ar": {
-                "char": ">",
-                "name": "GREATER-THAN SIGN"
-            },
-            "punc_en": {
-                "char": ">",
-                "name": "GREATER-THAN SIGN"
-            }
-        },
-        "others": [
-            {
-                "char": ">",
-                "name": "GREATER-THAN SIGN"
-            }
-        ]
+    "others": [
+      {
+        "char": "<",
+        "name": "LESS-THAN SIGN"
+      }
+    ]
+  },
+  {
+    "name": "GREATER-THAN SIGN",
+    "map": {
+      "punc_fa": {
+        "char": ">",
+        "name": "GREATER-THAN SIGN"
+      },
+      "punc_ar": {
+        "char": ">",
+        "name": "GREATER-THAN SIGN"
+      },
+      "punc_en": {
+        "char": ">",
+        "name": "GREATER-THAN SIGN"
+      }
     },
-    {
-        "name": "COMMERCIAL AT",
-        "map": {
-            "punc_fa": {
-                "char": "@",
-                "name": "COMMERCIAL AT"
-            },
-            "punc_ar": {
-                "char": "@",
-                "name": "COMMERCIAL AT"
-            },
-            "punc_en": {
-                "char": "@",
-                "name": "COMMERCIAL AT"
-            }
-        },
-        "others": [
-            {
-                "char": "@",
-                "name": "COMMERCIAL AT"
-            }
-        ]
+    "others": [
+      {
+        "char": ">",
+        "name": "GREATER-THAN SIGN"
+      }
+    ]
+  },
+  {
+    "name": "COMMERCIAL AT",
+    "map": {
+      "punc_fa": {
+        "char": "@",
+        "name": "COMMERCIAL AT"
+      },
+      "punc_ar": {
+        "char": "@",
+        "name": "COMMERCIAL AT"
+      },
+      "punc_en": {
+        "char": "@",
+        "name": "COMMERCIAL AT"
+      }
     },
-    {
-        "name": "TILDE",
-        "map": {
-            "punc_fa": {
-                "char": "~",
-                "name": "TILDE"
-            },
-            "punc_ar": {
-                "char": "~",
-                "name": "TILDE"
-            },
-            "punc_en": {
-                "char": "~",
-                "name": "TILDE"
-            }
-        },
-        "others": [
-            {
-                "char": "~",
-                "name": "TILDE"
-            },
-            {
-                "char": "˜",
-                "name": "SMALL TILDE"
-            },
-            {
-                "char": "˷",
-                "name": "MODIFIER LETTER LOW TILDE"
-            },
-            {
-                "char": "̃",
-                "name": "COMBINING TILDE"
-            },
-            {
-                "char": "̰",
-                "name": "COMBINING TILDE BELOW"
-            },
-            {
-                "char": "̴",
-                "name": "COMBINING TILDE OVERLAY"
-            },
-            {
-                "char": "∼",
-                "name": "TILDE OPERATOR"
-            },
-            {
-                "char": "∽",
-                "name": "REVERSED TILDE"
-            }
-        ]
+    "others": [
+      {
+        "char": "@",
+        "name": "COMMERCIAL AT"
+      }
+    ]
+  },
+  {
+    "name": "TILDE",
+    "map": {
+      "punc_fa": {
+        "char": "~",
+        "name": "TILDE"
+      },
+      "punc_ar": {
+        "char": "~",
+        "name": "TILDE"
+      },
+      "punc_en": {
+        "char": "~",
+        "name": "TILDE"
+      }
     },
-    {
-        "name": "CIRCUMFLEX ACCENT",
-        "map": {
-            "punc_fa": {
-                "char": "^",
-                "name": "CIRCUMFLEX ACCENT"
-            },
-            "punc_ar": {
-                "char": "^",
-                "name": "CIRCUMFLEX ACCENT"
-            },
-            "punc_en": {
-                "char": "^",
-                "name": "CIRCUMFLEX ACCENT"
-            }
-        },
-        "others": [
-            {
-                "char": "^",
-                "name": "CIRCUMFLEX ACCENT"
-            }
-        ]
+    "others": [
+      {
+        "char": "~",
+        "name": "TILDE"
+      },
+      {
+        "char": "˜",
+        "name": "SMALL TILDE"
+      },
+      {
+        "char": "˷",
+        "name": "MODIFIER LETTER LOW TILDE"
+      },
+      {
+        "char": "̃",
+        "name": "COMBINING TILDE"
+      },
+      {
+        "char": "̰",
+        "name": "COMBINING TILDE BELOW"
+      },
+      {
+        "char": "̴",
+        "name": "COMBINING TILDE OVERLAY"
+      },
+      {
+        "char": "∼",
+        "name": "TILDE OPERATOR"
+      },
+      {
+        "char": "∽",
+        "name": "REVERSED TILDE"
+      }
+    ]
+  },
+  {
+    "name": "CIRCUMFLEX ACCENT",
+    "map": {
+      "punc_fa": {
+        "char": "^",
+        "name": "CIRCUMFLEX ACCENT"
+      },
+      "punc_ar": {
+        "char": "^",
+        "name": "CIRCUMFLEX ACCENT"
+      },
+      "punc_en": {
+        "char": "^",
+        "name": "CIRCUMFLEX ACCENT"
+      }
     },
-    {
-        "name": "LOW LINE",
-        "map": {
-            "punc_fa": {
-                "char": "_",
-                "name": "LOW LINE"
-            },
-            "punc_ar": {
-                "char": "_",
-                "name": "LOW LINE"
-            },
-            "punc_en": {
-                "char": "_",
-                "name": "LOW LINE"
-            }
-        },
-        "others": [
-            {
-                "char": "_",
-                "name": "LOW LINE"
-            },
-            {
-                "char": "̲",
-                "name": "COMBINING LOW LINE"
-            },
-            {
-                "char": "̳",
-                "name": "COMBINING DOUBLE LOW LINE"
-            },
-            {
-                "char": "‗",
-                "name": "DOUBLE LOW LINE"
-            }
-        ]
-    }
+    "others": [
+      {
+        "char": "^",
+        "name": "CIRCUMFLEX ACCENT"
+      }
+    ]
+  },
+  {
+    "name": "LOW LINE",
+    "map": {
+      "punc_fa": {
+        "char": "_",
+        "name": "LOW LINE"
+      },
+      "punc_ar": {
+        "char": "_",
+        "name": "LOW LINE"
+      },
+      "punc_en": {
+        "char": "_",
+        "name": "LOW LINE"
+      }
+    },
+    "others": [
+      {
+        "char": "_",
+        "name": "LOW LINE"
+      },
+      {
+        "char": "̲",
+        "name": "COMBINING LOW LINE"
+      },
+      {
+        "char": "̳",
+        "name": "COMBINING DOUBLE LOW LINE"
+      },
+      {
+        "char": "‗",
+        "name": "DOUBLE LOW LINE"
+      }
+    ]
+  },
+  {
+    "name": "ASTERISK",
+    "map": {
+      "punc_fa": {
+        "char": "*",
+        "name": "ASTERISK"
+      },
+      "punc_ar": {
+        "char": "*",
+        "name": "ASTERISK"
+      },
+      "punc_en": {
+        "char": "*",
+        "name": "ASTERISK"
+      }
+    },
+    "others": [
+      {
+        "char": "*",
+        "name": "ASTERISK"
+      }
+    ]
+  },
+  {
+    "name": "ASTERISK",
+    "map": {
+      "punc_fa": {
+        "char": "×",
+        "name": "MULTIPLICATION SIGN"
+      },
+      "punc_ar": {
+        "char": "×",
+        "name": "MULTIPLICATION SIGN"
+      },
+      "punc_en": {
+        "char": "*",
+        "name": "ASTERISK"
+      }
+    },
+    "others": [
+      {
+        "char": "×",
+        "name": "MULTIPLICATION SIGN"
+      }
+    ]
+  },
+  {
+    "name": "DOLLAR SIGN",
+    "map": {
+      "punc_fa": {
+        "char": "$",
+        "name": "DOLLAR SIGN"
+      },
+      "punc_ar": {
+        "char": "$",
+        "name": "DOLLAR SIGN"
+      },
+      "punc_en": {
+        "char": "$",
+        "name": "DOLLAR SIGN"
+      }
+    },
+    "others": [
+    ]
+  },
+  {
+    "name": "EXCLAMATION MARK",
+    "map": {
+      "punc_fa": {
+        "char": "!",
+        "name": "EXCLAMATION MARK"
+      },
+      "punc_ar": {
+        "char": "!",
+        "name": "EXCLAMATION MARK"
+      },
+      "punc_en": {
+        "char": "!",
+        "name": "EXCLAMATION MARK"
+      }
+    },
+    "others": [
+    ]
+  },
+  {
+    "name": "GRAVE ACCENT",
+    "map": {
+      "punc_fa": {
+        "char": "`",
+        "name": "GRAVE ACCENT"
+      },
+      "punc_ar": {
+        "char": "`",
+        "name": "GRAVE ACCENT"
+      },
+      "punc_en": {
+        "char": "`",
+        "name": "GRAVE ACCENT"
+      }
+    },
+    "others": [
+    ]
+  },
+  {
+    "name": "VERTICAL LINE",
+    "map": {
+      "punc_fa": {
+        "char": "|",
+        "name": "VERTICAL LINE"
+      },
+      "punc_ar": {
+        "char": "|",
+        "name": "VERTICAL LINE"
+      },
+      "punc_en": {
+        "char": "|",
+        "name": "VERTICAL LINE"
+      }
+    },
+    "others": [
+    ]
+  }
 ]
