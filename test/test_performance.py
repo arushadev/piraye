@@ -1,16 +1,24 @@
 from normalizer import Normalizer
 import time
+import hazm
+from tqdm import tqdm
 
 if __name__ == '__main__':
-    text = '.محمد & حمزﻫ در , تاریخ ۲۴/12 به ("دانشگاهِ شریف") رفتند '
-    norm = Normalizer(['en'])
-    start = time.time()
-
-    start = time.time()
-    for i in range(10000):
-        norm.normalize(text, )
-    end = time.time()
-    print(end - start)
-    # for 10 time = 5s ( first normalizer)
-    # for 10 time = 4.110s ( second normalizer)
-    # for 10 time = 0.059s ( third normalizer)
+    with open('./input/text.txt') as f:
+        text = f.read()
+        norm = Normalizer(["alphabet_fa", "space_normal"], False)
+        start = time.time()
+        for i in tqdm(range(1000)):
+            result = norm.normalize(text)
+        end = time.time()
+        print("ME : ", end - start)
+        with open("./output/Output1.txt", "w") as text_file:
+            text_file.write(result)
+        start2 = time.time()
+        Normalizer = hazm.Normalizer()
+        for i in tqdm(range(1000)):
+            result2 = Normalizer.normalize(text)
+        end2 = time.time()
+        print("Hazm : ", end2 - start2)
+        with open("./output/Output2.txt", "w") as text_file:
+            text_file.write(result2)
