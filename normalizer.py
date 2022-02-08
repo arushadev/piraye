@@ -20,7 +20,7 @@ class Normalizer:
     ----------
     configs : List[str]
         list of desired configs
-    remove_extra_spaces : boo
+    remove_extra_spaces : bool
         that determines spaces stick together or not
 
 
