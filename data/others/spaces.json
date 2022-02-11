@@ -65,10 +65,6 @@
         "name": "HAIR SPACE"
       },
       {
-        "char": "​",
-        "name": "ZERO WIDTH SPACE"
-      },
-      {
         "char": " ",
         "name": "NARROW NO-BREAK SPACE"
       },
@@ -103,6 +99,29 @@
     ]
   },
   {
+    "name": "ZERO WIDTH SPACE",
+    "map": {
+      "space_delete": {
+        "char": "",
+        "name": "Space"
+      },
+      "space_normal": {
+        "char": " ",
+        "name": "SPACE"
+      },
+      "space_keep": {
+        "char": "​",
+        "name": "ZERO WIDTH SPACE"
+      }
+    },
+    "others": [
+      {
+        "char": "​",
+        "name": "ZERO WIDTH SPACE"
+      }
+    ]
+  },
+  {
     "name": "TAB",
     "map": {
       "space_delete": {
@@ -133,8 +152,8 @@
         "name": "EMPTY CHARACTER"
       },
       "space_normal": {
-        "char": " ",
-        "name": "SPACE"
+        "char": "\n",
+        "name": "NEW LINE"
       },
       "space_keep": {
         "char": "\n",
