@@ -81,6 +81,7 @@ class Normalizer:
         config = "alphabet_en"
         self.__configs.append(config)
         self.__get_mapping([config], self.__mapping)
+        return self
 
     def alphabet_fa(self):
         """

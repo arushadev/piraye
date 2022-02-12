@@ -1,7 +1,7 @@
 # testing Fibonacci number function
 # pylint: skip-file
 
-from normalizer import Normalizer
+from src.normalizer import Normalizer
 
 
 def test_object():
@@ -17,7 +17,7 @@ def test_not_changing_input():
 
 def test_number():
     text = "1.2"
-    norm = Normalizer(['digit_fa'])
+    norm = Normalizer().digit_fa().digit_en()
     assert text != norm.normalize(text)
 
 
