@@ -30,20 +30,138 @@ class Normalizer:
         get a text and normalize it and finally return it
     """
 
-    def __init__(self, configs: List[str], remove_extra_spaces: bool = True):
+    def __init__(self, configs: List[str] = None, remove_extra_spaces: bool = True):
         """
             constructor
             :param configs
         """
         # Create a blank Tokenizer with just the English vocab
         self.__tokenizer = English().tokenizer
-        self.__configs = configs
+        self.__configs = configs if configs else []
         self.__remove_extra_spaces = remove_extra_spaces
-        self.__mapping, self.__mapping_punc, self.__en_mapping = self.__load_jsons()
+        self.__all_configs: List[Dict[str, typing.Any]] = []
+        self.__mapping, self.__mapping_punc, self.__en_mapping = {}, {}, {}
+        self.__load_jsons()
+
+    def alphabet_ar(self):
+        """
+            Helper function for adding configs
+        """
+        config = "alphabet_ar"
+        self.__configs.append(config)
+        self.__get_mapping([config], self.__mapping)
+        return self
+
+    def alphabet_en(self):
+        """
+            Helper function for adding configs
+        """
+        config = "alphabet_en"
+        self.__configs.append(config)
+        self.__get_mapping([config], self.__mapping)
+
+    def alphabet_fa(self):
+        """
+            Helper function for adding configs
+        """
+        config = "alphabet_fa"
+        self.__configs.append(config)
+        self.__get_mapping([config], self.__mapping)
+        return self
+
+    def digit_ar(self):
+        """
+            Helper function for adding configs
+        """
+        config = "digit_ar"
+        self.__configs.append(config)
+        self.__get_mapping([config], self.__mapping)
+        return self
+
+    def digit_en(self):
+        """
+            Helper function for adding configs
+        """
+        config = "digit_en"
+        self.__configs.append(config)
+        self.__get_mapping([config], self.__mapping)
+        return self
+
+    def digit_fa(self):
+        """
+            Helper function for adding configs
+        """
+        config = "digit_fa"
+        self.__configs.append(config)
+        self.__get_mapping([config], self.__mapping)
+        return self
+
+    def diacritic_delete(self):
+        """
+            Helper function for adding configs
+        """
+        config = "diacritic_delete"
+        self.__configs.append(config)
+        self.__get_mapping([config], self.__mapping)
+        return self
+
+    def space_delete(self):
+        """
+            Helper function for adding configs
+        """
+        config = "space_delete"
+        self.__configs.append(config)
+        self.__get_mapping([config], self.__mapping)
+        return self
+
+    def space_normal(self):
+        """
+            Helper function for adding configs
+        """
+        config = "space_normal"
+        self.__configs.append(config)
+        self.__get_mapping([config], self.__mapping)
+        return self
+
+    def space_keep(self):
+        """
+            Helper function for adding configs
+        """
+        config = "space_keep"
+        self.__configs.append(config)
+        self.__get_mapping([config], self.__mapping)
+        return self
+
+    def punctuation_ar(self):
+        """
+            Helper function for adding configs
+        """
+        config = "punc_ar"
+        self.__configs.append(config)
+        self.__get_mapping([config], self.__mapping_punc)
+        return self
+
+    def punctuation_fa(self):
+        """
+            Helper function for adding configs
+        """
+        config = "punc_fa"
+        self.__configs.append(config)
+        self.__get_mapping([config], self.__mapping_punc)
+        return self
+
+    def punctuation_en(self):
+        """
+            Helper function for adding configs
+        """
+        config = "punc_en"
+        self.__configs.append(config)
+        self.__get_mapping([config], self.__mapping_punc)
+        return self
 
     def normalize(self, text: str) -> str:
         """
-            return an incredible text
+            return a normalized text
             :param text: the input text
             :return: normalized text
         """
@@ -75,13 +193,12 @@ class Normalizer:
             prev_token = token
         return final_text
 
-    def __load_jsons(self) -> (Dict[str, str], Dict[str, str], Dict[str, str]):
-        all_configs = []
+    def __load_jsons(self):
         current_directory = os.path.dirname(os.path.abspath(__file__))
         for dir_path, _, filenames in os.walk(current_directory + "/data/"):
             for filename in filenames:
-                all_configs.extend(Normalizer.read_json(os.path.abspath
-                                                        (os.path.join(dir_path, filename))))
+                self.__all_configs.extend(Normalizer.read_json(os.path.abspath
+                                                               (os.path.join(dir_path, filename))))
         configs_punc = []
         configs_not_punc = []
         for config in self.__configs:
@@ -89,15 +206,14 @@ class Normalizer:
                 configs_punc.append(config)
             else:
                 configs_not_punc.append(config)
-        return Normalizer.__get_mapping(all_configs, configs_not_punc), \
-               Normalizer.__get_mapping(all_configs, configs_punc), \
-               Normalizer.__get_mapping(all_configs, ["digit_en", "punc_en"])
+        self.__get_mapping(configs_not_punc, self.__mapping)
+        self.__get_mapping(configs_punc, self.__mapping_punc)
+        self.__get_mapping(["digit_en", "punc_en"], self.__en_mapping)
 
-    @staticmethod
-    def __get_mapping(all_configs: List[Dict[str, typing.Any]],
-                      configs: List[str]) -> Dict[str, str]:
-        mapping = {}
-        for data in all_configs:
+    def __get_mapping(self, configs: List[str], mapping: Dict[str, str]):
+        if configs and len(configs) == 0:
+            return
+        for data in self.__all_configs:
             for key in data["map"].keys():
                 if key in configs:
                     mapping[data["map"][key]["char"]] = data["map"][key]["char"]
@@ -105,8 +221,6 @@ class Normalizer:
                         char = char_dic["char"]
                         if not mapping.get(char):
                             mapping[char] = data["map"][key]["char"]
-
-        return mapping
 
     @staticmethod
     def read_json(address: string):
