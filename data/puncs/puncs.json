@@ -90,8 +90,8 @@
         "name": "FULL STOP"
       },
       "punc_ar": {
-        "char": "۔",
-        "name": "ARABIC FULL STOP"
+        "char": ".",
+        "name": "FULL STOP"
       },
       "punc_en": {
         "char": ".",
@@ -746,8 +746,8 @@
         "name": "NUMBER SIGN"
       },
       "punc_ar": {
-        "char": "؀",
-        "name": "ARABIC NUMBER SIGN"
+        "char": "#",
+        "name": "NUMBER SIGN"
       },
       "punc_en": {
         "char": "#",
@@ -950,12 +950,12 @@
     "name": "AMPERSAND",
     "map": {
       "punc_fa": {
-        "char": "و",
-        "name": "ARABIC LETTER WAW"
+        "char": "&",
+        "name": "AMPERSAND"
       },
       "punc_ar": {
-        "char": "۽",
-        "name": "ARABIC SIGN SINDHI AMPERSAND"
+        "char": "&",
+        "name": "AMPERSAND"
       },
       "punc_en": {
         "char": "&",
@@ -1265,25 +1265,6 @@
       "punc_en": {
         "char": "!",
         "name": "EXCLAMATION MARK"
-      }
-    },
-    "others": [
-    ]
-  },
-  {
-    "name": "GRAVE ACCENT",
-    "map": {
-      "punc_fa": {
-        "char": "`",
-        "name": "GRAVE ACCENT"
-      },
-      "punc_ar": {
-        "char": "`",
-        "name": "GRAVE ACCENT"
-      },
-      "punc_en": {
-        "char": "`",
-        "name": "GRAVE ACCENT"
       }
     },
     "others": [
