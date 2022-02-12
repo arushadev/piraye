@@ -1,4 +1,5 @@
 """This module includes Normalizer class for normalizing texts"""
+import enum
 import json
 import os
 import re
@@ -8,6 +9,25 @@ from typing import List
 from typing import Dict
 
 from spacy.lang.en import English
+
+
+class Configs(enum.Enum):
+    """
+    List of all available configs in this normalizer
+    """
+    ALPHABET_AR = "alphabet_ar"
+    ALPHABET_EN = "alphabet_en"
+    ALPHABET_FA = "alphabet_fa"
+    DIGIT_AR = "digit_ar"
+    DIGIT_EN = "digit_en"
+    DIGIT_FA = "digit_fa"
+    DIACRITIC_DELETE = "diacritic_delete"
+    SPACE_DELETE = "space_delete"
+    SPACE_NORMAL = "space_normal"
+    SPACE_KEEP = "space_keep"
+    PUNCTUATION_AR = "punc_ar"
+    PUNCTUATION_FA = "punc_fa"
+    PUNCTUATION_EN = "punc_en"
 
 
 class Normalizer:
@@ -30,7 +50,7 @@ class Normalizer:
         get a text and normalize it and finally return it
     """
 
-    def __init__(self, configs: List[str] = None, remove_extra_spaces: bool = True):
+    def __init__(self, configs: List = None, remove_extra_spaces: bool = True):
         """
             constructor
             :param configs
@@ -38,6 +58,8 @@ class Normalizer:
         # Create a blank Tokenizer with just the English vocab
         self.__tokenizer = English().tokenizer
         self.__configs = configs if configs else []
+        self.__configs = [config if isinstance(config, str) else config.value
+                          for config in self.__configs]
         self.__remove_extra_spaces = remove_extra_spaces
         self.__all_configs: List[Dict[str, typing.Any]] = []
         self.__mapping, self.__mapping_punc, self.__en_mapping = {}, {}, {}
