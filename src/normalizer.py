@@ -59,18 +59,39 @@ class Normalizer:
         else:
             is_token_list = [True] * len(text)
         result = ""
+        last = None
         for i, char in enumerate(text):
             is_token = is_token_list[i]
+            mapping_char = self.__mapping.get(char)
             if not self.configuration.remove_extra_spaces:
-                mapping_char = self.__mapping.get(char)
-                if not mapping_char:
-                    result += char
-                    continue
-                if not mapping_char.is_token or (mapping_char.is_token and is_token):
-                    result += mapping_char.char
-                    continue
-                result += char
-
+                new_char = char if not mapping_char \
+                    else mapping_char.char if not mapping_char.is_token \
+                                              or (mapping_char.is_token and is_token) \
+                    else char
+                result += new_char
+            else:
+                current = mapping_char if mapping_char else CharModel(char)
+                if current.is_space:
+                    last = current if last is None \
+                        else current if not last.is_space and last.space_after is not False \
+                        else last if last.space_after is False \
+                        else current if last.is_space and \
+                                        current.space_priority < last.space_priority \
+                        else last
+                else:
+                    if last.is_space and last.space_before is not False:
+                        result += last.char
+                    # If last char is not space and need space before current or after last
+                    if last.is_space is not True and \
+                            (current.space_before or last.space_after) and is_token:
+                        result += " "
+                    if not current.is_token or (current.is_token and is_token):
+                        result += current.char
+                    else:
+                        result += char
+                    last = current
+        if last and last.is_space:
+            result += last.char
         return result
 
     def __tokenize(self, text: str) -> List[bool]:
