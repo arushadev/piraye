@@ -1,6 +1,11 @@
 [
   {
     "name": "COMMA",
+    "clean": {
+      "space_before": false,
+      "space_after": true,
+      "is_token": true
+    },
     "map": {
       "punc_fa": {
         "char": "،",
@@ -84,6 +89,11 @@
   },
   {
     "name": "FULL STOP",
+    "clean": {
+      "space_before": false,
+      "space_after": true,
+      "is_token": true
+    },
     "map": {
       "punc_fa": {
         "char": ".",
@@ -202,6 +212,10 @@
   },
   {
     "name": "RIGHT PARENTHESIS",
+    "clean": {
+      "space_before": false,
+      "space_after": true
+    },
     "map": {
       "punc_fa": {
         "char": ")",
@@ -241,6 +255,10 @@
   },
   {
     "name": "LEFT PARENTHESIS",
+    "clean": {
+      "space_before": true,
+      "space_after": false
+    },
     "map": {
       "punc_fa": {
         "char": "(",
@@ -280,6 +298,10 @@
   },
   {
     "name": "COLON",
+    "clean": {
+      "space_before": false,
+      "space_after": true
+    },
     "map": {
       "punc_fa": {
         "char": ":",
@@ -410,6 +432,10 @@
   },
   {
     "name": "SEMICOLON",
+    "clean": {
+      "space_before": false,
+      "space_after": true
+    },
     "map": {
       "punc_fa": {
         "char": "؛",
@@ -528,6 +554,10 @@
   },
   {
     "name": "RIGHT SQUARE BRACKET",
+    "clean": {
+      "space_before": false,
+      "space_after": true
+    },
     "map": {
       "punc_fa": {
         "char": "]",
@@ -567,6 +597,10 @@
   },
   {
     "name": "LEFT SQUARE BRACKET",
+    "clean": {
+      "space_before": true,
+      "space_after": false
+    },
     "map": {
       "punc_fa": {
         "char": "[",
@@ -871,6 +905,10 @@
   },
   {
     "name": "DEGREE SIGN",
+    "clean": {
+      "space_before": false,
+      "space_after": true
+    },
     "map": {
       "punc_fa": {
         "char": "°",
@@ -894,6 +932,10 @@
   },
   {
     "name": "RIGHT CURLY BRACKET",
+    "clean": {
+      "space_before": false,
+      "space_after": true
+    },
     "map": {
       "punc_fa": {
         "char": "}",
@@ -921,6 +963,10 @@
   },
   {
     "name": "LEFT CURLY BRACKET",
+    "clean": {
+      "space_before": true,
+      "space_after": false
+    },
     "map": {
       "punc_fa": {
         "char": "{",
@@ -1253,6 +1299,10 @@
   },
   {
     "name": "EXCLAMATION MARK",
+    "clean": {
+      "space_before": false,
+      "space_after": true
+    },
     "map": {
       "punc_fa": {
         "char": "!",
@@ -1272,6 +1322,10 @@
   },
   {
     "name": "VERTICAL LINE",
+    "clean": {
+      "space_before": true,
+      "space_after": true
+    },
     "map": {
       "punc_fa": {
         "char": "|",

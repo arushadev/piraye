@@ -1,6 +1,9 @@
 [
   {
     "name": "SPACE",
+    "clean": {
+      "space_priority": 2
+    },
     "map": {
       "space_delete": {
         "char": "",
@@ -100,6 +103,9 @@
   },
   {
     "name": "ZERO WIDTH SPACE",
+    "clean": {
+      "space_priority": 4
+    },
     "map": {
       "space_delete": {
         "char": "",
@@ -123,6 +129,9 @@
   },
   {
     "name": "TAB",
+    "clean": {
+      "space_priority": 3
+    },
     "map": {
       "space_delete": {
         "char": "",
@@ -146,6 +155,9 @@
   },
   {
     "name": "NEW LINE",
+    "clean": {
+      "space_priority": 1
+    },
     "map": {
       "space_delete": {
         "char": "",
@@ -189,6 +201,9 @@
   },
   {
     "name": "CARRIAGE RETURN",
+    "clean": {
+      "space_priority": 4
+    },
     "map": {
       "space_delete": {
         "char": "",
@@ -212,6 +227,9 @@
   },
   {
     "name": "ZERO WIDTH NON-JOINER",
+    "clean": {
+      "space_priority": 4
+    },
     "map": {
       "space_delete": {
         "char": "",
@@ -235,6 +253,9 @@
   },
   {
     "name": "ZERO WIDTH JOINER",
+    "clean": {
+      "space_priority": 4
+    },
     "map": {
       "space_delete": {
         "char": "",
