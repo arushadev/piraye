@@ -1,7 +1,7 @@
 .idea/
 test/input/
 test/output/
-test/
+output/
 
 
 # Byte-compiled / optimized / DLL files

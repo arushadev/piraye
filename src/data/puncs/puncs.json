@@ -1,6 +1,11 @@
 [
   {
     "name": "COMMA",
+    "clean": {
+      "space_before": false,
+      "space_after": true,
+      "is_token": true
+    },
     "map": {
       "punc_fa": {
         "char": "،",
@@ -84,14 +89,19 @@
   },
   {
     "name": "FULL STOP",
+    "clean": {
+      "space_before": false,
+      "space_after": true,
+      "is_token": true
+    },
     "map": {
       "punc_fa": {
         "char": ".",
         "name": "FULL STOP"
       },
       "punc_ar": {
-        "char": "۔",
-        "name": "ARABIC FULL STOP"
+        "char": ".",
+        "name": "FULL STOP"
       },
       "punc_en": {
         "char": ".",
@@ -202,6 +212,10 @@
   },
   {
     "name": "RIGHT PARENTHESIS",
+    "clean": {
+      "space_before": false,
+      "space_after": true
+    },
     "map": {
       "punc_fa": {
         "char": ")",
@@ -241,6 +255,10 @@
   },
   {
     "name": "LEFT PARENTHESIS",
+    "clean": {
+      "space_before": true,
+      "space_after": false
+    },
     "map": {
       "punc_fa": {
         "char": "(",
@@ -280,6 +298,10 @@
   },
   {
     "name": "COLON",
+    "clean": {
+      "space_before": false,
+      "space_after": true
+    },
     "map": {
       "punc_fa": {
         "char": ":",
@@ -410,6 +432,10 @@
   },
   {
     "name": "SEMICOLON",
+    "clean": {
+      "space_before": false,
+      "space_after": true
+    },
     "map": {
       "punc_fa": {
         "char": "؛",
@@ -528,6 +554,10 @@
   },
   {
     "name": "RIGHT SQUARE BRACKET",
+    "clean": {
+      "space_before": false,
+      "space_after": true
+    },
     "map": {
       "punc_fa": {
         "char": "]",
@@ -567,6 +597,10 @@
   },
   {
     "name": "LEFT SQUARE BRACKET",
+    "clean": {
+      "space_before": true,
+      "space_after": false
+    },
     "map": {
       "punc_fa": {
         "char": "[",
@@ -746,8 +780,8 @@
         "name": "NUMBER SIGN"
       },
       "punc_ar": {
-        "char": "؀",
-        "name": "ARABIC NUMBER SIGN"
+        "char": "#",
+        "name": "NUMBER SIGN"
       },
       "punc_en": {
         "char": "#",
@@ -871,6 +905,10 @@
   },
   {
     "name": "DEGREE SIGN",
+    "clean": {
+      "space_before": false,
+      "space_after": true
+    },
     "map": {
       "punc_fa": {
         "char": "°",
@@ -894,6 +932,10 @@
   },
   {
     "name": "RIGHT CURLY BRACKET",
+    "clean": {
+      "space_before": false,
+      "space_after": true
+    },
     "map": {
       "punc_fa": {
         "char": "}",
@@ -921,6 +963,10 @@
   },
   {
     "name": "LEFT CURLY BRACKET",
+    "clean": {
+      "space_before": true,
+      "space_after": false
+    },
     "map": {
       "punc_fa": {
         "char": "{",
@@ -950,12 +996,12 @@
     "name": "AMPERSAND",
     "map": {
       "punc_fa": {
-        "char": "و",
-        "name": "ARABIC LETTER WAW"
+        "char": "&",
+        "name": "AMPERSAND"
       },
       "punc_ar": {
-        "char": "۽",
-        "name": "ARABIC SIGN SINDHI AMPERSAND"
+        "char": "&",
+        "name": "AMPERSAND"
       },
       "punc_en": {
         "char": "&",
@@ -1253,37 +1299,22 @@
   },
   {
     "name": "EXCLAMATION MARK",
-    "map": {
-      "punc_fa": {
-        "char": "!",
-        "name": "EXCLAMATION MARK"
-      },
-      "punc_ar": {
-        "char": "!",
-        "name": "EXCLAMATION MARK"
-      },
-      "punc_en": {
-        "char": "!",
-        "name": "EXCLAMATION MARK"
-      }
+    "clean": {
+      "space_before": false,
+      "space_after": true
     },
-    "others": [
-    ]
-  },
-  {
-    "name": "GRAVE ACCENT",
     "map": {
       "punc_fa": {
-        "char": "`",
-        "name": "GRAVE ACCENT"
+        "char": "!",
+        "name": "EXCLAMATION MARK"
       },
       "punc_ar": {
-        "char": "`",
-        "name": "GRAVE ACCENT"
+        "char": "!",
+        "name": "EXCLAMATION MARK"
       },
       "punc_en": {
-        "char": "`",
-        "name": "GRAVE ACCENT"
+        "char": "!",
+        "name": "EXCLAMATION MARK"
       }
     },
     "others": [
@@ -1291,6 +1322,10 @@
   },
   {
     "name": "VERTICAL LINE",
+    "clean": {
+      "space_before": true,
+      "space_after": true
+    },
     "map": {
       "punc_fa": {
         "char": "|",

@@ -2,7 +2,7 @@
 import time
 import hazm
 from tqdm import tqdm
-from normalizer import Normalizer
+from src.normalizer import Normalizer
 
 if __name__ == '__main__':
     with open('./input/text.txt', encoding="utf-8") as f:
