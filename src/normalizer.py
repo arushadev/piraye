@@ -5,13 +5,12 @@ import json
 import os
 import string
 import typing
-from typing import List
 from typing import Dict
+from typing import List
 
 from spacy.lang.en import English
 
-from src.Model.char_model import CharModel
-from src.normalizer_configuration import NormalizerConfiguration
+from src.char_config import CharConfig
 
 
 class Normalizer:
@@ -22,8 +21,12 @@ class Normalizer:
 
     Attributes
     ----------
-    configuration: NormalizerConfiguration
-        configuration for normalizer
+    configs : List[str]
+        list of desired configs
+    remove_extra_spaces : bool
+        that determines spaces stick together or not
+    tokenization : bool
+        tokenize text or not
 
 
     Methods
@@ -32,21 +35,30 @@ class Normalizer:
         get a text and normalize it and finally return it
     """
 
-    def __init__(self, configuration: NormalizerConfiguration):
+    def __init__(self, configs=None, remove_extra_spaces: bool = True, tokenization: bool = True):
         """
             constructor
-            :param configuration
-                configuration for normalizer
+            :param  configs : List[str]
+                list of desired configs
+            :param  remove_extra_spaces : bool
+                that determines spaces stick together or not
+            :param  tokenization : bool
+                tokenize text or not
         """
         # Create a blank Tokenizer with just the English vocab
-        self.configuration = configuration
-        if configuration.tokenization:
+        if configs is None:
+            configs = []
+        self.__configs = configs
+        self.__remove_extra_spaces = remove_extra_spaces
+        if tokenization:
             self.__tokenizer = English().tokenizer
-        self.__ = []
-        self.__mapping: Dict[str, CharModel] = {}
-        self.__en_mapping: Dict[str, CharModel] = {}
+        else:
+            self.__tokenizer = None
+        self.__mapping: Dict[str, CharConfig] = {}
+        self.__en_mapping: Dict[str, CharConfig] = {}
         self.__load_jsons()
 
+    # pylint: disable=too-many-branches
     def normalize(self, text: str) -> str:
         """
             return a normalized text
@@ -54,7 +66,7 @@ class Normalizer:
             :return: normalized text
         """
 
-        if self.configuration.tokenization:
+        if self.__tokenizer:
             is_token_list = self.__tokenize(text)
         else:
             is_token_list = [True] * len(text)
@@ -63,26 +75,25 @@ class Normalizer:
         for i, char in enumerate(text):
             is_token = is_token_list[i]
             mapping_char = self.__mapping.get(char)
-            if not self.configuration.remove_extra_spaces:
-                new_char = char if not mapping_char \
-                    else mapping_char.char if not mapping_char.is_token \
-                                              or (mapping_char.is_token and is_token) \
-                    else char
-                result += new_char
+            if not self.__remove_extra_spaces:
+                if mapping_char and \
+                        (not mapping_char.is_token or (mapping_char.is_token and is_token)):
+                    char = mapping_char.char
+                result += char
             else:
-                current = mapping_char if mapping_char else CharModel(char)
+                current = mapping_char if mapping_char else CharConfig(char)
                 if current.is_space:
-                    last = current if last is None \
-                        else current if not last.is_space and last.space_after is not False \
-                        else last if last.space_after is False \
-                        else current if last.is_space and \
-                                        current.space_priority < last.space_priority \
-                        else last
+                    if last is None:
+                        last = current
+                    elif not last.is_space and last.space_after is not False:
+                        last = current
+                    elif last.is_space and current.space_priority < last.space_priority:
+                        last = current
                 else:
-                    if last.is_space and last.space_before is not False:
+                    if last and last.is_space and last.space_before is not False:
                         result += last.char
                     # If last char is not space and need space before current or after last
-                    if last.is_space is not True and \
+                    if last and last.is_space is not True and \
                             (current.space_before or last.space_after) and is_token:
                         result += " "
                     if not current.is_token or (current.is_token and is_token):
@@ -116,12 +127,12 @@ class Normalizer:
             for filename in filenames:
                 all_configs.extend(Normalizer.read_json(os.path.abspath
                                                         (os.path.join(dir_path, filename))))
-        self.__mapping = self.__get_mapping(self.configuration.configs, all_configs)
+        self.__mapping = self.__get_mapping(self.__configs, all_configs)
         self.__en_mapping = self.__get_mapping(["digit_en", "punc_en"], all_configs)
 
     @staticmethod
     def __get_mapping(configs: List[str],
-                      all_configs: List[Dict[str, typing.Any]]) -> Dict[str, CharModel]:
+                      all_configs: List[Dict[str, typing.Any]]) -> Dict[str, CharConfig]:
         mapping = {}
         if configs and len(configs) == 0:
             return mapping
@@ -129,11 +140,11 @@ class Normalizer:
             for key in data["map"].keys():
                 if key in configs:
                     key_map = data["map"][key]
-                    mapping[key_map["char"]] = CharModel.get_model_from_dict(data, key)
+                    mapping[key_map["char"]] = CharConfig.from_dict(data, key)
                     for char_dic in data["others"]:
                         char = char_dic["char"]
                         if not mapping.get(char):
-                            mapping[char] = CharModel.get_model_from_dict(data, key)
+                            mapping[char] = CharConfig.from_dict(data, key)
         return mapping
 
     @staticmethod
