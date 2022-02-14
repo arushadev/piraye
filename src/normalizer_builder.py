@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import enum
 
-from src.normalizer import Normalizer
+from .normalizer import Normalizer
 
 
 class Config(enum.Enum):
@@ -62,6 +62,11 @@ class NormalizerBuilder:
         """
             Helper function for adding configs
         """
+        if self.__remove_extra_spaces and \
+                not (Config.SPACE_DELETE in self.__configs or
+                     Config.SPACE_KEEP in self.__configs or
+                     Config.SPACE_NORMAL in self.__configs):
+            self.__configs.append(Config.SPACE_KEEP)
         return Normalizer([c.value for c in self.__configs],
                           self.__remove_extra_spaces, self.__tokenization)
 
