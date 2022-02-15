@@ -10,7 +10,7 @@ from typing import List
 
 from spacy.lang.en import English
 
-from src.char_config import CharConfig
+from .char_config import CharConfig
 
 
 class Normalizer:
