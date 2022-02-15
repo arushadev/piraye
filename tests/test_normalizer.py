@@ -1,7 +1,7 @@
 # testing Fibonacci number function
 # pylint: skip-file
 
-from src import NormalizerBuilder
+from ..src import NormalizerBuilder
 
 
 def test_object():
