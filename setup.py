@@ -1,16 +1,20 @@
 """Install packages as defined in this file into the Python environment."""
+
 from setuptools import setup
 
 with open("README.md", "r", encoding="utf8") as fh:
-    long_description = fh.read()
+    readme = fh.read()
 
+with open("changelog.md", "r", encoding="utf8") as f:
+    changelog = f.read()
+    LONG_DESCRIPTION = "\n".join([readme, changelog])
 setup(
     name="piraye",
     author="Arusha Developers",
     author_email="info@arusha.dev",
     maintainer="Hamed Khademi Khaledi",
     maintainer_email="khaledihkh@gmail.com",
-    long_description=long_description,
+    long_description=LONG_DESCRIPTION,
     long_description_content_type="text/markdown",
     keywords=[
         "NLP",
