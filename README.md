@@ -36,7 +36,7 @@ normalizer = NormalizerBuilder(
 normalizer.normalize(text)  # "این یک متن تست است ، ۲۴/۱۲/۱۴۰۰"
 ```
 
-Also see [other examples](https://github.com/arushadev/piraye/blob/main/examples.md)
+Also see [other examples](https://github.com/arushadev/piraye/blob/readme/examples.md)
 
 ## Configs
 
