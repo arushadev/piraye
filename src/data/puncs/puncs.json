@@ -299,6 +299,7 @@
   {
     "name": "COLON",
     "clean": {
+      "is_token": true,
       "space_before": false,
       "space_after": true
     },
@@ -433,6 +434,7 @@
   {
     "name": "SEMICOLON",
     "clean": {
+      "is_token": true,
       "space_before": false,
       "space_after": true
     },

@@ -1,10 +1,19 @@
 # Piraye: NLP Utils
 
+<p align="center">
+  <a href="https://pypi.org/project/piraye"><img alt="PyPI Version" src="https://img.shields.io/pypi/v/piraye.svg?maxAge=86400" /></a>
+  <a href="https://pypi.org/project/piraye"><img alt="Python Versions" src="https://img.shields.io/pypi/pyversions/piraye.svg?maxAge=86400" /></a>
+  <a href="https://pypi.org/project/piraye"><img alt="License" src="https://img.shields.io/pypi/l/piraye.svg?maxAge=86400" /></a>
+  <a href="https://github.com/arushadev/piraye/actions/workflows/pylint.yml"><img alt="Pylint" src="https://github.com/arushadev/piraye/actions/workflows/pylint.yml/badge.svg" /></a>
+  <a href="https://github.com/arushadev/piraye/actions/workflows/unit-test.yml/badge.svg)](https://github.com/arushadev/piraye/actions/workflows/unit-test.yml"><img alt="Unit Test" src="https://github.com/arushadev/piraye/actions/workflows/unit-test.yml/badge.svg" /></a>
+</p>
+
+
 A utility for normalizing persian, arabic and english texts
 
 ## Requirements
 
-* Python 3.8+
+* Python 3.9+
 * spacy 3.1.3+
 
 ## Installation
@@ -27,36 +36,30 @@ normalizer = NormalizerBuilder(
 normalizer.normalize(text)  # "این یک متن تست است ، ۲۴/۱۲/۱۴۰۰"
 ```
 
+Also see [other examples](https://github.com/arushadev/piraye/blob/readme/examples.md)
+
 ## Configs
 
-| <center>Config</center> |     Function     |                          <center>Description</center> |
-|:------------------------|:----------------:|------------------------------------------------------:|
-| ALPHABET_AR             |   alphabet_ar    |                 mapping alphabet characters to arabic |
-| ALPHABET_EN             |   alphabet_en    |                mapping alphabet characters to english |
-| ALPHABET_FA             |   alphabet_fa    |                mapping alphabet characters to persian |
-| DIGIT_AR                |     digit_ar     |                       convert digits to arabic digits |
-| DIGIT_EN                |     digit_en     |                      convert digits to english digits |
-| DIGIT_FA                |     digit_fa     |                      convert digits to persian digits |
-| DIACRITIC_DELETE        | diacritic_delete |                                 remove all diacritics |
-| SPACE_DELETE            |   space_delete   |                                     remove all spaces |
-| SPACE_NORMAL            |   space_normal   | normal spaces ( like NO-BREAK SPACE , Tab and etc...) |
-| SPACE_KEEP              |    space_keep    |                    mapping spaces and not normal them |
-| PUNCTUATION_AR          |  punctuation_ar  |           mapping punctuations to arabic punctuations |
-| PUNCTUATION_Fa          |  punctuation_fa  |          mapping punctuations to persian punctuations |
-| PUNCTUATION_EN          |  punctuation_en  |          mapping punctuations to english punctuations |
+|      Config      |     Function     |                      Description                      |
+|:----------------:|:----------------:|:-----------------------------------------------------:|
+|   ALPHABET_AR    |   alphabet_ar    |         mapping alphabet characters to arabic         |
+|   ALPHABET_EN    |   alphabet_en    |        mapping alphabet characters to english         |
+|   ALPHABET_FA    |   alphabet_fa    |        mapping alphabet characters to persian         |
+|     DIGIT_AR     |     digit_ar     |            convert digits to arabic digits            |
+|     DIGIT_EN     |     digit_en     |           convert digits to english digits            |
+|     DIGIT_FA     |     digit_fa     |           convert digits to persian digits            |
+| DIACRITIC_DELETE | diacritic_delete |                 remove all diacritics                 |
+|   SPACE_DELETE   |   space_delete   |                   remove all spaces                   |
+|   SPACE_NORMAL   |   space_normal   | normal spaces ( like NO-BREAK SPACE , Tab and etc...) |
+|    SPACE_KEEP    |    space_keep    |          mapping spaces and not normal them           |
+|  PUNCTUATION_AR  |  punctuation_ar  |      mapping punctuations to arabic punctuations      |
+|  PUNCTUATION_Fa  |  punctuation_fa  |     mapping punctuations to persian punctuations      |
+|  PUNCTUATION_EN  |  punctuation_en  |     mapping punctuations to english punctuations      |
 
-## Tests
+Other attributes:
 
-[![Pylint](https://github.com/arushadev/piraye/actions/workflows/pylint.yml/badge.svg)](https://github.com/arushadev/piraye/actions/workflows/pylint.yml)
-[![Unit Test](https://github.com/arushadev/piraye/actions/workflows/unit-test.yml/badge.svg)](https://github.com/arushadev/piraye/actions/workflows/unit-test.yml)
-
-## Versions
-
-* [0.0.2](https://github.com/arushadev/piraye/releases/tag/0.0.2)
-    * fix pylint errors
-    * update normalizer builder
-* [0.0.1](https://github.com/arushadev/piraye/releases/tag/0.0.1)
-    * piraye released
+* remove_extra_spaces : append multiple spaces together
+* tokenization : replace punctuation characters that just are tokens
 
 ## License
 
@@ -67,6 +70,7 @@ works that only link to it do not fall under this restriction. There are two com
 
 See [LICENSE](https://github.com/arushadev/piraye/blob/main/LICENSE)
 
-## About
+## About ️
 
 [Arusha](https://www.arusha.dev)
+
