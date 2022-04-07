@@ -1,16 +1,11 @@
 """This module includes Normalizer class for normalizing texts"""
 from __future__ import annotations
 
-import json
-import os
-import string
-import typing
-from typing import Dict
 from typing import List
 
-from spacy.lang.en import English
-
 from .char_config import CharConfig
+from .mappings import MappingDict
+from .tokenizer import Tokenizer
 
 
 class Normalizer:
@@ -50,13 +45,12 @@ class Normalizer:
             configs = []
         self.__configs = configs
         self.__remove_extra_spaces = remove_extra_spaces
+        self.__mapping, self.__en_mapping = MappingDict.load_jsons(self.__configs)
+
         if tokenization:
-            self.__tokenizer = English().tokenizer
+            self.__tokenizer = Tokenizer(self.__en_mapping)
         else:
             self.__tokenizer = None
-        self.__mapping: Dict[str, CharConfig] = {}
-        self.__en_mapping: Dict[str, CharConfig] = {}
-        self.__load_jsons()
 
     # pylint: disable=too-many-branches
     def normalize(self, text: str) -> str:
@@ -67,7 +61,7 @@ class Normalizer:
         """
 
         if self.__tokenizer:
-            is_token_list = self.__tokenize(text)
+            is_token_list = self.tokenize(text)
         else:
             is_token_list = [True] * len(text)
         result = ""
@@ -105,55 +99,18 @@ class Normalizer:
             result += last.char
         return result
 
-    def __tokenize(self, text: str) -> List[bool]:
+    def tokenize(self, text: str) -> List[bool]:
+        """
+            return list of boolean that specifies each character is token or not
+            :param text: the input text
+            :return: list boolean.
+        """
         is_token_list = [False] * len(text)
-        text2 = ''.join(
-            [char if not self.__en_mapping.get(char)
-             else self.__en_mapping.get(char).char for char in text])
-        doc = self.__tokenizer(text2)
-        text2_counter = 0
-        for doc_i in doc:
-            token = doc_i.text
-            token_index = text2.index(token, text2_counter)
+        tokens = self.__tokenizer.word_tokenize(text)
+        text_counter = 0
+        for token in tokens:
+            token_index = text.index(token, text_counter)
             if len(token) == 1:
                 is_token_list[token_index] = True
-            text2_counter = token_index + len(token)
+            text_counter = token_index + len(token)
         return is_token_list
-
-    def __load_jsons(self):
-        all_configs = []
-        current_directory = os.path.dirname(os.path.abspath(__file__))
-        for dir_path, _, filenames in os.walk(current_directory + "/data/"):
-            for filename in filenames:
-                all_configs.extend(Normalizer.read_json(os.path.abspath
-                                                        (os.path.join(dir_path, filename))))
-        self.__mapping = self.__get_mapping(self.__configs, all_configs)
-        self.__en_mapping = self.__get_mapping(["digit_en", "punc_en"], all_configs)
-
-    @staticmethod
-    def __get_mapping(configs: List[str],
-                      all_configs: List[Dict[str, typing.Any]]) -> Dict[str, CharConfig]:
-        mapping = {}
-        if configs and len(configs) == 0:
-            return mapping
-        for data in all_configs:
-            for key in data["map"].keys():
-                if key in configs:
-                    key_map = data["map"][key]
-                    mapping[key_map["char"]] = CharConfig.from_dict(data, key)
-                    for char_dic in data["others"]:
-                        char = char_dic["char"]
-                        if not mapping.get(char):
-                            mapping[char] = CharConfig.from_dict(data, key)
-        return mapping
-
-    @staticmethod
-    def read_json(address: string):
-        """
-            return loaded json from dist
-            :param address: the input address
-            :return: loaded json
-        """
-        with open(address, encoding="utf-8") as json_file:
-            data = json.load(json_file)
-            return data

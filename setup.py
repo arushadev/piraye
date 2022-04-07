@@ -29,7 +29,7 @@ setup(
     package_data={"piraye": ["data/*/*.json"]},
     include_package_data=True,
     install_requires=[
-        "spacy",
+        "nltk",
     ],
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
