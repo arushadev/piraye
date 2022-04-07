@@ -1,5 +1,6 @@
 ## Versions
-
+* [0.1.0](https://github.com/arushadev/piraye/releases/tag/0.1.0)
+  * change tokenizer to nltk
 * [0.0.3](https://github.com/arushadev/piraye/releases/tag/0.0.3)
     * fixed some bugs
 * [0.0.2](https://github.com/arushadev/piraye/releases/tag/0.0.2)
