@@ -14,7 +14,7 @@ A utility for normalizing persian, arabic and english texts
 ## Requirements
 
 * Python 3.9+
-* spacy 3.1.3+
+* nltk 3.4.5+
 
 ## Installation
 
