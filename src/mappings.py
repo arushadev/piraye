@@ -23,7 +23,7 @@ class MappingDict:
     """
 
     @staticmethod
-    def load_jsons(configs: List[str]) -> (Dict[str, CharConfig], Dict[str, CharConfig]):
+    def load_jsons(configs: List[str]) -> Dict[str, CharConfig]:
         """
             Mapping for configs and english configs from files
             :param configs: the input configs
@@ -36,9 +36,7 @@ class MappingDict:
                 abspath = os.path.abspath(os.path.join(dir_path, filename))
                 all_configs.extend(MappingDict.read_json(abspath))
 
-        return MappingDict.get_mapping(configs, all_configs), \
-               MappingDict.get_mapping(["digit_en", "punc_en"],
-                                       all_configs)
+        return MappingDict.get_mapping(configs, all_configs)
 
     @staticmethod
     def get_mapping(configs: List[str],

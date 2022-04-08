@@ -1,21 +1,47 @@
 """This module includes Tokenizer class for tokenizing texts"""
 
-from typing import Dict, List
+from typing import List
+from abc import ABC, abstractmethod
 from nltk import word_tokenize, sent_tokenize
 import nltk
-from .char_config import CharConfig
 from .mappings import MappingDict
 
 
-class Tokenizer:
+class Tokenizer(ABC):
     """
-    A class for tokenizing.
-
+    Abstract class for tokenizing
     ...
 
-    Attributes
-    ----------
 
+    Methods
+    -------
+    word_tokenize(text: str):
+        return tokenized text (abstract method)
+    sentence_tokenize(text: str):
+        return sentence tokenized text (abstract method)
+    """
+
+    @abstractmethod
+    def word_tokenize(self, text) -> List[str]:
+        """
+            Return a tokenized text.
+            :param text: the input text
+            :return: list of words
+        """
+
+    @abstractmethod
+    def sentence_tokenize(self, text):
+        """
+            Return a sentence tokenized text.
+            :param text: the input text
+            :return: list of sentences
+        """
+
+
+class NltkTokenizer(Tokenizer):
+    """
+    A class for nltk tokenizing.
+    ...
     Methods
     -------
     word_tokenize(text: str):
@@ -24,18 +50,16 @@ class Tokenizer:
         return sentence tokenized text
     """
 
-    def __init__(self, en_mapping: Dict[str, CharConfig] = None):
+    def __init__(self, ):
         """
             constructor
         """
-        self.__en_mapping = en_mapping
         try:
             nltk.data.find('tokenizers/punkt')
         except LookupError:
             print("downloading tokenizer data : ")
             nltk.download('punkt')
-        if not self.__en_mapping:
-            _, self.__en_mapping = MappingDict.load_jsons([])
+        self.__en_mapping = MappingDict.load_jsons(["digit_en", "punc_en"])
 
     def word_tokenize(self, text) -> List[str]:
         """
@@ -47,7 +71,7 @@ class Tokenizer:
             [char if not self.__en_mapping.get(char)
              else self.__en_mapping.get(char).char for char in text])
         tokens_en = word_tokenize(text2)
-        return Tokenizer.__get_original_tokens(text, text2, tokens_en)
+        return NltkTokenizer.__get_original_tokens(text, text2, tokens_en)
 
     def sentence_tokenize(self, text):
         """
@@ -59,7 +83,7 @@ class Tokenizer:
             [char if not self.__en_mapping.get(char)
              else self.__en_mapping.get(char).char for char in text])
         tokens_en = sent_tokenize(text2)
-        return Tokenizer.__get_original_tokens(text, text2, tokens_en)
+        return NltkTokenizer.__get_original_tokens(text, text2, tokens_en)
 
     @staticmethod
     def __get_original_tokens(text: str, text2: str, tokens_en: List[str]) -> List[str]:

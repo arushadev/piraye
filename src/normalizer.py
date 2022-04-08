@@ -5,9 +5,10 @@ from typing import List
 
 from .char_config import CharConfig
 from .mappings import MappingDict
-from .tokenizer import Tokenizer
+from .tokenizer import NltkTokenizer, Tokenizer
 
 
+# pylint: disable=too-few-public-methods
 class Normalizer:
     """
     A class for normalizer.
@@ -30,7 +31,8 @@ class Normalizer:
         get a text and normalize it and finally return it
     """
 
-    def __init__(self, configs=None, remove_extra_spaces: bool = True, tokenization: bool = True):
+    def __init__(self, configs=None, remove_extra_spaces: bool = True, tokenization: bool = True,
+                 tokenizer: Tokenizer = None):
         """
             constructor
             :param  configs : List[str]
@@ -45,10 +47,13 @@ class Normalizer:
             configs = []
         self.__configs = configs
         self.__remove_extra_spaces = remove_extra_spaces
-        self.__mapping, self.__en_mapping = MappingDict.load_jsons(self.__configs)
+        self.__mapping = MappingDict.load_jsons(self.__configs)
 
         if tokenization:
-            self.__tokenizer = Tokenizer(self.__en_mapping)
+            if tokenizer:
+                self.__tokenizer = tokenizer
+            else:
+                self.__tokenizer = NltkTokenizer()
         else:
             self.__tokenizer = None
 
@@ -61,7 +66,7 @@ class Normalizer:
         """
 
         if self.__tokenizer:
-            is_token_list = self.tokenize(text)
+            is_token_list = self.__tokenize(text)
         else:
             is_token_list = [True] * len(text)
         result = ""
@@ -99,7 +104,7 @@ class Normalizer:
             result += last.char
         return result
 
-    def tokenize(self, text: str) -> List[bool]:
+    def __tokenize(self, text: str) -> List[bool]:
         """
             return list of boolean that specifies each character is token or not
             :param text: the input text
