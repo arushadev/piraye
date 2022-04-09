@@ -23,13 +23,13 @@ setup(
         "Normalization",
     ],
     url="https://github.com/arushadev/piraye",
-    version="0.0.3",
+    version="0.1.0",
     package_dir={"piraye": "src"},
     packages=["piraye"],
     package_data={"piraye": ["data/*/*.json"]},
     include_package_data=True,
     install_requires=[
-        "spacy",
+        "nltk",
     ],
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
