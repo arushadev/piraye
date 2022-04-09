@@ -3,11 +3,7 @@
 from setuptools import setup
 
 with open("README.md", "r", encoding="utf8") as fh:
-    readme = fh.read()
-
-with open("changelog.md", "r", encoding="utf8") as f:
-    changelog = f.read()
-    LONG_DESCRIPTION = "\n".join([readme, changelog])
+    LONG_DESCRIPTION = fh.read()
 setup(
     name="piraye",
     author="Arusha Developers",
