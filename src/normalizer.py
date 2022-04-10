@@ -5,7 +5,7 @@ from typing import List
 
 from .char_config import CharConfig
 from .mappings import MappingDict
-from .tokenizer import NltkTokenizer, Tokenizer
+from .nltk_tokenizer import NltkTokenizer, Tokenizer
 
 
 # pylint: disable=too-few-public-methods

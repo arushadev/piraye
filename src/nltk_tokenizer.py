@@ -90,8 +90,11 @@ class NltkTokenizer(Tokenizer):
         text2_counter = 0
         tokens = []
         for token_en in tokens_en:
-            token_index = text2.index(token_en, text2_counter)
-            curr_text = text[token_index:token_index + len(token_en)]
-            tokens.append(curr_text)
-            text2_counter = token_index + len(token_en)
+            try:
+                token_index = text2.index(token_en, text2_counter)
+                curr_text = text[token_index:token_index + len(token_en)]
+                tokens.append(curr_text)
+                text2_counter = token_index + len(token_en)
+            except ValueError:
+                tokens.append(token_en)
         return tokens
