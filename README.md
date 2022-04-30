@@ -26,13 +26,22 @@ Install the latest version with pip
 Create an instance of Normalizer with NormalizerBuilder and then call normalize function. Also see list of all available
 configs in [configs](#Configs) section.
 
+* Using builder pattern:
 ```python
 from piraye import NormalizerBuilder
 from piraye.normalizer_builder import Config
 
 text = "این یک متن تسة اسﺘ       , 24/12/1400 "
-normalizer = NormalizerBuilder(
-    [Config.PUNCTUATION_FA]).alphabet_fa().digit_fa().tokenizing().remove_extra_spaces().build()
+normalizer = NormalizerBuilder().alphabet_fa().digit_fa().punctuation_fa().tokenizing().remove_extra_spaces().build()
+normalizer.normalize(text)  # "این یک متن تست است ، ۲۴/۱۲/۱۴۰۰"
+```
+* Using constructor:
+```python
+from piraye import NormalizerBuilder
+from piraye.normalizer_builder import Config
+
+text = "این یک متن تسة اسﺘ       , 24/12/1400 "
+normalizer = NormalizerBuilder([Config.PUNCTUATION_FA, Config.ALPHABET_FA, Config.DIGIT_FA], remove_extra_spaces=True, tokenization=True).build()
 normalizer.normalize(text)  # "این یک متن تست است ، ۲۴/۱۲/۱۴۰۰"
 ```
 
