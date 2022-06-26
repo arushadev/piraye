@@ -111,11 +111,26 @@ class Normalizer:
             :return: list boolean.
         """
         is_token_list = [False] * len(text)
-        tokens = self.__tokenizer.word_tokenize(text)
-        text_counter = 0
-        for token in tokens:
-            token_index = text.index(token, text_counter)
-            if len(token) == 1:
-                is_token_list[token_index] = True
-            text_counter = token_index + len(token)
+
+        spans = list(self.__tokenizer.span_tokenize(text))
+        for i in range(len(spans)):
+            span = spans[i]
+            if span[1] - span[0] == 1:
+                is_token_list[i] = True
+        spans = list(self.__tokenizer.span_tokenize(text))
+        for i in range(len(spans)):
+            span = spans[i]
+            if span[1] - span[0] == 1:
+                is_token_list[i] = True
+        # tokens = self.__tokenizer.word_tokenize(text)
+        # text_counter = 0
+        # for token in tokens:
+        #     token = token.replace("``", "\"")
+        #     if token == "''":
+        #         token = "\""
+        #     token_index = text.index(token, text_counter)
+        #     if len(token) == 1:
+        #         is_token_list[token_index] = True
+        #     text_counter = token_index + len(token)
+
         return is_token_list

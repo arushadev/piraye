@@ -3,6 +3,7 @@
 from typing import List
 from abc import ABC, abstractmethod
 from nltk import word_tokenize, sent_tokenize
+from nltk.tokenize import TreebankWordTokenizer
 import nltk
 from .mappings import MappingDict
 
@@ -35,6 +36,14 @@ class Tokenizer(ABC):
             Return a sentence tokenized text.
             :param text: the input text
             :return: list of sentences
+        """
+
+    @abstractmethod
+    def span_tokenize(self, text):
+        """
+            Return a sentence tokenized text.
+            :param text: the input text
+            :return: list of token spans in sentence
         """
 
 
@@ -84,6 +93,12 @@ class NltkTokenizer(Tokenizer):
              else self.__en_mapping.get(char).char for char in text])
         tokens_en = sent_tokenize(text2)
         return NltkTokenizer.__get_original_tokens(text, text2, tokens_en)
+
+    def span_tokenize(self, text):
+        text2 = ''.join(
+            [char if not self.__en_mapping.get(char)
+             else self.__en_mapping.get(char).char for char in text])
+        return list(TreebankWordTokenizer().span_tokenize(text2))
 
     @staticmethod
     def __get_original_tokens(text: str, text2: str, tokens_en: List[str]) -> List[str]:
