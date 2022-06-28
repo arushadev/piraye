@@ -1,50 +1,11 @@
 """This module includes Tokenizer class for tokenizing texts"""
 
-from typing import List
-from abc import ABC, abstractmethod
-from nltk import word_tokenize, sent_tokenize
+from typing import List, Tuple
+from nltk import sent_tokenize
 from nltk.tokenize import TreebankWordTokenizer
 import nltk
 from .mappings import MappingDict
-
-
-class Tokenizer(ABC):
-    """
-    Abstract class for tokenizing
-    ...
-
-
-    Methods
-    -------
-    word_tokenize(text: str):
-        return tokenized text (abstract method)
-    sentence_tokenize(text: str):
-        return sentence tokenized text (abstract method)
-    """
-
-    @abstractmethod
-    def word_tokenize(self, text) -> List[str]:
-        """
-            Return a tokenized text.
-            :param text: the input text
-            :return: list of words
-        """
-
-    @abstractmethod
-    def sentence_tokenize(self, text):
-        """
-            Return a sentence tokenized text.
-            :param text: the input text
-            :return: list of sentences
-        """
-
-    @abstractmethod
-    def span_tokenize(self, text):
-        """
-            Return a sentence tokenized text.
-            :param text: the input text
-            :return: list of token spans in sentence
-        """
+from .tokenizer import Tokenizer
 
 
 class NltkTokenizer(Tokenizer):
@@ -79,10 +40,13 @@ class NltkTokenizer(Tokenizer):
         text2 = ''.join(
             [char if not self.__en_mapping.get(char)
              else self.__en_mapping.get(char).char for char in text])
-        tokens_en = word_tokenize(text2)
-        return NltkTokenizer.__get_original_tokens(text, text2, tokens_en)
+        spans = list(TreebankWordTokenizer().span_tokenize(text2))
+        tokens = []
+        for span in spans:
+            tokens.append(text[span[0]:span[1]])
+        return tokens
 
-    def sentence_tokenize(self, text):
+    def sentence_tokenize(self, text) -> List[str]:
         """
             Return a sentence tokenized text.
             :param text: the input text
@@ -94,11 +58,15 @@ class NltkTokenizer(Tokenizer):
         tokens_en = sent_tokenize(text2)
         return NltkTokenizer.__get_original_tokens(text, text2, tokens_en)
 
-    def span_tokenize(self, text):
+    def span_tokenize(self, text) -> List[Tuple[int, int, str]]:
         text2 = ''.join(
             [char if not self.__en_mapping.get(char)
              else self.__en_mapping.get(char).char for char in text])
-        return list(TreebankWordTokenizer().span_tokenize(text2))
+        spans = list(TreebankWordTokenizer().span_tokenize(text2))
+        result = []
+        for span in spans:
+            result.append((span[0], span[1], text[span[0]:span[1]]))
+        return result
 
     @staticmethod
     def __get_original_tokens(text: str, text2: str, tokens_en: List[str]) -> List[str]:
