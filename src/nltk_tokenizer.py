@@ -1,9 +1,11 @@
 """This module includes Tokenizer class for tokenizing texts"""
 
-from typing import List
 from abc import ABC, abstractmethod
-from nltk import word_tokenize, sent_tokenize
+from typing import List
+
 import nltk
+from nltk import word_tokenize, sent_tokenize
+
 from .mappings import MappingDict
 
 
@@ -96,5 +98,5 @@ class NltkTokenizer(Tokenizer):
                 tokens.append(curr_text)
                 text2_counter = token_index + len(token_en)
             except ValueError:
-                tokens.append(token_en)
+                tokens.append(text[text2_counter:text2_counter + 1])
         return tokens

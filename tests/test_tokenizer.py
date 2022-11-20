@@ -19,3 +19,9 @@ def test_double_quotes():
     text = "\"\"تست\""
     tokenizer = NltkTokenizer()
     assert len(tokenizer.word_tokenize(text)) == 4
+
+
+def test_double_quotes2():
+    text = "«»"
+    tokenizer = NltkTokenizer()
+    assert len(tokenizer.word_tokenize(text)) == 2

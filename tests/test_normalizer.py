@@ -31,3 +31,10 @@ def test_space():
     text = "Hello  , Piraye(   NLP Tool   )  .  \n   \n"
     norm = NormalizerBuilder().remove_extra_spaces().alphabet_en().punctuation_en().build()
     assert "Hello, Piraye (NLP Tool).\n" != norm.normalize(text)
+
+
+def test_quotes():
+    text = "«"
+    norm = NormalizerBuilder().digit_en().punctuation_en().alphabet_fa() \
+        .tokenizing().remove_extra_spaces().build()
+    norm.normalize(text)
