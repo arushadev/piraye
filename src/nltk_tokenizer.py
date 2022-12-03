@@ -98,7 +98,7 @@ class NltkTokenizer(Tokenizer):
                 tokens.append(curr_text)
                 text2_counter = token_index + len(token_en)
             except ValueError as error:
-                if token_en == "``" or token_en == "''":
+                if token_en in ('``', "''"):
                     while True:
                         curr_text = text[text2_counter:text2_counter + 1]
                         text2_counter = text2_counter + 1
