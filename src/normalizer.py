@@ -112,7 +112,7 @@ class Normalizer:
         """
         is_token_list = [False] * len(text)
         spans = self.__tokenizer.span_tokenize(text)
-        for (a, b) in spans:
-            if a + 1 == b:
-                is_token_list[a] = True
+        for (start, end) in spans:
+            if start + 1 == end:
+                is_token_list[start] = True
         return is_token_list

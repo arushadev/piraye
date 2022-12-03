@@ -108,8 +108,7 @@ class NltkTokenizer(Tokenizer):
     def __get_original_tokens(text: str, text2: str, tokens_en: List[str]) -> List[str]:
         text2_counter = 0
         tokens = []
-        for i in range(len(tokens_en)):
-            token_en = tokens_en[i]
+        for token_en in tokens_en:
             try:
                 token_index = text2.index(token_en, text2_counter)
                 curr_text = text[token_index:token_index + len(token_en)]
