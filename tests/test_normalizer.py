@@ -38,10 +38,11 @@ def test_quotes():
     norm = NormalizerBuilder().digit_en().punctuation_en().alphabet_fa() \
         .tokenizing().remove_extra_spaces().build()
     norm.normalize(text)
-
-
-def test_quotes2():
     text = " «««« تست "
+    norm = NormalizerBuilder().digit_en().punctuation_en().alphabet_fa() \
+        .tokenizing().remove_extra_spaces().build()
+    norm.normalize(text)
+    text = " \" تست '' تست «««« تست "
     norm = NormalizerBuilder().digit_en().punctuation_en().alphabet_fa() \
         .tokenizing().remove_extra_spaces().build()
     norm.normalize(text)
