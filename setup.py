@@ -19,7 +19,7 @@ setup(
         "Normalization",
     ],
     url="https://github.com/arushadev/piraye",
-    version="0.1.4",
+    version="0.1.5",
     package_dir={"piraye": "src"},
     packages=["piraye"],
     package_data={"piraye": ["data/*/*.json"]},

@@ -1,6 +1,7 @@
 # testing Fibonacci number function
 # pylint: skip-file
 
+from ..src import NltkTokenizer
 from ..src import NormalizerBuilder
 
 
@@ -46,3 +47,8 @@ def test_quotes():
     norm = NormalizerBuilder().digit_en().punctuation_en().alphabet_fa() \
         .tokenizing().remove_extra_spaces().build()
     norm.normalize(text)
+
+
+def test_normalizer():
+    tokens = NltkTokenizer().word_tokenize('\'\'Y\'"')
+    print(tokens)
