@@ -1,4 +1,5 @@
 """This module is for compare hazm and this normalizer"""
+# pylint: skip-file
 import time
 
 from tqdm import tqdm
