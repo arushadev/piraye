@@ -1,12 +1,14 @@
 """This module is for compare hazm and this normalizer"""
 import time
 
-import hazm
 from tqdm import tqdm
 
 from src import NormalizerBuilder
 
 if __name__ == '__main__':
+
+    import hazm
+
     with open('./input.txt', encoding="utf-8") as f:
         text = f.read()
         norm = NormalizerBuilder() \
