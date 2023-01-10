@@ -2,7 +2,6 @@
 from typing import List, Tuple
 
 import nltk
-
 from nltk.tokenize import TreebankWordTokenizer
 from nltk.tokenize.punkt import PunktSentenceTokenizer
 
@@ -56,6 +55,3 @@ class NltkTokenizer(Tokenizer):
              else self.__en_mapping.get(char).char for char in text])
         spans = self.__sentence_tokenize.span_tokenize(text2)
         return [(span[0], span[1], text[span[0]:span[1]]) for span in spans]
-
-
-
