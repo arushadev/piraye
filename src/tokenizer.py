@@ -1,3 +1,4 @@
+"""Base class of tokenizer"""
 from abc import ABC, abstractmethod
 from typing import List, Tuple
 
