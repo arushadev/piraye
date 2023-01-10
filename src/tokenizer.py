@@ -19,31 +19,31 @@ class Tokenizer(ABC):
     @abstractmethod
     def word_tokenize(self, text) -> List[str]:
         """
-            Return a tokenized text.
-            :param text: the input text
-            :return: list of words
+        Return a tokenized text.
+        :param text: the input text
+        :return: list of words
         """
 
     @abstractmethod
     def word_span_tokenize(self, text) -> List[Tuple[int, int, str]]:
         """
-            Return spans of tokenized text.
-            :param text: the input text
-            :return: list of token spans in text
+        Return spans of tokenized text.
+        :param text: the input text
+        :return: list of token spans in text
         """
 
     @abstractmethod
-    def sentence_tokenize(self, text):
+    def sentence_tokenize(self, text) -> List[str]:
         """
-            Return a sentence tokenized text.
-            :param text: the input text
-            :return: list of sentences
+        Return a sentence tokenized text.
+        :param text: the input text
+        :return: list of sentences
         """
 
     @abstractmethod
     def sentence_span_tokenize(self, text) -> List[Tuple[int, int, str]]:
         """
-            Return spans of tokenized text.
-            :param text: the input text
-            :return: list of token spans in text
+        Return spans of tokenized text.
+        :param text: the input text
+        :return: list of token spans in text
         """

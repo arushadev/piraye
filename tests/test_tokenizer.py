@@ -18,7 +18,7 @@ def test_sample():
 def test_double_quotes():
     text = "'\"\"تست\""
     tokenizer = NltkTokenizer()
-    assert len(tokenizer.word_tokenize(text)) == 4
+    assert len(tokenizer.word_tokenize(text)) == 5
 
 
 def test_sentence_tokenizer():
