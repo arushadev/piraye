@@ -1,9 +1,11 @@
 """This module includes Tokenizer class for tokenizing texts"""
 
 from typing import List, Tuple
-from nltk import sent_tokenize
-from nltk.tokenize import TreebankWordTokenizer
+
 import nltk
+from nltk.tokenize import TreebankWordTokenizer
+from nltk.tokenize.punkt import PunktSentenceTokenizer
+
 from .mappings import MappingDict
 from .tokenizer import Tokenizer
 
@@ -46,19 +48,7 @@ class NltkTokenizer(Tokenizer):
             tokens.append(text[span[0]:span[1]])
         return tokens
 
-    def sentence_tokenize(self, text) -> List[str]:
-        """
-            Return a sentence tokenized text.
-            :param text: the input text
-            :return: list of sentences
-        """
-        text2 = ''.join(
-            [char if not self.__en_mapping.get(char)
-             else self.__en_mapping.get(char).char for char in text])
-        tokens_en = sent_tokenize(text2)
-        return NltkTokenizer.__get_original_tokens(text, text2, tokens_en)
-
-    def span_tokenize(self, text) -> List[Tuple[int, int, str]]:
+    def word_span_tokenize(self, text) -> List[Tuple[int, int, str]]:
         text2 = ''.join(
             [char if not self.__en_mapping.get(char)
              else self.__en_mapping.get(char).char for char in text])
@@ -68,16 +58,26 @@ class NltkTokenizer(Tokenizer):
             result.append((span[0], span[1], text[span[0]:span[1]]))
         return result
 
-    @staticmethod
-    def __get_original_tokens(text: str, text2: str, tokens_en: List[str]) -> List[str]:
-        text2_counter = 0
-        tokens = []
-        for token_en in tokens_en:
-            try:
-                token_index = text2.index(token_en, text2_counter)
-                curr_text = text[token_index:token_index + len(token_en)]
-                tokens.append(curr_text)
-                text2_counter = token_index + len(token_en)
-            except ValueError:
-                tokens.append(token_en)
-        return tokens
+    def sentence_tokenize(self, text) -> List[str]:
+        """
+            Return a sentence tokenized text.
+            :param text: the input text
+            :return: list of sentences
+        """
+        text2 = ''.join(
+            [char if not self.__en_mapping.get(char)
+             else self.__en_mapping.get(char).char for char in text])
+        spans = PunktSentenceTokenizer().span_tokenize(text2)
+        return [text[span[0]:span[1]] for span in spans]
+
+    def sentence_span_tokenize(self, text) -> List[Tuple[int, int, str]]:
+        """
+            Return a sentence tokenized text.
+            :param text: the input text
+            :return: list of sentences
+        """
+        text2 = ''.join(
+            [char if not self.__en_mapping.get(char)
+             else self.__en_mapping.get(char).char for char in text])
+        spans = PunktSentenceTokenizer().span_tokenize(text2)
+        return [(span[0], span[1], text[span[0]:span[1]]) for span in spans]
