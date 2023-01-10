@@ -23,6 +23,7 @@ class Config(enum.Enum):
     PUNCTUATION_AR = "punc_ar"
     PUNCTUATION_FA = "punc_fa"
     PUNCTUATION_EN = "punc_en"
+    DELETE_DELETIONS = "deletions_delete"
 
 
 class NormalizerBuilder:
@@ -159,6 +160,13 @@ class NormalizerBuilder:
             Helper function for adding configs
         """
         self.__configs.append(Config.PUNCTUATION_EN)
+        return self
+
+    def delete_deletions(self) -> NormalizerBuilder:
+        """
+        Helper function for adding configs
+        """
+        self.__configs.append(Config.DELETE_DELETIONS)
         return self
 
     def remove_extra_spaces(self, remove_extra_spaces: bool = True) -> NormalizerBuilder:
