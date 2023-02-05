@@ -11,7 +11,7 @@ from .nltk_tokenizer import NltkTokenizer, Tokenizer
 # pylint: disable=too-few-public-methods
 class Normalizer:
     """
-    A class for normalizer.
+    A class for normalization.
 
     ...
 
@@ -60,7 +60,7 @@ class Normalizer:
     # pylint: disable=too-many-branches
     def normalize(self, text: str) -> str:
         """
-            return a normalized text
+            returns a normalized text
             :param text: the input text
             :return: normalized text
         """
@@ -106,7 +106,7 @@ class Normalizer:
 
     def __tokenize(self, text: str) -> List[bool]:
         """
-            return list of boolean that specifies each character is token or not
+            returns a list of booleans that specifies each character is token or not
             :param text: the input text
             :return: list boolean.
         """
