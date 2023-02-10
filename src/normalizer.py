@@ -12,18 +12,13 @@ from .nltk_tokenizer import NltkTokenizer, Tokenizer
 class Normalizer:
     """
     A class for normalization.
-
     ...
 
     Attributes
     ----------
-    configs : List[str]
-        list of desired configs
-    remove_extra_spaces : bool
-        that determines spaces stick together or not
-    tokenization : bool
-        tokenize text or not
-
+    config (List[str]): list of desired configs
+    remove_extra_spaces (bool): that determines spaces stick together or not
+    tokenization (bool): tokenize text or not
 
     Methods
     -------

@@ -1,35 +1,43 @@
+"""This module includes MultiLingualNormalizer class for normalizing texts"""
+from enum import Enum
 from typing import List, Tuple
 
-from .normalizer_builder import NormalizerBuilder
-from .normalizer import Normalizer
-from .nltk_tokenizer import NltkTokenizer, Tokenizer
 from lingua import Language, LanguageDetectorBuilder
 
-from enum import Enum
+from .nltk_tokenizer import NltkTokenizer, Tokenizer
+from .normalizer import Normalizer
+from .normalizer_builder import NormalizerBuilder
 
 
 class TokenizationLevel(Enum):
+    """
+    Level of text for language detection
+    """
     WORD_LEVEL = 1
     SENTENCE_LEVEL = 2
     LINGUA_MIXED_MODE = 3
 
 
+# pylint: disable=too-few-public-methods
 class MultiLingualNormalizer:
+    """
+    Detect lang of text, and then normalize based detected lang
+    """
 
     def __init__(self, configs: dict[str, Normalizer] = None,
                  main_normalizer_lang: str = 'fa',
                  tokenization_level: TokenizationLevel = TokenizationLevel.WORD_LEVEL,
                  tokenizer: Tokenizer = None):
         """ff
-            constructor
-            :param  configs : List[str]
-                list of desired configs
-            :param  main_normalizer_lang : str
-                that determines main normalization language (for space characters)
-            :param  tokenization_level: TokenizationLevel
-                tokenization level: word-level, sentence-level and lingua libaray mode
-            :param  tokenizer: Tokenizer
-                default tokenizer
+        constructor
+        :param  configs : List[str]
+            list of desired configs
+        :param  main_normalizer_lang : str
+            that determines main normalization language (for space characters)
+        :param  tokenization_level: TokenizationLevel
+            tokenization level: word-level, sentence-level and lingua libaray mode
+        :param  tokenizer: Tokenizer
+            default tokenizer
         """
         # Create a blank Tokenizer with just the English vocab
         if configs is None:
@@ -54,9 +62,9 @@ class MultiLingualNormalizer:
 
     def normalize(self, text: str) -> str:
         """
-            returns a normalized text
-            :param text: the input text, paragraphs are not retained.
-            :return: normalized text
+        returns a normalized text
+        :param text: the input text, paragraphs are not retained.
+        :return: normalized text
         """
         result = ''
         main_normalizer = self.__configs[self.__main_normalizer_lang]
@@ -66,7 +74,7 @@ class MultiLingualNormalizer:
             for det_res in lingua:
                 if det_res.start_index > i:
                     result += main_normalizer.normalize(text[i: det_res.start_index])
-                normalized = self.normalize_sub_text(text[det_res.start_index: det_res.end_index], det_res.language)
+                normalized = self.__normalize_sub_text(text[det_res.start_index: det_res.end_index], det_res.language)
                 result += normalized
                 i = det_res.end_index
             if i < len(text):
@@ -81,14 +89,20 @@ class MultiLingualNormalizer:
             for (start, end, word) in spans:
                 if start > i:
                     result += main_normalizer.normalize(text[i: start])
-                normalized = self.normalize_sub_text(word)
+                normalized = self.__normalize_sub_text(word)
                 result += normalized
                 i = end
             if i < len(text):
                 result += main_normalizer.normalize(text[i:])
         return result
 
-    def normalize_sub_text(self, sub_text: str, lang: Language | None = None) -> str:
+    def __normalize_sub_text(self, sub_text: str, lang: Language | None = None) -> str:
+        """
+        Normalize text
+        :param sub_text:
+        :param lang:
+        :return:
+        """
         language = lang if lang is not None else self.__detector.detect_language_of(sub_text)
         normalizer: Normalizer = self.__configs[self.__main_normalizer_lang]
         match language:
