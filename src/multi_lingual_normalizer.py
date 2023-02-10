@@ -105,10 +105,11 @@ class MultiLingualNormalizer:
         """
         language = lang if lang is not None else self.__detector.detect_language_of(sub_text)
         normalizer: Normalizer = self.__configs[self.__main_normalizer_lang]
-        if language == Language.ARABIC:
-            normalizer = self.__configs['ar']
-        elif language == Language.PERSIAN:
-            normalizer = self.__configs['fa']
-        elif language == Language.ENGLISH:
-            normalizer = self.__configs['en']
+        match language:
+            case Language.ARABIC:
+                normalizer = self.__configs['ar']
+            case Language.PERSIAN:
+                normalizer = self.__configs['fa']
+            case Language.ENGLISH:
+                normalizer = self.__configs['en']
         return normalizer.normalize(sub_text)

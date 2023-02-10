@@ -13,7 +13,7 @@ A utility for normalizing persian, arabic and english texts
 
 ## Requirements
 
-* Python 3.9+
+* Python 3.10+
 * nltk 3.4.5+
 
 ## Installation
@@ -27,6 +27,7 @@ Create an instance of Normalizer with NormalizerBuilder and then call normalize 
 configs in [configs](#Configs) section.
 
 * Using builder pattern:
+
 ```python
 from piraye import NormalizerBuilder
 from piraye.normalizer_builder import Config
@@ -35,7 +36,9 @@ text = "این یک متن تسة اسﺘ       , 24/12/1400 "
 normalizer = NormalizerBuilder().alphabet_fa().digit_fa().punctuation_fa().tokenizing().remove_extra_spaces().build()
 normalizer.normalize(text)  # "این یک متن تست است ، ۲۴/۱۲/۱۴۰۰"
 ```
+
 * Using constructor:
+
 ```python
 from piraye import NormalizerBuilder
 from piraye.normalizer_builder import Config
