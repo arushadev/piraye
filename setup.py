@@ -19,7 +19,7 @@ setup(
         "Normalization",
     ],
     url="https://github.com/arushadev/piraye",
-    version="0.3.0",
+    version="0.3.1",
     package_dir={"piraye": "src"},
     packages=["piraye"],
     package_data={"piraye": ["data/*/*.json"]},
@@ -34,8 +34,8 @@ setup(
         "Intended Audience :: Science/Research",
         "License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)",
         "Operating System :: OS Independent",
-        "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "Topic :: Scientific/Engineering",
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
         "Topic :: Text Processing",
@@ -44,5 +44,5 @@ setup(
         "Topic :: Text Processing :: Linguistic",
         "Topic :: Utilities"
     ],
-    python_requires='>=3.9',
+    python_requires='>=3.10',
 )
