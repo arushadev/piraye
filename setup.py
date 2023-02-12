@@ -19,13 +19,14 @@ setup(
         "Normalization",
     ],
     url="https://github.com/arushadev/piraye",
-    version="0.3.1",
+    version="0.3.2",
     package_dir={"piraye": "src"},
     packages=["piraye"],
     package_data={"piraye": ["data/*/*.json"]},
     include_package_data=True,
     install_requires=[
         "nltk",
+        "lingua-language-detector"
     ],
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
