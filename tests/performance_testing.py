@@ -4,7 +4,7 @@ import time
 
 from tqdm import tqdm
 
-from src import NormalizerBuilder
+from ..piraye import NormalizerBuilder
 
 if __name__ == '__main__':
 

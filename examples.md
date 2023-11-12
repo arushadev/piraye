@@ -2,10 +2,11 @@
 
 ```python
 from piraye import NormalizerBuilder
-from piraye.normalizer_builder import Config
+from piraye.tasks.normalizer.normalizer_builder import Config
 
 text = "این یک متن تسة اسﺘ       , 24,12,1400 "
-normalizer = NormalizerBuilder([Config.PUNCTUATION_FA]).alphabet_fa().digit_fa().remove_extra_spaces().tokenizing().build()
+normalizer = NormalizerBuilder(
+    [Config.PUNCTUATION_FA]).alphabet_fa().digit_fa().remove_extra_spaces().tokenizing().build()
 print(normalizer.normalize(text))  # "این یک متن تست است ، ۲۴,۱۲,۱۴۰۰"
 
 # without tokenizing
