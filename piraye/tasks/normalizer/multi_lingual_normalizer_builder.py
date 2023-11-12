@@ -1,9 +1,9 @@
 """This module is for config set """
 from __future__ import annotations
 
+from .character_normalizer import Normalizer
 from .multi_lingual_normalizer import MultiLingualNormalizer, TokenizationLevel
-from .normalizer import Normalizer
-from .tokenizer import Tokenizer
+from ...tokenizer import Tokenizer
 
 
 class MultiLingualNormalizerBuilder:
