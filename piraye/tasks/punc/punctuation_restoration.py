@@ -16,7 +16,11 @@ class PunctuationRestoration(Normalizer, ABC):
         :param text: Input text without punctuation
         :return: The text with punctuation
         """
-        pass
+        from deepmultilingualpunctuation import PunctuationModel
+        model = PunctuationModel(model = "final")
+        result = model.restore_punctuation(text)
+        return result
+        
 
     def span_normalize(self, text: str) -> List[Tuple[int, int, str]]:
         """
