@@ -1,12 +1,13 @@
 """This module includes MultiLingualNormalizer class for normalizing texts"""
+from abc import ABC
 from enum import Enum
 from typing import List, Tuple
 
 from lingua import Language, LanguageDetectorBuilder
 
-from .nltk_tokenizer import NltkTokenizer, Tokenizer
-from .normalizer import Normalizer
 from .normalizer_builder import NormalizerBuilder
+from ..tokenizer.nltk_tokenizer import NltkTokenizer, Tokenizer
+from ...normalizer import Normalizer
 
 
 class TokenizationLevel(Enum):
@@ -19,9 +20,13 @@ class TokenizationLevel(Enum):
 
 
 # pylint: disable=too-few-public-methods
-class MultiLingualNormalizer:
+class MultiLingualNormalizer(Normalizer, ABC):
     """
-    Detect lang of text, and then normalize based detected lang
+    Normalize the input text handling multiple languages.
+
+    Tokenizes the text into words or sentences based on
+    self.__tokenization_level. Detects the language of each
+    token and normalizes using the appropriate Normalizer.
     """
 
     def __init__(self, configs: dict[str, Normalizer] = None,
@@ -113,3 +118,6 @@ class MultiLingualNormalizer:
             case Language.ENGLISH:
                 normalizer = self.__configs['en']
         return normalizer.normalize(sub_text)
+
+    def span_normalize(self, text: str) -> List[Tuple[int, int, str]]:
+        raise NotImplementedError()

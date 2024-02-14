@@ -1,8 +1,8 @@
 # testing Fibonacci number function
 # pylint: skip-file
 
-from ..src import NltkTokenizer
-from ..src import NormalizerBuilder
+from ..piraye import NltkTokenizer
+from ..piraye import NormalizerBuilder
 
 
 def test_object():

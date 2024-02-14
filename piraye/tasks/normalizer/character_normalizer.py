@@ -1,41 +1,34 @@
 """This module includes Normalizer class for normalizing texts"""
 from __future__ import annotations
 
-from typing import List
+from abc import ABC
+from typing import List, Tuple
 
 from .char_config import CharConfig
 from .mappings import MappingDict
-from .nltk_tokenizer import NltkTokenizer, Tokenizer
+from ..tokenizer.nltk_tokenizer import NltkTokenizer, Tokenizer
+from ...normalizer import Normalizer
 
 
 # pylint: disable=too-few-public-methods
-class Normalizer:
+class CharacterNormalizer(Normalizer, ABC):
     """
-    A class for normalization.
-    ...
-
+    Impl normalizer by character level normalization
     Attributes
     ----------
     config (List[str]): list of desired configs
     remove_extra_spaces (bool): that determines spaces stick together or not
-    tokenization (bool): tokenize text or not
-
-    Methods
-    -------
-    normalize(text: str):
-        get a text and normalize it and finally return it
+    tokenization (bool): Whether to tokenize the text before normalization.
     """
 
     def __init__(self, configs=None, remove_extra_spaces: bool = True, tokenization: bool = True,
                  tokenizer: Tokenizer = None):
         """
-            constructor
-            :param  configs : List[str]
-                list of desired configs
-            :param  remove_extra_spaces : bool
-                that determines spaces stick together or not
-            :param  tokenization : bool
-                tokenize text or not
+        Constructor for NormalizerBuilder.
+        :param configs: List of normalizer configs to initialize with.
+        :param remove_extra_spaces: Whether to remove extra spaces during normalization.
+        :param tokenization: Whether to tokenize the text before normalization.
+        :param tokenizer: Tokenizer algorithm (Default is NltkTokenizer)
         """
         # Create a blank Tokenizer with just the English vocab
         if configs is None:
@@ -111,3 +104,6 @@ class Normalizer:
             if start + 1 == end:
                 is_token_list[start] = True
         return is_token_list
+
+    def span_normalize(self, text: str) -> List[Tuple[int, int, str]]:
+        raise NotImplementedError()

@@ -2,8 +2,10 @@
 from __future__ import annotations
 
 import enum
+from typing import List
 
-from .normalizer import Normalizer
+from .character_normalizer import CharacterNormalizer
+from ...normalizer import Normalizer
 
 
 class Config(enum.Enum):
@@ -46,12 +48,14 @@ class NormalizerBuilder:
         build an instance of normalizer with current config
     """
 
-    def __init__(self, configs=None,
+    def __init__(self, configs: List[Config] | None = None,
                  remove_extra_spaces: bool = False,
                  tokenization: bool = False):
         """
-            constructor
-            :param configs
+        Constructor for NormalizerBuilder.
+        :param configs: List of normalizer configs to initialize with.
+        :param remove_extra_spaces: Whether to remove extra spaces during normalization
+        :param tokenization: Whether to tokenize the text during normalization.
         """
         if configs is None:
             configs = []
@@ -61,124 +65,140 @@ class NormalizerBuilder:
 
     def build(self) -> Normalizer:
         """
-            Helper function for adding configs
+        Build and return a Normalizer instance with the configured options.
+        :return: A Normalizer instance with the configured normalization options.
         """
         if self.__remove_extra_spaces and \
                 not (Config.SPACE_DELETE in self.__configs or
                      Config.SPACE_KEEP in self.__configs or
                      Config.SPACE_NORMAL in self.__configs):
             self.__configs.append(Config.SPACE_KEEP)
-        return Normalizer([c.value for c in self.__configs],
-                          self.__remove_extra_spaces, self.__tokenization)
+        return CharacterNormalizer([c.value for c in self.__configs],
+                                   self.__remove_extra_spaces, self.__tokenization)
 
     def alphabet_ar(self) -> NormalizerBuilder:
         """
-            Helper function for adding configs
+        Add Config.ALPHABET_AR to the configuration.
+        :return: Self
         """
         self.__configs.append(Config.ALPHABET_AR)
         return self
 
     def alphabet_en(self) -> NormalizerBuilder:
         """
-            Helper function for adding configs
+        Add Config.ALPHABET_EN to the configuration.
+        :return: Self
         """
         self.__configs.append(Config.ALPHABET_EN)
         return self
 
     def alphabet_fa(self) -> NormalizerBuilder:
         """
-            Helper function for adding configs
+        Add Config.ALPHABET_FA to the configuration.
+        :return: Self
         """
         self.__configs.append(Config.ALPHABET_FA)
         return self
 
     def digit_ar(self) -> NormalizerBuilder:
         """
-            Helper function for adding configs
+        Add Config.DIGIT_AR to the configuration.
+        :return: Self
         """
-        self.__configs.append(Config.ALPHABET_AR)
+        self.__configs.append(Config.DIGIT_AR)
         return self
 
     def digit_en(self) -> NormalizerBuilder:
         """
-            Helper function for adding configs
+        Add Config.DIGIT_EN to the configuration.
+        :return: Self
         """
         self.__configs.append(Config.DIGIT_EN)
         return self
 
     def digit_fa(self) -> NormalizerBuilder:
         """
-            Helper function for adding configs
+        Add Config.DIGIT_FA to the configuration.
+        :return: Self
         """
         self.__configs.append(Config.DIGIT_FA)
         return self
 
     def diacritic_delete(self) -> NormalizerBuilder:
         """
-            Helper function for adding configs
+        Add Config.DIACRITIC_DELETE to the configuration.
+        :return: Self
         """
         self.__configs.append(Config.DIACRITIC_DELETE)
         return self
 
     def space_delete(self) -> NormalizerBuilder:
         """
-            Helper function for adding configs
+        Add Config.SPACE_DELETE to the configuration.
+        :return: Self
         """
         self.__configs.append(Config.SPACE_DELETE)
         return self
 
     def space_normal(self) -> NormalizerBuilder:
         """
-            Helper function for adding configs
+        Add Config.SPACE_NORMAL to the configuration.
+        :return: Self
         """
         self.__configs.append(Config.SPACE_NORMAL)
         return self
 
     def space_keep(self) -> NormalizerBuilder:
         """
-            Helper function for adding configs
+        Add Config.SPACE_KEEP to the configuration.
+        :return: Self
         """
         self.__configs.append(Config.SPACE_KEEP)
         return self
 
     def punctuation_ar(self) -> NormalizerBuilder:
         """
-            Helper function for adding configs
+        Add Config.PUNCTUATION_AR to the configuration.
+        :return: Self
         """
         self.__configs.append(Config.PUNCTUATION_AR)
         return self
 
     def punctuation_fa(self) -> NormalizerBuilder:
         """
-            Helper function for adding configs
+        Add Config.PUNCTUATION_FA to the configuration.
+        :return: Self
         """
         self.__configs.append(Config.PUNCTUATION_FA)
         return self
 
     def punctuation_en(self) -> NormalizerBuilder:
         """
-            Helper function for adding configs
+        Add Config.PUNCTUATION_EN to the configuration.
+        :return: Self
         """
         self.__configs.append(Config.PUNCTUATION_EN)
         return self
 
     def delete_deletions(self) -> NormalizerBuilder:
         """
-        Helper function for adding configs
+        Add Config.DELETE_DELETIONS to the configuration.
+        :return: Self
         """
         self.__configs.append(Config.DELETE_DELETIONS)
         return self
 
     def remove_extra_spaces(self, remove_extra_spaces: bool = True) -> NormalizerBuilder:
         """
-        Helper function for adding configs
+        Config whether delete remove extra space or not
+        :return: Self
         """
         self.__remove_extra_spaces = remove_extra_spaces
         return self
 
     def tokenizing(self, tokenization: bool = True) -> NormalizerBuilder:
         """
-        Helper function for adding configs
+        Config whether tokenize before normalization or not
         """
         self.__tokenization = tokenization
         return self

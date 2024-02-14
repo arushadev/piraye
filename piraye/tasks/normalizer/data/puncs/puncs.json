@@ -1344,5 +1344,60 @@
     },
     "others": [
     ]
+  },
+  {
+    "name": "QUESTION MARK",
+    "clean": {
+      "space_before": false,
+      "space_after": true
+    },
+    "map": {
+      "punc_fa": {
+        "char": "؟",
+        "name": "ARABIC QUESTION MARK"
+      },
+      "punc_ar": {
+        "char": "؟",
+        "name": "ARABIC QUESTION MARK"
+      },
+      "punc_en": {
+        "char": "?",
+        "name": "QUESTION MARK"
+      }
+    },
+    "others": [
+      {
+        "char": "¿",
+        "name": "INVERTED QUESTION MARK"
+      },
+      {
+        "char": ";",
+        "name": "GREEK QUESTION MARK"
+      },
+      {
+        "char": "՞",
+        "name": "ARMENIAN QUESTION MARK"
+      },
+      {
+        "char": "᥅",
+        "name": "LIMBU QUESTION MARK"
+      },
+      {
+        "char": "⁇",
+        "name": "DOUBLE QUESTION MARK"
+      },
+      {
+        "char": "︖",
+        "name": "PRESENTATION FORM FOR VERTICAL QUESTION MARK"
+      },
+      {
+        "char": "﹖",
+        "name": "SMALL QUESTION MARK"
+      },
+      {
+        "char": "？",
+        "name": "FULLWIDTH QUESTION MARK"
+      }
+    ]
   }
 ]
