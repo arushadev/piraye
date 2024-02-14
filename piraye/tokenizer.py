@@ -24,7 +24,6 @@ class Tokenizer(ABC):
         :param text: The input text to tokenize.
         :return: A list of tuples containing the start index, end index, and the tokenized word for each word span.
         """
-        pass
 
     def sentence_tokenize(self, text: str) -> List[str]:
         """
@@ -42,4 +41,3 @@ class Tokenizer(ABC):
         :param text: The input text to tokenize.
         :return: A list of tuples containing the start index, end index, and the sentence for each sentence span.
         """
-        pass
