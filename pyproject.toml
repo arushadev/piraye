@@ -40,10 +40,7 @@ classifiers = [
     "Topic :: Text Processing :: Linguistic",
     "Topic :: Utilities"
 ]
-dependencies = [
-    "nltk",
-    "lingua-language-detector"
-]
+
 
 [tool.setuptools]
 include-package-data = true
@@ -55,9 +52,13 @@ namespaces = false  # to disable scanning PEP 420 namespaces (true by default)
 [tool.setuptools.package-data]
 piraye = ["**/*.json"]
 
+dependencies = [
+    "nltk",
+    "lingua-language-detector"
+]
+
 [project.optional-dependencies]
-dev = ["tqdm", "pytest", "pylint", "flake8", "pytest"]
-rest = ["docutils>=0.3", "pack ==1.1, ==1.3"]
+dev = ["tqdm", "pytest", "pylint ==2.17.7", "flake8", "pytest"]
 
 [project.urls]
 "Homepage" = "https://github.com/arushadev/piraye"
