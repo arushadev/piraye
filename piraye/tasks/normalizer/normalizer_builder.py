@@ -6,6 +6,7 @@ from typing import List
 
 from .character_normalizer import CharacterNormalizer
 from ...normalizer import Normalizer
+from ...tokenizer import Tokenizer
 
 
 class Config(enum.Enum):
@@ -57,6 +58,7 @@ class NormalizerBuilder:
         :param remove_extra_spaces: Whether to remove extra spaces during normalization
         :param tokenization: Whether to tokenize the text during normalization.
         """
+        self.__tokenizer = None
         if configs is None:
             configs = []
         self.__configs = configs
@@ -74,7 +76,7 @@ class NormalizerBuilder:
                      Config.SPACE_NORMAL in self.__configs):
             self.__configs.append(Config.SPACE_KEEP)
         return CharacterNormalizer([c.value for c in self.__configs],
-                                   self.__remove_extra_spaces, self.__tokenization)
+                                   self.__remove_extra_spaces, self.__tokenization,self.__tokenizer)
 
     def alphabet_ar(self) -> NormalizerBuilder:
         """
@@ -196,9 +198,10 @@ class NormalizerBuilder:
         self.__remove_extra_spaces = remove_extra_spaces
         return self
 
-    def tokenizing(self, tokenization: bool = True) -> NormalizerBuilder:
+    def tokenizing(self, tokenization: bool = True, tokenizer: Tokenizer = None) -> NormalizerBuilder:
         """
         Config whether tokenize before normalization or not
         """
         self.__tokenization = tokenization
+        self.__tokenizer = tokenizer
         return self

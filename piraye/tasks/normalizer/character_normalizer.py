@@ -6,7 +6,8 @@ from typing import List, Tuple
 
 from .char_config import CharConfig
 from .mappings import MappingDict
-from ..tokenizer.nltk_tokenizer import NltkTokenizer, Tokenizer
+from ..tokenizer.nltk_tokenizer import NltkTokenizer
+from ...tokenizer import Tokenizer
 from ...normalizer import Normalizer
 
 
