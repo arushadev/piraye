@@ -1,7 +1,6 @@
 # testing Fibonacci number function
 # pylint: skip-file
-
-from ..piraye import NltkTokenizer
+from ..piraye import NltkTokenizer, SpacyTokenizer
 from ..piraye import NormalizerBuilder
 
 
@@ -38,6 +37,22 @@ def test_quotes():
     text = "«"
     norm = NormalizerBuilder().digit_en().punctuation_en().alphabet_fa() \
         .tokenizing().remove_extra_spaces().build()
+    norm.normalize(text)
+    text = " «««« تست "
+    norm = NormalizerBuilder().digit_en().punctuation_en().alphabet_fa() \
+        .tokenizing().remove_extra_spaces().build()
+    norm.normalize(text)
+    text = " \" تست '' تست «««« تست "
+    norm = NormalizerBuilder().digit_en().punctuation_en().alphabet_fa() \
+        .tokenizing().remove_extra_spaces().build()
+    norm.normalize(text)
+
+
+def test_quotes_spacy():
+    tokenizer = SpacyTokenizer()
+    text = "«"
+    norm = NormalizerBuilder().digit_en().punctuation_en().alphabet_fa() \
+        .tokenizing().remove_extra_spaces().tokenizing(tokenizer=tokenizer).build()
     norm.normalize(text)
     text = " «««« تست "
     norm = NormalizerBuilder().digit_en().punctuation_en().alphabet_fa() \

@@ -56,7 +56,7 @@ namespaces = false  # to disable scanning PEP 420 namespaces (true by default)
 piraye = ["**/*.json"]
 
 [project.optional-dependencies]
-dev = ["tqdm", "pytest", "pylint ==2.17.7", "flake8", "pytest"]
+dev = ["tqdm", "pytest", "pylint ==2.17.7", "flake8", "pytest", "spacy"]
 
 [project.urls]
 "Homepage" = "https://github.com/arushadev/piraye"
