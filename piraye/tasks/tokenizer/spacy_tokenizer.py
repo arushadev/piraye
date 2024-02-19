@@ -1,11 +1,11 @@
-"""This module includes Tokenizer class for tokenizing texts"""
+"""This module includes a Tokenizer class for tokenizing texts"""
 from abc import ABC
 from typing import List, Tuple
 from spacy.lang.en import English
+from spacy.pipeline import Sentencizer
 
 from ..normalizer.mappings import MappingDict
 from ...tokenizer import Tokenizer
-from spacy.pipeline import Sentencizer
 
 
 class SpacyTokenizer(Tokenizer, ABC):
@@ -48,11 +48,9 @@ class SpacyTokenizer(Tokenizer, ABC):
     def __clean_text(self, text: str) -> str:
         """
         Clean the input text by replacing digits and punctuation with normalized versions.
-        :param text: he input text to clean.
+        :param text: He inputs text to clean.
         :return: The cleaned text with normalized digits and punctuation.
         """
         return ''.join(
             [char if not self.__en_mapping.get(char)
              else self.__en_mapping.get(char).char for char in text])
-
-

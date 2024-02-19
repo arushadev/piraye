@@ -7,7 +7,7 @@ from typing import List, Tuple
 class Normalizer(ABC):
     """
     The Normalizer class is an abstract base class that defines the interface for text normalization. It provides two
-    abstract methods: normalize() and span_normalize(), which can be implemented by subclasses to perform specific
+    abstract methods: normalize() and span_normalize(), subclasses can implement which to perform specific
     normalization tasks.
 
     Example Usage
@@ -15,11 +15,11 @@ class Normalizer(ABC):
     # Create a subclass of Normalizer
     class MyNormalizer(Normalizer):
 
-        def normalize(self, text: str) -> str:
+        Def normalize (self, text: str) -> str:
             # Implement the normalization logic here
             ...
 
-        def span_normalize(self, text: str) -> List[Tuple[int, int, str]]:
+        Def span_normalize(self, text: str) -> List[Tuple[int, int, str]]:
             # Implement the normalization logic and return spans of normalized tokens
             ...
 
