@@ -28,6 +28,8 @@ print(normalizer.normalize(text))  # "این یک متن تسة اسﺘ ، ۲۴,
 # without change punctuations (Config.PUNCTUATION_FA)
 normalizer = NormalizerBuilder().alphabet_fa().digit_fa().remove_extra_spaces().tokenizing().build()
 print(normalizer.normalize(text))  # "این یک متن تست است , ۲۴,۱۲,۱۴۰۰"
+
+#use spacy tokenizer
 ```
 
 ``` python
