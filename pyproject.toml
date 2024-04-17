@@ -42,6 +42,7 @@ classifiers = [
 ]
 dependencies = [
     "nltk",
+    "spacy",
     "lingua-language-detector"
 ]
 
