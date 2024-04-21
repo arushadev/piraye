@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "piraye"
-version = "0.5.0"
+version = "0.5.1"
 authors = [
     { name = "Hamed Khademi Khaledi", email = "khaledihkh@gmail.com" },
     { name = "HosseiN Khademi khaeldi", email = "hossein@arusha.dev" },
@@ -42,6 +42,7 @@ classifiers = [
 ]
 dependencies = [
     "nltk",
+    "spacy",
     "lingua-language-detector"
 ]
 
