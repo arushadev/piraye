@@ -39,7 +39,7 @@ class NltkTokenizer(Tokenizer, ABC):
         spans = self.__tokenizer.span_tokenize(text2)
         return [(span[0], span[1], text[span[0]:span[1]]) for span in spans]
 
-    def sentence_span_tokenize(self, text) -> List[Tuple[int, int, str]]:
-        text2 = self._clean_text(text)
+    def sentence_span_tokenize(self, text, clean_before_tokenize=True) -> List[Tuple[int, int, str]]:
+        text2 = self._clean_text(text) if clean_before_tokenize else text
         spans = self.__sentence_tokenize.span_tokenize(text2)
         return [(span[0], span[1], text[span[0]:span[1]]) for span in spans]

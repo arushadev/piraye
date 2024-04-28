@@ -34,8 +34,8 @@ class SpacyTokenizer(Tokenizer, ABC):
         spans = self.__tokenizer(text2)
         return [(span.idx, span.idx + len(span.text), text[span.idx: span.idx + len(span.text)]) for span in spans]
 
-    def sentence_span_tokenize(self, text) -> List[Tuple[int, int, str]]:
-        text2 = self._clean_text(text)
+    def sentence_span_tokenize(self, text, clean_before_tokenize=True) -> List[Tuple[int, int, str]]:
+        text2 = self._clean_text(text) if clean_before_tokenize else text
         spans = self.__sentencizer(self.__nlp(text2))
         result = []
         last_index = 0
