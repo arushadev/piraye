@@ -72,7 +72,7 @@ class Tokenizer(ABC):
         for _, sentence_end, _ in sentences:
             if last_index + 1 >= text2_len:
                 break
-            pointer = sentence_end + 1
+            pointer = sentence_end
             while True:
                 if pointer + 1 >= text2_len:
                     paragraphs.append((last_index, pointer, text[last_index:pointer]))
