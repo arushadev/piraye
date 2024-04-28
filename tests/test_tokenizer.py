@@ -33,6 +33,15 @@ def test_sentence_tokenizer():
     assert len(tokenizer.sentence_span_tokenize(text)) == 2
 
 
+def test_paragraph_tokenizer():
+    text = "par1 sen1 sad.  par1 \n sen2. par1 \n\n sen3.  \n par2 sen1.\n\n\n\n   par3 sen1.\n\n"
+    tokenizer = NltkTokenizer()
+    assert len(tokenizer.paragraph_tokenize(text)) == 3
+    assert len(tokenizer.paragraph_span_tokenize(text)) == 3
+    assert len(tokenizer.paragraph_tokenize("par1 sen1 sad.")) == 1
+    assert len(tokenizer.paragraph_tokenize("par1 sen1 sad. par1 \n sen2. ")) == 1
+
+
 def test_sentence_tokenizer_spacy():
     text = "sentence1 sad. \n asd asd \n asdasd \n sentence 2."
     tokenizer = SpacyTokenizer()
