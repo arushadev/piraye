@@ -2,11 +2,16 @@
 from abc import ABC, abstractmethod
 from typing import List, Tuple
 
+from .tasks.normalizer.mappings import MappingDict
+
 
 class Tokenizer(ABC):
     """
     Abstract class for tokenizing
     """
+
+    def __init__(self):
+        self.__en_mapping = MappingDict.load_jsons(["digit_en", "punc_en"])
 
     def word_tokenize(self, text: str) -> List[str]:
         """
@@ -41,3 +46,13 @@ class Tokenizer(ABC):
         :param text: The input text to tokenize.
         :return: A list of tuples containing the start index, end index, and the sentence for each sentence span.
         """
+
+    def _clean_text(self, text: str) -> str:
+        """
+        Clean the input text by replacing digits and punctuation with normalized versions.
+        :param text: He inputs text to clean.
+        :return: The cleaned text with normalized digits and punctuation.
+        """
+        return ''.join(
+            [char if not self.__en_mapping.get(char)
+             else self.__en_mapping.get(char).char for char in text])
