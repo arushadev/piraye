@@ -76,15 +76,18 @@ class Tokenizer(ABC):
             while True:
                 if pointer + 1 >= text2_len:
                     paragraphs.append((last_index, pointer, text[last_index:pointer]))
+                    last_index = pointer
                     break
                 character = text2[pointer]
                 if character == "\n":
                     paragraphs.append((last_index, pointer, text[last_index:pointer]))
-                    last_index = pointer + 1
+                    last_index = pointer
                     break
                 if character not in self._space_mapping or not self._space_mapping.get(character).is_space:
                     break
                 pointer = pointer + 1
+        if last_index < text2_len:
+            paragraphs.append((last_index, text2_len, text[last_index:text2_len]))
         return paragraphs
 
     def _clean_text(self, text: str) -> str:
