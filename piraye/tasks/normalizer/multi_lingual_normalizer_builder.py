@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from .character_normalizer import Normalizer
 from .multi_lingual_normalizer import MultiLingualNormalizer, TokenizationLevel
-from ...tokenizer import Tokenizer
+from piraye.tasks.tokenizer.tokenizer import Tokenizer
 
 
 class MultiLingualNormalizerBuilder:

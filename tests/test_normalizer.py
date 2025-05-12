@@ -21,10 +21,11 @@ def test_number():
     assert text != norm.normalize(text)
 
 
-def test_puncs():
-    text = "شروع ، پایان"
-    norm = NormalizerBuilder().punctuation_en().build()
-    assert text != norm.normalize(text)
+def test_number_tokenize():
+    text = "1,200 , "
+    tokenizer = NltkTokenizer()
+    norm = NormalizerBuilder().punctuation_fa().tokenizing().build()
+    assert "1,200 ، " == norm.normalize(text)
 
 
 def test_space():

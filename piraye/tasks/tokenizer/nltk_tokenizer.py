@@ -6,7 +6,7 @@ import nltk
 from nltk import NLTKWordTokenizer
 from nltk.tokenize.punkt import PunktSentenceTokenizer
 
-from ...tokenizer import Tokenizer
+from piraye.tasks.tokenizer.tokenizer import Tokenizer
 
 
 class NltkTokenizer(Tokenizer, ABC):

@@ -5,7 +5,7 @@ from typing import List, Tuple
 from spacy.lang.en import English
 from spacy.pipeline import Sentencizer
 
-from ...tokenizer import Tokenizer
+from piraye.tasks.tokenizer.tokenizer import Tokenizer
 
 
 class SpacyTokenizer(Tokenizer, ABC):

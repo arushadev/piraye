@@ -12,20 +12,39 @@
 
 **Piraye** is a Python library designed to facilitate text normalization for Persian, Arabic, and English languages.
 
+---
+
+## Features
+
+- **Text Normalization**: Supports Persian, Arabic, and English.
+- **Configurable**: Offers various settings for alphabet, digit, punctuation, and space normalization.
+- **Tokenization**: Includes word and sentence tokenization utilities.
+- **Builder Pattern**: Simplifies configuration for normalization tasks.
+
+---
+
 ## Requirements
 
-* Python 3.11+
-* nltk 3.4.5+
+- Python 3.11+
+- `nltk` 3.4.5+
+
+---
 
 ## Installation
 
-You can install the latest version of Piraye via pip:
+Install the latest version of Piraye via pip:
 
-`pip install piraye`
+```bash
+pip install piraye
+```
+
+---
 
 ## Usage
 
-To use Piraye, create an instance of the Normalizer class with NormalizerBuilder and then call the normalize function. You can configure the normalization process using various settings available. Below are two examples demonstrating different approaches:
+To use Piraye, create an instance of the Normalizer class with NormalizerBuilder and then call the normalize function.
+You can configure the normalization process using various settings available. Below are two examples demonstrating
+different approaches:
 
 * Using builder pattern:
 
@@ -51,25 +70,25 @@ normalizer.normalize(text)  # "این یک متن تست است ، ۲۴/۱۲/۱�
 
 You can find more examples [here](https://github.com/arushadev/piraye/blob/readme/examples.md)
 
-## Configs
+## Configurations
 
-Piraye provides various configurations for text normalization. Here's a list of available configurations:
+Piraye provides various configurations for text normalization:
 
-|      Config      |     Function     |                      Description                      |
-|:----------------:|:----------------:|:-----------------------------------------------------:|
-|   ALPHABET_AR    |   alphabet_ar    |         mapping alphabet characters to Arabic         |
-|   ALPHABET_EN    |   alphabet_en    |        mapping alphabet characters to English         |
-|   ALPHABET_FA    |   alphabet_fa    |        mapping alphabet characters to Persian         |
-|     DIGIT_AR     |     digit_ar     |            convert digits to Arabic digits            |
-|     DIGIT_EN     |     digit_en     |           convert digits to English digits            |
-|     DIGIT_FA     |     digit_fa     |           convert digits to Persian digits            |
-| DIACRITIC_DELETE | diacritic_delete |                 remove all diacritics                 |
-|   SPACE_DELETE   |   space_delete   |                   remove all spaces                   |
-|   SPACE_NORMAL   |   space_normal   | normal spaces ( like NO-BREAK SPACE , Tab and etc...) |
-|    SPACE_KEEP    |    space_keep    |          mapping spaces and not normal them           |
-|  PUNCTUATION_AR  |  punctuation_ar  |      mapping punctuations to Arabic punctuations      |
-|  PUNCTUATION_Fa  |  punctuation_fa  |     mapping punctuations to Persian punctuations      |
-|  PUNCTUATION_EN  |  punctuation_en  |     mapping punctuations to English punctuations      |
+|      Config      |     Function     |                     Description                     |
+|:----------------:|:----------------:|:---------------------------------------------------:|
+|   ALPHABET_AR    |   alphabet_ar    |         Maps alphabet characters to Arabic          |
+|   ALPHABET_EN    |   alphabet_en    |         Maps alphabet characters to English         |
+|   ALPHABET_FA    |   alphabet_fa    |         Maps alphabet characters to Persian         |
+|     DIGIT_AR     |     digit_ar     |          Converts digits to Arabic digits           |
+|     DIGIT_EN     |     digit_en     |          Converts digits to English digits          |
+|     DIGIT_FA     |     digit_fa     |          Converts digits to Persian digits          |
+| DIACRITIC_DELETE | diacritic_delete |               Removes all diacriticss               |
+|   SPACE_DELETE   |   space_delete   |                 Removes all spaces                  |
+|   SPACE_NORMAL   |   space_normal   | Normalizes spaces (e.g., NO-BREAK SPACE, Tab, etc.) |
+|    SPACE_KEEP    |    space_keep    |         mapping spaces and not normal them          |
+|  PUNCTUATION_AR  |  punctuation_ar  |     mapping punctuations to Arabic punctuations     |
+|  PUNCTUATION_Fa  |  punctuation_fa  |    mapping punctuations to Persian punctuations     |
+|  PUNCTUATION_EN  |  punctuation_en  |    mapping punctuations to English punctuations     |
 
 Other attributes:
 

@@ -6,7 +6,7 @@ from typing import List
 
 from .character_normalizer import CharacterNormalizer
 from ...normalizer import Normalizer
-from ...tokenizer import Tokenizer
+from piraye.tasks.tokenizer.tokenizer import Tokenizer
 
 
 class Config(enum.Enum):
