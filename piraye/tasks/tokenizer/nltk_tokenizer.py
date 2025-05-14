@@ -6,7 +6,8 @@ import nltk
 from nltk import NLTKWordTokenizer
 from nltk.tokenize.punkt import PunktSentenceTokenizer
 
-from piraye.tasks.tokenizer.tokenizer import Tokenizer
+from .base_tokenizer import Tokenizer
+from .token import Token
 
 
 class NltkTokenizer(Tokenizer, ABC):
@@ -15,31 +16,41 @@ class NltkTokenizer(Tokenizer, ABC):
     ...
     Methods
     -------
-    word_tokenize(text: str):
+    tokenize(text: str):
         return tokenized text
-    sentence_tokenize(text: str):
-        return sentence tokenized text
     """
 
     def __init__(self):
-        """
-        constructor
-        """
-        super().__init__()
+        Tokenizer.__init__(self)
         try:
             nltk.data.find('tokenizers/punkt')
         except LookupError:
             print("downloading tokenizer data : ")
             nltk.download('punkt')
-        self.__tokenizer = NLTKWordTokenizer()
-        self.__sentence_tokenize = PunktSentenceTokenizer()
 
-    def word_span_tokenize(self, text) -> List[Tuple[int, int, str]]:
+
+class NltkWordTokenizer(NltkTokenizer):
+    def __init__(self):
+        NltkTokenizer.__init__(self)
+        self.__tokenizer = NLTKWordTokenizer()
+
+    def tokenize(self, text) -> List[Token]:
         text2 = self._clean_text(text)
         spans = self.__tokenizer.span_tokenize(text2)
-        return [(span[0], span[1], text[span[0]:span[1]]) for span in spans]
+        tokens = [
+            Token(content=text[span[0]:span[1]], position=(span[0], span[1]), type="NltkWordTokenizer", sub_tokens=[])
+            for span in spans]
+        return tokens
 
-    def sentence_span_tokenize(self, text, clean_before_tokenize=True) -> List[Tuple[int, int, str]]:
+
+class NltkSentenceTokenizer(NltkTokenizer):
+    def __init__(self):
+        NltkTokenizer.__init__(self)
+        self.__sentence_tokenize = PunktSentenceTokenizer()
+
+    def tokenize(self, text, clean_before_tokenize=True) -> List[Token]:
         text2 = self._clean_text(text) if clean_before_tokenize else text
         spans = self.__sentence_tokenize.span_tokenize(text2)
-        return [(span[0], span[1], text[span[0]:span[1]]) for span in spans]
+        tokens = [Token(content=text[span[0]:span[1]], position=(span[0], span[1]), type="NltkSentenceTokenizer",
+                        sub_tokens=[]) for span in spans]
+        return tokens

@@ -5,7 +5,7 @@ from .tasks.normalizer.multi_lingual_normalizer_builder import MultiLingualNorma
 from .tasks.normalizer.normalizer_builder import NormalizerBuilder
 from .tasks.tokenizer.nltk_tokenizer import NltkTokenizer
 from .tasks.tokenizer.spacy_tokenizer import SpacyTokenizer
-from piraye.tasks.tokenizer.tokenizer import Tokenizer
+from .tasks.tokenizer.base_tokenizer import Tokenizer
 
 __all__ = ["Normalizer", "Tokenizer", "NormalizerBuilder", "MultiLingualNormalizer", "MultiLingualNormalizerBuilder",
            "NltkTokenizer", "SpacyTokenizer"]
