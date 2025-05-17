@@ -1,6 +1,6 @@
 """This module includes Tokenizer class for tokenizing texts"""
 from abc import ABC
-from typing import List, Tuple
+from typing import List
 
 import nltk
 from nltk import NLTKWordTokenizer

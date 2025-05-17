@@ -6,9 +6,9 @@ from typing import List, Tuple
 
 from .char_config import CharConfig
 from .mappings import MappingDict
-from ..tokenizer.nltk_tokenizer import NltkTokenizer
+from ..tokenizer.nltk_tokenizer import NltkWordTokenizer
 from ..tokenizer.base_tokenizer import Tokenizer
-from ...normalizer import Normalizer
+from .normalizer import Normalizer
 
 
 # pylint: disable=too-few-public-methods
@@ -42,7 +42,7 @@ class CharacterNormalizer(Normalizer, ABC):
             if tokenizer:
                 self.__tokenizer = tokenizer
             else:
-                self.__tokenizer = NltkTokenizer()
+                self.__tokenizer = NltkWordTokenizer()
         else:
             self.__tokenizer = None
 
@@ -100,8 +100,10 @@ class CharacterNormalizer(Normalizer, ABC):
             :return: list boolean.
         """
         is_token_list = [False] * len(text)
-        spans = self.__tokenizer.word_span_tokenize(text)
-        for (start, end, _) in spans:
+        spans = self.__tokenizer.tokenize(text)
+        for span in spans:
+            start = span.position[0]
+            end = span.position[1]
             if start + 1 == end:
                 is_token_list[start] = True
         return is_token_list

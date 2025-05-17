@@ -1,6 +1,4 @@
 import pytest
-
-from ..piraye.tasks.tokenizer.nltk_tokenizer import NltkSentenceTokenizer
 from ..piraye.tasks.tokenizer.paragraph_tokenizer import ParagraphTokenizer
 
 
@@ -44,13 +42,9 @@ def test_text_with_only_newlines(paragraph_tokenizer):
 
 def test_text_with_spaces_and_newlines(paragraph_tokenizer):
     text = "   \nFirst paragraph.\n   \nSecond paragraph.\n   "
-    nltk_tokenizer = NltkSentenceTokenizer()
-    # nltk_tokens = nltk_tokenizer.tokenize(text)
-    # print(nltk_tokens)
-    # print(paragraph_tokenizer.merge(text, nltk_tokens))
     result = paragraph_tokenizer.tokenize(text)
     assert len(result) == 3
-    assert result[1].content == "\nFirst paragraph.\n   "
-    assert result[1].position == (3, 24)
-    assert result[2].content == "\nSecond paragraph.\n   "
-    assert result[2].position == (24, len(text))
+    assert result[0].content == "   \nFirst paragraph."
+    assert result[0].position == (0, 20)
+    assert result[1].content == "\n   \nSecond paragraph."
+    assert result[1].position == (20, 42)

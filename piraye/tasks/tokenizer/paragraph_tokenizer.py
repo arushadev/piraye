@@ -14,14 +14,14 @@ class ParagraphTokenizer(Tokenizer):
         paragraphs: List[Token] = []
         for i, char in enumerate(text):
             if char == "\n":
-                end = i
-            elif self._space_mapping.get(char) and self._space_mapping.get(char).is_space:
-                pass
-            else:
                 if end > start:
                     paragraphs.append(
                         Token(content=text[start:end], position=(start, end), type="Paragraph", sub_tokens=[]))
                     start = end
+            elif self._space_mapping.get(char) and self._space_mapping.get(char).is_space:
+                pass
+            else:
+                end = i + 1
         if len(text) > start:
             paragraphs.append(
                 Token(content=text[start:len(text)], position=(start, len(text)), type="Paragraph", sub_tokens=[]))

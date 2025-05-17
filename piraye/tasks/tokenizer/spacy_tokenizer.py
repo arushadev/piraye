@@ -1,6 +1,6 @@
 """This module includes a Tokenizer class for tokenizing texts"""
 from abc import ABC
-from typing import List, Tuple
+from typing import List
 
 from spacy.lang.en import English
 from spacy.pipeline import Sentencizer
@@ -21,18 +21,20 @@ class SpacyTokenizer(Tokenizer, ABC):
 
     def __init__(self):
         Tokenizer.__init__(self)
-        self.__nlp = English()
+        self._nlp = English()
 
 
 class SpacyWordTokenizer(SpacyTokenizer):
     def __init__(self):
         SpacyTokenizer.__init__(self)
-        self.__tokenizer = self.__nlp.tokenizer
+        self.__tokenizer = self._nlp.tokenizer
 
     def tokenize(self, text: str) -> List[Token]:
         text2 = self._clean_text(text)
         spans = self.__tokenizer(text2)
-        tokens = [Token(content=text[span[0]:span[1]], position=(span[0], span[1]), type="SpacyWordTokenizer",
+        tokens = [Token(content=text[span.idx:span.idx + len(span.text) + 1],
+                        position=(span.idx, span.idx + len(span.text) + 1),
+                        type="SpacyWordTokenizer",
                         sub_tokens=[]) for span in spans]
         return tokens
 
@@ -44,7 +46,7 @@ class SpacySentenceTokenizer(SpacyTokenizer):
 
     def tokenize(self, text: str) -> List[Token]:
         text2 = self._clean_text(text)
-        spans = self.__sentencizer(self.__nlp(text2))
+        spans = self.__sentencizer(self._nlp(text2))
         tokens = []
         last_index = 0
         for span in spans:

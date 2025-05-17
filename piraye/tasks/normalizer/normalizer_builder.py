@@ -5,7 +5,7 @@ import enum
 from typing import List
 
 from .character_normalizer import CharacterNormalizer
-from ...normalizer import Normalizer
+from .normalizer import Normalizer
 from ..tokenizer.base_tokenizer import Tokenizer
 
 

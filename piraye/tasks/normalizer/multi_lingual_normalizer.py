@@ -6,8 +6,9 @@ from typing import List, Tuple
 from lingua import Language, LanguageDetectorBuilder
 
 from .normalizer_builder import NormalizerBuilder
-from ..tokenizer.nltk_tokenizer import NltkTokenizer, Tokenizer
-from ...normalizer import Normalizer
+from ..tokenizer.nltk_tokenizer import Tokenizer, NltkWordTokenizer, NltkSentenceTokenizer
+from .normalizer import Normalizer
+from ..tokenizer.token import Token
 
 
 class TokenizationLevel(Enum):
@@ -60,7 +61,8 @@ class MultiLingualNormalizer(Normalizer, ABC):
         if tokenizer:
             self.__tokenizer = tokenizer
         else:
-            self.__tokenizer = NltkTokenizer()
+            self.__word_tokenizer = NltkWordTokenizer()
+            self.__sentence_tokenizer = NltkSentenceTokenizer()
 
         languages = [Language.PERSIAN, Language.ARABIC, Language.ENGLISH]
         self.__detector = LanguageDetectorBuilder.from_languages(*languages).build()
@@ -85,13 +87,17 @@ class MultiLingualNormalizer(Normalizer, ABC):
             if i < len(text):
                 result += main_normalizer.normalize(text[i:])
         else:
-            spans: List[Tuple[int, int, str]]
+            spans: List[Token]
             if self.__tokenization_level is TokenizationLevel.WORD_LEVEL:
-                spans = self.__tokenizer.word_span_tokenize(text)
+                spans = self.__word_tokenizer.tokenize(text)
             else:
-                spans = self.__tokenizer.sentence_span_tokenize(text)
+                spans = self.__sentence_tokenizer.tokenize(text)
             i = 0
-            for (start, end, word) in spans:
+
+            for span in spans:
+                start = span.position[0]
+                end = span.position[1]
+                word = span.content
                 if start > i:
                     result += main_normalizer.normalize(text[i: start])
                 normalized = self.__normalize_sub_text(word)
