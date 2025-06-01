@@ -68,7 +68,7 @@ class Tokenizer(ABC):
 
             if p_end <= n_start:
                 if current_token:
-                    current_token = Tokenizer._extend_token(current_token, prev, text)
+                    current_token = Tokenizer._extend_token(current_token, prev, text, prev)
                     merged_tokens.append(current_token)
                     current_token = None
                 else:
@@ -84,6 +84,13 @@ class Tokenizer(ABC):
                     merged_tokens.append(new)
                 j += 1
 
+            elif n_start <= p_start and p_end <= n_end:
+                if current_token:
+                    current_token = Tokenizer._extend_token(current_token, prev, text, prev)
+                else:
+                    current_token = Token(new.content, new.type, new.position, new.sub_tokens + [prev])
+                i += 1
+
             elif p_start <= n_start and n_end <= p_end:
                 if current_token:
                     current_token = Tokenizer._extend_token(current_token, new, text)
@@ -91,16 +98,11 @@ class Tokenizer(ABC):
                     current_token = Token(prev.content, prev.type, prev.position, prev.sub_tokens + [new])
                 j += 1
 
-            elif n_start <= p_start and p_end <= n_end:
-                if current_token:
-                    current_token = Tokenizer._extend_token(current_token, prev, text)
-                else:
-                    current_token = Token(new.content, new.type, new.position, new.sub_tokens + [prev])
-                i += 1
+
 
             elif p_start < n_start < p_end < n_end:
                 if current_token:
-                    current_token = Tokenizer._extend_token(current_token, prev, text)
+                    current_token = Tokenizer._extend_token(current_token, prev, text, prev)
                 else:
                     current_token = prev
                 i += 1
@@ -117,7 +119,7 @@ class Tokenizer(ABC):
                     content=text[min(p_start, n_start):p_end],
                     type=new.type,
                     position=(min(p_start, n_start), p_end),
-                    sub_tokens=prev.sub_tokens + new.sub_tokens + [prev, new]
+                    sub_tokens=prev.sub_tokens + new.sub_tokens + [prev]
                 )
                 merged_tokens.append(merged)
                 i += 1
@@ -127,10 +129,10 @@ class Tokenizer(ABC):
         return merged_tokens
 
     @staticmethod
-    def _extend_token(current: Token, new: Token, text: str) -> Token:
+    def _extend_token(current: Token, new: Token, text: str, child: Token = None) -> Token:
         return Token(
             content=text[current.position[0]:new.position[1]],
             type=current.type,
             position=(current.position[0], new.position[1]),
-            sub_tokens=current.sub_tokens + [new]
+            sub_tokens=current.sub_tokens + [child] if child else current.sub_tokens
         )
