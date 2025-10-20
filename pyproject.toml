@@ -56,6 +56,11 @@ namespaces = false  # to disable scanning PEP 420 namespaces (true by default)
 [tool.setuptools.package-data]
 piraye = ["**/*.json"]
 
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+]
+
 [project.optional-dependencies]
 dev = ["tqdm", "pytest", "pylint ==2.17.7", "flake8", "pytest", "spacy"]
 

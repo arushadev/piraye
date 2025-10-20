@@ -28,13 +28,15 @@
 ## 🧩 Installation
 
 ```bash
-pip install piraye spacy
-python -m spacy download en_core_web_sm
+pip install piraye 
 ```
 
 ---
 
 ## 🧠 Text Normalization Example
+
+Normalize Persian text by correcting and standardizing letters, digits, and punctuation, performing tokenization, 
+and removing extra spaces to produce clean, consistent text ready for NLP processing.
 
 * Using builder pattern:
 
@@ -57,6 +59,9 @@ normalizer = NormalizerBuilder([Config.PUNCTUATION_FA, Config.ALPHABET_FA, Confi
                                tokenization=True).build()
 normalizer.normalize(text)  # "این یک متن تست است ، ۲۴/۱۲/۱۴۰۰"
 ```
+
+> For more examples and usage patterns, please refer to the [Normalizer Examples](normalizing_examples.md).
+
 ---
 
 ## ⚙️ Configurations
@@ -90,20 +95,13 @@ Other attributes:
 
 All tokenizers inherit from `Tokenizer` and produce `Token` objects:
 
-```python
-from dataclasses import dataclass
-from typing import List, Self
+| Field        | Type              | Description                                                         |
+| ------------ | ----------------- | ------------------------------------------------------------------- |
+| `content`    | `str`             | The text content of the token.                                      |
+| `type`       | `str`             | The type or name of the tokenizer that created it.                  |
+| `position`   | `tuple[int, int]` | Start and end indices of the token in the original text.            |
+| `sub_tokens` | `List[Token]`     | A list of child tokens, if the token is composed of smaller tokens. |
 
-@dataclass(frozen=True)
-class Token:
-    content: str
-    type: str
-    position: tuple[int, int]
-    sub_tokens: List[Self]
-
-    def __str__(self):
-        return f"Token(type={self.type}, content={self.content!r}, position={self.position}, sub_tokens={len(self.sub_tokens)})"
-```
 
 **Base methods**:
 
@@ -132,24 +130,36 @@ class Token:
 - `ParagraphTokenizer` – split into paragraphs  
 
 ---
-## 🔧 Developer Guide
 
+🔄 TokenizerPipeline
 
-## ⚙️ Tokenizer Pipeline Example
+The TokenizerPipeline class provides a modular and sequential approach to text tokenization.
+It allows you to chain multiple tokenizers together, where the output of one tokenizer can be merged or refined by the next.
+This design makes it easy to combine tokenizers (e.g., sentences, words, emojis, URLs) into a unified pipeline for flexible and powerful text preprocessing.
 
+🧠 How It Works
+
+The pipeline starts with the first tokenizer, which processes the raw text.
+Each subsequent tokenizer is applied sequentially, refining or extending the previous tokens.
+The final result is a merged list of Token objects representing a fully tokenized text.
+
+## ⚙️ Tokenizer Pipeline Example (Sentence & URL)
+ 
 ```python
-from piraye.tasks.tokenizer.spacy_tokenizer import  SpacySentenceTokenizer, SpacyWordTokenizer
+from piraye.tasks.tokenizer.spacy_tokenizer import  SpacySentenceTokenizer
+from piraye.tasks.tokenizer.regex_tokenizer import  URLTokenizer
 from piraye.tasks.tokenizer.pipeline import TokenizerPipeline
 
 pipeline = TokenizerPipeline([
     SpacySentenceTokenizer(),
-    SpacyWordTokenizer()
+    URLTokenizer()
 ])
-
-text = "Hello world! This is a test."
+text = "Contact us at support@arusha.dev or info@piraye.ai."
 tokens = pipeline(text)
+
 print([t.content for t in tokens])
-# ['Hello', 'world', '!', 'This', 'is', 'a', 'test', '.']
+
+# ["Contact us at support@arusha.dev or info@piraye.ai."]
 ```
 
 ## ⚙️ Paragraph Tokenizer Pipeline Example
@@ -157,81 +167,19 @@ print([t.content for t in tokens])
 ```python
 from piraye.tasks.tokenizer.paragraph_tokenizer import ParagraphTokenizer
 
-text = """Piraye is a text normalization library.
-It supports Persian, Arabic, and English.
-
-It also includes tokenizers for different levels of text structure.
-"""
+text = "First paragraph.\nSecond paragraph.\nThird paragraph."
 tokenizer = ParagraphTokenizer()
 tokens = tokenizer.tokenize(text)
 
-for t in tokens:
-    print(f"{t.type}: {t.content!r} -> {t.position}")
-
-# Paragraph: 'Piraye is a text normalization library.\nIt supports Persian, Arabic, and English.' -> (0, 74)
-# Paragraph: 'It also includes tokenizers for different levels of text structure.' -> (76, 144)
-```
-
-## ⚙️ Spacy Sentence Tokenizer Pipeline Example
-
-```python
-from piraye.tasks.tokenizer.spacy_tokenizer import SpacySentenceTokenizer
-
-text = "Piraye is powerful. It supports Persian and English."
-tokenizer = SpacySentenceTokenizer()
-tokens = tokenizer.tokenize(text)
 for token in tokens:
     print(token)
 
-# Token(type=SpacySentenceTokenizer, content='Piraye is powerful.', position=(0, 19))
-# Token(type=SpacySentenceTokenizer, content='It supports Persian and English.', position=(20, 55))
-```
-## ⚙️ Spacy Word Tokenizer Pipeline Example
-
-```python
-from piraye.tasks.tokenizer.spacy_tokenizer import SpacyWordTokenizer
-
-text = "Piraye is a multilingual NLP toolkit."
-tokenizer = SpacyWordTokenizer()
-tokens = tokenizer.tokenize(text)
-for token in tokens:
-    print(token)
-
-# Token(type=SpacyWordTokenizer, content='Piraye', position=(0, 6))
-# Token(type=SpacyWordTokenizer, content='is', position=(7, 9))
-# Token(type=SpacyWordTokenizer, content='a', position=(10, 11))
-# Token(type=SpacyWordTokenizer, content='multilingual', position=(12, 24))
-# Token(type=SpacyWordTokenizer, content='NLP', position=(25, 28))
-# Token(type=SpacyWordTokenizer, content='toolkit.', position=(29, 37))
+#Token(content='First paragraph.', type='Paragraph', position=(0, 16), sub_tokens=[])
+#Token(content='\nSecond paragraph.', type='Paragraph', position=(16, 34), sub_tokens=[]) 
+#Token(content='\nThird paragraph.', type='Paragraph', position=(34, 51), sub_tokens=[])
 ```
 
-## ⚙️ Email Tokenizer Pipeline Example
-
-```python
-from piraye.tasks.tokenizer.regex_tokenizer import EmailTokenizer
-
-text = "Contact us at support@arusha.dev or info@piraye.ai"
-tokens = EmailTokenizer().tokenize(text)
-for token in tokens:
-    print(token)
-    
-# Token(type=EmailTokenizer, content='support@arusha.dev', position=(13, 32))
-# Token(type=EmailTokenizer, content='info@piraye.ai', position=(36, 51))
-```
-
-## ⚙️ URL Tokenizer Pipeline Example
-
-```python
-from piraye.tasks.tokenizer.regex_tokenizer import URLTokenizer
-
-text = "Visit https://www.arusha.dev or follow our GitHub at https://github.com/arushadev"
-tokens = URLTokenizer().tokenize(text)
-for token in tokens:
-    print(token)
-
-# Token(type=URLTokenizer, content='https://www.arusha.dev', position=(6, 30))
-# Token(type=URLTokenizer, content='https://github.com/arushadev', position=(60, 91))
-```
+> For more examples and usage patterns, please refer to the [Tokenizing Examples](tokenizing_examples.md).
 
 ---
 
@@ -242,14 +190,6 @@ piraye/
 ├── tasks/
 │   ├── normalizer/
 │   └── tokenizer/
-│       ├── base_tokenizer.py
-│       ├── spacy_tokenizers.py
-│       ├── nltk_tokenizers.py
-│       ├── regex_tokenizers.py
-│       ├── pipeline.py
-│       └── token.py
-├── utils/
-│   └── mapping_dict.py
 └── ...
 ```
 
@@ -260,8 +200,7 @@ piraye/
 ```bash
 git clone https://github.com/arushadev/piraye.git
 cd piraye
-pip install -e .[dev]
-pytest
+uv sync
 ```
 
 ---
