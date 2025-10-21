@@ -21,4 +21,4 @@ jobs:
       - name: Install dependencies
         run: uv sync --locked --all-extras --dev
       - name: Analysing the code with pylint
-        run: pylint $(git ls-files '*.py')
+        run: uv run pylint piraye
