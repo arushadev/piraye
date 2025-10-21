@@ -14,7 +14,7 @@ def test_object():
 def test_not_changing_input():
     text = "این یک متن فارسی ، English می‌باشد. این متن نباید تغییر کند.سال ۱۴۰۰ (1400)"
     norm = NormalizerBuilder().build()
-    assert text == norm.normalize(text)
+    assert text == norm.normalize(text)[0]
 
 
 def test_number():
@@ -26,7 +26,7 @@ def test_number():
 def test_number_tokenize():
     text = "1,200 , "
     norm = NormalizerBuilder().punctuation_fa().tokenizing().build()
-    assert "1,200 ، " == norm.normalize(text)
+    assert "1,200 ، " == norm.normalize(text)[0]
 
 def test_add_space_after_comma():
     text = "i,am"
@@ -82,12 +82,12 @@ def test_quotes_spacy():
     text = "«"
     norm = NormalizerBuilder().digit_en().punctuation_en().alphabet_fa() \
         .tokenizing().remove_extra_spaces().tokenizing(tokenizer=tokenizer).build()
-    assert "\"" == norm.normalize(text)
+    assert "\"" == norm.normalize(text)[0]
     text = " «««« تست "
     norm = NormalizerBuilder().digit_en().punctuation_en().alphabet_fa() \
         .tokenizing().remove_extra_spaces().build()
-    assert ' """" تست ' == norm.normalize(text)
+    assert ' """" تست ' == norm.normalize(text)[0]
     text = " \" تست '' تست «««« تست "
     norm = NormalizerBuilder().digit_en().punctuation_en().alphabet_fa() \
         .tokenizing().remove_extra_spaces().build()
-    assert ' " تست \'\' تست """" تست ' == norm.normalize(text)
+    assert ' " تست \'\' تست """" تست ' == norm.normalize(text)[0]

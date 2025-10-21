@@ -37,7 +37,7 @@ classifiers = [
     "Topic :: Utilities"
 ]
 dependencies = [
-    "nltk"
+    "nltk",
 ]
 
 [tool.setuptools]
@@ -57,6 +57,7 @@ dev = [
 
 [project.optional-dependencies]
 full = ["lingua-language-detector", "spacy"]
+
 
 [project.urls]
 "Homepage" = "https://github.com/arushadev/piraye"
