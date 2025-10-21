@@ -47,19 +47,24 @@ class CharacterNormalizer(Normalizer, ABC):
             self.__tokenizer = None
 
     # pylint: disable=too-many-branches
-    def normalize(self, text: str) -> str:
+    def normalize(self, text: str) -> tuple[str, list[tuple[int, int]]]:
         """
-            returns a normalized text
-            :param text: the input text
-            :return: normalized text
+        Normalize the given text.
+        Args:
+            text: To Be Normalized.
+        Returns:
+            normalized text,
+            list of shifts in texts (position in normalized text, shift in normalized text).
         """
-
         if self.__tokenizer:
             is_token_list = self.__tokenize(text)
         else:
             is_token_list = [True] * len(text)
-        result = ""
+        result: str = ""
         last = None
+        current_shift = 0
+        last_added_shift = 0
+        shifts: list[tuple[int, int]] = []
         for i, char in enumerate(text):
             is_token = is_token_list[i]
             mapping_char = self.__mapping.get(char)
@@ -68,6 +73,7 @@ class CharacterNormalizer(Normalizer, ABC):
                         (not mapping_char.is_token or (mapping_char.is_token and is_token)):
                     char = mapping_char.char
                 result += char
+                current_shift = i - len(result) + 1
             else:
                 current = mapping_char if mapping_char else CharConfig(char)
                 if current.is_space:
@@ -88,10 +94,17 @@ class CharacterNormalizer(Normalizer, ABC):
                         result += current.char
                     else:
                         result += char
+                    current_shift = i - len(result) + 1
                     last = current
+            if current_shift != last_added_shift:
+                shifts.append((len(result) - 1, current_shift))
+                last_added_shift = current_shift
         if last and last.is_space:
             result += last.char
-        return result
+            if current_shift != last_added_shift:
+                shifts.append((len(result) - 1, current_shift))
+        print(shifts)
+        return result, shifts
 
     def __tokenize(self, text: str) -> List[bool]:
         """

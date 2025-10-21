@@ -107,7 +107,7 @@ class MultiLingualNormalizer(Normalizer, ABC):
                 result += main_normalizer.normalize(text[i:])
         return result
 
-    def __normalize_sub_text(self, sub_text: str, lang: Language | None = None) -> str:
+    def __normalize_sub_text(self, sub_text: str, lang: Language | None = None) -> tuple[str, list[tuple[int, int]]]:
         """
         Normalize text
         :param sub_text:
@@ -124,6 +124,3 @@ class MultiLingualNormalizer(Normalizer, ABC):
             case Language.ENGLISH:
                 normalizer = self.__configs['en']
         return normalizer.normalize(sub_text)
-
-    def span_normalize(self, text: str) -> List[Tuple[int, int, str]]:
-        raise NotImplementedError()
