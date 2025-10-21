@@ -1,10 +1,10 @@
 import pytest
-from piraye.tasks.tokenizer.nltk_tokenizer import NltkSentenceTokenizer
-from piraye.tasks.tokenizer.regex_tokenizer import URLTokenizer
-from piraye.tasks.tokenizer.paragraph_tokenizer import ParagraphTokenizer
-from piraye.tasks.tokenizer.spacy_tokenizer import  SpacySentenceTokenizer
-from piraye.tasks.tokenizer.regex_tokenizer import  URLTokenizer
-from piraye.tasks.tokenizer.pipeline import TokenizerPipeline
+from ..piraye.tasks.tokenizer.nltk_tokenizer import NltkSentenceTokenizer
+from ..piraye.tasks.tokenizer.regex_tokenizer import URLTokenizer
+from ..piraye.tasks.tokenizer.paragraph_tokenizer import ParagraphTokenizer
+from ..piraye.tasks.tokenizer.spacy_tokenizer import  SpacySentenceTokenizer
+from ..piraye.tasks.tokenizer.regex_tokenizer import  URLTokenizer
+from ..piraye.tasks.tokenizer.pipeline import TokenizerPipeline
 
 
 
