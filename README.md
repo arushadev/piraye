@@ -45,7 +45,8 @@ from piraye import NormalizerBuilder
 
 text = "این یک متن تسة اسﺘ       , 24/12/1400 "
 normalizer = NormalizerBuilder().alphabet_fa().digit_fa().punctuation_fa().tokenizing().remove_extra_spaces().build()
-normalizer.normalize(text)  # "این یک متن تست است ، ۲۴/۱۲/۱۴۰۰"
+new_text=normalizer.normalize(text)[0]  
+# "این یک متن تست است ، ۲۴/۱۲/۱۴۰۰"
 ```
 
 * Using constructor:
@@ -57,13 +58,43 @@ from piraye.tasks.normalizer.normalizer_builder import Config
 text = "این یک متن تسة اسﺘ       , 24/12/1400 "
 normalizer = NormalizerBuilder([Config.PUNCTUATION_FA, Config.ALPHABET_FA, Config.DIGIT_FA], remove_extra_spaces=True,
                                tokenization=True).build()
-normalizer.normalize(text)  # "این یک متن تست است ، ۲۴/۱۲/۱۴۰۰"
+new_text = normalizer.normalize(text)[0]  
+# "این یک متن تست است ، ۲۴/۱۲/۱۴۰۰"
 ```
 
 > For more examples and usage patterns, please refer to the [Normalizer Examples](normalizing_examples.md).
 
 ---
+🔢 Position Mapping After Normalization
 
+When normalizing text, some characters may be added, removed, or replaced (letters, digits, punctuation, etc.).
+To map positions in the normalized text back to the original text, Piraye provides utility methods.
+
+Methods
+| Method | Description |
+|---------|-------------|
+| calc_original_position(shifts, position) | Returns the original position for a single index in normalized text. |
+| calc_original_positions(shifts, positions) | Returns original positions for multiple indices (must be sorted). |
+
+```python
+from piraye import NormalizerBuilder
+normalizer = NormalizerBuilder().space_normal().remove_extra_spaces().alphabet_en().punctuation_en().build()
+
+# Shifts calculated by the normalizer: (position_in_normalized, shift_value)
+shifts = [(5, 2), (10, 1)]
+
+# Map single position
+original_pos = normalizer.calc_original_position(shifts, 7)
+print(original_pos)  
+# 9
+
+# Map multiple positions
+positions = [3, 7, 12]
+original_positions = normalizer.calc_original_positions(shifts, positions)
+print(original_positions)  
+# [3, 9, 13]
+```
+---
 ## ⚙️ Configurations
 
 Piraye provides various configurations for text normalization:

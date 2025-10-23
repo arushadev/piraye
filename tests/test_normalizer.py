@@ -50,12 +50,12 @@ def test_shift():
     text = "0,3  5 \t\n.9.x.y.z"
     norm = NormalizerBuilder().space_normal().remove_extra_spaces().alphabet_en().punctuation_en().build()
     text2, shifts = norm.normalize(text)
-    # assert "0, 3 5\n. 9. x. y. z" == text2
-    # assert [(3, -1), (5, 0), (7, 2), (9, 1), (12, 0), (15, -1), (18, -2)] == shifts
-    # assert norm.calc_original_position(shifts, 3) == 2
-    # assert norm.calc_original_position(shifts, 13) == 13
-    # assert norm.calc_original_position(shifts, 15) == 14
-    # assert norm.calc_original_position(shifts, 19) == 17
+    assert "0, 3 5\n. 9. x. y. z" == text2
+    assert [(3, -1), (5, 0), (7, 2), (9, 1), (12, 0), (15, -1), (18, -2)] == shifts
+    assert norm.calc_original_position(shifts, 3) == 2
+    assert norm.calc_original_position(shifts, 13) == 13
+    assert norm.calc_original_position(shifts, 15) == 14
+    assert norm.calc_original_position(shifts, 19) == 17
     assert norm.calc_original_positions(shifts, [3, 13, 15, 19]) == [2, 13, 14, 17]
     with pytest.raises(Exception) as e:  # یا نوع خاص خطا مثل ValueError
         norm.calc_original_positions(shifts, [13, 3, 15, 19])
