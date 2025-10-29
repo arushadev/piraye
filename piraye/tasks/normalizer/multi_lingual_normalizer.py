@@ -80,12 +80,12 @@ class MultiLingualNormalizer(Normalizer, ABC):
             i = 0
             for det_res in lingua:
                 if det_res.start_index > i:
-                    result += main_normalizer.normalize(text[i: det_res.start_index])
+                    result += main_normalizer.normalize(text[i: det_res.start_index])[0]
                 normalized = self.__normalize_sub_text(text[det_res.start_index: det_res.end_index], det_res.language)
-                result += normalized
+                result += normalized[0]
                 i = det_res.end_index
             if i < len(text):
-                result += main_normalizer.normalize(text[i:])
+                result += main_normalizer.normalize(text[i:])[0]
         else:
             spans: List[Token]
             if self.__tokenization_level is TokenizationLevel.WORD_LEVEL:
@@ -99,15 +99,15 @@ class MultiLingualNormalizer(Normalizer, ABC):
                 end = span.position[1]
                 word = span.content
                 if start > i:
-                    result += main_normalizer.normalize(text[i: start])
+                    result += main_normalizer.normalize(text[i: start])[0]
                 normalized = self.__normalize_sub_text(word)
-                result += normalized
+                result += normalized[0]
                 i = end
             if i < len(text):
-                result += main_normalizer.normalize(text[i:])
+                result += main_normalizer.normalize(text[i:])[0]
         return result
 
-    def __normalize_sub_text(self, sub_text: str, lang: Language | None = None) -> str:
+    def __normalize_sub_text(self, sub_text: str, lang: Language | None = None) -> tuple[str, list[tuple[int, int]]]:
         """
         Normalize text
         :param sub_text:
@@ -124,6 +124,3 @@ class MultiLingualNormalizer(Normalizer, ABC):
             case Language.ENGLISH:
                 normalizer = self.__configs['en']
         return normalizer.normalize(sub_text)
-
-    def span_normalize(self, text: str) -> List[Tuple[int, int, str]]:
-        raise NotImplementedError()

@@ -34,17 +34,65 @@ class Normalizer(ABC):
     """
 
     @abstractmethod
-    def normalize(self, text: str) -> str:
+    def normalize(self, text: str) -> tuple[str, list[tuple[int, int]]]:
         """
         Normalize the input text.
-        :param text: The input text to normalize.
-        :return: The normalized text.
+        Args:
+            text: The input text to normalize.
+        Returns:
+            The normalized text.
+            Shifts in normalized text
         """
 
-    @abstractmethod
-    def span_normalize(self, text: str) -> List[Tuple[int, int, str]]:
+    # noinspection PyMethodMayBeStatic
+    def calc_original_position(self, shifts: list[tuple[int, int]], position: int) -> int:
         """
-        Normalize the input text and return spans of normalized tokens.
-        :param text: The input text to normalize.
-        :return: A list of tuples containing the start index, end index, and normalized token for each token span.
+        Calculate the original positions needed to normalize the input text.
+        Args:
+            shifts: shifts that has been calculated by normalizer
+            position: position in normalized text
+        Returns:
+            The original integer position before normalizing input text.
         """
+        final_shift = 0
+        for start, shift in shifts:
+            if position < start:
+                break
+            if position >= start:
+                final_shift = shift
+        return position + final_shift
+
+    # noinspection PyMethodMayBeStatic
+    def calc_original_positions(self, shifts: list[tuple[int, int]], positions: list[int]) -> list[int]:
+        """
+        Calculate the original positions needed to normalize the input text.
+        Args:
+            shifts: shifts that has been calculated by normalizer.
+            positions: sorted list of positions to be calculated.
+        Returns:
+            The list of original integer position before normalizing input text.
+
+        """
+        result=[]
+        pointer_on_shift = 0
+        for i in range(len(positions)):
+            current=positions[i]
+            last=positions[i-1] if i>0 else 0
+            if current < last:
+                raise Exception("The position list is not sorted")
+            while current > shifts[pointer_on_shift][0]:
+                pointer_on_shift += 1
+                if pointer_on_shift >= len(shifts):
+                    pointer_on_shift=len(shifts)-1
+                    result.append(shifts[pointer_on_shift][1]+current)
+                    break
+            if current < shifts[pointer_on_shift][0]:
+                    if pointer_on_shift==0:
+                        result.append(0)
+                    else:
+                      final_shift = shifts[pointer_on_shift-1][1]
+                      result.append(final_shift+current)
+            elif current == shifts[pointer_on_shift][0]:
+                final_shift = shifts[pointer_on_shift][1]
+                result.append(final_shift + current)
+        return result

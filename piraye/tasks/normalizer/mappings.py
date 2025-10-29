@@ -53,7 +53,8 @@ class MappingDict:
             for key in data["map"].keys():
                 if key in configs:
                     key_map = data["map"][key]
-                    mapping[key_map["char"]] = CharConfig.from_dict(data, key)
+                    if key_map["char"] not in mapping: #TODO: Check why THOUSANDS SEPARATOR is need
+                        mapping[key_map["char"]] = CharConfig.from_dict(data, key)
                     for char_dic in data["others"]:
                         char = char_dic["char"]
                         if not mapping.get(char):
