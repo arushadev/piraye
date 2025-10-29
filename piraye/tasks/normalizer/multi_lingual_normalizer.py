@@ -6,7 +6,7 @@ from typing import List, Tuple
 from lingua import Language, LanguageDetectorBuilder
 
 from .normalizer_builder import NormalizerBuilder
-from ..tokenizer.nltk_tokenizer import Tokenizer, NltkWordTokenizer, NltkSentenceTokenizer
+from ..tokenizer.tokenizers.nltk_tokenizer import Tokenizer, NltkWordTokenizer, NltkSentenceTokenizer
 from .normalizer import Normalizer
 from ..tokenizer.token import Token
 

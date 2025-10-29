@@ -2,8 +2,8 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-from .token import Token
-from ..normalizer.mappings import MappingDict
+from ..token import Token
+from ...normalizer.mappings import MappingDict
 
 
 class Tokenizer(ABC):

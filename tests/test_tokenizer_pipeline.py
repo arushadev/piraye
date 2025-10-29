@@ -1,8 +1,8 @@
 import pytest
 from ..piraye.tasks.tokenizer.pipeline import TokenizerPipeline
-from ..piraye.tasks.tokenizer.paragraph_tokenizer import ParagraphTokenizer
-from ..piraye.tasks.tokenizer.regex_tokenizer import URLTokenizer, EmailTokenizer
-from ..piraye.tasks.tokenizer.base_tokenizer import Tokenizer
+from ..piraye.tasks.tokenizer.tokenizers.paragraph_tokenizer import ParagraphTokenizer
+from ..piraye.tasks.tokenizer.tokenizers.regex_tokenizer import URLTokenizer, EmailTokenizer
+from ..piraye.tasks.tokenizer.tokenizers.base_tokenizer import Tokenizer
 from ..piraye.tasks.tokenizer.token import Token
 
 # Add import for pre-defined pipelines

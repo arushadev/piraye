@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from .character_normalizer import Normalizer
 from .multi_lingual_normalizer import MultiLingualNormalizer, TokenizationLevel
-from ..tokenizer.base_tokenizer import Tokenizer
+from ..tokenizer.tokenizers.base_tokenizer import Tokenizer
 
 
 class MultiLingualNormalizerBuilder:

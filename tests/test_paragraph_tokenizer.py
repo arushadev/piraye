@@ -1,5 +1,5 @@
 import pytest
-from ..piraye.tasks.tokenizer.paragraph_tokenizer import ParagraphTokenizer
+from ..piraye.tasks.tokenizer.tokenizers.paragraph_tokenizer import ParagraphTokenizer
 
 
 @pytest.fixture

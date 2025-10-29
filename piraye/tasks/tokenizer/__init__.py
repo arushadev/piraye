@@ -1,9 +1,9 @@
 # --- Custom pipelines ---
 
 from .pipeline import TokenizerPipeline
-from .regex_tokenizer import EmailTokenizer, URLTokenizer
-from .nltk_tokenizer import NltkSentenceTokenizer, NltkWordTokenizer
-from .paragraph_tokenizer import ParagraphTokenizer
+from .tokenizers.regex_tokenizer import EmailTokenizer, URLTokenizer
+from .tokenizers.nltk_tokenizer import NltkSentenceTokenizer, NltkWordTokenizer
+from .tokenizers.paragraph_tokenizer import ParagraphTokenizer
 
 paragraph_tokenizer_pipeline = TokenizerPipeline(
     [EmailTokenizer(), URLTokenizer(), NltkSentenceTokenizer(), ParagraphTokenizer()])

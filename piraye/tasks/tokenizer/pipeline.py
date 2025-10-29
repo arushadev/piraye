@@ -1,5 +1,5 @@
 from typing import List
-from .base_tokenizer import Tokenizer
+from .tokenizers.base_tokenizer import Tokenizer
 from .token import Token
 
 class TokenizerPipeline:

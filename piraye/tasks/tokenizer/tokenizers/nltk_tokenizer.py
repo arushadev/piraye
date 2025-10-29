@@ -7,7 +7,7 @@ from nltk import NLTKWordTokenizer
 from nltk.tokenize.punkt import PunktSentenceTokenizer
 
 from .base_tokenizer import Tokenizer
-from .token import Token
+from ..token import Token
 
 
 class NltkTokenizer(Tokenizer, ABC):

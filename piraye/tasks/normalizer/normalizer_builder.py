@@ -6,7 +6,7 @@ from typing import List
 
 from .character_normalizer import CharacterNormalizer
 from .normalizer import Normalizer
-from ..tokenizer.base_tokenizer import Tokenizer
+from ..tokenizer.tokenizers.base_tokenizer import Tokenizer
 
 
 class Config(enum.Enum):

@@ -1,7 +1,7 @@
 import pytest
-from ..piraye.tasks.tokenizer.nltk_tokenizer import NltkSentenceTokenizer
-from ..piraye.tasks.tokenizer.regex_tokenizer import URLTokenizer
-from ..piraye.tasks.tokenizer.paragraph_tokenizer import ParagraphTokenizer
+from ..piraye.tasks.tokenizer.tokenizers.nltk_tokenizer import NltkSentenceTokenizer
+from ..piraye.tasks.tokenizer.tokenizers.regex_tokenizer import URLTokenizer
+from ..piraye.tasks.tokenizer.tokenizers.paragraph_tokenizer import ParagraphTokenizer
 
 
 @pytest.fixture

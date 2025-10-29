@@ -5,7 +5,7 @@ from typing import List
 from spacy.lang.en import English
 from spacy.pipeline import Sentencizer
 
-from .token import Token
+from ..token import Token
 from .base_tokenizer import Tokenizer
 
 

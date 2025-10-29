@@ -1,7 +1,7 @@
 from typing import List
 
 from .base_tokenizer import Tokenizer
-from .token import Token
+from ..token import Token
 
 
 class ParagraphTokenizer(Tokenizer):
