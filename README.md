@@ -227,6 +227,7 @@ All tokenizers inherit from the `Tokenizer` abstract base class and produce `Tok
 - **`RegexTokenizer`** – Generic regex pattern tokenizer
 - **`URLTokenizer`** – Extract URLs from text
 - **`EmailTokenizer`** – Extract email addresses from text
+- **`HTMLTokenizer`** – Extract HTML tags from text
 
 ### Structural Tokenizers
 
@@ -319,12 +320,20 @@ piraye/
 │               ├── nltk_tokenizer.py
 │               ├── spacy_tokenizer.py
 │               ├── regex_tokenizer.py
-│               └── paragraph_tokenizer.py
+│               ├── paragraph_tokenizer.py
+│               └── regex_tokenizers/
+│                   ├── __init__.py
+│                   ├── base_regex_tokenizer.py
+│                   ├── url_tokenizer.py
+│                   ├── email_tokenizer.py
+│                   ├── html_tokenizer.py
+│                   └── README.md
 ├── tests/
 │   ├── test_normalizer.py
 │   ├── test_ml_normalizer.py
 │   ├── test_tokenizer.py
 │   ├── test_tokenizer_pipeline.py
+│   ├── test_html_tokenizer.py
 │   └── ...
 ├── README.md
 ├── LICENSE

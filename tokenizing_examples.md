@@ -1,8 +1,8 @@
 ## ⚙️ Tokenizer Pipeline Example (Sentence & paragraph)
  
 ```python
-from piraye.tasks.tokenizer.nltk_tokenizer import NltkSentenceTokenizer
-from piraye.tasks.tokenizer.paragraph_tokenizer import ParagraphTokenizer 
+from piraye.tasks.tokenizer import NltkSentenceTokenizer
+from piraye.tasks.tokenizer import ParagraphTokenizer 
 from piraye.tasks.tokenizer.pipeline import TokenizerPipeline
 
 pipeline = TokenizerPipeline([
@@ -20,7 +20,7 @@ print([token for token in tokens])
 ## ⚙️ Spacy Sentence Tokenizer Example
 
 ```python
-from piraye.tasks.tokenizer.spacy_tokenizer import SpacySentenceTokenizer
+from piraye.tasks.tokenizer import SpacySentenceTokenizer
 
 text = "Piraye is powerful. It supports Persian and English."
 tokenizer = SpacySentenceTokenizer()
@@ -34,7 +34,7 @@ for token in tokens:
 ## ⚙️ Spacy Word Tokenizer Example
 
 ```python
-from piraye.tasks.tokenizer.spacy_tokenizer import SpacyWordTokenizer
+from piraye.tasks.tokenizer import SpacyWordTokenizer
 
 text = "Piraye is a multilingual NLP toolkit."
 tokenizer = SpacyWordTokenizer()
@@ -53,7 +53,7 @@ for token in tokens:
 ## ⚙️ Email Tokenizer Example
 
 ```python
-from piraye.tasks.tokenizer.regex_tokenizer import EmailTokenizer
+from piraye.tasks.tokenizer import EmailTokenizer
 
 text = "Contact us at support@arusha.dev or info@piraye.ai."
 tokens = EmailTokenizer().tokenize(text)
@@ -67,7 +67,7 @@ for token in tokens:
 ## ⚙️ URL Tokenizer Example
 
 ```python
-from piraye.tasks.tokenizer.regex_tokenizer import URLTokenizer
+from piraye.tasks.tokenizer import URLTokenizer
 
 text = "Visit https://www.arusha.dev or follow our GitHub at https://github.com/arushadev"
 tokens = URLTokenizer().tokenize(text)
@@ -77,3 +77,20 @@ for token in tokens:
 # Token(type=URLTokenizer, content='https://www.arusha.dev', position=(6, 28), sub_tokens=0)
 # Token(type=URLTokenizer, content='https://github.com/arushadev', position=(53, 81), sub_tokens=0)
 ```
+
+## ⚙️ HTML Tokenizer Example
+
+```python
+from piraye.tasks.tokenizer import HTMLTokenizer
+
+text = "This is <b>bold</b> text and <a href='link.html'>a link</a>."
+tokens = HTMLTokenizer().tokenize(text)
+for token in tokens:
+    print(token)
+
+# Token(type=HTMLTokenizer, content='<b>', position=(8, 11), sub_tokens=0)
+# Token(type=HTMLTokenizer, content='</b>', position=(15, 19), sub_tokens=0)
+# Token(type=HTMLTokenizer, content="<a href='link.html'>", position=(29, 49), sub_tokens=0)
+# Token(type=HTMLTokenizer, content='</a>', position=(55, 59), sub_tokens=0)
+```
+

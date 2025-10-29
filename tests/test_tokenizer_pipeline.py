@@ -1,7 +1,7 @@
 import pytest
 from ..piraye.tasks.tokenizer.pipeline import TokenizerPipeline
 from ..piraye.tasks.tokenizer.tokenizers.paragraph_tokenizer import ParagraphTokenizer
-from ..piraye.tasks.tokenizer.tokenizers.regex_tokenizer import URLTokenizer, EmailTokenizer
+from ..piraye.tasks.tokenizer import URLTokenizer, EmailTokenizer
 from ..piraye.tasks.tokenizer.tokenizers.base_tokenizer import Tokenizer
 from ..piraye.tasks.tokenizer.token import Token
 
@@ -12,12 +12,14 @@ from ..piraye.tasks.tokenizer import (
     word_tokenizer_pipeline,
 )
 
+
 class DummyCharTokenizer(Tokenizer):
     def tokenize(self, text):
         return [
-            Token(content=c, position=(i, i+1), type="Char", sub_tokens=[])
+            Token(content=c, position=(i, i + 1), type="Char", sub_tokens=[])
             for i, c in enumerate(text) if c.strip()
         ]
+
 
 @pytest.fixture
 def sample_text():
@@ -27,9 +29,11 @@ def sample_text():
         "Another paragraph."
     )
 
+
 def test_empty_pipeline(sample_text):
     pipeline = TokenizerPipeline([])
     assert pipeline(sample_text) == []
+
 
 def test_single_paragraph_tokenizer(sample_text):
     pipeline = TokenizerPipeline([ParagraphTokenizer()])
@@ -37,6 +41,7 @@ def test_single_paragraph_tokenizer(sample_text):
     assert len(tokens) == 3
     assert all(t.type == "Paragraph" for t in tokens)
     assert tokens[0].content.startswith("Hello world!")
+
 
 def test_single_url_tokenizer():
     text = "Check this: https://foo.com and http://bar.com"
@@ -47,6 +52,7 @@ def test_single_url_tokenizer():
     assert "http://bar.com" in urls
     assert all(t.type == "URLTokenizer" for t in tokens)
 
+
 def test_single_email_tokenizer():
     text = "Emails: a@b.com, x.y@z.org"
     pipeline = TokenizerPipeline([EmailTokenizer()])
@@ -56,12 +62,16 @@ def test_single_email_tokenizer():
     assert "x.y@z.org" in emails
     assert all(t.type == "EmailTokenizer" for t in tokens)
 
+
 def test_chain_paragraph_and_url_tokenizer(sample_text):
     pipeline = TokenizerPipeline([ParagraphTokenizer(), URLTokenizer()])
     tokens = pipeline(sample_text)
     # Should merge paragraph tokens with URL tokens
-    assert any("https://example.com" in t.content or any("https://example.com" in st.content for st in t.sub_tokens) for t in tokens)
+    assert any(
+        "https://example.com" in t.content or any("https://example.com" in st.content for st in t.sub_tokens) for t in
+        tokens)
     assert any(t.type == "Paragraph" for t in tokens)
+
 
 def test_chain_url_and_email_tokenizer():
     text = "Contact: foo@bar.com and https://bar.com"
@@ -69,7 +79,9 @@ def test_chain_url_and_email_tokenizer():
     tokens = pipeline(text)
     # Should merge URL and Email tokens
     assert any("foo@bar.com" in t.content or any("foo@bar.com" in st.content for st in t.sub_tokens) for t in tokens)
-    assert any("https://bar.com" in t.content or any("https://bar.com" in st.content for st in t.sub_tokens) for t in tokens)
+    assert any(
+        "https://bar.com" in t.content or any("https://bar.com" in st.content for st in t.sub_tokens) for t in tokens)
+
 
 def test_chain_paragraph_and_char_tokenizer(sample_text):
     pipeline = TokenizerPipeline([ParagraphTokenizer(), DummyCharTokenizer()])
@@ -77,12 +89,14 @@ def test_chain_paragraph_and_char_tokenizer(sample_text):
     # Each paragraph token should have sub_tokens for each character
     assert all(any(len(st.content) == 1 for st in t.sub_tokens) for t in tokens)
 
+
 def test_merging_preserves_positions(sample_text):
     pipeline = TokenizerPipeline([ParagraphTokenizer(), DummyCharTokenizer()])
     tokens = pipeline(sample_text)
     for t in tokens:
         for st in t.sub_tokens:
             assert t.position[0] <= st.position[0] < st.position[1] <= t.position[1]
+
 
 def test_predefined_paragraph_tokenizer_pipeline(sample_text):
     tokens = paragraph_tokenizer_pipeline(sample_text)
@@ -95,6 +109,7 @@ def test_predefined_paragraph_tokenizer_pipeline(sample_text):
         for t in tokens
     )
 
+
 def test_predefined_sentence_tokenizer_pipeline(sample_text):
     tokens = sentence_tokenizer_pipeline(sample_text)
     # Should return sentence tokens, each with sub_tokens for URL/email
@@ -103,6 +118,7 @@ def test_predefined_sentence_tokenizer_pipeline(sample_text):
         any(st.type in ("URLTokenizer", "EmailTokenizer") for st in t.sub_tokens)
         for t in tokens
     )
+
 
 def test_predefined_word_tokenizer_pipeline(sample_text):
     tokens = word_tokenizer_pipeline(sample_text)

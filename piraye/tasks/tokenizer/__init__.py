@@ -6,10 +6,10 @@ for common text processing tasks.
 """
 
 from .pipeline import TokenizerPipeline
-from .tokenizers.regex_tokenizer import EmailTokenizer, URLTokenizer
+from .tokenizers.regex_tokenizers import EmailTokenizer, URLTokenizer, HTMLTokenizer
 from .tokenizers.nltk_tokenizer import NltkSentenceTokenizer, NltkWordTokenizer
 from .tokenizers.paragraph_tokenizer import ParagraphTokenizer
-from .tokenizers.spacy_tokenizer import SpacySentenceTokenizer
+from .tokenizers.spacy_tokenizer import SpacySentenceTokenizer, SpacyWordTokenizer
 
 # --- Pre-configured tokenizer pipelines ---
 
@@ -43,10 +43,12 @@ __all__ = [
     # Tokenizers
     "EmailTokenizer",
     "URLTokenizer",
+    "HTMLTokenizer",
     "NltkSentenceTokenizer",
     "NltkWordTokenizer",
     "ParagraphTokenizer",
     "SpacySentenceTokenizer",
+    "SpacyWordTokenizer",
     # Pipeline class
     "TokenizerPipeline",
 ]
