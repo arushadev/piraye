@@ -1,7 +1,6 @@
 """This module includes MappingDict class"""
 import json
 import os
-import string
 import typing
 from typing import Dict
 from typing import List
@@ -53,7 +52,7 @@ class MappingDict:
             for key in data["map"].keys():
                 if key in configs:
                     key_map = data["map"][key]
-                    if key_map["char"] not in mapping: #TODO: Check why THOUSANDS SEPARATOR is need
+                    if key_map["char"] not in mapping:  # TODO: Check why THOUSANDS SEPARATOR is need
                         mapping[key_map["char"]] = CharConfig.from_dict(data, key)
                     for char_dic in data["others"]:
                         char = char_dic["char"]
@@ -62,7 +61,7 @@ class MappingDict:
         return mapping
 
     @staticmethod
-    def read_json(address: string):
+    def read_json(address: str):
         """
             return loaded json from files
             :param address: the input address

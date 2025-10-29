@@ -18,24 +18,24 @@ def test_multi_lingual_normalization():
     target = "در این آیه کمی تفکر کنید.\nالذین یقیمون الصلاة ویؤتون الزکاة"
     norm = MultiLingualNormalizerBuilder().set_normalizer('fa', fa_normalizer) \
         .set_normalizer('ar', ar_normalizer).main_normalizer_lang('fa').build()
-    assert target == norm.normalize(text)
+    assert target == norm.normalize(text)[0]
 
     text = "در این آیه کمی تفکر کنید: الَّذِينَ يُقِيمُونَ الصَّلاةَ وَيُؤْتُونَ الزَّكَاةَ"
     target = "در این آیه کمی تفکر کنید: الذین یقیمون الصلات ویوتون الزکات"
     norm = MultiLingualNormalizerBuilder().set_normalizer('fa', fa_normalizer) \
         .set_normalizer('ar', ar_normalizer).main_normalizer_lang('fa') \
         .sentence_level().build()
-    assert target == norm.normalize(text)
+    assert target == norm.normalize(text)[0]
 
     text = "در این آیه کمی تفکر کنید: الَّذِينَ يُقِيمُونَ الصَّلاةَ وَيُؤْتُونَ الزَّكَاةَ"
     target = "در این آیه کمی تفکر کنید: الذین یقیمون الصلاة ویؤتون الزکاة"
     norm = MultiLingualNormalizerBuilder().set_normalizer('fa', fa_normalizer) \
         .set_normalizer('ar', ar_normalizer).main_normalizer_lang('fa') \
         .word_level().build()
-    assert target == norm.normalize(text)
+    assert target == norm.normalize(text)[0]
 
     text = "در این 1 آیه کمی تفکر کنید: الَّذِينَ يُقِيمُونَ الصَّلاةَ وَيُؤْتُونَ الزَّكَاةَ"
     target = "در این ۱ آیه کمی تفکر کنید: الذین یقیمون الصلاة ویؤتون الزکاة"
     norm = MultiLingualNormalizerBuilder().set_normalizer('fa', fa_normalizer) \
         .set_normalizer('ar', ar_normalizer).main_normalizer_lang('fa').word_level().build()
-    assert target == norm.normalize(text)
+    assert target == norm.normalize(text)[0]

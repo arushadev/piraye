@@ -1,7 +1,6 @@
 """This module includes Normalizer class for normalizing texts"""
 
 from abc import ABC, abstractmethod
-from typing import List, Tuple
 
 
 class Normalizer(ABC):
@@ -73,25 +72,25 @@ class Normalizer(ABC):
             The list of original integer position before normalizing input text.
 
         """
-        result=[]
+        result = []
         pointer_on_shift = 0
         for i in range(len(positions)):
-            current=positions[i]
-            last=positions[i-1] if i>0 else 0
+            current = positions[i]
+            last = positions[i - 1] if i > 0 else 0
             if current < last:
                 raise Exception("The position list is not sorted")
             while current > shifts[pointer_on_shift][0]:
                 pointer_on_shift += 1
                 if pointer_on_shift >= len(shifts):
-                    pointer_on_shift=len(shifts)-1
-                    result.append(shifts[pointer_on_shift][1]+current)
+                    pointer_on_shift = len(shifts) - 1
+                    result.append(shifts[pointer_on_shift][1] + current)
                     break
             if current < shifts[pointer_on_shift][0]:
-                    if pointer_on_shift==0:
-                        result.append(0)
-                    else:
-                      final_shift = shifts[pointer_on_shift-1][1]
-                      result.append(final_shift+current)
+                if pointer_on_shift == 0:
+                    result.append(0)
+                else:
+                    final_shift = shifts[pointer_on_shift - 1][1]
+                    result.append(final_shift + current)
             elif current == shifts[pointer_on_shift][0]:
                 final_shift = shifts[pointer_on_shift][1]
                 result.append(final_shift + current)

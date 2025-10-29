@@ -1,11 +1,6 @@
 import pytest
-from ..piraye.tasks.tokenizer.nltk_tokenizer import NltkSentenceTokenizer
-from ..piraye.tasks.tokenizer.regex_tokenizer import URLTokenizer
-from ..piraye.tasks.tokenizer.paragraph_tokenizer import ParagraphTokenizer
-from ..piraye.tasks.tokenizer.spacy_tokenizer import  SpacySentenceTokenizer
-from ..piraye.tasks.tokenizer.regex_tokenizer import  URLTokenizer
-from ..piraye.tasks.tokenizer.pipeline import TokenizerPipeline
-
+from ..piraye.tasks.tokenizer import NltkSentenceTokenizer, ParagraphTokenizer, SpacySentenceTokenizer, \
+    URLTokenizer, TokenizerPipeline
 
 
 @pytest.fixture
@@ -33,9 +28,9 @@ def test_pipeline():
     tokens = pipeline(text)
     print([t.content for t in tokens])
 
-
-    assert len(tokens) ==1
+    assert len(tokens) == 1
     assert any("Contact us at support@arusha.dev or info@piraye.ai." in t.content for t in tokens)
+
 
 def test_merge_sentence_and_url(sentence_tokenizer, url_tokenizer):
     text = "Visit https://example.com. This is a test."
