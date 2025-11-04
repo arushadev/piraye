@@ -70,7 +70,6 @@ class Normalizer(ABC):
             positions: sorted list of positions to be calculated.
         Returns:
             The list of original integer position before normalizing input text.
-
         """
         result = []
         pointer_on_shift = 0

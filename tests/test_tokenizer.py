@@ -2,11 +2,14 @@
 # pylint: skip-file
 from ..piraye import NltkWordTokenizer, SpacyWordTokenizer, ParagraphTokenizer, SpacySentenceTokenizer, \
     NltkSentenceTokenizer, URLTokenizer
+from ..piraye.tasks.tokenizer.pipeline import TokenizerPipeline
 
 
 def test_object():
     tokenizer = NltkWordTokenizer()
-    assert tokenizer is not None
+    assert (
+
+            tokenizer is not None)
 
 
 def test_sample():
@@ -36,19 +39,15 @@ def test_sentence_tokenizer():
 
 def test_paragraph_tokenizer():
     text = "par1 sen1 sad.  par1 \n sen2. par1 \n\n sen3.\n par2 sen1.\n\n\n\n   par3 sen1. \n par4 sen1.\n\n"
-    sent_tokenizer = NltkSentenceTokenizer()
-    sentences = sent_tokenizer.tokenize(text)
-    paragraph_tokenizer = ParagraphTokenizer()
-    paragraphs = paragraph_tokenizer.merge(text, sentences)
+    pipeline = TokenizerPipeline([NltkSentenceTokenizer(), ParagraphTokenizer()])
+    paragraphs = pipeline.tokenize(text)  # Use pipeline to handle merging
     assert len(paragraphs) == 5
 
 
 def test_paragraph_tokenizer_spacy():
     text = "par1 sen1 sad.  par1 \n sen2. par1 \n\n sen3.\n par2 sen1.\n\n\n\n   par3 sen1. \n par4 sen1.\n\n"
-    sent_tokenizer = SpacySentenceTokenizer()
-    sentences = sent_tokenizer.tokenize(text)
-    paragraph_tokenizer = ParagraphTokenizer()
-    paragraphs = paragraph_tokenizer.merge(text, sentences)
+    pipeline = TokenizerPipeline([SpacySentenceTokenizer(), ParagraphTokenizer()])
+    paragraphs = pipeline.tokenize(text)  # Use pipeline to handle merging
     assert len(paragraphs) == 5
 
 
@@ -66,9 +65,9 @@ def test_double_quotes2():
 
 def test_link():
     text = "این یک لینک تست است https://www.google.com "
-    urls = URLTokenizer().tokenize(text)
-    tokenizer = NltkWordTokenizer()
-    assert len(tokenizer.merge(text, urls)) != 9
+    pipeline = TokenizerPipeline([URLTokenizer(), NltkWordTokenizer()])
+    tokens = pipeline.tokenize(text)  # Use pipeline to handle merging
+    assert len(tokens) != 9
 
 
 def test_link_spacy():

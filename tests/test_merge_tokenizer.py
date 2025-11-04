@@ -33,18 +33,18 @@ def test_pipeline():
 
 
 def test_merge_sentence_and_url(sentence_tokenizer, url_tokenizer):
+    pipeline = TokenizerPipeline([sentence_tokenizer, url_tokenizer])
     text = "Visit https://example.com. This is a test."
-    url_tokens = url_tokenizer.tokenize(text)
-    result = sentence_tokenizer.merge(text, url_tokens)
+    result = pipeline.tokenize(text)  # Use tokenize instead of merge
     print(result)
     assert len(result) > 0
     assert any("https://example.com" in token.content for token in result)
 
 
 def test_merge_paragraph_and_url(paragraph_tokenizer, url_tokenizer):
+    pipeline = TokenizerPipeline([paragraph_tokenizer, url_tokenizer])
     text = "Paragraph 1.\nhttps://example.com\nParagraph 2."
-    url_tokens = url_tokenizer.tokenize(text)
-    result = paragraph_tokenizer.merge(text, url_tokens)
+    result = pipeline.tokenize(text)  # Use tokenize instead of merge
     for token in result:
         print(token)
     assert len(result) > 0
@@ -52,9 +52,9 @@ def test_merge_paragraph_and_url(paragraph_tokenizer, url_tokenizer):
 
 
 def test_merge_sentence_and_paragraph(sentence_tokenizer, paragraph_tokenizer):
+    pipeline = TokenizerPipeline([sentence_tokenizer, paragraph_tokenizer])
     text = "This is a sentence.\nThis is a paragraph."
-    paragraph_tokens = paragraph_tokenizer.tokenize(text)
-    result = sentence_tokenizer.merge(text, paragraph_tokens)
+    result = pipeline.tokenize(text)  # Use tokenize instead of merge
     print([token for token in result])
 
     assert len(result) > 0

@@ -1,5 +1,4 @@
 """Multi-lingual text normalizer implementation."""
-from abc import ABC
 from enum import Enum
 from typing import Dict
 
@@ -25,7 +24,7 @@ class TokenizationLevel(Enum):
 
 
 # pylint: disable=too-few-public-methods
-class MultiLingualNormalizer(Normalizer, ABC):
+class MultiLingualNormalizer(Normalizer):
     """
     Normalizer that handles multiple languages in the same text.
 

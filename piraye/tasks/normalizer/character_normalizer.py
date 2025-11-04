@@ -1,7 +1,6 @@
 """Character-level text normalizer implementation."""
 from __future__ import annotations
 
-from abc import ABC
 from typing import List, Tuple
 
 from .char_config import CharConfig
@@ -12,7 +11,7 @@ from .normalizer import Normalizer
 
 
 # pylint: disable=too-few-public-methods
-class CharacterNormalizer(Normalizer, ABC):
+class CharacterNormalizer(Normalizer):
     """
     Character-level normalizer implementation.
     

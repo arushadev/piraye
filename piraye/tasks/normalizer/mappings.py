@@ -31,7 +31,7 @@ class MappingDict:
         current_directory = os.path.dirname(os.path.abspath(__file__))
         for dir_path, _, filenames in os.walk(current_directory + "/data/"):
             for filename in filenames:
-                abspath = os.path.abspath(os.path.join(dir_path, filename))
+                abspath = os.path.abspath(os.path.join(dir_path, str(filename)))
                 all_configs.extend(MappingDict.read_json(abspath))
 
         return MappingDict.get_mapping(configs, all_configs)
@@ -52,7 +52,7 @@ class MappingDict:
             for key in data["map"].keys():
                 if key in configs:
                     key_map = data["map"][key]
-                    if key_map["char"] not in mapping:  # TODO: Check why THOUSANDS SEPARATOR is need
+                    if key_map["char"] not in mapping:
                         mapping[key_map["char"]] = CharConfig.from_dict(data, key)
                     for char_dic in data["others"]:
                         char = char_dic["char"]
