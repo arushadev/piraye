@@ -5,8 +5,9 @@ from abc import ABC, abstractmethod
 
 class Normalizer(ABC):
     """
-    The Normalizer class is an abstract base class that defines the interface for text normalization. It provides two
-    abstract methods: normalize() and span_normalize(), subclasses can implement which to perform specific
+    The Normalizer class is an abstract base class that defines the interface
+    for text normalization. It provides two abstract methods: normalize() and
+    span_normalize(), subclasses can implement which to perform specific
     normalization tasks.
 
     Example Usage
@@ -62,22 +63,25 @@ class Normalizer(ABC):
         return position + final_shift
 
     # noinspection PyMethodMayBeStatic
-    def calc_original_positions(self, shifts: list[tuple[int, int]], positions: list[int]) -> list[int]:
+    def calc_original_positions(
+            self, shifts: list[tuple[int, int]],
+            positions: list[int]
+    ) -> list[int]:
         """
         Calculate the original positions needed to normalize the input text.
         Args:
             shifts: shifts that has been calculated by normalizer.
             positions: sorted list of positions to be calculated.
         Returns:
-            The list of original integer position before normalizing input text.
+            The list of original integer position before normalizing
+            input text.
         """
         result = []
         pointer_on_shift = 0
-        for i in range(len(positions)):
-            current = positions[i]
+        for i, current in enumerate(positions):
             last = positions[i - 1] if i > 0 else 0
             if current < last:
-                raise Exception("The position list is not sorted")
+                raise ValueError("The position list is not sorted")
             while current > shifts[pointer_on_shift][0]:
                 pointer_on_shift += 1
                 if pointer_on_shift >= len(shifts):

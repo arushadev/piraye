@@ -198,7 +198,8 @@ class NormalizerBuilder:
         self.__remove_extra_spaces = remove_extra_spaces
         return self
 
-    def tokenizing(self, tokenization: bool = True, tokenizer: Tokenizer | None = None) -> NormalizerBuilder:
+    def tokenizing(self, tokenization: bool = True,
+                   tokenizer: Tokenizer | None = None) -> NormalizerBuilder:
         """
         Configure whether to tokenize text during normalization.
         

@@ -2,13 +2,14 @@
 from abc import ABC
 from typing import List
 
-from spacy.lang.en import English
-from spacy.pipeline import Sentencizer
+from spacy.lang.en import English  # pylint: disable=import-error
+from spacy.pipeline import Sentencizer  # pylint: disable=import-error
 
 from ..token import Token
 from .base_tokenizer import Tokenizer
 
 
+# pylint: disable=too-few-public-methods
 class SpacyTokenizer(Tokenizer, ABC):
     """
     Base class for Spacy-based tokenizers.

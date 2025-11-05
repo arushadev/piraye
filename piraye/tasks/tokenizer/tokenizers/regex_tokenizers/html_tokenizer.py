@@ -2,6 +2,7 @@
 from .base_regex_tokenizer import RegexTokenizer
 
 
+# pylint: disable=too-few-public-methods
 class HTMLTokenizer(RegexTokenizer):
     """
     Tokenizer for identifying and extracting HTML tags from text.
@@ -14,4 +15,3 @@ class HTMLTokenizer(RegexTokenizer):
         """Initialize the HTMLTokenizer with an HTML tag matching pattern."""
         pattern = r'<(?:!--.*?--|[^>]+)>'
         RegexTokenizer.__init__(self, pattern)
-

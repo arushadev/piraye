@@ -6,6 +6,7 @@ from ..base_tokenizer import Tokenizer
 from ...token import Token
 
 
+# pylint: disable=too-few-public-methods
 class RegexTokenizer(Tokenizer):
     """
     Tokenizer that uses regular expressions to identify tokens.
@@ -48,4 +49,3 @@ class RegexTokenizer(Tokenizer):
             tokens.append(token)
 
         return tokens
-

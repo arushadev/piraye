@@ -2,6 +2,7 @@
 from .base_regex_tokenizer import RegexTokenizer
 
 
+# pylint: disable=too-few-public-methods
 class EmailTokenizer(RegexTokenizer):
     """
     Tokenizer for identifying and extracting email addresses from text.
@@ -13,4 +14,3 @@ class EmailTokenizer(RegexTokenizer):
         """Initialize the EmailTokenizer with an email matching pattern."""
         pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
         RegexTokenizer.__init__(self, pattern)
-

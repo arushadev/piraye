@@ -2,10 +2,12 @@
 from enum import Enum
 from typing import Dict
 
-from lingua import Language, LanguageDetectorBuilder
+from lingua import Language, LanguageDetectorBuilder  # pylint: disable=import-error
 
 from .normalizer_builder import NormalizerBuilder
-from ..tokenizer.tokenizers.nltk_tokenizer import Tokenizer, NltkWordTokenizer, NltkSentenceTokenizer
+from ..tokenizer.tokenizers.nltk_tokenizer import (
+    Tokenizer, NltkWordTokenizer, NltkSentenceTokenizer
+)
 from .normalizer import Normalizer
 
 
@@ -75,11 +77,12 @@ class MultiLingualNormalizer(Normalizer):
         self.__main_normalizer_lang = main_normalizer_lang
 
         # Set up tokenizers
-        if tokenizer:
-            self.__tokenizer = tokenizer
-        else:
-            self.__word_tokenizer = NltkWordTokenizer()
-            self.__sentence_tokenizer = NltkSentenceTokenizer()
+        if tokenizer is not None:
+            # Custom tokenizer provided (reserved for future use)
+            pass
+
+        self.__word_tokenizer = NltkWordTokenizer()
+        self.__sentence_tokenizer = NltkSentenceTokenizer()
 
         # Initialize language detector
         languages = [Language.PERSIAN, Language.ARABIC, Language.ENGLISH]
@@ -179,7 +182,10 @@ class MultiLingualNormalizer(Normalizer):
 
         return result
 
-    def __normalize_sub_text(self, sub_text: str, lang: Language | None = None) -> tuple[str, list[tuple[int, int]]]:
+    def __normalize_sub_text(
+            self, sub_text: str,
+            lang: Language | None = None
+    ) -> tuple[str, list[tuple[int, int]]]:
         """
         Normalize a substring with detected or provided language.
 
@@ -190,7 +196,8 @@ class MultiLingualNormalizer(Normalizer):
         Returns:
             A tuple containing normalized text and shifts
         """
-        language = lang if lang is not None else self.__detector.detect_language_of(sub_text)
+        language = (lang if lang is not None
+                    else self.__detector.detect_language_of(sub_text))
         normalizer: Normalizer = self.__configs[self.__main_normalizer_lang]
 
         match language:

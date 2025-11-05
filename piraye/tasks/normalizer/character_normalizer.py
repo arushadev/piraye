@@ -139,4 +139,13 @@ class CharacterNormalizer(Normalizer):
         return is_token_list
 
     def span_normalize(self, text: str) -> List[Tuple[int, int, str]]:
+        """
+        Normalize text and return spans of normalized tokens.
+
+        Args:
+            text: The input text to normalize
+
+        Returns:
+            List of tuples containing (start, end, normalized_text)
+        """
         raise NotImplementedError()

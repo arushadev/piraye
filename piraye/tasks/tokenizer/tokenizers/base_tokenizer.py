@@ -51,4 +51,3 @@ class Tokenizer(ABC):
         Returns:
             A list of Token objects extracted from the input text
         """
-        pass

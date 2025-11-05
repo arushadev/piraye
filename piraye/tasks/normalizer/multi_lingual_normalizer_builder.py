@@ -51,7 +51,10 @@ class MultiLingualNormalizerBuilder:
             self.__tokenizer
         )
 
-    def tokenization_level(self, tokenization_level: TokenizationLevel) -> MultiLingualNormalizerBuilder:
+    def tokenization_level(
+            self,
+            tokenization_level: TokenizationLevel
+    ) -> MultiLingualNormalizerBuilder:
         """
         Set the tokenization level for language detection.
 

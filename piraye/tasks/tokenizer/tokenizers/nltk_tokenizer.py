@@ -10,6 +10,7 @@ from .base_tokenizer import Tokenizer
 from ..token import Token
 
 
+# pylint: disable=too-few-public-methods
 class NltkTokenizer(Tokenizer, ABC):
     """
     Base class for NLTK-based tokenizers.

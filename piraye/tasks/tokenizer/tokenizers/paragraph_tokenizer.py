@@ -5,6 +5,7 @@ from .base_tokenizer import Tokenizer
 from ..token import Token
 
 
+# pylint: disable=too-few-public-methods
 class ParagraphTokenizer(Tokenizer):
     """
     Tokenizer that splits text into paragraphs based on newline characters.
@@ -28,11 +29,11 @@ class ParagraphTokenizer(Tokenizer):
         """
         if not text:
             return []
-            
+
         start = 0
         end = 0
         paragraphs: List[Token] = []
-        
+
         for i, char in enumerate(text):
             if char == "\n":
                 if end > start:
@@ -50,7 +51,7 @@ class ParagraphTokenizer(Tokenizer):
                 pass
             else:
                 end = i + 1
-                
+
         # Add remaining text as final paragraph
         if len(text) > start:
             paragraphs.append(
@@ -61,5 +62,5 @@ class ParagraphTokenizer(Tokenizer):
                     sub_tokens=[]
                 )
             )
-            
+
         return paragraphs
