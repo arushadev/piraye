@@ -2,7 +2,8 @@
 from enum import Enum
 from typing import Dict
 
-from lingua import Language, LanguageDetectorBuilder  # pylint: disable=import-error
+# pylint: disable=import-error,no-name-in-module
+from lingua import Language, LanguageDetectorBuilder
 
 from .normalizer_builder import NormalizerBuilder
 from ..tokenizer.tokenizers.nltk_tokenizer import (
