@@ -84,9 +84,11 @@ normalizer = (NormalizerBuilder()
               .remove_extra_spaces()
               .build())
 
-# normalize() returns tuple: (normalized_text, position_shifts)
-normalized_text, shifts = normalizer.normalize(text)
+# normalize() returns tuple: (normalized_text, NormalizationResult)
+normalized_text, result = normalizer.normalize(text)
 print(normalized_text)  # "این یک متن تست است ، ۲۴/۱۲/۱۴۰۰"
+print(result.shifts)  # Position shifts for mapping
+print(result.punc_positions)  # Punctuation locations in normalized text
 ```
 
 ### Using Config Constructor
@@ -102,27 +104,70 @@ normalizer = NormalizerBuilder(
     tokenization=True
 ).build()
 
-normalized_text, shifts = normalizer.normalize(text)
+normalized_text, result = normalizer.normalize(text)
 print(normalized_text)  # "این یک متن تست است ، ۲۴/۱۲/۱۴۰۰"
 ```
 
-### Multi-Lingual Normalization
+> 📖 For more examples and usage patterns, see [Normalizer Examples](normalizing_examples.md).
+
+---
+
+## 📊 Normalizer Output
+
+The `normalize()` method returns a tuple containing the normalized text and a `NormalizationResult` object with
+metadata.
+
+### Return Value Structure
 
 ```python
-from piraye import MultiLingualNormalizerBuilder
-
-# Automatically detect and normalize Persian, Arabic, and English
-normalizer = (MultiLingualNormalizerBuilder()
-              .word_level()  # Detect language at word level
-              .main_normalizer_lang('fa')  # Use Persian as main language
-              .build())
-
-text = "این یک test است with English words و کلمات عربی"
-normalized_text, shifts = normalizer.normalize(text)
-print(normalized_text)
+normalized_text, result = normalizer.normalize(text)
+# Returns: tuple[str, NormalizationResult]
 ```
 
-> 📖 For more examples and usage patterns, see [Normalizer Examples](normalizing_examples.md).
+### NormalizationResult Properties
+
+| Property         | Type                    | Description                                                                                           |
+|------------------|-------------------------|-------------------------------------------------------------------------------------------------------|
+| `shifts`         | `list[tuple[int, int]]` | Position shifts tracking character position changes during normalization. Format: `(position, shift)` |
+| `punc_positions` | `list[int]`             | List of punctuation character positions in the normalized text                                        |
+
+### Example
+
+```python
+from piraye import NormalizerBuilder
+
+normalizer = (NormalizerBuilder()
+              .alphabet_fa()
+              .punctuation_fa()
+              .digit_fa()
+              .remove_extra_spaces()
+              .build())
+
+text = "سلام،  این  ۱۲۳  است."
+normalized_text, result = normalizer.normalize(text)
+
+# Normalized text
+print(normalized_text)
+# Output: "سلام، این ۱۲۳ است."
+
+# Shifts for position mapping
+print(result.shifts)
+# Output: [(4, 0), (9, 1), (13, 2), (17, 3)]
+# Each tuple represents (position_in_normalized_text, cumulative_shift_from_original)
+
+# Punctuation positions
+print(result.punc_positions)
+# Output: [4, 17]
+# Positions where punctuation characters (، and .) are located in normalized text
+
+# Access individual punctuation characters
+for pos in result.punc_positions:
+    char = normalized_text[pos]
+    print(f"Punctuation at position {pos}: '{char}'")
+# Output:
+# Punctuation at position 4: '،'
+# Punctuation at position 17: '.'
+```
 
 ---
 
@@ -143,21 +188,49 @@ to map positions between normalized and original text.
 ```python
 from piraye import NormalizerBuilder
 
-normalizer = NormalizerBuilder().space_normal().remove_extra_spaces().alphabet_en().punctuation_en().build()
+normalizer = (NormalizerBuilder()
+              .space_normal()
+              .remove_extra_spaces()
+              .alphabet_en()
+              .punctuation_en()
+              .build())
 
-# Shifts calculated by the normalizer: (position_in_normalized, shift_value)
-shifts = [(5, 2), (10, 1)]
+text = "Hello  ,  World  !"
+normalized_text, result = normalizer.normalize(text)
+
+# Access shifts from NormalizationResult
+shifts = result.shifts
+print(f"Shifts: {shifts}")
 
 # Map single position
 original_pos = normalizer.calc_original_position(shifts, 7)
-print(original_pos)
-# 9
+print(f"Position 7 in normalized text was at position {original_pos} in original")
 
-# Map multiple positions
+# Map multiple positions (must be sorted)
 positions = [3, 7, 12]
 original_positions = normalizer.calc_original_positions(shifts, positions)
-print(original_positions)
-# [3, 9, 13]
+print(f"Positions {positions} map to {original_positions} in original text")
+```
+
+### Working with Punctuation Positions
+
+```python
+from piraye import NormalizerBuilder
+
+normalizer = (NormalizerBuilder()
+              .alphabet_fa()
+              .punctuation_fa()
+              .build())
+
+text = "سلام، این یک متن است."
+normalized_text, result = normalizer.normalize(text)
+
+# Access punctuation positions
+print(f"Punctuation found at positions: {result.punc_positions}")
+
+# Get the actual punctuation characters
+punc_chars = [normalized_text[pos] for pos in result.punc_positions]
+print(f"Punctuation characters: {punc_chars}")
 ```
 
 > 💡 **Tip**: Use position mapping to align annotations, highlight text, or track character positions through
@@ -251,12 +324,12 @@ a fully tokenized text.
 ### Example Usage
 
 ```python
-from piraye.tasks.tokenizer import SpacySentenceTokenizer
+from piraye.tasks.tokenizer import NltkSentenceTokenizer
 from piraye.tasks.tokenizer import URLTokenizer
 from piraye.tasks.tokenizer.pipeline import TokenizerPipeline
 
 pipeline = TokenizerPipeline([
-    SpacySentenceTokenizer(),
+    NltkSentenceTokenizer(),
     URLTokenizer()
 ])
 text = "Contact us at support@arusha.dev or info@piraye.ai."

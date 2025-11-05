@@ -5,11 +5,12 @@ from typing import Dict
 # pylint: disable=import-error,no-name-in-module
 from lingua import Language, LanguageDetectorBuilder
 
-from .normalizer_builder import NormalizerBuilder
-from ..tokenizer.tokenizers.nltk_tokenizer import (
+from ..normalizer_builder import NormalizerBuilder
+from ...tokenizer.tokenizers.nltk_tokenizer import (
     Tokenizer, NltkWordTokenizer, NltkSentenceTokenizer
 )
-from .normalizer import Normalizer
+from .base_normalizer import Normalizer
+from ..normalization_result import NormalizationResult
 
 
 class TokenizationLevel(Enum):
@@ -89,7 +90,7 @@ class MultiLingualNormalizer(Normalizer):
         languages = [Language.PERSIAN, Language.ARABIC, Language.ENGLISH]
         self.__detector = LanguageDetectorBuilder.from_languages(*languages).build()
 
-    def normalize(self, text: str) -> tuple[str, list[tuple[int, int]]]:
+    def normalize(self, text: str) -> tuple[str, NormalizationResult]:
         """
         Normalize text with multi-language support.
 
@@ -99,7 +100,7 @@ class MultiLingualNormalizer(Normalizer):
         Returns:
             A tuple containing:
                 - Normalized text
-                - List of position shifts (currently returns empty list)
+                - NormalizationResult with shifts and punctuation locations
         """
         result = ''
         main_normalizer = self.__configs[self.__main_normalizer_lang]
@@ -109,7 +110,7 @@ class MultiLingualNormalizer(Normalizer):
         else:
             result = self._normalize_token_mode(text, main_normalizer)
 
-        return result, []
+        return result, NormalizationResult()
 
     def _normalize_lingua_mode(self, text: str, main_normalizer: Normalizer) -> str:
         """
@@ -186,7 +187,7 @@ class MultiLingualNormalizer(Normalizer):
     def __normalize_sub_text(
             self, sub_text: str,
             lang: Language | None = None
-    ) -> tuple[str, list[tuple[int, int]]]:
+    ) -> tuple[str, NormalizationResult]:
         """
         Normalize a substring with detected or provided language.
 
@@ -195,7 +196,7 @@ class MultiLingualNormalizer(Normalizer):
             lang: Detected language (if None, will be detected)
 
         Returns:
-            A tuple containing normalized text and shifts
+            A tuple containing normalized text and NormalizationResult
         """
         language = (lang if lang is not None
                     else self.__detector.detect_language_of(sub_text))

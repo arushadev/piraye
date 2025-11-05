@@ -12,6 +12,7 @@ class CharConfig:
     space_after: bool = None
     space_priority: int = None
     is_token: bool = None
+    is_punctuation: bool = None
 
     @property
     def is_space(self) -> str:
@@ -23,5 +24,6 @@ class CharConfig:
                           data["clean"].get('space_before') if data.get("clean") else None,
                           data["clean"].get('space_after') if data.get("clean") else None,
                           data["clean"].get('space_priority') if data.get("clean") else None,
-                          data["clean"].get('is_token') if data.get("clean") else None
+                          data["clean"].get('is_token') if data.get("clean") else None,
+                          data["clean"].get('is_punctuation') if data.get("clean") else None
                           )

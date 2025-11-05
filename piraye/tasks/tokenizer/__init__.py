@@ -9,7 +9,6 @@ from .pipeline import TokenizerPipeline
 from .tokenizers.regex_tokenizers import EmailTokenizer, URLTokenizer, HTMLTokenizer
 from .tokenizers.nltk_tokenizer import NltkSentenceTokenizer, NltkWordTokenizer
 from .tokenizers.paragraph_tokenizer import ParagraphTokenizer
-from .tokenizers.spacy_tokenizer import SpacySentenceTokenizer, SpacyWordTokenizer
 
 # --- Pre-configured tokenizer pipelines ---
 
@@ -47,8 +46,6 @@ __all__ = [
     "NltkSentenceTokenizer",
     "NltkWordTokenizer",
     "ParagraphTokenizer",
-    "SpacySentenceTokenizer",
-    "SpacyWordTokenizer",
     # Pipeline class
     "TokenizerPipeline",
 ]

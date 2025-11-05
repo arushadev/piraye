@@ -3,11 +3,12 @@ from __future__ import annotations
 
 from typing import List, Tuple
 
-from .char_config import CharConfig
-from .mappings import MappingDict
-from ..tokenizer.tokenizers.nltk_tokenizer import NltkWordTokenizer
-from ..tokenizer.tokenizers.base_tokenizer import Tokenizer
-from .normalizer import Normalizer
+from ..char_config import CharConfig
+from ..mappings import MappingDict
+from ...tokenizer.tokenizers.nltk_tokenizer import NltkWordTokenizer
+from ...tokenizer.tokenizers.base_tokenizer import Tokenizer
+from .base_normalizer import Normalizer
+from ..normalization_result import NormalizationResult
 
 
 # pylint: disable=too-few-public-methods
@@ -52,7 +53,7 @@ class CharacterNormalizer(Normalizer):
             self.__tokenizer = None
 
     # pylint: disable=too-many-branches
-    def normalize(self, text: str) -> tuple[str, list[tuple[int, int]]]:
+    def normalize(self, text: str) -> tuple[str, NormalizationResult]:
         """
         Normalize the given text according to configured rules.
         
@@ -65,7 +66,7 @@ class CharacterNormalizer(Normalizer):
         Returns:
             A tuple containing:
                 - Normalized text
-                - List of shifts in the format (position_in_normalized, shift_value)
+                - NormalizationResult with shifts and punctuation locations
         """
         if self.__tokenizer:
             is_token_list = self.__tokenize(text)
@@ -76,6 +77,8 @@ class CharacterNormalizer(Normalizer):
         current_shift = 0
         last_added_shift = 0
         shifts: list[tuple[int, int]] = []
+        punc_positions: list[int] = []
+
         for i, char in enumerate(text):
             is_token = is_token_list[i]
             mapping_char = self.__mapping.get(char)
@@ -85,6 +88,9 @@ class CharacterNormalizer(Normalizer):
                     char = mapping_char.char
                 result += char
                 current_shift = i - len(result) + 1
+                # Track punctuation locations in normalized text
+                if mapping_char and mapping_char.is_punctuation:
+                    punc_positions.append(len(result) - 1)
             else:
                 current = mapping_char if mapping_char else CharConfig(char)
                 if current.is_space:
@@ -105,6 +111,9 @@ class CharacterNormalizer(Normalizer):
                         result += current.char
                     else:
                         result += char
+                    # Track punctuation locations in normalized text
+                    if current.is_punctuation:
+                        punc_positions.append(len(result) - 1)
                     current_shift = i - len(result) + 1
                     last = current
             if current_shift != last_added_shift:
@@ -114,7 +123,7 @@ class CharacterNormalizer(Normalizer):
             result += last.char
             if current_shift != last_added_shift:
                 shifts.append((len(result) - 1, current_shift))
-        return result, shifts
+        return result, NormalizationResult(shifts=shifts, punc_positions=punc_positions)
 
     def __tokenize(self, text: str) -> List[bool]:
         """

@@ -1,15 +1,14 @@
 # testing Fibonacci number function
 # pylint: skip-file
-from ..piraye import NltkWordTokenizer, SpacyWordTokenizer, ParagraphTokenizer, SpacySentenceTokenizer, \
+from ..piraye import NltkWordTokenizer, ParagraphTokenizer, \
     NltkSentenceTokenizer, URLTokenizer
+from ..piraye.tasks.tokenizer.tokenizers.spacy_tokenizer import SpacySentenceTokenizer, SpacyWordTokenizer
 from ..piraye.tasks.tokenizer.pipeline import TokenizerPipeline
 
 
 def test_object():
     tokenizer = NltkWordTokenizer()
-    assert (
-
-            tokenizer is not None)
+    assert tokenizer is not None
 
 
 def test_sample():

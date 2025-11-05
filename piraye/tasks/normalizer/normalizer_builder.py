@@ -4,8 +4,8 @@ from __future__ import annotations
 import enum
 from typing import List
 
-from .character_normalizer import CharacterNormalizer
-from .normalizer import Normalizer
+from .normalizers.character_normalizer import CharacterNormalizer
+from .normalizers.base_normalizer import Normalizer
 from ..tokenizer.tokenizers.base_tokenizer import Tokenizer
 
 

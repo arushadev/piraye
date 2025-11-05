@@ -2,6 +2,8 @@
 
 from abc import ABC, abstractmethod
 
+from ..normalization_result import NormalizationResult
+
 
 class Normalizer(ABC):
     """
@@ -34,14 +36,15 @@ class Normalizer(ABC):
     """
 
     @abstractmethod
-    def normalize(self, text: str) -> tuple[str, list[tuple[int, int]]]:
+    def normalize(self, text: str) -> tuple[str, NormalizationResult]:
         """
         Normalize the input text.
         Args:
             text: The input text to normalize.
         Returns:
-            The normalized text.
-            Shifts in normalized text
+            A tuple containing:
+                - The normalized text
+                - NormalizationResult with shifts and punctuation locations
         """
 
     # noinspection PyMethodMayBeStatic
