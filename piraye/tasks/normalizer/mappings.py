@@ -1,7 +1,6 @@
 """This module includes MappingDict class"""
 import json
 import os
-import string
 import typing
 from typing import Dict
 from typing import List
@@ -32,7 +31,7 @@ class MappingDict:
         current_directory = os.path.dirname(os.path.abspath(__file__))
         for dir_path, _, filenames in os.walk(current_directory + "/data/"):
             for filename in filenames:
-                abspath = os.path.abspath(os.path.join(dir_path, filename))
+                abspath = os.path.abspath(os.path.join(dir_path, str(filename)))
                 all_configs.extend(MappingDict.read_json(abspath))
 
         return MappingDict.get_mapping(configs, all_configs)
@@ -53,7 +52,8 @@ class MappingDict:
             for key in data["map"].keys():
                 if key in configs:
                     key_map = data["map"][key]
-                    mapping[key_map["char"]] = CharConfig.from_dict(data, key)
+                    if key_map["char"] not in mapping:
+                        mapping[key_map["char"]] = CharConfig.from_dict(data, key)
                     for char_dic in data["others"]:
                         char = char_dic["char"]
                         if not mapping.get(char):
@@ -61,7 +61,7 @@ class MappingDict:
         return mapping
 
     @staticmethod
-    def read_json(address: string):
+    def read_json(address: str):
         """
             return loaded json from files
             :param address: the input address

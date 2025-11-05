@@ -4,7 +4,8 @@
     "clean": {
       "space_before": false,
       "space_after": true,
-      "is_token": true
+      "is_token": true,
+      "is_punctuation": true
     },
     "map": {
       "punc_fa": {
@@ -92,7 +93,8 @@
     "clean": {
       "space_before": false,
       "space_after": true,
-      "is_token": true
+      "is_token": true,
+      "is_punctuation": true
     },
     "map": {
       "punc_fa": {
@@ -208,13 +210,17 @@
         "char": "ߵ",
         "name": "NKO LOW TONE APOSTROPHE"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "RIGHT PARENTHESIS",
     "clean": {
       "space_before": false,
-      "space_after": true
+      "space_after": true,
+      "is_punctuation": true
     },
     "map": {
       "punc_fa": {
@@ -257,7 +263,8 @@
     "name": "LEFT PARENTHESIS",
     "clean": {
       "space_before": true,
-      "space_after": false
+      "space_after": false,
+      "is_punctuation": true
     },
     "map": {
       "punc_fa": {
@@ -301,7 +308,8 @@
     "clean": {
       "is_token": true,
       "space_before": false,
-      "space_after": true
+      "space_after": true,
+      "is_punctuation": true
     },
     "map": {
       "punc_fa": {
@@ -426,17 +434,21 @@
         "name": "MINUS SIGN"
       },
       {
-        "char": "\u00AD",
+        "char": "­",
         "name": "SOFT HYPHEN"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "SEMICOLON",
     "clean": {
       "is_token": true,
       "space_before": false,
-      "space_after": true
+      "space_after": true,
+      "is_punctuation": true
     },
     "map": {
       "punc_fa": {
@@ -552,13 +564,17 @@
         "char": "⎖",
         "name": "DECIMAL SEPARATOR KEY SYMBOL"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "RIGHT SQUARE BRACKET",
     "clean": {
       "space_before": false,
-      "space_after": true
+      "space_after": true,
+      "is_punctuation": true
     },
     "map": {
       "punc_fa": {
@@ -601,7 +617,8 @@
     "name": "LEFT SQUARE BRACKET",
     "clean": {
       "space_before": true,
-      "space_after": false
+      "space_after": false,
+      "is_punctuation": true
     },
     "map": {
       "punc_fa": {
@@ -661,7 +678,10 @@
         "char": "٬",
         "name": "ARABIC THOUSANDS SEPARATOR"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "QUOTATION MARK",
@@ -772,7 +792,10 @@
         "char": "〟",
         "name": "LOW DOUBLE PRIME QUOTATION MARK"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "NUMBER SIGN",
@@ -803,7 +826,10 @@
         "char": "௺",
         "name": "TAMIL NUMBER SIGN"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "PERCENT SIGN",
@@ -830,7 +856,10 @@
         "char": "%",
         "name": "PERCENT SIGN"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "PLUS SIGN",
@@ -853,7 +882,10 @@
         "char": "+",
         "name": "PLUS SIGN"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "EQUALS SIGN",
@@ -876,7 +908,10 @@
         "char": "=",
         "name": "EQUALS SIGN"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "HORIZONTAL ELLIPSIS",
@@ -903,13 +938,17 @@
         "char": "⋯",
         "name": "MIDLINE HORIZONTAL ELLIPSIS"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "DEGREE SIGN",
     "clean": {
       "space_before": false,
-      "space_after": true
+      "space_after": true,
+      "is_punctuation": true
     },
     "map": {
       "punc_fa": {
@@ -936,7 +975,8 @@
     "name": "RIGHT CURLY BRACKET",
     "clean": {
       "space_before": false,
-      "space_after": true
+      "space_after": true,
+      "is_punctuation": true
     },
     "map": {
       "punc_fa": {
@@ -967,7 +1007,8 @@
     "name": "LEFT CURLY BRACKET",
     "clean": {
       "space_before": true,
-      "space_after": false
+      "space_after": false,
+      "is_punctuation": true
     },
     "map": {
       "punc_fa": {
@@ -1023,7 +1064,10 @@
         "char": "⅋",
         "name": "TURNED AMPERSAND"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "REVERSE SOLIDUS",
@@ -1054,7 +1098,10 @@
         "char": "⧹",
         "name": "BIG REVERSE SOLIDUS"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "LESS-THAN SIGN",
@@ -1077,7 +1124,10 @@
         "char": "<",
         "name": "LESS-THAN SIGN"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "GREATER-THAN SIGN",
@@ -1100,7 +1150,10 @@
         "char": ">",
         "name": "GREATER-THAN SIGN"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "COMMERCIAL AT",
@@ -1123,7 +1176,10 @@
         "char": "@",
         "name": "COMMERCIAL AT"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "TILDE",
@@ -1174,7 +1230,10 @@
         "char": "∽",
         "name": "REVERSED TILDE"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "CIRCUMFLEX ACCENT",
@@ -1197,7 +1256,10 @@
         "char": "^",
         "name": "CIRCUMFLEX ACCENT"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "LOW LINE",
@@ -1232,7 +1294,10 @@
         "char": "‗",
         "name": "DOUBLE LOW LINE"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "ASTERISK",
@@ -1255,7 +1320,10 @@
         "char": "*",
         "name": "ASTERISK"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "ASTERISK",
@@ -1278,7 +1346,10 @@
         "char": "×",
         "name": "MULTIPLICATION SIGN"
       }
-    ]
+    ],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "DOLLAR SIGN",
@@ -1296,14 +1367,17 @@
         "name": "DOLLAR SIGN"
       }
     },
-    "others": [
-    ]
+    "others": [],
+    "clean": {
+      "is_punctuation": true
+    }
   },
   {
     "name": "EXCLAMATION MARK",
     "clean": {
       "space_before": false,
-      "space_after": true
+      "space_after": true,
+      "is_punctuation": true
     },
     "map": {
       "punc_fa": {
@@ -1319,14 +1393,14 @@
         "name": "EXCLAMATION MARK"
       }
     },
-    "others": [
-    ]
+    "others": []
   },
   {
     "name": "VERTICAL LINE",
     "clean": {
       "space_before": true,
-      "space_after": true
+      "space_after": true,
+      "is_punctuation": true
     },
     "map": {
       "punc_fa": {
@@ -1342,14 +1416,14 @@
         "name": "VERTICAL LINE"
       }
     },
-    "others": [
-    ]
+    "others": []
   },
   {
     "name": "QUESTION MARK",
     "clean": {
       "space_before": false,
-      "space_after": true
+      "space_after": true,
+      "is_punctuation": true
     },
     "map": {
       "punc_fa": {

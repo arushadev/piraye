@@ -4,9 +4,9 @@ from __future__ import annotations
 import enum
 from typing import List
 
-from .character_normalizer import CharacterNormalizer
-from ...normalizer import Normalizer
-from ...tokenizer import Tokenizer
+from .normalizers.character_normalizer import CharacterNormalizer
+from .normalizers.base_normalizer import Normalizer
+from ..tokenizer.tokenizers.base_tokenizer import Tokenizer
 
 
 class Config(enum.Enum):
@@ -198,9 +198,17 @@ class NormalizerBuilder:
         self.__remove_extra_spaces = remove_extra_spaces
         return self
 
-    def tokenizing(self, tokenization: bool = True, tokenizer: Tokenizer = None) -> NormalizerBuilder:
+    def tokenizing(self, tokenization: bool = True,
+                   tokenizer: Tokenizer | None = None) -> NormalizerBuilder:
         """
-        Config whether tokenize before normalization or not
+        Configure whether to tokenize text during normalization.
+        
+        Args:
+            tokenization: Whether to enable tokenization
+            tokenizer: Custom tokenizer to use (defaults to NltkWordTokenizer if None)
+        
+        Returns:
+            Self for method chaining
         """
         self.__tokenization = tokenization
         self.__tokenizer = tokenizer

@@ -1,11 +1,8 @@
 """This module includes Normalizer and NormalizerBuilder"""
-from .normalizer import Normalizer
-from .tasks.normalizer.multi_lingual_normalizer import MultiLingualNormalizer
-from .tasks.normalizer.multi_lingual_normalizer_builder import MultiLingualNormalizerBuilder
+from .tasks.normalizer.normalizers.base_normalizer import Normalizer
+from .tasks.normalizer.normalization_result import NormalizationResult
 from .tasks.normalizer.normalizer_builder import NormalizerBuilder
-from .tasks.tokenizer.nltk_tokenizer import NltkTokenizer
-from .tasks.tokenizer.spacy_tokenizer import SpacyTokenizer
-from .tokenizer import Tokenizer
-
-__all__ = ["Normalizer", "Tokenizer", "NormalizerBuilder", "MultiLingualNormalizer", "MultiLingualNormalizerBuilder",
-           "NltkTokenizer", "SpacyTokenizer"]
+from .tasks.tokenizer import NltkSentenceTokenizer, NltkWordTokenizer
+from .tasks.tokenizer.tokenizers.base_tokenizer import Tokenizer
+from .tasks.tokenizer import URLTokenizer, EmailTokenizer, HTMLTokenizer
+from .tasks.tokenizer import ParagraphTokenizer
