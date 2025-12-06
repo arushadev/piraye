@@ -14,28 +14,19 @@ on:
 
 jobs:
   deploy:
-
     runs-on: ubuntu-latest
-
+    environment: pypi
+    permissions:
+      id-token: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - name: Install uv and set the Python version 3.11
-        uses: astral-sh/setup-uv@v6
+        uses: astral-sh/setup-uv@v7
         with:
           python-version: 3.11
       - name: Install dependencies
         run: uv sync --locked --all-extras --dev
-      - name: Build package
-        run: uv build
-          # Check that basic features work and we didn't miss to include crucial files
-      - name: Smoke test (wheel)
-        run: uv run --isolated --no-project --with dist/*.whl tests/smoke_test.py
-      - name: Smoke test (source distribution)
-        run: uv run --isolated --no-project --with dist/*.tar.gz tests/smoke_test.py
-      - name: Publish
-        run: uv publish
+      - name: Set Version
+        run: uv version $(git describe --tags --abbrev=0)
       - name: Publish package
-        uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
+        run: uv publish

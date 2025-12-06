@@ -4,23 +4,18 @@ This script performs a minimal import and normalization operation and
 prints the normalized text and punctuation positions. It exits with
 code 0 on success and non-zero on failure so CI can detect problems.
 """
-
-# Add project root to sys.path so the test can import the local `piraye`
-# package when the file is executed directly (e.g. `python tests/smoke_test.py`).
-import os
-import sys
-
 # Skip this smoke test during pytest collection; the file is intended
 # to be runnable as a standalone smoke script but can break CI collection.
 import pytest
-pytest.skip("Skipping smoke_test during pytest runs", allow_module_level=True)
+import os
+import sys
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
-from piraye import NormalizerBuilder
-
-
+@pytest.mark.skip(reason="This test is temporarily disabled for smoke runs.")
 def run_smoke_test():
+    # Add project root to sys.path so the test can import the local `piraye`
+    # package when the file is executed directly (e.g. `python tests/smoke_test.py`).s
+    # sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+    from piraye import NormalizerBuilder
     try:
         # Build a simple normalizer without tokenization to avoid external downloads
         norm = (

@@ -11,13 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [ "3.11", "3.12" ]
+        version: [ "3.11", "3.12", "3.13" ]
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - name: Install uv and set the Python version 3.11
-        uses: astral-sh/setup-uv@v6
+        uses: astral-sh/setup-uv@v7
         with:
-          python-version: 3.11
+          python-version: ${{ matrix.version }}
       - name: Install dependencies
         run: uv sync --locked --all-extras --dev
       - name: Lint with flake8
@@ -28,3 +28,9 @@ jobs:
           uv run flake8 . --exclude .venv,tests --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytest
         run: uv run pytest tests
+      - name: Build package
+        run: uv build
+      - name: Smoke test (wheel)
+        run: uv run --isolated --no-project  --with pytest --with dist/*.whl tests/smoke_test.py
+      - name: Smoke test (source distribution)
+        run: uv run --isolated --no-project  --with pytest --with dist/*.tar.gz tests/smoke_test.py
