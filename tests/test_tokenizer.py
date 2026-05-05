@@ -2,7 +2,7 @@
 # pylint: skip-file
 from ..piraye import NltkWordTokenizer, ParagraphTokenizer, \
     NltkSentenceTokenizer, URLTokenizer
-from ..piraye.tasks.tokenizer.tokenizers.spacy_tokenizer import SpacySentenceTokenizer, SpacyWordTokenizer
+from ..piraye.tasks.tokenizer.impl.spacy_tokenizer import SpacySentenceTokenizer, SpacyWordTokenizer
 from ..piraye.tasks.tokenizer.pipeline import TokenizerPipeline
 
 

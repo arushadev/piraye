@@ -1,5 +1,5 @@
 """Email tokenizer implementation."""
-from .base_regex_tokenizer import RegexTokenizer
+from .regex_tokenizer import RegexTokenizer
 
 
 # pylint: disable=too-few-public-methods

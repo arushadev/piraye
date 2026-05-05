@@ -1,7 +1,7 @@
 # testing Fibonacci number function
 # pylint: skip-file
 from ..piraye import NormalizerBuilder
-from ..piraye.tasks.normalizer.normalizers.multi_lingual_normalizer_builder import MultiLingualNormalizerBuilder
+from ..piraye.tasks.normalizer.impl.multi_lingual_normalizer_builder import MultiLingualNormalizerBuilder
 
 fa_normalizer = NormalizerBuilder().alphabet_fa().alphabet_en().digit_fa().punctuation_fa() \
     .diacritic_delete().space_normal().tokenizing().remove_extra_spaces().build()

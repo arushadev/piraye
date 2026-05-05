@@ -1,7 +1,7 @@
 import pytest
 from ..piraye.tasks.tokenizer import NltkSentenceTokenizer, ParagraphTokenizer, \
     URLTokenizer, TokenizerPipeline
-from ..piraye.tasks.tokenizer.tokenizers.spacy_tokenizer import SpacySentenceTokenizer
+from ..piraye.tasks.tokenizer.impl.spacy_tokenizer import SpacySentenceTokenizer
 
 
 @pytest.fixture

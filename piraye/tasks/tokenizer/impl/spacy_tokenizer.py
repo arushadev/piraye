@@ -6,15 +6,15 @@ from spacy.lang.en import English  # pylint: disable=import-error
 from spacy.pipeline import Sentencizer  # pylint: disable=import-error
 
 from ..token import Token
-from .base_tokenizer import Tokenizer
+from ..base_tokenizer import Tokenizer
 
 
 # pylint: disable=too-few-public-methods
 class SpacyTokenizer(Tokenizer, ABC):
     """
-    Base class for Spacy-based tokenizers.
+    Base class for Spacy-based impl.
 
-    This abstract class provides common functionality for tokenizers
+    This abstract class provides common functionality for impl
     that use the Spacy library for natural language processing.
     """
 

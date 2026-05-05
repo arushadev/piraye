@@ -1,9 +1,9 @@
-"""Base class for all tokenizers."""
+"""Base class for all impl."""
 from abc import ABC, abstractmethod
 from typing import List
 
-from ..token import Token
-from ...normalizer.mappings import MappingDict
+from .token import Token
+from ..normalizer.mappings import MappingDict
 
 
 class Tokenizer(ABC):
@@ -14,7 +14,7 @@ class Tokenizer(ABC):
     enabling flexible and extensible tokenization strategies for various use cases.
     
     The class also provides a merge method for hierarchical tokenization, allowing
-    different tokenizers to be combined in a pipeline.
+    different impl to be combined in a pipeline.
     """
 
     def __init__(self):

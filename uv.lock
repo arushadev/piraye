@@ -665,8 +665,10 @@ full = [
 [package.dev-dependencies]
 dev = [
     { name = "flake8" },
+    { name = "lingua-language-detector" },
     { name = "pylint" },
     { name = "pytest" },
+    { name = "spacy" },
     { name = "tqdm" },
 ]
 
@@ -681,8 +683,10 @@ provides-extras = ["full"]
 [package.metadata.requires-dev]
 dev = [
     { name = "flake8" },
+    { name = "lingua-language-detector" },
     { name = "pylint" },
     { name = "pytest" },
+    { name = "spacy" },
     { name = "tqdm" },
 ]
 
