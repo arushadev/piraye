@@ -5,12 +5,12 @@ from typing import Dict
 # pylint: disable=import-error,no-name-in-module
 from lingua import Language, LanguageDetectorBuilder
 
+from ..base_normalizer import Normalizer
+from ..normalized_text import NormalizedText
 from ..normalizer_builder import NormalizerBuilder
-from ...tokenizer.tokenizers.nltk_tokenizer import (
+from ...tokenizer.impl.nltk_tokenizer import (
     Tokenizer, NltkWordTokenizer, NltkSentenceTokenizer
 )
-from .base_normalizer import Normalizer
-from ..normalization_result import NormalizationResult
 
 
 class TokenizationLevel(Enum):
@@ -51,13 +51,13 @@ class MultiLingualNormalizer(Normalizer):
         Initialize the MultiLingualNormalizer.
 
         Args:
-            configs: Dictionary mapping language codes to their normalizers.
-                    Defaults to Persian, Arabic, and English normalizers.
+            configs: Dictionary mapping language codes to their impl.
+                    Defaults to Persian, Arabic, and English impl.
             main_normalizer_lang: Main language code for normalizing non-detected text
             tokenization_level: Level at which to perform language detection
             tokenizer: Custom tokenizer to use (optional)
         """
-        # Set default normalizers if none provided
+        # Set default impl if none provided
         if configs is None:
             configs = {
                 'fa': (NormalizerBuilder()
@@ -78,7 +78,7 @@ class MultiLingualNormalizer(Normalizer):
         self.__tokenization_level = tokenization_level
         self.__main_normalizer_lang = main_normalizer_lang
 
-        # Set up tokenizers
+        # Set up impl
         if tokenizer is not None:
             # Custom tokenizer provided (reserved for future use)
             pass
@@ -90,7 +90,7 @@ class MultiLingualNormalizer(Normalizer):
         languages = [Language.PERSIAN, Language.ARABIC, Language.ENGLISH]
         self.__detector = LanguageDetectorBuilder.from_languages(*languages).build()
 
-    def normalize(self, text: str) -> tuple[str, NormalizationResult]:
+    def normalize(self, text: str) -> tuple[str, NormalizedText]:
         """
         Normalize text with multi-language support.
 
@@ -110,7 +110,7 @@ class MultiLingualNormalizer(Normalizer):
         else:
             result = self._normalize_token_mode(text, main_normalizer)
 
-        return result, NormalizationResult()
+        return result, NormalizedText(text=result)
 
     def _normalize_lingua_mode(self, text: str, main_normalizer: Normalizer) -> str:
         """
@@ -187,7 +187,7 @@ class MultiLingualNormalizer(Normalizer):
     def __normalize_sub_text(
             self, sub_text: str,
             lang: Language | None = None
-    ) -> tuple[str, NormalizationResult]:
+    ) -> tuple[str, NormalizedText]:
         """
         Normalize a substring with detected or provided language.
 

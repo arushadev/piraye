@@ -1,14 +1,16 @@
 """
 Tokenizer module providing various tokenization strategies and pre-configured pipelines.
 
-This module exports individual tokenizers and pre-built tokenizer pipelines
+This module exports individual impl and pre-built tokenizer pipelines
 for common text processing tasks.
 """
 
 from .pipeline import TokenizerPipeline
-from .tokenizers.regex_tokenizers import EmailTokenizer, URLTokenizer, HTMLTokenizer
-from .tokenizers.nltk_tokenizer import NltkSentenceTokenizer, NltkWordTokenizer
-from .tokenizers.paragraph_tokenizer import ParagraphTokenizer
+from .impl.email_tokenizer import EmailTokenizer
+from .impl.url_tokenizer import URLTokenizer
+from .impl.html_tokenizer import HTMLTokenizer
+from .impl.nltk_tokenizer import NltkSentenceTokenizer, NltkWordTokenizer
+from .impl.paragraph_tokenizer import ParagraphTokenizer
 
 # --- Pre-configured tokenizer pipelines ---
 

@@ -52,7 +52,7 @@ piraye = ["**/*.json"]
 
 [dependency-groups]
 dev = [
-    "pytest", "tqdm", "pylint", "flake8"
+    "pytest", "tqdm", "pylint", "flake8", "spacy", "lingua-language-detector"
 ]
 
 [project.optional-dependencies]

@@ -1,7 +1,7 @@
 """Paragraph tokenizer implementation."""
 from typing import List
 
-from .base_tokenizer import Tokenizer
+from ..base_tokenizer import Tokenizer
 from ..token import Token
 
 

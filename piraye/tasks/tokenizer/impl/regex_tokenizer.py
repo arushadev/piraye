@@ -3,7 +3,7 @@ import re
 from typing import List
 
 from ..base_tokenizer import Tokenizer
-from ...token import Token
+from ..token import Token
 
 
 # pylint: disable=too-few-public-methods
@@ -11,7 +11,7 @@ class RegexTokenizer(Tokenizer):
     """
     Tokenizer that uses regular expressions to identify tokens.
 
-    This class provides a flexible base for creating tokenizers that use
+    This class provides a flexible base for creating impl that use
     regex patterns to match specific types of content in text.
     """
 

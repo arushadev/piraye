@@ -4,9 +4,9 @@ from __future__ import annotations
 import enum
 from typing import List
 
-from .normalizers.character_normalizer import CharacterNormalizer
-from .normalizers.base_normalizer import Normalizer
-from ..tokenizer.tokenizers.base_tokenizer import Tokenizer
+from .impl.character_normalizer import CharacterNormalizer
+from .base_normalizer import Normalizer
+from ..tokenizer.base_tokenizer import Tokenizer
 
 
 class Config(enum.Enum):
@@ -59,9 +59,7 @@ class NormalizerBuilder:
         :param tokenization: Whether to tokenize the text during normalization.
         """
         self.__tokenizer = None
-        if configs is None:
-            configs = []
-        self.__configs = configs
+        self.__configs: List[Config]  = configs if configs is not None else []
         self.__remove_extra_spaces = remove_extra_spaces
         self.__tokenization = tokenization
 

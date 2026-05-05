@@ -5,7 +5,7 @@ from typing import Dict
 
 from .character_normalizer import Normalizer
 from .multi_lingual_normalizer import MultiLingualNormalizer, TokenizationLevel
-from ...tokenizer.tokenizers.base_tokenizer import Tokenizer
+from ...tokenizer.base_tokenizer import Tokenizer
 
 
 class MultiLingualNormalizerBuilder:
@@ -13,7 +13,7 @@ class MultiLingualNormalizerBuilder:
     Builder class for creating MultiLingualNormalizer instances.
 
     This builder provides a fluent interface for configuring multi-lingual
-    text normalization with custom normalizers for each language and
+    text normalization with custom impl for each language and
     different tokenization strategies.
 
     Example:
@@ -29,8 +29,8 @@ class MultiLingualNormalizerBuilder:
         Initialize the MultiLingualNormalizerBuilder.
 
         Args:
-            configs: Dictionary of language codes to normalizers.
-                    If None, default normalizers will be used.
+            configs: Dictionary of language codes to impl.
+                    If None, default impl will be used.
         """
         self.__tokenizer: Tokenizer | None = None
         self.__configs = configs if configs is not None else {}

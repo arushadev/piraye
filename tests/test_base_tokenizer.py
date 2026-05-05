@@ -1,6 +1,6 @@
 import pytest
 from ..piraye.tasks.tokenizer.token import Token
-from ..piraye.tasks.tokenizer.tokenizers.base_tokenizer import Tokenizer
+from ..piraye.tasks.tokenizer.base_tokenizer import Tokenizer
 from ..piraye.tasks.tokenizer.pipeline import TokenizerPipeline
 
 

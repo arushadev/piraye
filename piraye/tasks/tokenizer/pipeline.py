@@ -1,15 +1,15 @@
-"""Pipeline module for chaining multiple tokenizers."""
+"""Pipeline module for chaining multiple impl."""
 from typing import List
-from .tokenizers.base_tokenizer import Tokenizer
+from .base_tokenizer import Tokenizer
 from .token import Token
 
 
 # pylint: disable=too-few-public-methods
 class TokenizerPipeline(Tokenizer):
     """
-    Pipeline for sequentially applying multiple tokenizers and merging their outputs.
+    Pipeline for sequentially applying multiple impl and merging their outputs.
 
-    This class enables hierarchical tokenization by chaining multiple tokenizers.
+    This class enables hierarchical tokenization by chaining multiple impl.
     Each tokenizer in the pipeline processes and refines the output of the previous one.
 
     Example:
@@ -25,10 +25,10 @@ class TokenizerPipeline(Tokenizer):
         Initialize the TokenizerPipeline.
 
         Args:
-            tokenizers: List of tokenizers to apply sequentially
+            tokenizers: List of impl to apply sequentially
 
         Raises:
-            ValueError: If tokenizers list is None
+            ValueError: If impl list is None
         """
         Tokenizer.__init__(self)
         if tokenizers is None:
@@ -68,7 +68,7 @@ class TokenizerPipeline(Tokenizer):
         Merge new tokens with previously generated tokens.
 
         This method enables hierarchical tokenization by intelligently combining
-        tokens from different tokenizers, handling overlapping and nested tokens.
+        tokens from different impl, handling overlapping and nested tokens.
 
         Args:
             text: The original input text
