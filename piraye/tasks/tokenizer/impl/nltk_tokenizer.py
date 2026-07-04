@@ -78,4 +78,3 @@ class NltkSentenceTokenizer(NltkTokenizer):
 
     def __init__(self, clean_before_tokenize=True):
         NltkTokenizer.__init__(self, PunktSentenceTokenizer(), clean_before_tokenize)
-        self.__sentence_tokenize = PunktSentenceTokenizer()
