@@ -1,4 +1,5 @@
 """Spacy-based tokenizer implementations."""
+import sys
 from abc import ABC
 from typing import List
 
@@ -21,6 +22,10 @@ class SpacyTokenizer(Tokenizer, ABC):
     def __init__(self):
         Tokenizer.__init__(self)
         self._nlp = English()
+        # No parser/NER in this pipeline, so the default max_length
+        # (a safeguard against parser/NER memory blowup) doesn't apply here.
+        # Raise it so long inputs don't get rejected.
+        self._nlp.max_length = sys.maxsize
 
 
 class SpacyWordTokenizer(SpacyTokenizer):
