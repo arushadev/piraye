@@ -1,6 +1,6 @@
 """Multi-lingual text normalizer implementation."""
 from enum import Enum
-from typing import Dict
+from typing import Dict, List, Tuple
 
 # pylint: disable=import-error,no-name-in-module
 from lingua import Language, LanguageDetectorBuilder
@@ -27,7 +27,6 @@ class TokenizationLevel(Enum):
     LINGUA_MIXED_MODE = 3
 
 
-# pylint: disable=too-few-public-methods
 class MultiLingualNormalizer(Normalizer):
     """
     Normalizer that handles multiple languages in the same text.
@@ -211,3 +210,15 @@ class MultiLingualNormalizer(Normalizer):
                 normalizer = self.__configs['en']
 
         return normalizer.normalize(sub_text)
+
+    def span_normalize(self, text: str) -> List[Tuple[int, int, str]]:
+        """
+        Normalize text and return spans of normalized tokens.
+
+        Args:
+            text: The input text to normalize
+
+        Returns:
+            List of tuples containing (start, end, normalized_text)
+        """
+        raise NotImplementedError()

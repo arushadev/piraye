@@ -125,7 +125,7 @@ class CharacterNormalizer(Normalizer):
             is_token = is_token_list[i]
             mapping_char = self.__mapping.get(char)
             if not self.__remove_extra_spaces:
-                if mapping_char and (not mapping_char.is_token or (mapping_char.is_token and is_token)):
+                if mapping_char and (not mapping_char.is_token or is_token):
                     char = mapping_char.char
                 state.add_char(char, i, (mapping_char is not None) and mapping_char.is_punctuation)
             else:
