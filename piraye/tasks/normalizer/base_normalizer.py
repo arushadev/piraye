@@ -1,6 +1,7 @@
 """This module includes Normalizer class for normalizing texts"""
 
 from abc import ABC, abstractmethod
+from typing import List, Tuple
 
 from .normalized_text import NormalizedText
 
@@ -45,4 +46,16 @@ class Normalizer(ABC):
             A tuple containing:
                 - The normalized text
                 - NormalizationResult with shifts and punctuation locations
+        """
+
+    @abstractmethod
+    def span_normalize(self, text: str) -> List[Tuple[int, int, str]]:
+        """
+        Normalize text and return spans of normalized tokens.
+
+        Args:
+            text: The input text to normalize
+
+        Returns:
+            List of tuples containing (start, end, normalized_text)
         """

@@ -26,8 +26,9 @@ class NormalizationState:
         Add a character and update tracking
         Args:
             char: char to be added to normalized text. can be zero length or length > 0
-            original_pos: original pos of char in text if char is not exists in original text pass None
-            is_punctuation: whether char is punctuation or not for tracking punctuation locations in normalized text
+            original_pos: original position of the char in text, or None if not present
+            is_punctuation: whether char is punctuation for tracking punctuation locations
+                in normalized text
         Returns:
         """
         if original_pos is not None:
@@ -43,6 +44,15 @@ class NormalizationState:
         self.__current_text_position += len(char)
 
     def finalize(self, text_length: int | None = None) -> NormalizedText:
+        """
+        Finalize the normalization state and return the result.
+
+        Args:
+            text_length: Total original text length for final shift calculation
+
+        Returns:
+            NormalizedText with shifts and punctuation locations
+        """
         if text_length is not None:
             current_shift = text_length - self.__current_actual_position
             if current_shift != 0:
@@ -115,7 +125,7 @@ class CharacterNormalizer(Normalizer):
             is_token = is_token_list[i]
             mapping_char = self.__mapping.get(char)
             if not self.__remove_extra_spaces:
-                if mapping_char and (not mapping_char.is_token or (mapping_char.is_token and is_token)):
+                if mapping_char and (not mapping_char.is_token or is_token):
                     char = mapping_char.char
                 state.add_char(char, i, (mapping_char is not None) and mapping_char.is_punctuation)
             else:
